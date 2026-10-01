@@ -1,0 +1,760 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = {
+    darkMode: "class",
+    theme: {
+      extend: {
+        "colors": {
+          "on-surface": "#1b1c1c",
+          "surface-container-lowest": "#ffffff",
+          "inverse-primary": "#75d9b3",
+          "on-primary-fixed-variant": "#00513c",
+          "on-tertiary-fixed-variant": "#474746",
+          "surface-dim": "#dbdad9",
+          "on-error-container": "#93000a",
+          "on-background": "#1b1c1c",
+          "surface-tint": "#006c50",
+          "tertiary": "#585857",
+          "tertiary-fixed": "#e5e2e1",
+          "on-primary": "#ffffff",
+          "outline-variant": "#bdc9c2",
+          "tertiary-fixed-dim": "#c8c6c5",
+          "secondary-fixed-dim": "#b0c6ff",
+          "background": "#fbf9f8",
+          "primary": "#00654b",
+          "on-tertiary-fixed": "#1c1b1b",
+          "surface-container-low": "#f5f3f3",
+          "on-secondary-container": "#fefcff",
+          "on-error": "#ffffff",
+          "on-primary-container": "#d6ffeb",
+          "surface-variant": "#e4e2e2",
+          "error": "#ba1a1a",
+          "surface": "#fbf9f8",
+          "primary-fixed": "#92f6cf",
+          "surface-container-highest": "#e4e2e2",
+          "primary-container": "#008060",
+          "primary-fixed-dim": "#75d9b3",
+          "surface-container": "#efeded",
+          "on-tertiary": "#ffffff",
+          "error-container": "#ffdad6",
+          "on-secondary-fixed-variant": "#00419c",
+          "inverse-on-surface": "#f2f0f0",
+          "on-secondary-fixed": "#001945",
+          "on-primary-fixed": "#002116",
+          "outline": "#6e7a73",
+          "surface-bright": "#fbf9f8",
+          "on-surface-variant": "#3e4944",
+          "secondary-container": "#2c6fe7",
+          "surface-container-high": "#e9e8e7",
+          "secondary": "#0055c7",
+          "on-secondary": "#ffffff",
+          "inverse-surface": "#303031",
+          "secondary-fixed": "#d9e2ff",
+          "on-tertiary-container": "#f8f5f4",
+          "tertiary-container": "#717070"
+        },
+        "borderRadius": {
+          "DEFAULT": "0.125rem",
+          "lg": "0.25rem",
+          "xl": "0.5rem",
+          "full": "0.75rem"
+        },
+        "spacing": {
+          "margin": "1.5rem",
+          "space-md": "1rem",
+          "space-sm": "0.5rem",
+          "space-lg": "1.25rem",
+          "space-xl": "1.5rem",
+          "space-xs": "0.25rem",
+          "gutter": "1rem"
+        },
+        "fontFamily": {
+          "body-lg": [
+            "Inter"
+          ],
+          "label-md": [
+            "Inter"
+          ],
+          "caption": [
+            "Inter"
+          ],
+          "body-md": [
+            "Inter"
+          ],
+          "body-sm": [
+            "Inter"
+          ],
+          "body-sm-semibold": [
+            "Inter"
+          ],
+          "headline-md": [
+            "Inter"
+          ],
+          "headline-sm": [
+            "Inter"
+          ],
+          "label-sm": [
+            "Inter"
+          ],
+          "headline-lg-mobile": [
+            "Inter"
+          ],
+          "body-md-semibold": [
+            "Inter"
+          ],
+          "headline-lg": [
+            "Inter"
+          ]
+        },
+        "fontSize": {
+          "body-lg": [
+            "15px",
+            {
+              "lineHeight": "22px",
+              "fontWeight": "400"
+            }
+          ],
+          "label-md": [
+            "13px",
+            {
+              "lineHeight": "16px",
+              "fontWeight": "500"
+            }
+          ],
+          "caption": [
+            "11px",
+            {
+              "lineHeight": "14px",
+              "fontWeight": "500"
+            }
+          ],
+          "body-md": [
+            "14px",
+            {
+              "lineHeight": "20px",
+              "fontWeight": "400"
+            }
+          ],
+          "body-sm": [
+            "13px",
+            {
+              "lineHeight": "18px",
+              "fontWeight": "400"
+            }
+          ],
+          "body-sm-semibold": [
+            "13px",
+            {
+              "lineHeight": "18px",
+              "fontWeight": "600"
+            }
+          ],
+          "headline-md": [
+            "20px",
+            {
+              "lineHeight": "28px",
+              "letterSpacing": "-0.01em",
+              "fontWeight": "600"
+            }
+          ],
+          "headline-sm": [
+            "16px",
+            {
+              "lineHeight": "24px",
+              "letterSpacing": "-0.005em",
+              "fontWeight": "600"
+            }
+          ],
+          "label-sm": [
+            "12px",
+            {
+              "lineHeight": "16px",
+              "letterSpacing": "0.01em",
+              "fontWeight": "600"
+            }
+          ],
+          "headline-lg-mobile": [
+            "22px",
+            {
+              "lineHeight": "28px",
+              "letterSpacing": "-0.015em",
+              "fontWeight": "700"
+            }
+          ],
+          "body-md-semibold": [
+            "14px",
+            {
+              "lineHeight": "20px",
+              "fontWeight": "600"
+            }
+          ],
+          "headline-lg": [
+            "28px",
+            {
+              "lineHeight": "36px",
+              "letterSpacing": "-0.02em",
+              "fontWeight": "700"
+            }
+          ]
+        }
+      },
+    },
+  }</script><title>Shopify POS Orders Returns | Shopify Prototype</title>
+</head><body class="bg-surface font-body-md text-body-md text-on-surface"><aside class="fixed left-0 top-0 h-full w-60 bg-surface-container-low z-40 flex flex-col justify-between shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="flex flex-col"><div class="h-14 flex items-center px-margin gap-space-sm bg-surface-container-lowest"><img alt="Brand logo. - Primary color: #008060
+- Font: inter
+- Mode: light
+- Roundness: rounded-sm
+" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1WPubMgscUINGuisBDvGZbhiRvwxKjFWpAHPA0GXYWeRFqxcZY4G-byYU4PUykJPYVnuurpj_2yFkafDFmBWhplcA2dlqdqMDkr5ufN1GCA1-9Cy6Y74Bk73_KmB_pOSwvk_HQjInJtWpmQfLSQUcNeG5m75CCs-SDUFif7I_eleu-OGwNMldz9nzh1957zHt7Hfbkc1ds6tpanpikt3_aR6SAXkw6znZBFRPYg-rTUbi8f0VwyeBPJuaQ"/><div class="flex flex-col"><span class="font-body-md-semibold text-body-md-semibold text-on-surface leading-tight">Shopify POS</span><span class="font-caption text-caption text-on-surface-variant leading-tight">Store #0421 • SoHo</span></div></div><div class="px-space-md pt-space-md"><div class="px-space-sm py-space-xs font-caption text-caption uppercase text-on-surface-variant tracking-wider">Retail Terminal</div></div><nav class="flex flex-col gap-space-xs px-space-md py-space-sm" data-active-classes="bg-primary-container text-on-primary font-body-sm-semibold text-body-sm-semibold rounded-xl"><a class="flex items-center gap-space-md px-space-md py-space-sm text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface rounded-xl transition-colors font-body-sm text-body-sm" data-path="pos-terminal" href="#"><span class="material-symbols-outlined text-[20px]">point_of_sale</span>Register</a><a class="flex items-center gap-space-md px-space-md py-space-sm text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface rounded-xl transition-colors font-body-sm text-body-sm" data-path="orders" href="#"><span class="material-symbols-outlined text-[20px]">receipt_long</span>Orders</a><a class="flex items-center gap-space-md px-space-md py-space-sm text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface rounded-xl transition-colors font-body-sm text-body-sm" data-path="inventory" href="#"><span class="material-symbols-outlined text-[20px]">inventory_2</span>Inventory</a><a class="flex items-center gap-space-md px-space-md py-space-sm text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface rounded-xl transition-colors font-body-sm text-body-sm" data-path="customers" href="#"><span class="material-symbols-outlined text-[20px]">group</span>Customers</a><a class="flex items-center gap-space-md px-space-md py-space-sm text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface rounded-xl transition-colors font-body-sm text-body-sm" data-path="shifts" href="#"><span class="material-symbols-outlined text-[20px]">payments</span>Cash Drawer</a></nav></div><div class="p-space-md flex flex-col gap-space-xs bg-surface-container"><a class="flex items-center gap-space-md px-space-md py-space-sm text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface rounded-xl transition-colors font-body-sm text-body-sm" data-path="settings" href="#"><span class="material-symbols-outlined text-[20px]">settings</span>Terminal Settings</a><div class="flex items-center justify-between px-space-md py-space-sm bg-surface-container-lowest rounded-xl"><div class="flex items-center gap-space-sm"><span class="w-2 h-2 rounded-full bg-primary-container"></span><span class="font-caption text-caption text-on-surface-variant">Reader Connected</span></div><span class="material-symbols-outlined text-[16px] text-primary">wifi</span></div></div></aside><div class="pl-60"><header class="fixed top-0 left-60 right-0 h-14 bg-surface-container-lowest shadow-[0_1px_8px_rgba(0,0,0,0.04)] z-30 flex items-center justify-between px-margin"><div class="flex items-center gap-space-lg"><div class="flex items-center gap-space-sm px-space-md py-1 bg-surface-container rounded-full"><span class="material-symbols-outlined text-primary text-[18px]">verified</span><span class="font-label-sm text-label-sm text-on-surface">Register 01 • Active</span></div><div class="hidden md:flex items-center gap-space-sm px-space-md py-1 bg-surface-container-low rounded-full"><span class="material-symbols-outlined text-on-surface-variant text-[18px]">barcode_scanner</span><span class="font-label-sm text-label-sm text-on-surface-variant">Scanner Ready</span></div></div><div class="flex items-center gap-space-lg"><div class="flex items-center gap-space-sm px-space-md py-1 bg-surface-container-low rounded-xl"><span class="material-symbols-outlined text-on-surface-variant text-[18px]">badge</span><div class="flex flex-col text-left"><span class="font-caption text-caption text-on-surface-variant leading-none">Staff In</span><span class="font-label-sm text-label-sm text-on-surface leading-tight">Elena Rostova</span></div></div><div class="flex items-center gap-space-sm"><img alt="Profile" class="w-8 h-8 rounded-full object-cover" src="https://lh3.googleusercontent.com/aida/AEtjO1XM8bAU6u1SGd73cRUZpDg7te6U8Hd9YuPkqi431L4IWNqZL9tf8Hx7usC0Pr2x5uZFks9b6ZVSsN6pF4qp7qBy14iGcMBDgJ1CkgkmUAjIfndkwn_z2y62oK4m5xXJUzEyvjga7vHBHY5I_yrgT2bDOvV6QCvONuw_NwyDFyHdKZJuuGyK5Pgek_6deKYxGCdGgDgn0o72iDzak64pRiWW1BSKisoh_F_jv3CeZdUD3Qs1uum2E_qsQHaI"/><a class="flex items-center justify-center p-1.5 text-on-surface-variant hover:text-error hover:bg-surface-container rounded-lg transition-colors" data-path="login" href="#" title="Lock Terminal / Sign Out"><span class="material-symbols-outlined text-[20px]">lock</span></a></div></div></header><main class="w-full pt-14 px-margin"><div class="flex flex-col w-full pb-10">
+<!-- Top Utility Context & Real-Time Barcode Omnibar -->
+<div class="w-full flex flex-col md:flex-row items-stretch md:items-center justify-between gap-space-md py-space-sm mb-space-md">
+<div class="flex items-center gap-space-sm">
+<div class="p-2 bg-surface-container-high rounded-lg text-primary flex items-center justify-center">
+<span class="material-symbols-outlined text-[22px]">swap_horizontal_circle</span>
+</div>
+<div>
+<h1 class="font-headline-sm text-headline-sm text-on-surface">Returns &amp; Exchanges Hub</h1>
+<p class="font-caption text-caption text-on-surface-variant">Lookup in-store or online orders, process restock flows, and dispense tender refunds</p>
+</div>
+</div>
+<!-- Live Scanner & Search Input -->
+<div class="flex items-center gap-space-sm flex-1 max-w-xl">
+<div class="relative w-full">
+<div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none text-on-surface-variant">
+<span class="material-symbols-outlined text-[20px]">search</span>
+</div>
+<input class="w-full h-10 pl-10 pr-24 bg-surface-container-lowest text-on-surface font-body-sm text-body-sm rounded-xl shadow-sm focus:outline-none focus:ring-2 focus:ring-primary focus:bg-surface-container-lowest placeholder:text-outline" id="order-search" placeholder="Scan receipt barcode, search order #1042, or customer name..." type="text" value="#1042"/>
+<div class="absolute inset-y-0 right-1.5 flex items-center gap-1">
+<span class="px-2 py-0.5 bg-surface-container-high text-on-surface-variant font-caption text-caption rounded font-mono">⌘K</span>
+<button class="p-1 text-on-surface-variant hover:text-primary hover:bg-surface-container rounded transition-colors" title="Trigger Laser Scanner">
+<span class="material-symbols-outlined text-[18px]">barcode_scanner</span>
+</button>
+</div>
+</div>
+<button class="h-10 px-4 bg-surface-container-lowest hover:bg-surface-container text-on-surface font-label-md text-label-md rounded-xl shadow-sm flex items-center gap-space-xs transition-colors shrink-0">
+<span class="material-symbols-outlined text-[18px]">person_search</span>
+<span>Customer</span>
+</button>
+</div>
+</div>
+<!-- Main POS Grid: 5-Col Orders Roster + 7-Col Focused Return Workspace -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-lg items-start">
+<!-- LEFT PANEL: Orders Filter & Stream (5 Cols) -->
+<div class="lg:col-span-5 flex flex-col gap-space-md">
+<!-- Filter Segment Pills -->
+<div class="flex items-center justify-between bg-surface-container-low p-1.5 rounded-xl shadow-sm">
+<div class="flex items-center gap-1 overflow-x-auto">
+<button class="px-3 py-1.5 rounded-lg text-on-surface font-body-sm-semibold text-body-sm-semibold bg-surface-container-lowest shadow-sm transition-all text-left">
+            All Orders
+          </button>
+<button class="px-3 py-1.5 rounded-lg text-on-surface-variant hover:text-on-surface font-body-sm text-body-sm transition-colors flex items-center gap-1.5">
+<span>Completed</span>
+<span class="px-1.5 py-0.2 bg-surface-container-high text-on-surface-variant font-caption text-caption rounded-full">18</span>
+</button>
+<button class="px-3 py-1.5 rounded-lg text-primary font-body-sm-semibold text-body-sm-semibold bg-primary-container/10 transition-colors flex items-center gap-1.5">
+<span>Return Req.</span>
+<span class="px-1.5 py-0.2 bg-primary-container text-on-primary font-caption text-caption rounded-full">2</span>
+</button>
+<button class="px-3 py-1.5 rounded-lg text-on-surface-variant hover:text-on-surface font-body-sm text-body-sm transition-colors">
+            Refunded
+          </button>
+</div>
+<button class="p-1 text-on-surface-variant hover:text-on-surface rounded-lg hover:bg-surface-container" title="Filter options">
+<span class="material-symbols-outlined text-[18px]">tune</span>
+</button>
+</div>
+<!-- Quick Metrics Ribbon -->
+<div class="grid grid-cols-3 gap-space-sm">
+<div class="bg-surface-container-lowest p-space-sm rounded-xl shadow-sm flex flex-col">
+<span class="font-caption text-caption uppercase text-on-surface-variant tracking-wider">Today's Returns</span>
+<div class="flex items-baseline gap-1 mt-1">
+<span class="font-headline-sm text-headline-sm text-on-surface">$284.50</span>
+<span class="font-caption text-caption text-on-surface-variant">/ 5 ops</span>
+</div>
+</div>
+<div class="bg-surface-container-lowest p-space-sm rounded-xl shadow-sm flex flex-col">
+<span class="font-caption text-caption uppercase text-on-surface-variant tracking-wider">Restock Rate</span>
+<div class="flex items-baseline gap-1 mt-1">
+<span class="font-headline-sm text-headline-sm text-primary">88.2%</span>
+<span class="font-caption text-caption text-primary">shelf</span>
+</div>
+</div>
+<div class="bg-surface-container-lowest p-space-sm rounded-xl shadow-sm flex flex-col">
+<span class="font-caption text-caption uppercase text-on-surface-variant tracking-wider">Store Credit</span>
+<div class="flex items-baseline gap-1 mt-1">
+<span class="font-headline-sm text-headline-sm text-secondary">$140.00</span>
+<span class="font-caption text-caption text-on-surface-variant">kept</span>
+</div>
+</div>
+</div>
+<!-- Order Cards Stream -->
+<div class="flex flex-col gap-space-xs">
+<!-- Order #1043 (Unselected) -->
+<div class="group relative bg-surface-container-lowest hover:bg-surface-container-low p-space-md rounded-xl shadow-sm transition-all cursor-pointer">
+<div class="flex items-start justify-between">
+<div class="flex items-center gap-space-sm">
+<span class="font-headline-sm text-headline-sm text-on-surface">#1043</span>
+<span class="inline-flex items-center px-2 py-0.5 rounded-full font-caption text-caption bg-surface-container-highest text-on-surface-variant font-medium">
+                Fulfilled
+              </span>
+</div>
+<span class="font-headline-sm text-headline-sm text-on-surface font-semibold">$188.00</span>
+</div>
+<div class="mt-space-sm flex items-center justify-between">
+<div class="flex items-center gap-space-sm">
+<span class="w-6 h-6 rounded-full bg-secondary-fixed text-on-secondary-fixed flex items-center justify-center font-caption text-caption font-semibold">EW</span>
+<span class="font-body-sm-semibold text-body-sm-semibold text-on-surface">Emma Watson</span>
+</div>
+<span class="font-caption text-caption text-on-surface-variant">Today, 2:14 PM</span>
+</div>
+<div class="mt-space-sm pt-space-xs flex items-center justify-between text-on-surface-variant font-body-sm text-body-sm">
+<div class="flex items-center gap-space-sm">
+<div class="w-8 h-8 rounded-lg overflow-hidden bg-surface-container-high shrink-0">
+<img class="w-full h-full object-cover" data-alt="Minimalist wool overcoat folded neatly in studio lighting against soft beige background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAeNydHYuRF8mdLVVDC4Jo5TinDZ2OT3ZnvEIpofNpx2PvLFwubOmzJwpyrJPcnF5CH59XNFIt4MKEpPshHfkri4hEUQm3YQm6_qir7KiPuCAwIyZEJdBL9jGFH9dCvTrK0zUUUH0OB8HDe9THULMOTkVJkDE12prXVhPgSkZFP0kgPvBpyX2IiXMBXIRIubq1jEYmmpraIQ84T8sz-jU4iuWjr_a_IVKFcpSoJ2tzGTnh8e0rviSvcEQ"/>
+</div>
+<span class="font-caption text-caption text-on-surface">Cashmere Knit Jacket + 1 item</span>
+</div>
+<div class="flex items-center gap-1 font-caption text-caption text-on-surface-variant">
+<span class="material-symbols-outlined text-[15px]">credit_card</span>
+<span>Visa •••• 1089</span>
+</div>
+</div>
+</div>
+<!-- Order #1042 (SELECTED & ACTIVE TARGET) -->
+<div class="relative bg-surface-container-lowest p-space-md rounded-xl shadow-md ring-2 ring-primary transition-all cursor-pointer">
+<div class="absolute -left-1 top-4 bottom-4 w-1.5 bg-primary rounded-r"></div>
+<div class="flex items-start justify-between">
+<div class="flex items-center gap-space-sm">
+<span class="font-headline-sm text-headline-sm text-primary font-bold">#1042</span>
+<span class="inline-flex items-center px-2 py-0.5 rounded-full font-caption text-caption bg-primary-fixed text-on-primary-fixed font-semibold">
+                Return Requested
+              </span>
+<span class="inline-flex items-center px-1.5 py-0.5 rounded font-caption text-caption bg-surface-container-high text-on-surface-variant">
+                Store #0421
+              </span>
+</div>
+<span class="font-headline-sm text-headline-sm text-on-surface font-semibold">$76.32</span>
+</div>
+<div class="mt-space-sm flex items-center justify-between">
+<div class="flex items-center gap-space-sm">
+<span class="w-6 h-6 rounded-full bg-primary-fixed-dim text-on-primary-fixed flex items-center justify-center font-caption text-caption font-semibold">MB</span>
+<div class="flex flex-col">
+<span class="font-body-sm-semibold text-body-sm-semibold text-on-surface leading-tight">Marcus Brody</span>
+<span class="font-caption text-caption text-on-surface-variant leading-tight">marcus.brody@domain.com</span>
+</div>
+</div>
+<div class="text-right">
+<span class="font-caption text-caption text-on-surface-variant block">Purchased Yesterday</span>
+<span class="font-caption text-caption text-primary font-medium">Within 30-day window</span>
+</div>
+</div>
+<!-- Items Strip inside preview -->
+<div class="mt-space-md p-space-xs bg-surface-container-low rounded-lg flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<div class="w-7 h-7 rounded bg-surface-container-high overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="Navy blue organic cotton crewneck sweatshirt cleanly displayed on flat matte surface" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCri99cio9ubDKFrUwoZ6pREFaEHcCJIguTwVnuO_Dkfv10U_cm4ROCHvmG2d7dm-VHvsMNQbhrbGMgzTw7h__hUJ46GqQ3AwFxpYhuR5B0ZQo7xXnCOH7ke6tyPsUbrLVURqV5gNVLAU-xvSkhC54aURR8tFL6uINuGo8U1OiOa4k5b0OsODDvJ1ITXQ4fOd_AOZuejZubLbZ8BYOkL_EMMy028qsfF6M65Y6RPWW7ke4AHqgbFYGxew"/>
+</div>
+<div class="w-7 h-7 rounded bg-surface-container-high overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="Heavyweight unbleached canvas market tote bag with reinforced handles on neutral surface" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDGDSeWYcqMeIjPB_CMpx3QcHF0kHU1cgBDoLnWSkP7kdSfAeMwDYT11AcNdT5Ofaofz3f84FwtNd2EAG6AmflXoC9Jpm2-5MJw3n0a9xNgakWT7GDGiaKgEeqKF3qMtTrtVH2K3reIbqzXK7BSB-TMZgfswjNSWJmwpUfmryLJrEEa9ffsm-cVk52YLNtCeRooUzWbLVFVJGIJJFVCiE_oCPB9Z1ZNrLNPONa7FNJRzuRHEh04z9VbUg"/>
+</div>
+<span class="font-caption text-caption text-on-surface-variant pl-1">2 Items eligible</span>
+</div>
+<div class="flex items-center gap-1 font-caption text-caption text-on-surface">
+<span class="material-symbols-outlined text-[15px] text-primary">credit_card</span>
+<span class="font-mono">Visa •••• 4242</span>
+</div>
+</div>
+</div>
+<!-- Order #1041 (Unselected) -->
+<div class="group relative bg-surface-container-lowest hover:bg-surface-container-low p-space-md rounded-xl shadow-sm transition-all cursor-pointer">
+<div class="flex items-start justify-between">
+<div class="flex items-center gap-space-sm">
+<span class="font-headline-sm text-headline-sm text-on-surface">#1041</span>
+<span class="inline-flex items-center px-2 py-0.5 rounded-full font-caption text-caption bg-surface-container-highest text-on-surface-variant font-medium">
+                Fulfilled
+              </span>
+</div>
+<span class="font-headline-sm text-headline-sm text-on-surface font-semibold">$35.00</span>
+</div>
+<div class="mt-space-sm flex items-center justify-between">
+<div class="flex items-center gap-space-sm">
+<span class="w-6 h-6 rounded-full bg-tertiary-fixed text-on-tertiary-fixed flex items-center justify-center font-caption text-caption font-semibold">SL</span>
+<span class="font-body-sm-semibold text-body-sm-semibold text-on-surface">Sarah Lin</span>
+</div>
+<span class="font-caption text-caption text-on-surface-variant">Nov 23, 11:05 AM</span>
+</div>
+<div class="mt-space-sm pt-space-xs flex items-center justify-between text-on-surface-variant font-body-sm text-body-sm">
+<div class="flex items-center gap-space-sm">
+<div class="w-8 h-8 rounded-lg overflow-hidden bg-surface-container-high shrink-0">
+<img class="w-full h-full object-cover" data-alt="Recycled ceramic mug with speckled glaze isolated on neutral studio backdrop" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB5AZb_YPhalWZc5SKqyG1LxmtIwrUNU1empB5dUy-gkpyQYQyxyeeuZ2De7ziRbzxj9sM0fnhYZbnvOUolN5D4Oli2FXdcEfCAnt5inpIbCcGvbYAInbJaNayYq00wJKfxOP7tWMqVV4GXAAa7ThGm5CGAkybbCL8XtpXF2WDwIXyI25CMZF5WZvzrSupncV6IGQGxtJkDQo19mFvvS3GeWCUSU1wmWp0E9aVsvfMQTYn-KqyiGsEEGQ"/>
+</div>
+<span class="font-caption text-caption text-on-surface">Studio Ceramic Mug (Earth)</span>
+</div>
+<div class="flex items-center gap-1 font-caption text-caption text-on-surface-variant">
+<span class="material-symbols-outlined text-[15px]">payments</span>
+<span>Cash ($40.00 Tender)</span>
+</div>
+</div>
+</div>
+<!-- Order #1040 (Unselected - Partially Returned) -->
+<div class="group relative bg-surface-container-lowest hover:bg-surface-container-low p-space-md rounded-xl shadow-sm transition-all cursor-pointer opacity-75">
+<div class="flex items-start justify-between">
+<div class="flex items-center gap-space-sm">
+<span class="font-headline-sm text-headline-sm text-on-surface">#1040</span>
+<span class="inline-flex items-center px-2 py-0.5 rounded-full font-caption text-caption bg-secondary-fixed text-on-secondary-fixed font-medium">
+                Partially Refunded
+              </span>
+</div>
+<span class="font-headline-sm text-headline-sm text-on-surface font-semibold">$120.00</span>
+</div>
+<div class="mt-space-sm flex items-center justify-between">
+<div class="flex items-center gap-space-sm">
+<span class="w-6 h-6 rounded-full bg-surface-container-high text-on-surface flex items-center justify-center font-caption text-caption font-semibold">DK</span>
+<span class="font-body-sm-semibold text-body-sm-semibold text-on-surface">David Kim</span>
+</div>
+<span class="font-caption text-caption text-on-surface-variant">Nov 22, 4:48 PM</span>
+</div>
+</div>
+</div>
+</div>
+<!-- RIGHT / MAIN PANEL: Active Return/Exchange Inspector for #1042 (7 Cols) -->
+<div class="lg:col-span-7 flex flex-col gap-space-md">
+<!-- Inspection Action Card -->
+<div class="bg-surface-container-lowest rounded-xl shadow-sm p-space-lg flex flex-col gap-space-lg">
+<!-- Header & Top Metadata -->
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-space-sm pb-space-md bg-surface-container-low/50 -m-space-lg mb-0 p-space-lg rounded-t-xl">
+<div>
+<div class="flex items-center gap-space-sm">
+<h2 class="font-headline-md text-headline-md text-on-surface">Order #1042 Details</h2>
+<span class="px-2 py-0.5 rounded bg-primary-container text-on-primary font-label-sm text-label-sm">Active Session</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">
+              Customer: <span class="font-body-sm-semibold text-body-sm-semibold text-on-surface">Marcus Brody</span> • POS Terminal 01 (SoHo)
+            </p>
+</div>
+<div class="flex items-center gap-space-xs self-start sm:self-auto">
+<button class="px-3 py-1.5 bg-surface-container hover:bg-surface-container-high text-on-surface font-label-md text-label-md rounded-lg flex items-center gap-1 transition-colors">
+<span class="material-symbols-outlined text-[16px]">print</span>
+<span>Original Receipt</span>
+</button>
+<button class="px-3 py-1.5 bg-surface-container hover:bg-surface-container-high text-on-surface font-label-md text-label-md rounded-lg flex items-center gap-1 transition-colors">
+<span class="material-symbols-outlined text-[16px]">more_horiz</span>
+</button>
+</div>
+</div>
+<!-- Mode Indicator / Banner -->
+<div class="bg-primary-fixed/20 p-space-md rounded-xl flex items-center justify-between">
+<div class="flex items-center gap-space-md">
+<div class="p-2 bg-primary-container text-on-primary rounded-lg flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[20px]">assignment_return</span>
+</div>
+<div>
+<span class="font-body-sm-semibold text-body-sm-semibold text-on-surface block">Start Return / Exchange Workflow</span>
+<span class="font-caption text-caption text-on-surface-variant">Select items the customer is returning, assign restock conditions, and designate refund method.</span>
+</div>
+</div>
+<div class="hidden sm:block text-right shrink-0">
+<span class="font-caption text-caption text-on-surface-variant block uppercase tracking-wider">Select All</span>
+<input checked="" class="w-4 h-4 text-primary rounded cursor-pointer accent-primary mt-1" id="master-toggle" onchange="toggleAllReturnItems(this)" type="checkbox"/>
+</div>
+</div>
+<!-- Item 1: Minimalist Cotton Crewneck (Selected for Return) -->
+<div class="bg-surface-container-low/40 p-space-md rounded-xl flex flex-col gap-space-md transition-all">
+<div class="flex items-start gap-space-md">
+<div class="pt-1">
+<input checked="" class="item-checkbox w-5 h-5 rounded cursor-pointer accent-primary transition-transform active:scale-95" data-price="48.00" data-tax="2.88" id="item-1-check" onchange="recalculateRefund()" type="checkbox"/>
+</div>
+<div class="w-16 h-16 rounded-xl bg-surface-container-high overflow-hidden shrink-0 shadow-sm">
+<img class="w-full h-full object-cover" data-alt="Detailed studio shot of a deep navy blue organic cotton crewneck sweatshirt with ribbed collar" src="https://lh3.googleusercontent.com/aida-public/AB6AXuClQ08K9_ApiRPJ7QYZPB4TDf4VKiWLyS_RDaInPZ3bDjNUTyBnxlkAwTK-EJwVcyrs5VB0SQxYRXzL50K_rwZBmNg8yGlORcacT84L_CR6JQZBzfUN8bBhDD2dYwRixZ5_MvYRSTBT09ZovfdZqNQBdL6Mbnjq59pbKnOY6gHxMXyja0_fWtwsFWBvgxp34R8f3L8BaazFXGpmdQpd51K4lrNvL-hKU3isguNAtmIEJFqadznfcJxZRw"/>
+</div>
+<div class="flex-1 min-w-0">
+<div class="flex items-start justify-between gap-space-sm">
+<div>
+<h3 class="font-body-md-semibold text-body-md-semibold text-on-surface truncate">Minimalist Cotton Crewneck</h3>
+<div class="flex items-center gap-space-xs text-on-surface-variant font-caption text-caption mt-0.5">
+<span class="font-medium text-on-surface">Size L</span>
+<span>•</span>
+<span>Navy Heather</span>
+<span>•</span>
+<span class="font-mono">SKU-77291-NV</span>
+</div>
+</div>
+<div class="text-right">
+<span class="font-headline-sm text-headline-sm text-on-surface font-semibold">$48.00</span>
+<span class="font-caption text-caption text-on-surface-variant block">Qty: 1</span>
+</div>
+</div>
+<!-- Item Return Configuration Sub-row -->
+<div class="mt-space-md pt-space-sm grid grid-cols-1 sm:grid-cols-2 gap-space-md bg-surface-container-lowest p-space-sm rounded-lg shadow-sm">
+<div>
+<label class="block font-caption text-caption uppercase text-on-surface-variant tracking-wider mb-1">Restock Condition</label>
+<div class="relative">
+<select class="w-full h-8 pl-2 pr-7 bg-surface-container-low text-on-surface font-body-sm text-body-sm rounded-lg border-0 focus:ring-1 focus:ring-primary appearance-none cursor-pointer">
+<option selected="">Restock to Shelf (New / Tagged)</option>
+<option>Defective / Damaged / Write-off</option>
+<option>Store Sample / Floor Display</option>
+<option>Return to Warehouse (RTV)</option>
+</select>
+<span class="material-symbols-outlined text-[16px] text-on-surface-variant absolute right-2 top-2 pointer-events-none">expand_more</span>
+</div>
+</div>
+<div>
+<label class="block font-caption text-caption uppercase text-on-surface-variant tracking-wider mb-1">Return Reason</label>
+<div class="relative">
+<select class="w-full h-8 pl-2 pr-7 bg-surface-container-low text-on-surface font-body-sm text-body-sm rounded-lg border-0 focus:ring-1 focus:ring-primary appearance-none cursor-pointer">
+<option selected="">Customer Changed Mind / Size Mismatch</option>
+<option>Fabric Texture / Dislike</option>
+<option>Wrong Color Shipped</option>
+<option>Gift Return</option>
+</select>
+<span class="material-symbols-outlined text-[16px] text-on-surface-variant absolute right-2 top-2 pointer-events-none">expand_more</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Item 2: Canvas Tote (Selected for Return) -->
+<div class="bg-surface-container-low/40 p-space-md rounded-xl flex flex-col gap-space-md transition-all">
+<div class="flex items-start gap-space-md">
+<div class="pt-1">
+<input checked="" class="item-checkbox w-5 h-5 rounded cursor-pointer accent-primary transition-transform active:scale-95" data-price="24.00" data-tax="1.44" id="item-2-check" onchange="recalculateRefund()" type="checkbox"/>
+</div>
+<div class="w-16 h-16 rounded-xl bg-surface-container-high overflow-hidden shrink-0 shadow-sm">
+<img class="w-full h-full object-cover" data-alt="Natural undyed canvas tote bag with contrast black handles resting on clean wooden floor" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD-jT5Ugd_-Cla4yQalf0qMbD3fwlQaXb0dBNClF1HlcLDfxzzcISrZrxEVR6vhgIPA1ef0r07WO4TTkEVk9GBhq50MPtSvza-p4OgNRl0MBj0U53TlQD0fd8Jwv0Z-5GGuVeu2i35O5MJXHzLBq7BaJH7XkyMc1Hmf7l1i0RWyvJsBMVBadbSvMY9-7N_7Y22lBsPwoV_WeVWBx0vcR-DnNSm5pCuwlwAFs-TBGohmU6jvNFA1BIbL7A"/>
+</div>
+<div class="flex-1 min-w-0">
+<div class="flex items-start justify-between gap-space-sm">
+<div>
+<h3 class="font-body-md-semibold text-body-md-semibold text-on-surface truncate">Canvas Daily Market Tote</h3>
+<div class="flex items-center gap-space-xs text-on-surface-variant font-caption text-caption mt-0.5">
+<span class="font-medium text-on-surface">One Size</span>
+<span>•</span>
+<span>Natural / Black Straps</span>
+<span>•</span>
+<span class="font-mono">SKU-18230-NT</span>
+</div>
+</div>
+<div class="text-right">
+<span class="font-headline-sm text-headline-sm text-on-surface font-semibold">$24.00</span>
+<span class="font-caption text-caption text-on-surface-variant block">Qty: 1</span>
+</div>
+</div>
+<!-- Item Return Configuration Sub-row -->
+<div class="mt-space-md pt-space-sm grid grid-cols-1 sm:grid-cols-2 gap-space-md bg-surface-container-lowest p-space-sm rounded-lg shadow-sm">
+<div>
+<label class="block font-caption text-caption uppercase text-on-surface-variant tracking-wider mb-1">Restock Condition</label>
+<div class="relative">
+<select class="w-full h-8 pl-2 pr-7 bg-surface-container-low text-on-surface font-body-sm text-body-sm rounded-lg border-0 focus:ring-1 focus:ring-primary appearance-none cursor-pointer">
+<option selected="">Restock to Shelf (New / Tagged)</option>
+<option>Defective / Damaged / Write-off</option>
+<option>Store Sample / Floor Display</option>
+</select>
+<span class="material-symbols-outlined text-[16px] text-on-surface-variant absolute right-2 top-2 pointer-events-none">expand_more</span>
+</div>
+</div>
+<div>
+<label class="block font-caption text-caption uppercase text-on-surface-variant tracking-wider mb-1">Return Reason</label>
+<div class="relative">
+<select class="w-full h-8 pl-2 pr-7 bg-surface-container-low text-on-surface font-body-sm text-body-sm rounded-lg border-0 focus:ring-1 focus:ring-primary appearance-none cursor-pointer">
+<option selected="">No longer needed</option>
+<option>Duplicate purchase</option>
+<option>Minor cosmetic stain</option>
+</select>
+<span class="material-symbols-outlined text-[16px] text-on-surface-variant absolute right-2 top-2 pointer-events-none">expand_more</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Refund Tender Selection Tabs -->
+<div class="flex flex-col gap-space-sm pt-space-sm">
+<label class="font-body-sm-semibold text-body-sm-semibold text-on-surface flex items-center justify-between">
+<span>Select Refund Destination</span>
+<span class="font-caption text-caption text-on-surface-variant font-normal">Original Authorization Valid</span>
+</label>
+<div class="grid grid-cols-1 sm:grid-cols-3 gap-space-sm">
+<!-- Option 1: Original Card -->
+<label class="cursor-pointer relative flex flex-col p-space-md rounded-xl bg-surface-container-low hover:bg-surface-container transition-all has-[:checked]:bg-primary-container/10 has-[:checked]:shadow-sm">
+<input checked="" class="sr-only" name="refund-tender" onchange="selectTender(this)" type="radio" value="card"/>
+<div class="flex items-center justify-between mb-1">
+<span class="material-symbols-outlined text-[20px] text-primary">credit_card</span>
+<span class="w-3.5 h-3.5 rounded-full bg-primary flex items-center justify-center">
+<span class="w-1.5 h-1.5 rounded-full bg-on-primary"></span>
+</span>
+</div>
+<span class="font-body-sm-semibold text-body-sm-semibold text-on-surface">Original Card</span>
+<span class="font-caption text-caption text-on-surface-variant mt-0.5">Visa •••• 4242</span>
+</label>
+<!-- Option 2: Store Credit -->
+<label class="cursor-pointer relative flex flex-col p-space-md rounded-xl bg-surface-container-low hover:bg-surface-container transition-all has-[:checked]:bg-primary-container/10 has-[:checked]:shadow-sm">
+<input class="sr-only" name="refund-tender" onchange="selectTender(this)" type="radio" value="credit"/>
+<div class="flex items-center justify-between mb-1">
+<span class="material-symbols-outlined text-[20px] text-secondary">card_membership</span>
+<span class="w-3.5 h-3.5 rounded-full bg-surface-container-highest flex items-center justify-center"></span>
+</div>
+<span class="font-body-sm-semibold text-body-sm-semibold text-on-surface">Store Credit</span>
+<span class="font-caption text-caption text-on-surface-variant mt-0.5">Shopify Digital Card</span>
+</label>
+<!-- Option 3: Even Exchange -->
+<label class="cursor-pointer relative flex flex-col p-space-md rounded-xl bg-surface-container-low hover:bg-surface-container transition-all has-[:checked]:bg-primary-container/10 has-[:checked]:shadow-sm">
+<input class="sr-only" name="refund-tender" onchange="selectTender(this)" type="radio" value="exchange"/>
+<div class="flex items-center justify-between mb-1">
+<span class="material-symbols-outlined text-[20px] text-on-surface-variant">sync_alt</span>
+<span class="w-3.5 h-3.5 rounded-full bg-surface-container-highest flex items-center justify-center"></span>
+</div>
+<span class="font-body-sm-semibold text-body-sm-semibold text-on-surface">Even Exchange</span>
+<span class="font-caption text-caption text-on-surface-variant mt-0.5">Scan Replacement Item</span>
+</label>
+</div>
+</div>
+<!-- Refund Calculation Summary Ledger -->
+<div class="bg-surface-container p-space-md rounded-xl flex flex-col gap-space-xs font-body-sm text-body-sm">
+<div class="flex items-center justify-between text-on-surface-variant">
+<span>Returned Items Subtotal (2 items)</span>
+<span class="font-mono text-on-surface" id="subtotal-display">-$72.00</span>
+</div>
+<div class="flex items-center justify-between text-on-surface-variant">
+<span>Sales Tax Recalculation (6% NY State &amp; Local)</span>
+<span class="font-mono text-on-surface" id="tax-display">-$4.32</span>
+</div>
+<div class="flex items-center justify-between text-on-surface-variant">
+<span>Restocking Fee</span>
+<span class="font-mono text-primary">Waived ($0.00)</span>
+</div>
+<div class="mt-space-xs pt-space-xs flex items-center justify-between bg-surface-container-lowest p-space-sm rounded-lg shadow-sm">
+<div>
+<span class="font-headline-sm text-headline-sm text-on-surface font-bold block">Total Refund Due</span>
+<span class="font-caption text-caption text-on-surface-variant" id="tender-label">Will credit to Visa •••• 4242</span>
+</div>
+<span class="font-headline-lg text-headline-lg text-primary font-bold font-mono" id="total-display">-$76.32</span>
+</div>
+</div>
+<!-- Action Bar conforming to Polaris Utilitarian Enterprise standards -->
+<div class="flex flex-col sm:flex-row items-stretch sm:items-center justify-between gap-space-sm pt-space-xs">
+<button class="h-10 px-4 bg-surface-container hover:bg-surface-container-high text-on-surface font-body-md-semibold text-body-md-semibold rounded-xl transition-colors">
+            Cancel Session
+          </button>
+<div class="flex items-center gap-space-sm flex-col sm:flex-row">
+<button class="w-full sm:w-auto h-10 px-4 bg-surface-container-high hover:bg-surface-dim text-on-surface font-body-md-semibold text-body-md-semibold rounded-xl transition-colors flex items-center justify-center gap-1.5" onclick="issueStoreCreditToast()">
+<span class="material-symbols-outlined text-[18px]">card_giftcard</span>
+<span>Issue Store Credit</span>
+</button>
+<button class="w-full sm:w-auto h-11 px-6 bg-primary-container hover:bg-primary text-on-primary font-body-md-semibold text-body-md-semibold rounded-xl shadow-md transition-all flex items-center justify-center gap-2" onclick="completeReturn()">
+<span class="material-symbols-outlined text-[20px]">check_circle</span>
+<span>Complete Return &amp; Print Slip</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Historical Audit & Customer Insight Mini-Bento -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-space-md">
+<!-- Marcus Brody Customer Snapshot -->
+<div class="bg-surface-container-lowest p-space-md rounded-xl shadow-sm flex flex-col justify-between">
+<div class="flex items-start justify-between">
+<div>
+<span class="font-caption text-caption uppercase text-on-surface-variant tracking-wider block">Customer Profile</span>
+<span class="font-body-md-semibold text-body-md-semibold text-on-surface">Marcus Brody</span>
+<span class="font-caption text-caption text-on-surface-variant block">Tier 2 VIP • 14 Total Orders</span>
+</div>
+<span class="px-2 py-0.5 bg-primary-fixed text-on-primary-fixed font-caption text-caption rounded-full font-semibold">Low Return Rate (4%)</span>
+</div>
+<div class="mt-space-md flex items-center gap-space-lg text-on-surface-variant font-caption text-caption pt-space-xs bg-surface-container-low p-space-xs rounded-lg">
+<div>Lifetime Value: <span class="font-semibold text-on-surface">$1,420.00</span></div>
+<div>Joined: <span class="font-semibold text-on-surface">March 2022</span></div>
+</div>
+</div>
+<!-- Terminal Receipt Printer Status -->
+<div class="bg-surface-container-lowest p-space-md rounded-xl shadow-sm flex items-center justify-between">
+<div class="flex items-center gap-space-sm">
+<div class="p-2 bg-surface-container text-on-surface rounded-lg">
+<span class="material-symbols-outlined text-[20px]">receipt</span>
+</div>
+<div class="flex flex-col">
+<span class="font-body-sm-semibold text-body-sm-semibold text-on-surface">Epson Thermal Slip</span>
+<span class="font-caption text-caption text-primary flex items-center gap-1">
+<span class="w-1.5 h-1.5 rounded-full bg-primary-container"></span>
+                Loaded &amp; Ready (Roll 84%)
+              </span>
+</div>
+</div>
+<button class="px-2.5 py-1 bg-surface-container hover:bg-surface-container-high rounded text-on-surface font-caption text-caption transition-colors">
+            Test Feed
+          </button>
+</div>
+</div>
+</div>
+</div>
+<!-- Interactive Client-side Script for calculations & selection changes -->
+<script>
+    function recalculateRefund() {
+      const itemCheckboxes = document.querySelectorAll('.item-checkbox');
+      let subtotal = 0.0;
+      let tax = 0.0;
+      let count = 0;
+
+      itemCheckboxes.forEach(cb => {
+        if (cb.checked) {
+          subtotal += parseFloat(cb.dataset.price);
+          tax += parseFloat(cb.dataset.tax);
+          count++;
+        }
+      });
+
+      const total = subtotal + tax;
+
+      document.getElementById('subtotal-display').textContent = `-$${subtotal.toFixed(2)}`;
+      document.getElementById('tax-display').textContent = `-$${tax.toFixed(2)}`;
+      document.getElementById('total-display').textContent = `-$${total.toFixed(2)}`;
+
+      const master = document.getElementById('master-toggle');
+      if (master) {
+        master.checked = count === itemCheckboxes.length;
+      }
+    }
+
+    function toggleAllReturnItems(masterCheckbox) {
+      const itemCheckboxes = document.querySelectorAll('.item-checkbox');
+      itemCheckboxes.forEach(cb => {
+        cb.checked = masterCheckbox.checked;
+      });
+      recalculateRefund();
+    }
+
+    function selectTender(radioInput) {
+      const label = document.getElementById('tender-label');
+      if (radioInput.value === 'card') {
+        label.textContent = 'Will credit to Visa •••• 4242';
+      } else if (radioInput.value === 'credit') {
+        label.textContent = 'Will issue digital gift card code via SMS & Email';
+      } else {
+        label.textContent = 'Credit applied toward in-store exchange item';
+      }
+    }
+
+    function completeReturn() {
+      const btn = event.currentTarget;
+      const originalText = btn.innerHTML;
+      btn.innerHTML = '<span class="material-symbols-outlined text-[20px] animate-spin">refresh</span> <span>Processing &amp; Printing...</span>';
+      btn.disabled = true;
+      setTimeout(() => {
+        btn.innerHTML = '<span class="material-symbols-outlined text-[20px]">check</span> <span>Slip Printed! Order Updated</span>';
+        btn.classList.remove('bg-primary-container');
+        btn.classList.add('bg-primary');
+        setTimeout(() => {
+          btn.innerHTML = originalText;
+          btn.classList.remove('bg-primary');
+          btn.classList.add('bg-primary-container');
+          btn.disabled = false;
+        }, 2500);
+      }, 900);
+    }
+
+    function issueStoreCreditToast() {
+      const total = document.getElementById('total-display').textContent.replace('-', '');
+      alert(`Issued Shopify Store Credit voucher for ${total} to Marcus Brody (MB-77291)`);
+    }
+  </script>
+</div></main></div></body></html>

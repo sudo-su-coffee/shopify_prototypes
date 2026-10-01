@@ -1,0 +1,801 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = {
+    darkMode: "class",
+    theme: {
+      extend: {
+        "colors": {
+          "on-tertiary-fixed": "#1c1b1b",
+          "on-secondary-fixed-variant": "#00419c",
+          "secondary": "#0055c7",
+          "on-secondary": "#ffffff",
+          "surface-variant": "#e4e2e2",
+          "surface-container-highest": "#e4e2e2",
+          "on-tertiary-container": "#f8f5f4",
+          "error-container": "#ffdad6",
+          "primary-fixed": "#92f6cf",
+          "on-error-container": "#93000a",
+          "inverse-surface": "#303031",
+          "on-background": "#1b1c1c",
+          "primary-fixed-dim": "#75d9b3",
+          "surface-container-low": "#f5f3f3",
+          "surface-container": "#efeded",
+          "background": "#fbf9f8",
+          "on-surface": "#1b1c1c",
+          "primary-container": "#008060",
+          "on-error": "#ffffff",
+          "on-secondary-container": "#fefcff",
+          "primary": "#00654b",
+          "outline-variant": "#bdc9c2",
+          "surface-tint": "#006c50",
+          "secondary-container": "#2c6fe7",
+          "inverse-primary": "#75d9b3",
+          "surface-container-lowest": "#ffffff",
+          "on-primary-fixed-variant": "#00513c",
+          "tertiary-container": "#717070",
+          "secondary-fixed": "#d9e2ff",
+          "error": "#ba1a1a",
+          "surface-dim": "#dbdad9",
+          "tertiary-fixed-dim": "#c8c6c5",
+          "secondary-fixed-dim": "#b0c6ff",
+          "surface": "#fbf9f8",
+          "on-tertiary-fixed-variant": "#474746",
+          "on-primary-fixed": "#002116",
+          "on-surface-variant": "#3e4944",
+          "surface-bright": "#fbf9f8",
+          "on-primary-container": "#d6ffeb",
+          "on-primary": "#ffffff",
+          "outline": "#6e7a73",
+          "on-tertiary": "#ffffff",
+          "inverse-on-surface": "#f2f0f0",
+          "surface-container-high": "#e9e8e7",
+          "tertiary": "#585857",
+          "on-secondary-fixed": "#001945",
+          "tertiary-fixed": "#e5e2e1"
+        },
+        "borderRadius": {
+          "DEFAULT": "0.125rem",
+          "lg": "0.25rem",
+          "xl": "0.5rem",
+          "full": "0.75rem"
+        },
+        "spacing": {
+          "space-xl": "1.5rem",
+          "gutter": "1rem",
+          "space-md": "1rem",
+          "space-xs": "0.25rem",
+          "space-sm": "0.5rem",
+          "margin": "1.5rem",
+          "space-lg": "1.25rem"
+        },
+        "fontFamily": {
+          "headline-lg": [
+            "Inter"
+          ],
+          "headline-lg-mobile": [
+            "Inter"
+          ],
+          "label-sm": [
+            "Inter"
+          ],
+          "body-md": [
+            "Inter"
+          ],
+          "body-md-semibold": [
+            "Inter"
+          ],
+          "headline-sm": [
+            "Inter"
+          ],
+          "caption": [
+            "Inter"
+          ],
+          "headline-md": [
+            "Inter"
+          ],
+          "body-sm": [
+            "Inter"
+          ],
+          "label-md": [
+            "Inter"
+          ],
+          "body-sm-semibold": [
+            "Inter"
+          ],
+          "body-lg": [
+            "Inter"
+          ]
+        },
+        "fontSize": {
+          "headline-lg": [
+            "28px",
+            {
+              "lineHeight": "36px",
+              "letterSpacing": "-0.02em",
+              "fontWeight": "700"
+            }
+          ],
+          "headline-lg-mobile": [
+            "22px",
+            {
+              "lineHeight": "28px",
+              "letterSpacing": "-0.015em",
+              "fontWeight": "700"
+            }
+          ],
+          "label-sm": [
+            "12px",
+            {
+              "lineHeight": "16px",
+              "letterSpacing": "0.01em",
+              "fontWeight": "600"
+            }
+          ],
+          "body-md": [
+            "14px",
+            {
+              "lineHeight": "20px",
+              "fontWeight": "400"
+            }
+          ],
+          "body-md-semibold": [
+            "14px",
+            {
+              "lineHeight": "20px",
+              "fontWeight": "600"
+            }
+          ],
+          "headline-sm": [
+            "16px",
+            {
+              "lineHeight": "24px",
+              "letterSpacing": "-0.005em",
+              "fontWeight": "600"
+            }
+          ],
+          "caption": [
+            "11px",
+            {
+              "lineHeight": "14px",
+              "fontWeight": "500"
+            }
+          ],
+          "headline-md": [
+            "20px",
+            {
+              "lineHeight": "28px",
+              "letterSpacing": "-0.01em",
+              "fontWeight": "600"
+            }
+          ],
+          "body-sm": [
+            "13px",
+            {
+              "lineHeight": "18px",
+              "fontWeight": "400"
+            }
+          ],
+          "label-md": [
+            "13px",
+            {
+              "lineHeight": "16px",
+              "fontWeight": "500"
+            }
+          ],
+          "body-sm-semibold": [
+            "13px",
+            {
+              "lineHeight": "18px",
+              "fontWeight": "600"
+            }
+          ],
+          "body-lg": [
+            "15px",
+            {
+              "lineHeight": "22px",
+              "fontWeight": "400"
+            }
+          ]
+        }
+      },
+    },
+  }</script><title>Shopify POS Offline Mode Sync Terminal | Shopify Prototype</title>
+</head><body class="bg-surface font-body-md text-body-md text-on-surface"><aside class="fixed left-0 top-0 h-full w-60 bg-surface-container-low z-40 flex flex-col justify-between shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="flex flex-col overflow-y-auto"><div class="h-14 flex items-center px-margin gap-space-sm bg-surface-container-lowest shrink-0"><img alt="Shopify logo" class="h-7 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1WPubMgscUINGuisBDvGZbhiRvwxKjFWpAHPA0GXYWeRFqxcZY4G-byYU4PUykJPYVnuurpj_2yFkafDFmBWhplcA2dlqdqMDkr5ufN1GCA1-9Cy6Y74Bk73_KmB_pOSwvk_HQjInJtWpmQfLSQUcNeG5m75CCs-SDUFif7I_eleu-OGwNMldz9nzh1957zHt7Hfbkc1ds6tpanpikt3_aR6SAXkw6znZBFRPYg-rTUbi8f0VwyeBPJuaQ"/><div class="flex flex-col"><span class="font-body-md-semibold text-body-md-semibold text-on-surface leading-tight">Shopify Admin</span><span class="font-caption text-caption text-on-surface-variant leading-tight">POS &amp; Store Operations</span></div></div><div class="px-space-md pt-space-sm"><div class="px-space-sm py-space-xs font-caption text-caption uppercase text-on-surface-variant tracking-wider">POS &amp; In-Store Operations</div></div><nav class="flex flex-col gap-space-xs px-space-md py-space-xs" data-active-classes="bg-primary-container text-on-primary font-body-sm-semibold text-body-sm-semibold rounded-xl"><a class="flex items-center px-space-md py-space-sm text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface rounded-xl transition-colors font-body-sm text-body-sm" data-path="shopify-admin---pos-daily-sales-&amp;-tender-settlement-report" href="#">POS Daily Sales &amp; Settlement</a><a class="flex items-center px-space-md py-space-sm text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface rounded-xl transition-colors font-body-sm text-body-sm" data-path="sales-agent-&amp;-cashier-commission-report" href="#">Agent &amp; Cashier Commissions</a><a aria-current="page" class="flex items-center px-space-md py-space-sm transition-colors bg-primary-container text-on-primary font-body-sm-semibold text-body-sm-semibold rounded-xl" data-path="pos-offline-&amp;-sync-terminal" href="#">POS Offline &amp; Sync Terminal</a><a class="flex items-center px-space-md py-space-sm text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface rounded-xl transition-colors font-body-sm text-body-sm" data-path="pos-gift-cards-&amp;-store-credit" href="#">POS Gift Cards &amp; Store Credit</a><a class="flex items-center px-space-md py-space-sm text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface rounded-xl transition-colors font-body-sm text-body-sm" data-path="pos-price-override-&amp;-manager-security" href="#">POS Price Override &amp; Security</a><a class="flex items-center px-space-md py-space-sm text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface rounded-xl transition-colors font-body-sm text-body-sm" data-path="pos-split-billing-checkout" href="#">POS Split Billing Checkout</a><a class="flex items-center px-space-md py-space-sm text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface rounded-xl transition-colors font-body-sm text-body-sm" data-path="pos-master-z-report-&amp;-safe-drops" href="#">POS Master Z-Report &amp; Drops</a></nav><div class="px-space-md pt-space-sm"><div class="px-space-sm py-space-xs font-caption text-caption uppercase text-on-surface-variant tracking-wider">Store Management</div></div><nav class="flex flex-col gap-space-xs px-space-md py-space-xs" data-active-classes="bg-primary-container text-on-primary font-body-sm-semibold text-body-sm-semibold rounded-xl"><a class="flex items-center px-space-md py-space-sm text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface rounded-xl transition-colors font-body-sm text-body-sm" data-path="shopify-admin-orders" href="#">Orders</a><a class="flex items-center px-space-md py-space-sm text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface rounded-xl transition-colors font-body-sm text-body-sm" data-path="shopify-admin-products" href="#">Products</a><a class="flex items-center px-space-md py-space-sm text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface rounded-xl transition-colors font-body-sm text-body-sm" data-path="shopify-admin-multi-location-inventory-stock-hub" href="#">Multi-Location Inventory</a><a class="flex items-center px-space-md py-space-sm text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface rounded-xl transition-colors font-body-sm text-body-sm" data-path="shopify-admin-customers" href="#">Customers</a></nav><div class="px-space-md pt-space-sm"><div class="px-space-sm py-space-xs font-caption text-caption uppercase text-on-surface-variant tracking-wider">Finance &amp; Reporting</div></div><nav class="flex flex-col gap-space-xs px-space-md py-space-xs" data-active-classes="bg-primary-container text-on-primary font-body-sm-semibold text-body-sm-semibold rounded-xl"><a class="flex items-center px-space-md py-space-sm text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface rounded-xl transition-colors font-body-sm text-body-sm" data-path="shopify-admin-payments-cash-flow-register" href="#">Payments &amp; Cash Flow</a><a class="flex items-center px-space-md py-space-sm text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface rounded-xl transition-colors font-body-sm text-body-sm" data-path="shopify-admin-bank-reconciliation" href="#">Bank Reconciliation</a><a class="flex items-center px-space-md py-space-sm text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface rounded-xl transition-colors font-body-sm text-body-sm" data-path="shopify-admin-financial-reports-trial-balance" href="#">Financial Reports</a></nav></div><div class="p-space-md flex flex-col gap-space-xs bg-surface-container shrink-0"><nav class="flex flex-col gap-space-xs" data-active-classes="bg-primary-container text-on-primary font-body-sm-semibold text-body-sm-semibold rounded-xl"><a class="flex items-center px-space-md py-space-sm text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface rounded-xl transition-colors font-body-sm text-body-sm" data-path="shopify-admin-settings" href="#">Settings</a></nav><div class="flex items-center justify-between px-space-md py-space-sm bg-surface-container-lowest rounded-xl"><div class="flex items-center gap-space-sm"><span class="w-2 h-2 rounded-full bg-primary-container"></span><span class="font-caption text-caption text-on-surface-variant">Terminal Synced</span></div><span class="material-symbols-outlined text-[16px] text-primary">sync</span></div></div></aside><div class="pl-60"><header class="fixed top-0 left-60 right-0 h-14 bg-surface-container-lowest shadow-[0_1px_8px_rgba(0,0,0,0.04)] z-30 flex items-center justify-between px-margin"><div class="flex items-center gap-space-md"><div class="flex items-center gap-space-sm px-space-md py-1 bg-surface-container rounded-full"><span class="material-symbols-outlined text-primary text-[18px]">storefront</span><span class="font-label-sm text-label-sm text-on-surface">Apex Apparel SoHo POS</span><span class="material-symbols-outlined text-on-surface-variant text-[16px]">expand_more</span></div><div class="hidden lg:flex items-center gap-space-xs text-on-surface-variant font-caption text-caption"><span class="hover:text-on-surface cursor-pointer">Admin</span><span>/</span><span class="text-on-surface font-label-sm text-label-sm">POS &amp; In-Store Operations</span></div><div class="relative flex items-center w-64 md:w-80 ml-space-xs"><span class="material-symbols-outlined absolute left-space-sm text-on-surface-variant text-[18px]">search</span><input class="w-full h-8 pl-8 pr-space-md py-1 bg-surface-container-low text-on-surface placeholder:text-on-surface-variant rounded-lg font-body-sm text-body-sm border-none focus:outline-none focus:ring-1 focus:ring-primary" placeholder="Search orders, products, accounts (⌘K)" type="text"/></div></div><div class="flex items-center gap-space-md"><div class="flex items-center gap-space-sm px-space-md py-1 bg-surface-container-low rounded-xl"><span class="material-symbols-outlined text-on-surface-variant text-[18px]">badge</span><div class="flex flex-col text-left"><span class="font-caption text-caption text-on-surface-variant leading-none">Staff Operator</span><span class="font-label-sm text-label-sm text-on-surface leading-tight">Elena Rostova</span></div></div><button class="relative p-1.5 text-on-surface-variant hover:text-on-surface hover:bg-surface-container rounded-lg transition-colors" title="Notifications"><span class="material-symbols-outlined text-[20px]">notifications</span><span class="absolute top-1 right-1 w-2 h-2 rounded-full bg-error"></span></button><div class="flex items-center gap-space-sm"><img alt="Elena Rostova avatar" class="w-8 h-8 rounded-full object-cover" src="https://lh3.googleusercontent.com/aida/AEtjO1XM8bAU6u1SGd73cRUZpDg7te6U8Hd9YuPkqi431L4IWNqZL9tf8Hx7usC0Pr2x5uZFks9b6ZVSsN6pF4qp7qBy14iGcMBDgJ1CkgkmUAjIfndkwn_z2y62oK4m5xXJUzEyvjga7vHBHY5I_yrgT2bDOvV6QCvONuw_NwyDFyHdKZJuuGyK5Pgek_6deKYxGCdGgDgn0o72iDzak64pRiWW1BSKisoh_F_jv3CeZdUD3Qs1uum2E_qsQHaI"/><button class="flex items-center justify-center p-1.5 text-on-surface-variant hover:text-error hover:bg-surface-container rounded-lg transition-colors" title="Lock Terminal / Sign Out"><span class="material-symbols-outlined text-[20px]">lock</span></button></div></div></header><main class="w-full pt-14 px-margin"><div class="flex flex-col w-full">
+<div class="flex flex-col gap-space-lg py-space-md">
+<div class="flex flex-col lg:flex-row lg:items-center justify-between gap-space-md bg-surface-container-lowest p-space-lg rounded-xl shadow-sm">
+<div class="flex flex-col gap-space-xs">
+<div class="flex items-center gap-space-xs text-on-surface-variant font-caption text-caption">
+<span class="hover:text-primary transition-colors cursor-pointer">POS Operations</span>
+<span>/</span>
+<span class="text-on-surface font-body-sm-semibold text-body-sm-semibold">Offline Mode &amp; Sync</span>
+</div>
+<div class="flex items-center gap-space-sm mt-1">
+<h1 class="font-headline-lg text-headline-lg text-on-surface tracking-tight">POS Offline &amp; Local Sync Hub</h1>
+<span class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full font-caption text-caption bg-primary-fixed text-on-primary-fixed font-medium">
+<span class="w-1.5 h-1.5 rounded-full bg-primary animate-ping"></span>
+            Online • In-Sync Engine
+          </span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-4xl">
+          Continuous retail transaction processing with local SQLite/IndexedDB caching, cryptographic receipt signing, and automatic ledger reconciliation upon network reconnection.
+        </p>
+</div>
+<div class="flex flex-wrap items-center gap-space-sm shrink-0">
+<div class="flex items-center gap-2 px-space-md py-1.5 bg-surface-container-low rounded-xl text-on-surface">
+<span class="material-symbols-outlined text-[18px] text-primary">wifi_tethering</span>
+<div class="flex flex-col">
+<span class="font-caption text-caption text-on-surface-variant leading-none">Primary Link</span>
+<span class="font-body-sm-semibold text-body-sm-semibold text-on-surface leading-tight">Cell Failover (98ms)</span>
+</div>
+</div>
+<button class="flex items-center gap-1.5 bg-primary-container hover:bg-primary text-on-primary px-space-md py-2 rounded-xl font-body-sm-semibold text-body-sm-semibold shadow-sm transition-all active:scale-[0.98]" id="manual-sync-btn">
+<span class="material-symbols-outlined text-[18px] transition-transform duration-700" id="sync-icon">sync</span>
+<span>Force Manual Sync Now</span>
+</button>
+<button class="flex items-center gap-1.5 bg-surface-container-lowest hover:bg-surface-container-high text-on-surface px-space-md py-2 rounded-xl font-body-sm-semibold text-body-sm-semibold shadow-sm transition-colors">
+<span class="material-symbols-outlined text-[18px] text-on-surface-variant">download_for_offline</span>
+<span>Export Audit Log (.enc)</span>
+</button>
+<button class="flex items-center justify-center w-9 h-9 bg-surface-container-low hover:bg-surface-container text-on-surface-variant rounded-xl transition-colors" title="Terminal Diagnostics">
+<span class="material-symbols-outlined text-[20px]">monitor_heart</span>
+</button>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-space-md">
+<div class="bg-surface-container-lowest p-space-lg rounded-xl shadow-sm flex flex-col justify-between relative overflow-hidden group">
+<div class="flex items-start justify-between">
+<div class="flex flex-col">
+<span class="font-caption text-caption text-on-surface-variant uppercase tracking-wider">Queued Offline Transactions</span>
+<div class="flex items-baseline gap-2 mt-1">
+<span class="font-headline-md text-headline-md text-on-surface">18 Orders</span>
+<span class="font-label-sm text-label-sm text-primary font-semibold">$2,480.50</span>
+</div>
+</div>
+<span class="p-2 rounded-xl bg-surface-container-low text-primary">
+<span class="material-symbols-outlined text-[22px]">pending_actions</span>
+</span>
+</div>
+<div class="mt-4 pt-3 flex items-center justify-between bg-surface-container-low/50 -mx-space-lg -mb-space-lg px-space-lg py-2.5">
+<div class="flex items-center gap-1.5">
+<span class="w-2 h-2 rounded-full bg-secondary animate-pulse"></span>
+<span class="font-caption text-caption text-on-surface-variant">Auto-draining (4/sec)</span>
+</div>
+<span class="font-caption text-caption text-primary font-semibold">78% Drained</span>
+</div>
+</div>
+<div class="bg-surface-container-lowest p-space-lg rounded-xl shadow-sm flex flex-col justify-between relative overflow-hidden group">
+<div class="flex items-start justify-between">
+<div class="flex flex-col">
+<span class="font-caption text-caption text-on-surface-variant uppercase tracking-wider">Local Catalog Cache</span>
+<div class="flex items-baseline gap-2 mt-1">
+<span class="font-headline-md text-headline-md text-on-surface">14,240 SKUs</span>
+<span class="font-caption text-caption text-primary font-medium">100% Synced</span>
+</div>
+</div>
+<span class="p-2 rounded-xl bg-surface-container-low text-on-surface-variant">
+<span class="material-symbols-outlined text-[22px]">database</span>
+</span>
+</div>
+<div class="mt-4 pt-3 flex items-center justify-between bg-surface-container-low/50 -mx-space-lg -mb-space-lg px-space-lg py-2.5">
+<span class="font-caption text-caption text-on-surface-variant">IndexedDB Cache: 38.4 MB</span>
+<span class="font-caption text-caption text-on-surface-variant">14m ago</span>
+</div>
+</div>
+<div class="bg-surface-container-lowest p-space-lg rounded-xl shadow-sm flex flex-col justify-between relative overflow-hidden group">
+<div class="flex items-start justify-between">
+<div class="flex flex-col">
+<span class="font-caption text-caption text-on-surface-variant uppercase tracking-wider">Offline Payment Vouchers</span>
+<div class="flex items-baseline gap-2 mt-1">
+<span class="font-headline-md text-headline-md text-on-surface">14 Tokens</span>
+<span class="font-caption text-caption text-on-surface-variant font-medium">EMV Stored</span>
+</div>
+</div>
+<span class="p-2 rounded-xl bg-surface-container-low text-on-surface">
+<span class="material-symbols-outlined text-[22px]">contactless</span>
+</span>
+</div>
+<div class="mt-4 pt-3 flex items-center justify-between bg-surface-container-low/50 -mx-space-lg -mb-space-lg px-space-lg py-2.5">
+<div class="flex items-center gap-1 text-primary">
+<span class="material-symbols-outlined text-[15px]">verified</span>
+<span class="font-caption text-caption font-semibold">Zero decline risk</span>
+</div>
+<span class="font-caption text-caption text-on-surface-variant">≤ $250 Cap OK</span>
+</div>
+</div>
+<div class="bg-surface-container-lowest p-space-lg rounded-xl shadow-sm flex flex-col justify-between relative overflow-hidden group">
+<div class="flex items-start justify-between">
+<div class="flex flex-col">
+<span class="font-caption text-caption text-on-surface-variant uppercase tracking-wider">Ledger Re-Sync Integrity</span>
+<div class="flex items-baseline gap-2 mt-1">
+<span class="font-headline-md text-headline-md text-on-surface">99.98%</span>
+<span class="font-caption text-caption text-primary font-medium">Parity Match</span>
+</div>
+</div>
+<span class="p-2 rounded-xl bg-surface-container-low text-primary">
+<span class="material-symbols-outlined text-[22px]">account_balance</span>
+</span>
+</div>
+<div class="mt-4 pt-3 flex items-center justify-between bg-surface-container-low/50 -mx-space-lg -mb-space-lg px-space-lg py-2.5">
+<span class="font-caption text-caption text-on-surface-variant">0 Hash Duplicates</span>
+<span class="font-caption text-caption text-primary font-semibold">GL #1020 Verified</span>
+</div>
+</div>
+</div>
+<div class="bg-surface-container-lowest rounded-xl shadow-sm overflow-hidden">
+<div class="p-space-lg flex flex-col md:flex-row md:items-center justify-between gap-space-md bg-surface-container-lowest">
+<div class="flex items-center gap-space-md">
+<div class="flex flex-col">
+<div class="flex items-center gap-2">
+<h2 class="font-headline-sm text-headline-sm text-on-surface">Active Offline Queue &amp; In-Flight Drain Stream</h2>
+<span class="px-2 py-0.5 rounded-full font-caption text-caption bg-secondary/10 text-secondary font-semibold">18 Pending Influx</span>
+</div>
+<span class="font-caption text-caption text-on-surface-variant">Real-time local IndexedDB buffer synchronized with Shopify Core API</span>
+</div>
+</div>
+<div class="flex items-center gap-space-xs">
+<div class="flex bg-surface-container-low p-1 rounded-xl">
+<button class="px-3 py-1 bg-surface-container-lowest text-on-surface rounded-lg font-caption text-caption font-semibold shadow-xs">All (18)</button>
+<button class="px-3 py-1 text-on-surface-variant hover:text-on-surface rounded-lg font-caption text-caption font-medium transition-colors">Syncing (4)</button>
+<button class="px-3 py-1 text-on-surface-variant hover:text-on-surface rounded-lg font-caption text-caption font-medium transition-colors">Queued (11)</button>
+<button class="px-3 py-1 text-on-surface-variant hover:text-on-surface rounded-lg font-caption text-caption font-medium transition-colors">Posted (3)</button>
+</div>
+<button class="p-1.5 text-on-surface-variant hover:text-on-surface hover:bg-surface-container-low rounded-lg transition-colors" title="Filter columns">
+<span class="material-symbols-outlined text-[18px]">filter_list</span>
+</button>
+</div>
+</div>
+<div class="overflow-x-auto">
+<table class="w-full text-left font-body-sm text-body-sm text-on-surface">
+<thead class="bg-surface-container-low font-caption text-caption text-on-surface-variant uppercase tracking-wider select-none">
+<tr>
+<th class="py-3 px-space-md font-semibold">Local Queue ID</th>
+<th class="py-3 px-space-md font-semibold">Terminal</th>
+<th class="py-3 px-space-md font-semibold">Customer / Guest</th>
+<th class="py-3 px-space-md font-semibold">Cart Items</th>
+<th class="py-3 px-space-md font-semibold text-right">Order Total</th>
+<th class="py-3 px-space-md font-semibold">Payment Tender</th>
+<th class="py-3 px-space-md font-semibold">Sync Status &amp; General Ledger</th>
+<th class="py-3 px-space-md font-semibold text-right">Actions</th>
+</tr>
+</thead>
+<tbody class="divide-y-0" id="queue-table-body">
+<tr class="hover:bg-surface-container-low/60 transition-colors">
+<td class="py-3 px-space-md font-body-sm-semibold text-body-sm-semibold text-on-surface">
+<div class="flex items-center gap-1.5">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary animate-pulse"></span>
+<span class="font-mono text-[12px]">#OFF-9041</span>
+</div>
+<div class="font-caption text-caption text-on-surface-variant font-mono">14:28:19 (3s ago)</div>
+</td>
+<td class="py-3 px-space-md">
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[16px] text-on-surface-variant">point_of_sale</span>
+<span class="font-medium">Term 01 SoHo</span>
+</div>
+<span class="font-caption text-caption text-on-surface-variant">Lane 2 • Fast Checkout</span>
+</td>
+<td class="py-3 px-space-md">
+<div class="font-medium text-on-surface">Marcus Vance</div>
+<div class="font-caption text-caption text-on-surface-variant">VIP Tier • marcus@vance.io</div>
+</td>
+<td class="py-3 px-space-md">
+<span class="font-medium">3 items</span>
+<span class="font-caption text-caption text-on-surface-variant block">Wool Coat, Beanie (2)</span>
+</td>
+<td class="py-3 px-space-md text-right font-body-sm-semibold text-body-sm-semibold text-on-surface">
+                $348.00
+              </td>
+<td class="py-3 px-space-md">
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded font-caption text-caption bg-surface-container-high text-on-surface font-medium">
+<span class="material-symbols-outlined text-[14px] text-primary">credit_card</span>
+                  Offline EMV Chip
+                </span>
+<div class="font-caption text-caption text-on-surface-variant font-mono mt-0.5">Auth: *8904 (Encrypted)</div>
+</td>
+<td class="py-3 px-space-md">
+<div class="flex items-center gap-2">
+<div class="w-24 bg-surface-container-high rounded-full h-1.5 overflow-hidden">
+<div class="bg-secondary h-full rounded-full w-4/5 animate-pulse"></div>
+</div>
+<span class="font-caption text-caption text-secondary font-semibold">Syncing 80%</span>
+</div>
+<span class="font-caption text-caption text-on-surface-variant">Holding in GL #1020-Float</span>
+</td>
+<td class="py-3 px-space-md text-right">
+<div class="flex items-center justify-end gap-1">
+<button class="p-1 hover:bg-surface-container rounded text-on-surface-variant hover:text-on-surface transition-colors" title="Inspect Local Payload">
+<span class="material-symbols-outlined text-[16px]">terminal</span>
+</button>
+<button class="p-1 hover:bg-surface-container rounded text-primary transition-colors" title="Push Priority">
+<span class="material-symbols-outlined text-[16px]">bolt</span>
+</button>
+</div>
+</td>
+</tr>
+<tr class="hover:bg-surface-container-low/60 transition-colors bg-surface-container-lowest">
+<td class="py-3 px-space-md font-body-sm-semibold text-body-sm-semibold text-on-surface">
+<div class="flex items-center gap-1.5">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+<span class="font-mono text-[12px]">#OFF-9040</span>
+</div>
+<div class="font-caption text-caption text-on-surface-variant font-mono">14:27:54 (28s ago)</div>
+</td>
+<td class="py-3 px-space-md">
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[16px] text-on-surface-variant">point_of_sale</span>
+<span class="font-medium">Term 02 SoHo</span>
+</div>
+<span class="font-caption text-caption text-on-surface-variant">Lane 4 • Fitting Rooms</span>
+</td>
+<td class="py-3 px-space-md">
+<div class="font-medium text-on-surface">Walk-in Guest</div>
+<div class="font-caption text-caption text-on-surface-variant">Guest #891104</div>
+</td>
+<td class="py-3 px-space-md">
+<span class="font-medium">1 item</span>
+<span class="font-caption text-caption text-on-surface-variant block">Heavyweight Cotton Tee</span>
+</td>
+<td class="py-3 px-space-md text-right font-body-sm-semibold text-body-sm-semibold text-on-surface">
+                $64.00
+              </td>
+<td class="py-3 px-space-md">
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded font-caption text-caption bg-surface-container-high text-on-surface font-medium">
+<span class="material-symbols-outlined text-[14px]">payments</span>
+                  Cash Till Float
+                </span>
+<div class="font-caption text-caption text-on-surface-variant mt-0.5">Drawer #2 Safe Balance</div>
+</td>
+<td class="py-3 px-space-md">
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded font-caption text-caption bg-primary-fixed text-on-primary-fixed font-semibold">
+<span class="material-symbols-outlined text-[14px]">check_circle</span>
+                  Posted &amp; Reconciled
+                </span>
+<span class="font-caption text-caption text-on-surface-variant block mt-0.5">GL #1020 Cash on Hand</span>
+</td>
+<td class="py-3 px-space-md text-right">
+<div class="flex items-center justify-end gap-1">
+<button class="p-1 hover:bg-surface-container rounded text-on-surface-variant hover:text-on-surface transition-colors" title="Inspect Local Payload">
+<span class="material-symbols-outlined text-[16px]">terminal</span>
+</button>
+<button class="p-1 hover:bg-surface-container rounded text-on-surface-variant transition-colors" title="View Audit Receipt">
+<span class="material-symbols-outlined text-[16px]">receipt_long</span>
+</button>
+</div>
+</td>
+</tr>
+<tr class="hover:bg-surface-container-low/60 transition-colors">
+<td class="py-3 px-space-md font-body-sm-semibold text-body-sm-semibold text-on-surface">
+<div class="flex items-center gap-1.5">
+<span class="w-1.5 h-1.5 rounded-full bg-outline-variant"></span>
+<span class="font-mono text-[12px]">#OFF-9039</span>
+</div>
+<div class="font-caption text-caption text-on-surface-variant font-mono">14:26:12 (2m ago)</div>
+</td>
+<td class="py-3 px-space-md">
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[16px] text-on-surface-variant">point_of_sale</span>
+<span class="font-medium">Term 01 SoHo</span>
+</div>
+<span class="font-caption text-caption text-on-surface-variant">Lane 1 • Flagship Main</span>
+</td>
+<td class="py-3 px-space-md">
+<div class="font-medium text-on-surface">Aria Montgomery</div>
+<div class="font-caption text-caption text-on-surface-variant">aria.m@studio.com</div>
+</td>
+<td class="py-3 px-space-md">
+<span class="font-medium">4 items</span>
+<span class="font-caption text-caption text-on-surface-variant block">Denim Overshirt, Bootcut Pants</span>
+</td>
+<td class="py-3 px-space-md text-right font-body-sm-semibold text-body-sm-semibold text-on-surface">
+                $512.00
+              </td>
+<td class="py-3 px-space-md">
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded font-caption text-caption bg-surface-container-high text-on-surface font-medium">
+<span class="material-symbols-outlined text-[14px] text-secondary">token</span>
+                  Stored Card Token
+                </span>
+<div class="font-caption text-caption text-on-surface-variant font-mono mt-0.5">ApplePay Vault Token</div>
+</td>
+<td class="py-3 px-space-md">
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded font-caption text-caption bg-surface-container-high text-on-surface-variant font-semibold">
+<span class="material-symbols-outlined text-[14px]">hourglass_empty</span>
+                  Queued in SQLite
+                </span>
+<span class="font-caption text-caption text-on-surface-variant block mt-0.5">Floor check passed • Next slot</span>
+</td>
+<td class="py-3 px-space-md text-right">
+<div class="flex items-center justify-end gap-1">
+<button class="p-1 hover:bg-surface-container rounded text-on-surface-variant hover:text-on-surface transition-colors" title="Inspect Local Payload">
+<span class="material-symbols-outlined text-[16px]">terminal</span>
+</button>
+<button class="p-1 hover:bg-surface-container rounded text-primary transition-colors" title="Force Manual Push">
+<span class="material-symbols-outlined text-[16px]">upload</span>
+</button>
+</div>
+</td>
+</tr>
+<tr class="hover:bg-surface-container-low/60 transition-colors">
+<td class="py-3 px-space-md font-body-sm-semibold text-body-sm-semibold text-on-surface">
+<div class="flex items-center gap-1.5">
+<span class="w-1.5 h-1.5 rounded-full bg-outline-variant"></span>
+<span class="font-mono text-[12px]">#OFF-9038</span>
+</div>
+<div class="font-caption text-caption text-on-surface-variant font-mono">14:24:01 (4m ago)</div>
+</td>
+<td class="py-3 px-space-md">
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[16px] text-on-surface-variant">point_of_sale</span>
+<span class="font-medium">Term 02 SoHo</span>
+</div>
+<span class="font-caption text-caption text-on-surface-variant">Lane 3 • Mobile Rover</span>
+</td>
+<td class="py-3 px-space-md">
+<div class="font-medium text-on-surface">Claire Chen</div>
+<div class="font-caption text-caption text-on-surface-variant">Store Credit Member #229</div>
+</td>
+<td class="py-3 px-space-md">
+<span class="font-medium">2 items</span>
+<span class="font-caption text-caption text-on-surface-variant block">Silk Scarf, Leather Tote</span>
+</td>
+<td class="py-3 px-space-md text-right font-body-sm-semibold text-body-sm-semibold text-on-surface">
+                $180.00
+              </td>
+<td class="py-3 px-space-md">
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded font-caption text-caption bg-surface-container-high text-on-surface font-medium">
+<span class="material-symbols-outlined text-[14px]">confirmation_number</span>
+                  Paper Voucher / Ledger
+                </span>
+<div class="font-caption text-caption text-on-surface-variant font-mono mt-0.5">Voucher #PV-99120</div>
+</td>
+<td class="py-3 px-space-md">
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded font-caption text-caption bg-surface-container-high text-on-surface-variant font-semibold">
+<span class="material-symbols-outlined text-[14px]">schedule</span>
+                  Awaiting Cloud Ledger
+                </span>
+<span class="font-caption text-caption text-on-surface-variant block mt-0.5">GL #1250 Store Credits</span>
+</td>
+<td class="py-3 px-space-md text-right">
+<div class="flex items-center justify-end gap-1">
+<button class="p-1 hover:bg-surface-container rounded text-on-surface-variant hover:text-on-surface transition-colors" title="Inspect Local Payload">
+<span class="material-symbols-outlined text-[16px]">terminal</span>
+</button>
+<button class="p-1 hover:bg-surface-container rounded text-on-surface-variant transition-colors" title="Retry Transaction">
+<span class="material-symbols-outlined text-[16px]">replay</span>
+</button>
+</div>
+</td>
+</tr>
+<tr class="hover:bg-surface-container-low/60 transition-colors">
+<td class="py-3 px-space-md font-body-sm-semibold text-body-sm-semibold text-on-surface">
+<div class="flex items-center gap-1.5">
+<span class="w-1.5 h-1.5 rounded-full bg-primary"></span>
+<span class="font-mono text-[12px]">#OFF-9037</span>
+</div>
+<div class="font-caption text-caption text-on-surface-variant font-mono">14:21:40 (7m ago)</div>
+</td>
+<td class="py-3 px-space-md">
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[16px] text-on-surface-variant">point_of_sale</span>
+<span class="font-medium">Term 01 SoHo</span>
+</div>
+<span class="font-caption text-caption text-on-surface-variant">Lane 2 • Fast Checkout</span>
+</td>
+<td class="py-3 px-space-md">
+<div class="font-medium text-on-surface">Liam Davies</div>
+<div class="font-caption text-caption text-on-surface-variant">liam.davies@gmail.com</div>
+</td>
+<td class="py-3 px-space-md">
+<span class="font-medium">2 items</span>
+<span class="font-caption text-caption text-on-surface-variant block">Merino Knit Cardigan</span>
+</td>
+<td class="py-3 px-space-md text-right font-body-sm-semibold text-body-sm-semibold text-on-surface">
+                $210.00
+              </td>
+<td class="py-3 px-space-md">
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded font-caption text-caption bg-surface-container-high text-on-surface font-medium">
+<span class="material-symbols-outlined text-[14px] text-primary">credit_card</span>
+                  Offline EMV Chip
+                </span>
+<div class="font-caption text-caption text-on-surface-variant font-mono mt-0.5">Auth: *1182 (Pre-Auth)</div>
+</td>
+<td class="py-3 px-space-md">
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded font-caption text-caption bg-primary-fixed text-on-primary-fixed font-semibold">
+<span class="material-symbols-outlined text-[14px]">check_circle</span>
+                  Verified &amp; Posted
+                </span>
+<span class="font-caption text-caption text-on-surface-variant block mt-0.5">GL #1020 / Shopify #99401</span>
+</td>
+<td class="py-3 px-space-md text-right">
+<div class="flex items-center justify-end gap-1">
+<button class="p-1 hover:bg-surface-container rounded text-on-surface-variant hover:text-on-surface transition-colors" title="Inspect Local Payload">
+<span class="material-symbols-outlined text-[16px]">terminal</span>
+</button>
+<button class="p-1 hover:bg-surface-container rounded text-on-surface-variant transition-colors" title="View Audit Receipt">
+<span class="material-symbols-outlined text-[16px]">receipt_long</span>
+</button>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="p-space-md bg-surface-container-low flex items-center justify-between font-caption text-caption text-on-surface-variant">
+<span>Showing 5 of 18 pending local sync records</span>
+<div class="flex items-center gap-space-sm">
+<button class="px-2 py-1 bg-surface-container-lowest text-on-surface rounded font-medium shadow-xs disabled:opacity-50" disabled="">Previous</button>
+<span class="font-medium text-on-surface">Page 1 of 4</span>
+<button class="px-2 py-1 bg-surface-container-lowest text-on-surface rounded font-medium shadow-xs hover:bg-surface-container">Next</button>
+</div>
+</div>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-md">
+<div class="lg:col-span-5 bg-surface-container-lowest p-space-lg rounded-xl shadow-sm flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between pb-space-sm">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-[20px]">shield</span>
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Network Outage Policy &amp; Standalone Floor Limits</h3>
+</div>
+<span class="px-2 py-0.5 rounded text-caption bg-surface-container text-on-surface-variant font-mono">Policy #POS-SEC-89</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mb-space-md">
+            Guards transaction exposure during wide area connectivity failure and establishes local offline processing thresholds.
+          </p>
+<div class="flex flex-col gap-space-sm">
+<div class="p-space-sm bg-surface-container-low rounded-xl flex items-center justify-between">
+<div class="flex flex-col">
+<span class="font-body-sm-semibold text-body-sm-semibold text-on-surface">Offline Transaction Cap</span>
+<span class="font-caption text-caption text-on-surface-variant">Maximum per single ticket processing</span>
+</div>
+<div class="text-right">
+<span class="font-body-sm-semibold text-body-sm-semibold text-on-surface">$500.00 max</span>
+<span class="font-caption text-caption text-primary block">Enforced locally</span>
+</div>
+</div>
+<div class="p-space-sm bg-surface-container-low rounded-xl flex items-center justify-between">
+<div class="flex flex-col">
+<span class="font-body-sm-semibold text-body-sm-semibold text-on-surface">Floor Limit Ceiling</span>
+<span class="font-caption text-caption text-on-surface-variant">Aggregated offline queue ticket volume</span>
+</div>
+<div class="text-right">
+<span class="font-body-sm-semibold text-body-sm-semibold text-on-surface">$5,000.00 batch</span>
+<span class="font-caption text-caption text-on-surface-variant block">$2,480.50 utilized (49%)</span>
+</div>
+</div>
+<div class="p-space-sm bg-surface-container-low rounded-xl flex items-center justify-between">
+<div class="flex flex-col">
+<span class="font-body-sm-semibold text-body-sm-semibold text-on-surface">Auto-Reconnect Retry Interval</span>
+<span class="font-caption text-caption text-on-surface-variant">Polling cycle for upstream cloud health check</span>
+</div>
+<div class="text-right">
+<span class="font-body-sm-semibold text-body-sm-semibold text-on-surface">Every 15s</span>
+<span class="font-caption text-caption text-secondary block">Exponential backoff active</span>
+</div>
+</div>
+<div class="p-space-sm bg-surface-container-low rounded-xl flex items-center justify-between">
+<div class="flex flex-col">
+<span class="font-body-sm-semibold text-body-sm-semibold text-on-surface">Fallback USB Barcode Buffer</span>
+<span class="font-caption text-caption text-on-surface-variant">HID keyboard wedge hardware persistence</span>
+</div>
+<div class="flex items-center gap-1.5 text-primary">
+<span class="material-symbols-outlined text-[16px]">check_circle</span>
+<span class="font-label-sm text-label-sm font-semibold">Enabled</span>
+</div>
+</div>
+<div class="p-space-sm bg-surface-container-low rounded-xl flex items-center justify-between">
+<div class="flex flex-col">
+<span class="font-body-sm-semibold text-body-sm-semibold text-on-surface">Store Location Node</span>
+<span class="font-caption text-caption text-on-surface-variant">Local Gateway Relay Node instance</span>
+</div>
+<span class="font-caption text-caption bg-surface-container text-on-surface px-2 py-0.5 rounded font-mono">SoHo Flagship (NY-LOC-01)</span>
+</div>
+</div>
+</div>
+<div class="mt-space-md pt-space-sm flex items-center justify-between text-on-surface-variant font-caption text-caption">
+<span>Config Revision: v2.4.9 (Cryptographically Signed)</span>
+<a class="text-primary hover:underline font-medium" href="#">Edit Security Rules</a>
+</div>
+</div>
+<div class="lg:col-span-7 bg-surface-container-lowest p-space-lg rounded-xl shadow-sm flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between pb-space-sm">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary text-[20px]">lock_reset</span>
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Cryptographic Transaction Integrity &amp; Conflict Resolution</h3>
+</div>
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full font-caption text-caption bg-primary-fixed text-on-primary-fixed font-semibold">
+<span class="w-1.5 h-1.5 rounded-full bg-primary"></span>
+              Deterministic Sequence Verified
+            </span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mb-space-md">
+            SHA-256 local chained hashing guarantees uninterrupted receipt validation, eliminates double-drain risk, and performs auto-decrement stock locks without negative stock anomalies.
+          </p>
+<div class="space-y-space-sm font-mono text-[12px]">
+<div class="p-space-sm bg-surface-container-low rounded-xl flex flex-col gap-1">
+<div class="flex items-center justify-between">
+<span class="font-bold text-on-surface">HASH CHAIN INTEGRITY: #TX-8821 → #TX-8839</span>
+<span class="text-primary font-sans text-caption font-semibold">No sequence gaps (0 gaps detected)</span>
+</div>
+<div class="text-on-surface-variant text-[11px] truncate">
+                Genesis: 0x9f83a... • Head: 0x48b92cd8ef1092e0ab7201c900e47da1538a7c640243572621049c6ba7f9e801
+              </div>
+</div>
+<div class="p-space-sm bg-surface-container-low rounded-xl flex items-center justify-between">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary text-[18px]">inventory_2</span>
+<div class="flex flex-col">
+<span class="font-sans font-body-sm-semibold text-body-sm-semibold text-on-surface">Local Stock Reservation Locks</span>
+<span class="font-sans font-caption text-caption text-on-surface-variant">54 inventory units isolated in RAM/IndexedDB cache</span>
+</div>
+</div>
+<span class="font-sans font-caption text-caption bg-surface-container px-2 py-1 rounded text-on-surface font-semibold">
+                Auto-Decrementing (Safe)
+              </span>
+</div>
+<div class="p-space-sm bg-surface-container-low rounded-xl flex items-center justify-between">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-secondary text-[18px]">merge_type</span>
+<div class="flex flex-col">
+<span class="font-sans font-body-sm-semibold text-body-sm-semibold text-on-surface">Ledger Conflict Policy</span>
+<span class="font-sans font-caption text-caption text-on-surface-variant">Local physical scan wins timestamp arbitration against web orders</span>
+</div>
+</div>
+<span class="font-sans font-caption text-caption bg-surface-container text-on-surface px-2 py-1 rounded font-semibold">
+                Storefront Priority
+              </span>
+</div>
+<div class="p-space-sm bg-surface-container-low rounded-xl flex items-center justify-between">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-on-surface-variant text-[18px]">verified_user</span>
+<div class="flex flex-col">
+<span class="font-sans font-body-sm-semibold text-body-sm-semibold text-on-surface">Hardware Security Module (HSM) State</span>
+<span class="font-sans font-caption text-caption text-on-surface-variant">Terminal Tamper-Resistant Crypto Unit Online</span>
+</div>
+</div>
+<span class="font-sans font-caption text-caption text-primary font-semibold flex items-center gap-1">
+<span class="w-1.5 h-1.5 rounded-full bg-primary"></span>
+                ECDSA P-256 Valid
+              </span>
+</div>
+</div>
+</div>
+<div class="mt-space-md pt-space-sm flex items-center justify-between text-on-surface-variant font-caption text-caption">
+<span>Reconciliation Ledger Sync: Queue drains directly to Core GraphQL ERP</span>
+<button class="text-primary hover:underline font-medium">Verify Block Hashes</button>
+</div>
+</div>
+</div>
+<div class="p-space-md bg-surface-container-low rounded-xl flex flex-col sm:flex-row items-center justify-between gap-space-sm text-on-surface-variant font-caption text-caption">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[16px] text-primary">router</span>
+<span class="font-medium text-on-surface">Terminal Gateway Engine v4.8</span>
+<span>•</span>
+<span>Local node connected to Primary Shopify Cloud Services via TLS 1.3</span>
+</div>
+<div class="flex items-center gap-space-md">
+<span>Local Database: SQLite 3.42 / IndexedDB (38.4MB)</span>
+<span>•</span>
+<span class="text-on-surface font-medium">Last Cloud Pulse: 2s ago</span>
+</div>
+</div>
+</div>
+</div>
+<script>
+  (function() {
+    const btn = document.getElementById('manual-sync-btn');
+    const icon = document.getElementById('sync-icon');
+    if (!btn || !icon) return;
+
+    btn.addEventListener('click', function() {
+      icon.classList.add('rotate-180');
+      btn.classList.add('opacity-75');
+      setTimeout(() => {
+        icon.classList.remove('rotate-180');
+        btn.classList.remove('opacity-75');
+      }, 700);
+    });
+  })();
+</script></main></div></body></html>

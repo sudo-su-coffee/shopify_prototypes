@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base { html, body { margin: 0; padding: 0; } body { overscroll-behavior: none; } main > :first-child { margin-top: 0 !important; } main > :last-child { margin-bottom: 0 !important; } } ::-webkit-scrollbar { display: none; }</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "tertiary-container": "#717070", "surface-variant": "#e4e2e2", "surface-container": "#efeded", "on-tertiary-container": "#f8f5f4", "tertiary-fixed": "#e5e2e1", "tertiary": "#585857", "error": "#ba1a1a", "secondary-fixed-dim": "#b0c6ff", "surface-container-lowest": "#ffffff", "on-surface-variant": "#3e4944", "on-tertiary": "#ffffff", "on-primary-fixed-variant": "#00513c", "outline-variant": "#bdc9c2", "primary": "#00654b", "on-secondary-fixed": "#001945", "on-error": "#ffffff", "inverse-primary": "#75d9b3", "inverse-on-surface": "#f2f0f0", "surface": "#fbf9f8", "on-secondary-container": "#fefcff", "surface-tint": "#006c50", "inverse-surface": "#303031", "secondary-fixed": "#d9e2ff", "background": "#fbf9f8", "surface-bright": "#fbf9f8", "on-tertiary-fixed-variant": "#474746", "outline": "#6e7a73", "on-secondary": "#ffffff", "primary-fixed": "#92f6cf", "secondary-container": "#2c6fe7", "surface-container-low": "#f5f3f3", "on-primary-fixed": "#002116", "on-secondary-fixed-variant": "#00419c", "tertiary-fixed-dim": "#c8c6c5", "on-primary-container": "#d6ffeb", "on-tertiary-fixed": "#1c1b1b", "on-primary": "#ffffff", "surface-container-highest": "#e4e2e2", "surface-dim": "#dbdad9", "on-background": "#1b1c1c", "on-error-container": "#93000a", "secondary": "#0055c7", "on-surface": "#1b1c1c", "error-container": "#ffdad6", "surface-container-high": "#e9e8e7", "primary-fixed-dim": "#75d9b3", "primary-container": "#008060" }, "borderRadius": { "DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem" }, "spacing": { "gutter": "1rem", "space-lg": "1.25rem", "space-sm": "0.5rem", "space-md": "1rem", "space-xl": "1.5rem", "space-xs": "0.25rem", "margin": "1.5rem" }, "fontFamily": { "headline-lg-mobile": ["Inter"], "body-sm-semibold": ["Inter"], "body-md": ["Inter"], "body-lg": ["Inter"], "caption": ["Inter"], "body-sm": ["Inter"], "label-md": ["Inter"], "headline-lg": ["Inter"], "body-md-semibold": ["Inter"], "label-sm": ["Inter"], "headline-md": ["Inter"], "headline-sm": ["Inter"] }, "fontSize": { "headline-lg-mobile": ["22px", { "lineHeight": "28px", "letterSpacing": "-0.015em", "fontWeight": "700" }], "body-sm-semibold": ["13px", { "lineHeight": "18px", "fontWeight": "600" }], "body-md": ["14px", { "lineHeight": "20px", "fontWeight": "400" }], "body-lg": ["15px", { "lineHeight": "22px", "fontWeight": "400" }], "caption": ["11px", { "lineHeight": "14px", "fontWeight": "500" }], "body-sm": ["13px", { "lineHeight": "18px", "fontWeight": "400" }], "label-md": ["13px", { "lineHeight": "16px", "fontWeight": "500" }], "headline-lg": ["28px", { "lineHeight": "36px", "letterSpacing": "-0.02em", "fontWeight": "700" }], "body-md-semibold": ["14px", { "lineHeight": "20px", "fontWeight": "600" }], "label-sm": ["12px", { "lineHeight": "16px", "letterSpacing": "0.01em", "fontWeight": "600" }], "headline-md": ["20px", { "lineHeight": "28px", "letterSpacing": "-0.01em", "fontWeight": "600" }], "headline-sm": ["16px", { "lineHeight": "24px", "letterSpacing": "-0.005em", "fontWeight": "600" }] } } } };</script><title>Shopify Admin Product Detail | Shopify Prototype</title>
+</head><body class="bg-surface font-body-sm text-body-sm text-on-surface antialiased"><header class="fixed top-0 left-0 right-0 h-14 z-50 bg-inverse-surface text-inverse-on-surface flex items-center justify-between px-space-md shadow-[0_1px_4px_rgba(0,0,0,0.12)]"><div class="flex items-center gap-space-md min-w-[240px]"><img alt="Shopify Bag Logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1V-gBEwThgr-JtgX9yJl4VfYLNligKQdpdnLcSOj72vBDf09IMRWjwgZsjYFKYjD08YLtP8B-SEGeGQbwEmwDagHqaiIOGihO5RXFpt7lBq5HlF0PbWh6uxwSlc0CBgRhiPPd9vS3exUlOycCN-MkNJmT5T7SXilbOifwtBHvqZNsrW1449A9avt2-TkOOXcSdAFvahgA9guhlj9CatQnNdRmAl_hy1rnaOOSPDdVK1p7XxUiPrvE-t-Rep"/><button class="flex items-center gap-space-xs px-space-sm py-1 rounded bg-inverse-surface hover:bg-surface-variant/20 text-inverse-on-surface transition-colors" type="button"><span class="material-symbols-outlined text-[18px]">storefront</span><span class="font-body-sm-semibold text-body-sm-semibold">Northwind Apparel</span><span class="material-symbols-outlined text-[16px]">unfold_more</span></button></div><div class="flex-1 max-w-2xl px-space-lg"><div class="relative flex items-center w-full"><span class="material-symbols-outlined absolute left-space-sm text-outline-variant text-[18px]">search</span><input class="w-full h-8 pl-8 pr-16 bg-surface-variant/20 hover:bg-surface-variant/30 focus:bg-surface text-inverse-on-surface focus:text-on-surface placeholder:text-outline-variant rounded font-body-sm text-body-sm transition-all focus:outline-none focus:ring-1 focus:ring-secondary" placeholder="Search across products, orders, customers..." type="text"/><div class="absolute right-space-sm flex items-center gap-0.5 px-1.5 py-0.5 rounded bg-surface-variant/30 text-inverse-on-surface/80 font-caption text-caption"><span>⌘</span><span>K</span></div></div></div><div class="flex items-center gap-space-sm justify-end min-w-[240px]"><button aria-label="Shopify Sidekick AI" class="relative p-1.5 rounded hover:bg-surface-variant/20 text-inverse-on-surface transition-colors flex items-center justify-center" type="button"><span class="material-symbols-outlined text-[20px] text-primary-fixed">auto_awesome</span></button><button aria-label="Notifications" class="relative p-1.5 rounded hover:bg-surface-variant/20 text-inverse-on-surface transition-colors flex items-center justify-center" type="button"><span class="material-symbols-outlined text-[20px]">notifications</span><span class="absolute top-1 right-1 w-2 h-2 rounded-full bg-error ring-1 ring-inverse-surface"></span></button><div class="flex items-center gap-space-xs pl-space-xs cursor-pointer"><img alt="Alex Rivera Profile" class="w-8 h-8 rounded-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDDN-BO4JB6MuU38q67dITctfWzt4dLTdDBL2t4xB3lLE03T-bdODjv-wv_98TF0qrDAO9jaPkwOX72S6hoiZ3T9eKXyf1dnaMPBlrflTYXV57f2yJbzxjbOQxS5lyEjN9mmXMo6KjRE6DyikqZjdeJBMkDFuRq5vIAMpORcySFqHR6hrK3tlZcjHG6JoM6A_h2PwwGignz8F_G9xJtEfQdNgcDzilJFfw74GdLzuvF3lsnFFs-aVN4sQ"/><span class="hidden lg:inline font-body-sm-semibold text-body-sm-semibold text-inverse-on-surface">Alex Rivera</span><span class="material-symbols-outlined text-[16px] text-inverse-on-surface/70">keyboard_arrow_down</span></div></div></header><aside class="fixed left-0 top-14 bottom-0 w-60 z-40 bg-surface-container-low flex flex-col justify-between overflow-y-auto"><div class="p-space-sm flex flex-col gap-space-md"><nav class="flex flex-col gap-0.5" data-active-classes="bg-surface-container-high text-on-surface font-body-sm-semibold text-body-sm-semibold rounded"><a class="flex items-center justify-between px-space-sm py-1.5 rounded text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="shopify-admin-home" href="#">Home</a><a class="flex items-center justify-between px-space-sm py-1.5 rounded text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="shopify-admin-orders" href="#">Orders</a><a class="flex items-center justify-between px-space-sm py-1.5 rounded text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="shopify-admin-products" href="#">Products</a><a class="flex items-center justify-between px-space-sm py-1.5 rounded text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="shopify-admin-customers" href="#">Customers</a><a class="flex items-center justify-between px-space-sm py-1.5 rounded text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="shopify-admin-analytics" href="#">Analytics</a><a class="flex items-center justify-between px-space-sm py-1.5 rounded text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="shopify-admin-marketing" href="#">Marketing</a><a class="flex items-center justify-between px-space-sm py-1.5 rounded text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="shopify-admin-discounts" href="#">Discounts</a></nav><div class="flex flex-col gap-1"><div class="px-space-sm py-1 font-caption text-caption uppercase text-tertiary tracking-wider font-semibold">Sales Channels</div><nav class="flex flex-col gap-0.5" data-active-classes="bg-surface-container-high text-on-surface font-body-sm-semibold text-body-sm-semibold rounded"><a class="flex items-center justify-between px-space-sm py-1.5 rounded text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="shopify-admin-online-store" href="#">Online Store</a><a class="flex items-center justify-between px-space-sm py-1.5 rounded text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="shopify-admin-point-of-sale" href="#">Point of Sale</a></nav></div><div class="flex flex-col gap-1"><div class="px-space-sm py-1 font-caption text-caption uppercase text-tertiary tracking-wider font-semibold">Apps</div><nav class="flex flex-col gap-0.5" data-active-classes="bg-surface-container-high text-on-surface font-body-sm-semibold text-body-sm-semibold rounded"><a class="flex items-center px-space-sm py-1.5 rounded text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="shopify-admin-apps" href="#">Apps</a></nav></div></div><div class="p-space-sm"><nav class="flex flex-col gap-0.5" data-active-classes="bg-surface-container-high text-on-surface font-body-sm-semibold text-body-sm-semibold rounded"><a class="flex items-center px-space-sm py-1.5 rounded text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="shopify-admin-settings" href="#">Settings</a></nav></div></aside><div class="pl-60"><main class="relative pt-14 min-h-screen bg-surface w-full px-space-md lg:px-space-xl py-space-md"><div class="flex flex-col w-full">
+<div class="w-full max-w-[1240px] mx-auto pb-16 flex flex-col gap-space-md">
+<!-- Top Sticky Bar / Header Navigation -->
+<div class="flex flex-col md:flex-row md:items-center justify-between gap-space-sm pb-space-xs">
+<div class="flex items-center gap-space-sm">
+<a class="p-1 rounded hover:bg-surface-container text-on-surface-variant flex items-center justify-center transition-colors" href="#" title="Back to Products">
+<span class="material-symbols-outlined text-[20px]">arrow_back</span>
+</a>
+<div class="flex items-center gap-space-xs flex-wrap">
+<span class="font-body-sm text-tertiary">Products /</span>
+<h1 class="font-headline-md text-headline-md text-on-surface">Heavyweight Boxy Tee - Vintage Black</h1>
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-primary-fixed text-primary font-caption text-caption tracking-tight">
+<span class="w-1.5 h-1.5 rounded-full bg-primary"></span>
+            Active
+          </span>
+</div>
+</div>
+<div class="flex items-center gap-space-xs self-end md:self-auto">
+<button class="h-8 px-3 rounded bg-surface-container-low hover:bg-surface-container text-on-surface font-body-sm-semibold text-body-sm-semibold shadow-sm transition-colors flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[16px] text-tertiary">campaign</span>
+<span>Promote</span>
+</button>
+<button class="h-8 px-3 rounded bg-surface-container-low hover:bg-surface-container text-on-surface font-body-sm-semibold text-body-sm-semibold shadow-sm transition-colors">
+          Duplicate
+        </button>
+<button class="h-8 px-3 rounded bg-surface-container-low hover:bg-surface-container text-on-surface font-body-sm-semibold text-body-sm-semibold shadow-sm transition-colors flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px] text-tertiary">visibility</span>
+<span>View in store</span>
+</button>
+<button class="h-8 px-4 rounded bg-primary-container hover:bg-primary text-on-primary font-body-sm-semibold text-body-sm-semibold shadow transition-colors flex items-center gap-1">
+          Save
+        </button>
+</div>
+</div>
+<!-- 2-Column Responsive Layout -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-md items-start">
+<!-- Left / Main Column (8 cols ~66%) -->
+<div class="lg:col-span-8 flex flex-col gap-space-md">
+<!-- Card 1: Title & Description -->
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm flex flex-col gap-space-md">
+<div class="flex flex-col gap-1.5">
+<label class="font-body-sm-semibold text-body-sm-semibold text-on-surface">Title</label>
+<input class="w-full h-8 px-3 bg-surface-container-lowest rounded text-on-surface font-body-md text-body-md shadow-sm outline-none focus:ring-2 focus:ring-secondary/30 transition-all placeholder:text-outline-variant" type="text" value="Heavyweight Boxy Tee - Vintage Black"/>
+</div>
+<div class="flex flex-col gap-1.5">
+<div class="flex items-center justify-between">
+<label class="font-body-sm-semibold text-body-sm-semibold text-on-surface">Description</label>
+<button class="flex items-center gap-1 text-primary hover:text-primary-container font-caption text-caption transition-colors">
+<span class="material-symbols-outlined text-[14px]">auto_awesome</span>
+<span>Generate with AI</span>
+</button>
+</div>
+<!-- Rich Text Editor Container -->
+<div class="rounded bg-surface-container-lowest shadow-sm flex flex-col overflow-hidden">
+<!-- Toolbar -->
+<div class="flex items-center flex-wrap gap-0.5 px-2 py-1.5 bg-surface-container-low text-on-surface-variant">
+<button class="p-1 rounded hover:bg-surface-container hover:text-on-surface text-on-surface-variant flex items-center justify-center">
+<span class="material-symbols-outlined text-[18px]">format_bold</span>
+</button>
+<button class="p-1 rounded hover:bg-surface-container hover:text-on-surface text-on-surface-variant flex items-center justify-center">
+<span class="material-symbols-outlined text-[18px]">format_italic</span>
+</button>
+<button class="p-1 rounded hover:bg-surface-container hover:text-on-surface text-on-surface-variant flex items-center justify-center">
+<span class="material-symbols-outlined text-[18px]">format_underlined</span>
+</button>
+<div class="w-px h-4 bg-outline-variant/40 mx-1"></div>
+<button class="p-1 rounded hover:bg-surface-container hover:text-on-surface text-on-surface-variant flex items-center justify-center">
+<span class="material-symbols-outlined text-[18px]">format_list_bulleted</span>
+</button>
+<button class="p-1 rounded hover:bg-surface-container hover:text-on-surface text-on-surface-variant flex items-center justify-center">
+<span class="material-symbols-outlined text-[18px]">format_list_numbered</span>
+</button>
+<div class="w-px h-4 bg-outline-variant/40 mx-1"></div>
+<button class="p-1 rounded hover:bg-surface-container hover:text-on-surface text-on-surface-variant flex items-center justify-center">
+<span class="material-symbols-outlined text-[18px]">format_align_left</span>
+</button>
+<button class="p-1 rounded hover:bg-surface-container hover:text-on-surface text-on-surface-variant flex items-center justify-center">
+<span class="material-symbols-outlined text-[18px]">format_align_center</span>
+</button>
+<div class="w-px h-4 bg-outline-variant/40 mx-1"></div>
+<button class="p-1 rounded hover:bg-surface-container hover:text-on-surface text-on-surface-variant flex items-center justify-center">
+<span class="material-symbols-outlined text-[18px]">link</span>
+</button>
+<button class="p-1 rounded hover:bg-surface-container hover:text-on-surface text-on-surface-variant flex items-center justify-center">
+<span class="material-symbols-outlined text-[18px]">image</span>
+</button>
+<button class="p-1 rounded hover:bg-surface-container hover:text-on-surface text-on-surface-variant flex items-center justify-center">
+<span class="material-symbols-outlined text-[18px]">code</span>
+</button>
+</div>
+<!-- Editable Text Surface -->
+<div class="p-3 min-h-[140px] font-body-md text-body-md text-on-surface focus:outline-none leading-relaxed">
+                Crafted from 100% combed organic ring-spun cotton (280 GSM). Boxy, relaxed streetwear fit with dropped shoulders and thick 1.2-inch collar ribbing. Pre-shrunk to maintain fit wash after wash. Features reinforced twin-needle hems and blind stitching throughout.
+              </div>
+</div>
+</div>
+</div>
+<!-- Card 2: Media -->
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm flex flex-col gap-space-md">
+<div class="flex items-center justify-between">
+<h2 class="font-headline-sm text-headline-sm text-on-surface">Media</h2>
+<div class="flex items-center gap-space-xs">
+<button class="h-7 px-2.5 rounded bg-surface-container hover:bg-surface-variant text-on-surface font-caption text-caption transition-colors">
+                Add from URL
+              </button>
+<button class="h-7 px-2.5 rounded bg-surface-container-high hover:bg-surface-variant text-on-surface font-caption text-caption transition-colors flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">upload</span>
+<span>Upload new</span>
+</button>
+</div>
+</div>
+<div class="grid grid-cols-2 sm:grid-cols-4 gap-space-sm">
+<!-- Thumbnail 1 (Primary) -->
+<div class="group relative rounded-lg overflow-hidden bg-surface-container aspect-square shadow-sm flex flex-col justify-end p-2">
+<img class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" data-alt="Studio catalog shot of a minimalist heavyweight boxy black cotton streetwear t-shirt on pure light gray backdrop, crisp fabric drape, high key studio lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBp8n-PSIZSaM5OI5Z3dXnU4GdAuknO6Ywh3b70hFsUqR9IS8N2W5VA6JAJuSDTIU8dZ5ChTV0viy-dt260DllozjVHrFJGxRPGzvj97nLPxlc12K2aMBzmrTR7S-FD3N2MY_Jz-Ap6IS9MB4RzONmWdhDT0H2Dnyn9oy2fdr8pcV1Dy9f2e7bYnl95z5d7P4TwIZsBMrvkYXhqcWI9K16DPJs7OLj7aN2bBpOhY831NTjSBufMZFqgwA"/>
+<span class="relative z-10 self-start px-1.5 py-0.5 rounded bg-inverse-surface/85 text-inverse-on-surface font-caption text-caption text-[10px]">
+                Primary
+              </span>
+<div class="absolute top-2 right-2 opacity-0 group-hover:opacity-100 transition-opacity bg-inverse-surface/80 rounded p-1 text-inverse-on-surface cursor-grab">
+<span class="material-symbols-outlined text-[14px]">drag_indicator</span>
+</div>
+</div>
+<!-- Thumbnail 2 -->
+<div class="group relative rounded-lg overflow-hidden bg-surface-container aspect-square shadow-sm flex items-center justify-center">
+<img class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" data-alt="Rear studio back view of a heavyweight vintage black organic cotton boxy oversized t-shirt hanging straight against a neutral studio wall" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAVaroguSBERRI7OiYqiW0PbaND4k-5iSj9rN4GbwPEiN-6r5HY7dQoi-8UXiz9JvdyLjca1JF-5FlMLe2QLEz4rrgXqFkfgASsoBB6LplJmKHjQy5UGATnXlE8uGb7rtao5_D3neIVJRbUVuB_VaMRc6cqcrqQEXjc9B0XegQh0LQRS9akQM93neYG9zjOsx5LBSiFD3DoliKaZsDNPBJr6iYeDwwBCyEKBXhrHZKx7bNapLWhDCkdYg"/>
+<div class="absolute top-2 right-2 opacity-0 group-hover:opacity-100 transition-opacity bg-inverse-surface/80 rounded p-1 text-inverse-on-surface cursor-grab">
+<span class="material-symbols-outlined text-[14px]">drag_indicator</span>
+</div>
+</div>
+<!-- Thumbnail 3 -->
+<div class="group relative rounded-lg overflow-hidden bg-surface-container aspect-square shadow-sm flex items-center justify-center">
+<img class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" data-alt="Extreme macro close-up of premium 280 GSM dark washed black organic slub cotton knit fabric texture with visible natural fiber weave and subtle heathering" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBQ9Asu4Q8ipQnaHZQQsDxB03tIhs4IY9ZLRmyjCiUjLPcDJypqar4Hrr3ycJyqQA6NcP2cUf07nXntE_g1zP2CMBsmMH-ypC5Yz6lFR6lwelktVLSMv-OXJ1xO47X3SRK5uqXAOfdOuuKz0hqLyJ6Pu2jkdZrxtqssmAVbePnR3U5QnD9xNg6Z-iasN7VL4ZanudL8SZQI99fL_C_RABoqEKa1egq5fVRjvmt9B08p9Y62sMmVEdGAgw"/>
+<div class="absolute top-2 right-2 opacity-0 group-hover:opacity-100 transition-opacity bg-inverse-surface/80 rounded p-1 text-inverse-on-surface cursor-grab">
+<span class="material-symbols-outlined text-[14px]">drag_indicator</span>
+</div>
+</div>
+<!-- Thumbnail 4 -->
+<div class="group relative rounded-lg overflow-hidden bg-surface-container aspect-square shadow-sm flex items-center justify-center">
+<img class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" data-alt="Lifestyle editorial lookbook photography of male streetwear model wearing heavyweight boxy vintage black t-shirt outdoors in urban architectural setting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC-RzPEZHHUk47NC609txF4xA11Txyt1svbQTbY4UspjA1dy3R-aPMqGyghPJw0Y9MsFUf040HW-dbU-xSqtYMeZe10zUYEJO6Nfhe0RpKDuPC_q5DztAcY7SNqGN7aZVQQsXvqxWNlfa-9V7q13B9_BxShCJlofI8NHT0ELF75bmuiAr2WfDid-y2taIRPAe0QKKdUXr8v2w-8-sTrkN-W8zmIMnufqp8Fk62Lbc9Q2YH-og2CLPtjyA"/>
+<div class="absolute top-2 right-2 opacity-0 group-hover:opacity-100 transition-opacity bg-inverse-surface/80 rounded p-1 text-inverse-on-surface cursor-grab">
+<span class="material-symbols-outlined text-[14px]">drag_indicator</span>
+</div>
+</div>
+</div>
+<div class="p-4 rounded-lg bg-surface-container-low text-center flex flex-col items-center justify-center gap-1 cursor-pointer hover:bg-surface-container transition-colors">
+<span class="material-symbols-outlined text-[24px] text-tertiary">add_photo_alternate</span>
+<span class="font-body-sm-semibold text-body-sm-semibold text-on-surface">Drop images or 3D models here</span>
+<span class="font-caption text-caption text-tertiary">Supports JPG, PNG, WEBP, and GLB files up to 20MB</span>
+</div>
+</div>
+<!-- Card 3: Variants -->
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm flex flex-col gap-space-md">
+<div class="flex items-center justify-between">
+<h2 class="font-headline-sm text-headline-sm text-on-surface">Variants</h2>
+<button class="text-secondary hover:underline font-body-sm-semibold text-body-sm-semibold">
+              + Add options
+            </button>
+</div>
+<!-- Options overview pills -->
+<div class="flex flex-col gap-space-xs p-3 rounded-lg bg-surface-container-low">
+<div class="flex items-center justify-between text-body-sm">
+<span class="font-body-sm-semibold text-body-sm-semibold text-on-surface">Option 1: Size</span>
+<div class="flex items-center gap-1.5 flex-wrap">
+<span class="px-2 py-0.5 rounded bg-surface-container-lowest text-on-surface font-caption text-caption shadow-sm">S</span>
+<span class="px-2 py-0.5 rounded bg-surface-container-lowest text-on-surface font-caption text-caption shadow-sm">M</span>
+<span class="px-2 py-0.5 rounded bg-surface-container-lowest text-on-surface font-caption text-caption shadow-sm">L</span>
+<span class="px-2 py-0.5 rounded bg-surface-container-lowest text-on-surface font-caption text-caption shadow-sm">XL</span>
+<span class="px-2 py-0.5 rounded bg-surface-container-lowest text-on-surface font-caption text-caption shadow-sm">XXL</span>
+</div>
+</div>
+<div class="flex items-center justify-between text-body-sm">
+<span class="font-body-sm-semibold text-body-sm-semibold text-on-surface">Option 2: Color</span>
+<div class="flex items-center gap-1.5">
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded bg-surface-container-lowest text-on-surface font-caption text-caption shadow-sm">
+<span class="w-2.5 h-2.5 rounded-full bg-on-background"></span>
+                  Vintage Black
+                </span>
+</div>
+</div>
+</div>
+<!-- Variants Index Table -->
+<div class="overflow-x-auto rounded-lg shadow-sm">
+<table class="w-full text-left font-body-sm text-body-sm">
+<thead>
+<tr class="bg-surface-container-high text-on-surface-variant font-caption text-caption uppercase tracking-wider h-9">
+<th class="px-3 py-2 w-8"><input class="rounded accent-primary" type="checkbox"/></th>
+<th class="px-3 py-2">Variant</th>
+<th class="px-3 py-2">Price</th>
+<th class="px-3 py-2">Available</th>
+<th class="px-3 py-2">SKU</th>
+<th class="px-3 py-2 text-right">Actions</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-surface-container bg-surface-container-lowest">
+<!-- Variant 1 -->
+<tr class="hover:bg-surface-container-low/60 transition-colors">
+<td class="px-3 py-2.5"><input class="rounded accent-primary" type="checkbox"/></td>
+<td class="px-3 py-2.5 font-body-sm-semibold text-body-sm-semibold text-on-surface">S / Vintage Black</td>
+<td class="px-3 py-2.5">
+<div class="relative w-24">
+<span class="absolute left-2 top-1 text-tertiary">$</span>
+<input class="w-full h-7 pl-5 pr-2 bg-surface-container-low rounded text-on-surface text-body-sm font-body-sm outline-none focus:ring-1 focus:ring-secondary" type="text" value="48.00"/>
+</div>
+</td>
+<td class="px-3 py-2.5">
+<span class="px-2 py-0.5 rounded bg-surface-container text-on-surface font-caption text-caption font-semibold">12 in stock</span>
+</td>
+<td class="px-3 py-2.5 text-on-surface-variant font-mono text-[12px]">NWT-001-BLK-S</td>
+<td class="px-3 py-2.5 text-right">
+<button class="text-secondary hover:underline font-body-sm-semibold text-body-sm-semibold">Edit</button>
+</td>
+</tr>
+<!-- Variant 2 -->
+<tr class="hover:bg-surface-container-low/60 transition-colors">
+<td class="px-3 py-2.5"><input class="rounded accent-primary" type="checkbox"/></td>
+<td class="px-3 py-2.5 font-body-sm-semibold text-body-sm-semibold text-on-surface">M / Vintage Black</td>
+<td class="px-3 py-2.5">
+<div class="relative w-24">
+<span class="absolute left-2 top-1 text-tertiary">$</span>
+<input class="w-full h-7 pl-5 pr-2 bg-surface-container-low rounded text-on-surface text-body-sm font-body-sm outline-none focus:ring-1 focus:ring-secondary" type="text" value="48.00"/>
+</div>
+</td>
+<td class="px-3 py-2.5">
+<span class="px-2 py-0.5 rounded bg-surface-container text-on-surface font-caption text-caption font-semibold">18 in stock</span>
+</td>
+<td class="px-3 py-2.5 text-on-surface-variant font-mono text-[12px]">NWT-001-BLK-M</td>
+<td class="px-3 py-2.5 text-right">
+<button class="text-secondary hover:underline font-body-sm-semibold text-body-sm-semibold">Edit</button>
+</td>
+</tr>
+<!-- Variant 3 -->
+<tr class="hover:bg-surface-container-low/60 transition-colors">
+<td class="px-3 py-2.5"><input class="rounded accent-primary" type="checkbox"/></td>
+<td class="px-3 py-2.5 font-body-sm-semibold text-body-sm-semibold text-on-surface">L / Vintage Black</td>
+<td class="px-3 py-2.5">
+<div class="relative w-24">
+<span class="absolute left-2 top-1 text-tertiary">$</span>
+<input class="w-full h-7 pl-5 pr-2 bg-surface-container-low rounded text-on-surface text-body-sm font-body-sm outline-none focus:ring-1 focus:ring-secondary" type="text" value="48.00"/>
+</div>
+</td>
+<td class="px-3 py-2.5">
+<span class="px-2 py-0.5 rounded bg-surface-container text-on-surface font-caption text-caption font-semibold">14 in stock</span>
+</td>
+<td class="px-3 py-2.5 text-on-surface-variant font-mono text-[12px]">NWT-001-BLK-L</td>
+<td class="px-3 py-2.5 text-right">
+<button class="text-secondary hover:underline font-body-sm-semibold text-body-sm-semibold">Edit</button>
+</td>
+</tr>
+<!-- Variant 4 -->
+<tr class="hover:bg-surface-container-low/60 transition-colors">
+<td class="px-3 py-2.5"><input class="rounded accent-primary" type="checkbox"/></td>
+<td class="px-3 py-2.5 font-body-sm-semibold text-body-sm-semibold text-on-surface">XL / Vintage Black</td>
+<td class="px-3 py-2.5">
+<div class="relative w-24">
+<span class="absolute left-2 top-1 text-tertiary">$</span>
+<input class="w-full h-7 pl-5 pr-2 bg-surface-container-low rounded text-on-surface text-body-sm font-body-sm outline-none focus:ring-1 focus:ring-secondary" type="text" value="48.00"/>
+</div>
+</td>
+<td class="px-3 py-2.5">
+<span class="px-2 py-0.5 rounded bg-error-container text-on-error-container font-caption text-caption font-semibold">4 low stock</span>
+</td>
+<td class="px-3 py-2.5 text-on-surface-variant font-mono text-[12px]">NWT-001-BLK-XL</td>
+<td class="px-3 py-2.5 text-right">
+<button class="text-secondary hover:underline font-body-sm-semibold text-body-sm-semibold">Edit</button>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<!-- Card 4: Inventory & Shipping -->
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm flex flex-col gap-space-md">
+<h2 class="font-headline-sm text-headline-sm text-on-surface">Inventory &amp; Fulfillment</h2>
+<div class="flex items-center gap-2">
+<input checked="" class="rounded accent-primary w-4 h-4" id="track_qty" type="checkbox"/>
+<label class="font-body-md text-body-md text-on-surface cursor-pointer select-none" for="track_qty">
+              Track quantity across locations
+            </label>
+</div>
+<!-- Locations breakdown table -->
+<div class="rounded-lg bg-surface-container-low p-3 flex flex-col gap-2">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-tertiary">Inventory Locations</span>
+<div class="flex items-center justify-between py-1">
+<span class="font-body-sm-semibold text-body-sm-semibold text-on-surface">Main Distribution Center (Seattle)</span>
+<span class="font-body-sm-semibold text-body-sm-semibold text-primary">36 units</span>
+</div>
+<div class="flex items-center justify-between py-1">
+<span class="font-body-sm-semibold text-body-sm-semibold text-on-surface">Downtown Retail Flagship Store</span>
+<span class="font-body-sm-semibold text-body-sm-semibold text-primary">12 units</span>
+</div>
+</div>
+<div class="w-full h-px bg-surface-container my-1"></div>
+<h3 class="font-label-md text-label-md text-on-surface">Shipping Settings</h3>
+<div class="flex items-center gap-2">
+<input checked="" class="rounded accent-primary w-4 h-4" id="is_physical" type="checkbox"/>
+<label class="font-body-md text-body-md text-on-surface cursor-pointer select-none" for="is_physical">
+              This is a physical product
+            </label>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-space-md">
+<div class="flex flex-col gap-1">
+<label class="font-caption text-caption text-tertiary uppercase tracking-wider">Weight</label>
+<div class="flex items-center gap-2">
+<input class="h-8 w-full px-3 rounded bg-surface-container-low text-on-surface font-body-sm text-body-sm outline-none focus:ring-1 focus:ring-secondary" type="text" value="0.45"/>
+<span class="px-2.5 py-1 rounded bg-surface-container text-on-surface font-caption text-caption font-semibold">kg</span>
+</div>
+</div>
+<div class="flex flex-col gap-1">
+<label class="font-caption text-caption text-tertiary uppercase tracking-wider">Harmonized Tariff (HS) Code</label>
+<input class="h-8 w-full px-3 rounded bg-surface-container-low text-on-surface font-body-sm text-body-sm outline-none focus:ring-1 focus:ring-secondary" type="text" value="HS 6109.10"/>
+</div>
+</div>
+</div>
+<!-- Card 5: Search Engine Listing (SEO) -->
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm flex flex-col gap-space-sm">
+<div class="flex items-center justify-between">
+<h2 class="font-headline-sm text-headline-sm text-on-surface">Search engine listing preview</h2>
+<button class="text-secondary hover:underline font-body-sm-semibold text-body-sm-semibold">Edit website SEO</button>
+</div>
+<div class="p-3 rounded-lg bg-surface-container-low flex flex-col gap-1">
+<span class="text-primary font-body-lg text-body-lg font-semibold hover:underline cursor-pointer">
+              Heavyweight Boxy Tee - Vintage Black – Northwind Apparel
+            </span>
+<span class="text-primary-container font-caption text-caption">
+              https://northwindapparel.com/products/heavyweight-boxy-tee-vintage-black
+            </span>
+<p class="font-body-sm text-body-sm text-on-surface-variant line-clamp-2">
+              Crafted from 100% combed organic ring-spun cotton (280 GSM). Boxy, relaxed streetwear fit with dropped shoulders and thick 1.2-inch collar ribbing. Pre-shrunk to maintain fit wash after wash.
+            </p>
+</div>
+</div>
+</div>
+<!-- Right / Secondary Column (4 cols ~34%) -->
+<div class="lg:col-span-4 flex flex-col gap-space-md">
+<!-- Card 1: Status & Publishing -->
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm flex flex-col gap-space-md">
+<div class="flex flex-col gap-1.5">
+<label class="font-body-sm-semibold text-body-sm-semibold text-on-surface">Status</label>
+<div class="relative">
+<select class="w-full h-8 px-3 pr-8 rounded bg-surface-container-low text-on-surface font-body-sm-semibold text-body-sm-semibold outline-none focus:ring-1 focus:ring-secondary appearance-none cursor-pointer">
+<option selected="">Active</option>
+<option>Draft</option>
+<option>Archived</option>
+</select>
+<span class="material-symbols-outlined absolute right-2.5 top-1.5 text-[18px] text-tertiary pointer-events-none">expand_more</span>
+</div>
+</div>
+<div class="w-full h-px bg-surface-container"></div>
+<div class="flex flex-col gap-2">
+<div class="flex items-center justify-between">
+<span class="font-body-sm-semibold text-body-sm-semibold text-on-surface">Publishing</span>
+<button class="text-secondary hover:underline font-caption text-caption">Manage</button>
+</div>
+<div class="flex flex-col gap-2 pt-1 font-body-sm text-body-sm">
+<div class="flex items-center justify-between text-on-surface">
+<span class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[16px] text-primary">check_circle</span>
+                  Online Store
+                </span>
+<span class="font-caption text-caption text-tertiary">Oct 12, 2024</span>
+</div>
+<div class="flex items-center justify-between text-on-surface">
+<span class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[16px] text-primary">check_circle</span>
+                  Point of Sale
+                </span>
+<span class="font-caption text-caption text-tertiary">All locations</span>
+</div>
+<div class="flex items-center justify-between text-on-surface">
+<span class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[16px] text-primary">check_circle</span>
+                  Shop App
+                </span>
+<span class="font-caption text-caption text-primary">Synced</span>
+</div>
+<div class="flex items-center justify-between text-on-surface">
+<span class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[16px] text-primary">check_circle</span>
+                  Instagram &amp; Facebook
+                </span>
+<span class="font-caption text-caption text-primary">Synced</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Card 2: Sidekick AI Assistant -->
+<div class="bg-gradient-to-br from-primary-fixed/30 via-surface-container-lowest to-surface-container-lowest rounded-xl p-space-md shadow-sm flex flex-col gap-space-sm relative overflow-hidden">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[20px] text-primary">auto_awesome</span>
+<h3 class="font-body-sm-semibold text-body-sm-semibold text-on-surface">Shopify Sidekick</h3>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-normal">
+            Sidekick detected high demand in Streetwear Basics this month. Consider expanding into Slate Gray or increasing XXL allocation.
+          </p>
+<div class="flex items-center gap-2 pt-1">
+<button class="h-7 px-3 rounded bg-primary-container hover:bg-primary text-on-primary font-caption text-caption transition-colors">
+              Optimize Pricing
+            </button>
+<button class="h-7 px-2.5 rounded bg-surface-container hover:bg-surface-variant text-on-surface font-caption text-caption transition-colors">
+              Rewrite Copy
+            </button>
+</div>
+</div>
+<!-- Card 3: Product Organization -->
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm flex flex-col gap-space-md">
+<h2 class="font-headline-sm text-headline-sm text-on-surface">Product Organization</h2>
+<div class="flex flex-col gap-1">
+<label class="font-caption text-caption text-tertiary uppercase tracking-wider">Product Category</label>
+<span class="font-body-sm text-body-sm text-on-surface bg-surface-container-low px-2.5 py-1.5 rounded truncate">
+              Apparel &gt; Clothing &gt; Shirts &gt; T-Shirts
+            </span>
+</div>
+<div class="flex flex-col gap-1">
+<label class="font-caption text-caption text-tertiary uppercase tracking-wider">Product Type</label>
+<input class="h-8 px-2.5 rounded bg-surface-container-low text-on-surface font-body-sm text-body-sm outline-none focus:ring-1 focus:ring-secondary" type="text" value="Shirts"/>
+</div>
+<div class="flex flex-col gap-1">
+<label class="font-caption text-caption text-tertiary uppercase tracking-wider">Vendor</label>
+<input class="h-8 px-2.5 rounded bg-surface-container-low text-on-surface font-body-sm text-body-sm outline-none focus:ring-1 focus:ring-secondary" type="text" value="Northwind Apparel"/>
+</div>
+<div class="flex flex-col gap-1.5">
+<label class="font-caption text-caption text-tertiary uppercase tracking-wider">Collections</label>
+<div class="flex flex-wrap gap-1.5">
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded bg-surface-container text-on-surface font-caption text-caption">
+                Autumn / Winter 2024
+                <button class="hover:text-error"><span class="material-symbols-outlined text-[14px]">close</span></button>
+</span>
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded bg-surface-container text-on-surface font-caption text-caption">
+                Core Basics
+                <button class="hover:text-error"><span class="material-symbols-outlined text-[14px]">close</span></button>
+</span>
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded bg-surface-container text-on-surface font-caption text-caption">
+                Best Sellers
+                <button class="hover:text-error"><span class="material-symbols-outlined text-[14px]">close</span></button>
+</span>
+</div>
+</div>
+<div class="flex flex-col gap-1.5">
+<label class="font-caption text-caption text-tertiary uppercase tracking-wider">Tags</label>
+<div class="flex flex-wrap gap-1.5">
+<span class="px-2 py-0.5 rounded bg-surface-container-low text-on-surface font-caption text-caption">vintage</span>
+<span class="px-2 py-0.5 rounded bg-surface-container-low text-on-surface font-caption text-caption">boxy-fit</span>
+<span class="px-2 py-0.5 rounded bg-surface-container-low text-on-surface font-caption text-caption">organic-cotton</span>
+<span class="px-2 py-0.5 rounded bg-surface-container-low text-on-surface font-caption text-caption">heavyweight</span>
+<span class="px-2 py-0.5 rounded bg-surface-container-low text-on-surface font-caption text-caption">streetwear</span>
+</div>
+<input class="h-7 px-2.5 mt-1 rounded bg-surface-container-low text-on-surface font-caption text-caption outline-none focus:ring-1 focus:ring-secondary" placeholder="Add tags..." type="text"/>
+</div>
+</div>
+<!-- Card 4: Online Store Theme Template -->
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm flex flex-col gap-space-sm">
+<h2 class="font-headline-sm text-headline-sm text-on-surface">Online Store Theme</h2>
+<div class="flex flex-col gap-1">
+<label class="font-caption text-caption text-tertiary uppercase tracking-wider">Theme template</label>
+<div class="relative">
+<select class="w-full h-8 px-3 pr-8 rounded bg-surface-container-low text-on-surface font-body-sm text-body-sm outline-none focus:ring-1 focus:ring-secondary appearance-none cursor-pointer">
+<option selected="">Default product</option>
+<option>Pre-order template</option>
+<option>Lookbook layout</option>
+</select>
+<span class="material-symbols-outlined absolute right-2.5 top-1.5 text-[18px] text-tertiary pointer-events-none">expand_more</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div></main></div></body></html>

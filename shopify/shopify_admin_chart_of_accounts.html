@@ -1,0 +1,1294 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = {
+    darkMode: "class",
+    theme: {
+      extend: {
+        "colors": {
+          "on-tertiary-fixed-variant": "#474746",
+          "surface-container": "#efeded",
+          "tertiary-container": "#717070",
+          "secondary-container": "#2c6fe7",
+          "secondary-fixed-dim": "#b0c6ff",
+          "on-secondary-container": "#fefcff",
+          "surface-dim": "#dbdad9",
+          "primary-fixed-dim": "#75d9b3",
+          "on-primary-fixed": "#002116",
+          "on-tertiary-container": "#f8f5f4",
+          "tertiary-fixed-dim": "#c8c6c5",
+          "error": "#ba1a1a",
+          "on-secondary-fixed": "#001945",
+          "inverse-surface": "#303031",
+          "surface-container-lowest": "#ffffff",
+          "on-error": "#ffffff",
+          "tertiary-fixed": "#e5e2e1",
+          "surface-container-highest": "#e4e2e2",
+          "primary-fixed": "#92f6cf",
+          "on-tertiary": "#ffffff",
+          "on-primary": "#ffffff",
+          "primary": "#00654b",
+          "on-secondary-fixed-variant": "#00419c",
+          "surface-variant": "#e4e2e2",
+          "surface-container-low": "#f5f3f3",
+          "secondary": "#0055c7",
+          "surface-tint": "#006c50",
+          "outline": "#6e7a73",
+          "on-error-container": "#93000a",
+          "surface-bright": "#fbf9f8",
+          "error-container": "#ffdad6",
+          "primary-container": "#008060",
+          "on-surface": "#1b1c1c",
+          "on-primary-container": "#d6ffeb",
+          "on-surface-variant": "#3e4944",
+          "inverse-on-surface": "#f2f0f0",
+          "tertiary": "#585857",
+          "secondary-fixed": "#d9e2ff",
+          "inverse-primary": "#75d9b3",
+          "surface-container-high": "#e9e8e7",
+          "on-tertiary-fixed": "#1c1b1b",
+          "outline-variant": "#bdc9c2",
+          "on-primary-fixed-variant": "#00513c",
+          "on-background": "#1b1c1c",
+          "background": "#fbf9f8",
+          "surface": "#fbf9f8",
+          "on-secondary": "#ffffff"
+        },
+        "borderRadius": {
+          "DEFAULT": "0.125rem",
+          "lg": "0.25rem",
+          "xl": "0.5rem",
+          "full": "0.75rem"
+        },
+        "spacing": {
+          "space-xl": "1.5rem",
+          "space-md": "1rem",
+          "space-lg": "1.25rem",
+          "gutter": "1rem",
+          "margin": "1.5rem",
+          "space-sm": "0.5rem",
+          "space-xs": "0.25rem"
+        },
+        "fontFamily": {
+          "body-md": [
+            "Inter"
+          ],
+          "headline-lg": [
+            "Inter"
+          ],
+          "headline-md": [
+            "Inter"
+          ],
+          "body-sm-semibold": [
+            "Inter"
+          ],
+          "body-sm": [
+            "Inter"
+          ],
+          "caption": [
+            "Inter"
+          ],
+          "label-sm": [
+            "Inter"
+          ],
+          "body-md-semibold": [
+            "Inter"
+          ],
+          "headline-lg-mobile": [
+            "Inter"
+          ],
+          "body-lg": [
+            "Inter"
+          ],
+          "headline-sm": [
+            "Inter"
+          ],
+          "label-md": [
+            "Inter"
+          ]
+        },
+        "fontSize": {
+          "body-md": [
+            "14px",
+            {
+              "lineHeight": "20px",
+              "fontWeight": "400"
+            }
+          ],
+          "headline-lg": [
+            "28px",
+            {
+              "lineHeight": "36px",
+              "letterSpacing": "-0.02em",
+              "fontWeight": "700"
+            }
+          ],
+          "headline-md": [
+            "20px",
+            {
+              "lineHeight": "28px",
+              "letterSpacing": "-0.01em",
+              "fontWeight": "600"
+            }
+          ],
+          "body-sm-semibold": [
+            "13px",
+            {
+              "lineHeight": "18px",
+              "fontWeight": "600"
+            }
+          ],
+          "body-sm": [
+            "13px",
+            {
+              "lineHeight": "18px",
+              "fontWeight": "400"
+            }
+          ],
+          "caption": [
+            "11px",
+            {
+              "lineHeight": "14px",
+              "fontWeight": "500"
+            }
+          ],
+          "label-sm": [
+            "12px",
+            {
+              "lineHeight": "16px",
+              "letterSpacing": "0.01em",
+              "fontWeight": "600"
+            }
+          ],
+          "body-md-semibold": [
+            "14px",
+            {
+              "lineHeight": "20px",
+              "fontWeight": "600"
+            }
+          ],
+          "headline-lg-mobile": [
+            "22px",
+            {
+              "lineHeight": "28px",
+              "letterSpacing": "-0.015em",
+              "fontWeight": "700"
+            }
+          ],
+          "body-lg": [
+            "15px",
+            {
+              "lineHeight": "22px",
+              "fontWeight": "400"
+            }
+          ],
+          "headline-sm": [
+            "16px",
+            {
+              "lineHeight": "24px",
+              "letterSpacing": "-0.005em",
+              "fontWeight": "600"
+            }
+          ],
+          "label-md": [
+            "13px",
+            {
+              "lineHeight": "16px",
+              "fontWeight": "500"
+            }
+          ]
+        }
+      },
+    },
+  }</script><title>Shopify Admin Chart Of Accounts | Shopify Prototype</title>
+</head><body class="bg-surface font-body-md text-body-md text-on-surface"><aside class="fixed left-0 top-0 h-full w-60 bg-surface-container-low z-40 flex flex-col justify-between shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="flex flex-col overflow-y-auto"><div class="h-14 flex items-center px-margin gap-space-sm bg-surface-container-lowest shrink-0"><img alt="Shopify logo" class="h-7 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1WPubMgscUINGuisBDvGZbhiRvwxKjFWpAHPA0GXYWeRFqxcZY4G-byYU4PUykJPYVnuurpj_2yFkafDFmBWhplcA2dlqdqMDkr5ufN1GCA1-9Cy6Y74Bk73_KmB_pOSwvk_HQjInJtWpmQfLSQUcNeG5m75CCs-SDUFif7I_eleu-OGwNMldz9nzh1957zHt7Hfbkc1ds6tpanpikt3_aR6SAXkw6znZBFRPYg-rTUbi8f0VwyeBPJuaQ"/><div class="flex flex-col"><span class="font-body-md-semibold text-body-md-semibold text-on-surface leading-tight">Shopify Admin</span><span class="font-caption text-caption text-on-surface-variant leading-tight">Operations &amp; Finance</span></div></div><div class="px-space-md pt-space-sm"><div class="px-space-sm py-space-xs font-caption text-caption uppercase text-on-surface-variant tracking-wider">Store Management</div></div><nav class="flex flex-col gap-space-xs px-space-md py-space-xs" data-active-classes="bg-primary-container text-on-primary font-body-sm-semibold text-body-sm-semibold rounded-xl"><a class="flex items-center px-space-md py-space-sm text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface rounded-xl transition-colors font-body-sm text-body-sm" data-path="shopify-admin-home" href="#">Home</a><a class="flex items-center px-space-md py-space-sm text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface rounded-xl transition-colors font-body-sm text-body-sm" data-path="shopify-admin-orders" href="#">Orders</a><a class="flex items-center px-space-md py-space-sm text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface rounded-xl transition-colors font-body-sm text-body-sm" data-path="shopify-admin-products" href="#">Products</a><a class="flex items-center px-space-md py-space-sm text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface rounded-xl transition-colors font-body-sm text-body-sm" data-path="shopify-admin-multi-location-inventory-stock-hub" href="#">Multi-Location Inventory</a><a class="flex items-center px-space-md py-space-sm text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface rounded-xl transition-colors font-body-sm text-body-sm" data-path="shopify-admin-customers" href="#">Customers</a></nav><div class="px-space-md pt-space-sm"><div class="px-space-sm py-space-xs font-caption text-caption uppercase text-on-surface-variant tracking-wider">Accounting &amp; Finance</div></div><nav class="flex flex-col gap-space-xs px-space-md py-space-xs" data-active-classes="bg-primary-container text-on-primary font-body-sm-semibold text-body-sm-semibold rounded-xl"><a class="flex items-center px-space-md py-space-sm text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface rounded-xl transition-colors font-body-sm text-body-sm" data-path="shopify-admin-chart-of-accounts" href="#">Chart of Accounts</a><a class="flex items-center px-space-md py-space-sm text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface rounded-xl transition-colors font-body-sm text-body-sm" data-path="shopify-admin-journal-entries" href="#">Journal Entries</a><a class="flex items-center px-space-md py-space-sm text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface rounded-xl transition-colors font-body-sm text-body-sm" data-path="shopify-admin-bank-reconciliation" href="#">Bank Reconciliation</a><a class="flex items-center px-space-md py-space-sm text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface rounded-xl transition-colors font-body-sm text-body-sm" data-path="shopify-admin-tax-vat-gst" href="#">Tax / VAT &amp; GST</a><a class="flex items-center px-space-md py-space-sm text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface rounded-xl transition-colors font-body-sm text-body-sm" data-path="shopify-admin-financial-reports-trial-balance" href="#">Financial Reports &amp; Trial Balance</a></nav><div class="px-space-md pt-space-sm"><div class="px-space-sm py-space-xs font-caption text-caption uppercase text-on-surface-variant tracking-wider">Sales &amp; Marketing</div></div><nav class="flex flex-col gap-space-xs px-space-md py-space-xs" data-active-classes="bg-primary-container text-on-primary font-body-sm-semibold text-body-sm-semibold rounded-xl"><a class="flex items-center px-space-md py-space-sm text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface rounded-xl transition-colors font-body-sm text-body-sm" data-path="shopify-admin-analytics" href="#">Analytics</a><a class="flex items-center px-space-md py-space-sm text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface rounded-xl transition-colors font-body-sm text-body-sm" data-path="shopify-admin-marketing" href="#">Marketing</a><a class="flex items-center px-space-md py-space-sm text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface rounded-xl transition-colors font-body-sm text-body-sm" data-path="shopify-admin-discounts" href="#">Discounts</a><a class="flex items-center px-space-md py-space-sm text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface rounded-xl transition-colors font-body-sm text-body-sm" data-path="shopify-admin-point-of-sale" href="#">Point of Sale</a></nav></div><div class="p-space-md flex flex-col gap-space-xs bg-surface-container shrink-0"><nav class="flex flex-col gap-space-xs" data-active-classes="bg-primary-container text-on-primary font-body-sm-semibold text-body-sm-semibold rounded-xl"><a class="flex items-center px-space-md py-space-sm text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface rounded-xl transition-colors font-body-sm text-body-sm" data-path="shopify-admin-settings" href="#">Settings</a></nav><div class="flex items-center justify-between px-space-md py-space-sm bg-surface-container-lowest rounded-xl"><div class="flex items-center gap-space-sm"><span class="w-2 h-2 rounded-full bg-primary-container"></span><span class="font-caption text-caption text-on-surface-variant">Ledger Engine Synced</span></div><span class="material-symbols-outlined text-[16px] text-primary">sync</span></div></div></aside><div class="pl-60"><header class="fixed top-0 left-60 right-0 h-14 bg-surface-container-lowest shadow-[0_1px_8px_rgba(0,0,0,0.04)] z-30 flex items-center justify-between px-margin"><div class="flex items-center gap-space-md"><div class="flex items-center gap-space-sm px-space-md py-1 bg-surface-container rounded-full"><span class="material-symbols-outlined text-primary text-[18px]">store</span><span class="font-label-sm text-label-sm text-on-surface">Apex Apparel SoHo</span><span class="material-symbols-outlined text-on-surface-variant text-[16px]">expand_more</span></div><div class="hidden lg:flex items-center gap-space-xs text-on-surface-variant font-caption text-caption"><span class="hover:text-on-surface cursor-pointer">Admin</span><span>/</span><span class="text-on-surface font-label-sm text-label-sm">Finance &amp; Operations</span></div><div class="relative flex items-center w-64 md:w-80 ml-space-xs"><span class="material-symbols-outlined absolute left-space-sm text-on-surface-variant text-[18px]">search</span><input class="w-full h-8 pl-8 pr- space-md py-1 bg-surface-container-low text-on-surface placeholder:text-on-surface-variant rounded-lg font-body-sm text-body-sm border-none focus:outline-none focus:ring-1 focus:ring-primary" placeholder="Search orders, products, accounts (⌘K)" type="text"/></div></div><div class="flex items-center gap-space-md"><div class="flex items-center gap-space-sm px-space-md py-1 bg-surface-container-low rounded-xl"><span class="material-symbols-outlined text-on-surface-variant text-[18px]">badge</span><div class="flex flex-col text-left"><span class="font-caption text-caption text-on-surface-variant leading-none">Staff Operator</span><span class="font-label-sm text-label-sm text-on-surface leading-tight">Elena Rostova</span></div></div><button class="relative p-1.5 text-on-surface-variant hover:text-on-surface hover:bg-surface-container rounded-lg transition-colors" title="Notifications"><span class="material-symbols-outlined text-[20px]">notifications</span><span class="absolute top-1 right-1 w-2 h-2 rounded-full bg-error"></span></button><div class="flex items-center gap-space-sm"><img alt="Elena Rostova avatar" class="w-8 h-8 rounded-full object-cover" src="https://lh3.googleusercontent.com/aida/AEtjO1XM8bAU6u1SGd73cRUZpDg7te6U8Hd9YuPkqi431L4IWNqZL9tf8Hx7usC0Pr2x5uZFks9b6ZVSsN6pF4qp7qBy14iGcMBDgJ1CkgkmUAjIfndkwn_z2y62oK4m5xXJUzEyvjga7vHBHY5I_yrgT2bDOvV6QCvONuw_NwyDFyHdKZJuuGyK5Pgek_6deKYxGCdGgDgn0o72iDzak64pRiWW1BSKisoh_F_jv3CeZdUD3Qs1uum2E_qsQHaI"/><button class="flex items-center justify-center p-1.5 text-on-surface-variant hover:text-error hover:bg-surface-container rounded-lg transition-colors" title="Lock Terminal / Sign Out"><span class="material-symbols-outlined text-[20px]">lock</span></button></div></div></header><main class="w-full pt-14 px-margin"><div class="flex flex-col w-full pb-16">
+<!-- Top Breadcrumb & Page Actions Bar -->
+<div class="flex flex-col md:flex-row md:items-center justify-between gap-space-md py-space-lg">
+<div class="flex flex-col gap-space-xs">
+<div class="flex items-center gap-space-xs font-caption text-caption text-on-surface-variant">
+<a class="hover:text-primary transition-colors flex items-center gap-1" href="#">
+<span class="material-symbols-outlined text-[14px]">account_balance</span>
+          Accounting
+        </a>
+<span>/</span>
+<span class="text-on-surface font-label-sm text-label-sm">General Ledger</span>
+<span>/</span>
+<span class="text-on-surface font-body-sm-semibold text-body-sm-semibold">Chart of Accounts</span>
+</div>
+<div class="flex items-center gap-space-sm">
+<h1 class="font-headline-lg text-headline-lg text-on-surface tracking-tight">Chart of Accounts</h1>
+<span class="bg-primary-fixed text-on-primary-fixed font-caption text-caption px-space-sm py-0.5 rounded-full font-semibold">GAAP &amp; IFRS</span>
+<span class="bg-surface-container-high text-on-surface-variant font-caption text-caption px-space-sm py-0.5 rounded-full flex items-center gap-1">
+<span class="w-1.5 h-1.5 rounded-full bg-primary-container"></span>
+          Fiscal Year 2025 (Open)
+        </span>
+</div>
+</div>
+<div class="flex items-center gap-space-sm self-start md:self-auto">
+<button class="flex items-center gap-1.5 px-space-md py-1.5 bg-surface-container-lowest text-on-surface hover:bg-surface-container shadow-sm rounded-lg transition-colors font-body-sm-semibold text-body-sm-semibold">
+<span class="material-symbols-outlined text-[16px] text-on-surface-variant">file_download</span>
+        Export CSV
+      </button>
+<button class="flex items-center gap-1.5 px-space-md py-1.5 bg-surface-container-lowest text-on-surface hover:bg-surface-container shadow-sm rounded-lg transition-colors font-body-sm-semibold text-body-sm-semibold">
+<span class="material-symbols-outlined text-[16px] text-on-surface-variant">file_upload</span>
+        Import Accounts
+      </button>
+<button class="flex items-center gap-1.5 px-space-md py-1.5 bg-primary-container text-on-primary hover:bg-primary shadow-sm rounded-lg transition-all font-body-sm-semibold text-body-sm-semibold" onclick="document.getElementById('new-account-modal').classList.remove('hidden')">
+<span class="material-symbols-outlined text-[18px]">add</span>
+        New Account
+      </button>
+</div>
+</div>
+<!-- Operational Synchronizer Banner -->
+<div class="mb-space-lg p-space-md bg-surface-container-lowest rounded-xl shadow-sm flex flex-col md:flex-row md:items-center justify-between gap-space-md">
+<div class="flex items-start md:items-center gap-space-md">
+<div class="w-9 h-9 rounded-lg bg-surface-container flex items-center justify-center text-primary shrink-0">
+<span class="material-symbols-outlined text-[20px]">sync_alt</span>
+</div>
+<div class="flex flex-col">
+<div class="flex items-center gap-space-sm">
+<span class="font-body-md-semibold text-body-md-semibold text-on-surface">Dual Engine Real-Time Sync</span>
+<span class="bg-primary-fixed-dim text-on-primary-fixed-variant font-caption text-caption px-2 py-0.5 rounded-full font-medium">Auto-Reconciling</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+          Mapped with <span class="font-semibold text-on-surface">Odoo Financials Enterprise v17</span> &amp; live transactions from <span class="font-semibold text-on-surface">Shopify POS Terminal 01 (SoHo)</span>. Last journal commit was 2 minutes ago.
+        </p>
+</div>
+</div>
+<div class="flex items-center gap-space-sm shrink-0">
+<span class="font-caption text-caption text-on-surface-variant">Batch clearing status:</span>
+<span class="font-caption text-caption font-semibold text-primary flex items-center gap-1">
+<span class="w-2 h-2 rounded-full bg-primary-container animate-pulse"></span>
+        Zero Mismatch Delta
+      </span>
+<button class="ml-space-sm text-primary hover:text-on-primary-fixed-variant font-body-sm-semibold text-body-sm flex items-center">
+        Inspect Mappings →
+      </button>
+</div>
+</div>
+<!-- Financial Metrics & Ledger Health Cards (Bento style) -->
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-space-md mb-space-lg">
+<!-- Total Assets -->
+<div class="p-space-md bg-surface-container-lowest rounded-xl shadow-sm flex flex-col justify-between">
+<div class="flex items-center justify-between">
+<span class="font-caption text-caption uppercase tracking-wider text-on-surface-variant font-semibold">Total Assets (1000-1999)</span>
+<span class="material-symbols-outlined text-[18px] text-primary">account_balance_wallet</span>
+</div>
+<div class="my-space-sm flex items-baseline justify-between">
+<span class="font-headline-md text-headline-md text-on-surface font-bold">$486,210.00</span>
+<span class="flex items-center font-caption text-caption text-primary font-semibold">
+<span class="material-symbols-outlined text-[14px]">arrow_upward</span>
+          +8.4%
+        </span>
+</div>
+<!-- Mini Sparkline for Assets -->
+<div class="w-full flex items-end h-6 gap-1 pt-1">
+<div class="bg-primary-fixed h-[40%] flex-1 rounded-sm"></div>
+<div class="bg-primary-fixed h-[55%] flex-1 rounded-sm"></div>
+<div class="bg-primary-fixed h-[50%] flex-1 rounded-sm"></div>
+<div class="bg-primary-fixed h-[70%] flex-1 rounded-sm"></div>
+<div class="bg-primary-fixed h-[65%] flex-1 rounded-sm"></div>
+<div class="bg-primary-fixed h-[85%] flex-1 rounded-sm"></div>
+<div class="bg-primary-container h-[100%] flex-1 rounded-sm"></div>
+</div>
+<div class="mt-space-xs flex justify-between font-caption text-caption text-on-surface-variant">
+<span>MoM Growth</span>
+<span>vs. $448,500.00 LY</span>
+</div>
+</div>
+<!-- Total Liabilities -->
+<div class="p-space-md bg-surface-container-lowest rounded-xl shadow-sm flex flex-col justify-between">
+<div class="flex items-center justify-between">
+<span class="font-caption text-caption uppercase tracking-wider text-on-surface-variant font-semibold">Total Liabilities (2000-2999)</span>
+<span class="material-symbols-outlined text-[18px] text-tertiary">credit_card</span>
+</div>
+<div class="my-space-sm flex items-baseline justify-between">
+<span class="font-headline-md text-headline-md text-on-surface font-bold">$112,450.00</span>
+<span class="flex items-center font-caption text-caption text-secondary font-semibold">
+<span class="material-symbols-outlined text-[14px]">arrow_downward</span>
+          -2.1%
+        </span>
+</div>
+<!-- Mini Sparkline for Liabilities -->
+<div class="w-full flex items-end h-6 gap-1 pt-1">
+<div class="bg-surface-container-highest h-[90%] flex-1 rounded-sm"></div>
+<div class="bg-surface-container-highest h-[85%] flex-1 rounded-sm"></div>
+<div class="bg-surface-container-highest h-[80%] flex-1 rounded-sm"></div>
+<div class="bg-surface-container-highest h-[75%] flex-1 rounded-sm"></div>
+<div class="bg-surface-container-highest h-[65%] flex-1 rounded-sm"></div>
+<div class="bg-surface-container-highest h-[68%] flex-1 rounded-sm"></div>
+<div class="bg-tertiary-container h-[60%] flex-1 rounded-sm"></div>
+</div>
+<div class="mt-space-xs flex justify-between font-caption text-caption text-on-surface-variant">
+<span>Vendor AP Debt Reduced</span>
+<span>$18.9k Tax Res.</span>
+</div>
+</div>
+<!-- Total Equity -->
+<div class="p-space-md bg-surface-container-lowest rounded-xl shadow-sm flex flex-col justify-between">
+<div class="flex items-center justify-between">
+<span class="font-caption text-caption uppercase tracking-wider text-on-surface-variant font-semibold">Total Owners' Equity</span>
+<span class="material-symbols-outlined text-[18px] text-secondary">pie_chart</span>
+</div>
+<div class="my-space-sm flex items-baseline justify-between">
+<span class="font-headline-md text-headline-md text-on-surface font-bold">$373,760.00</span>
+<span class="flex items-center font-caption text-caption text-primary font-semibold">
+<span class="material-symbols-outlined text-[14px]">trending_up</span>
+          Balanced
+        </span>
+</div>
+<div class="w-full bg-surface-container-low h-3 rounded-full overflow-hidden flex">
+<div class="bg-secondary-container h-full w-[65%]" title="Retained Earnings 65%"></div>
+<div class="bg-secondary-fixed-dim h-full w-[35%]" title="Contributed Capital 35%"></div>
+</div>
+<div class="mt-space-xs flex justify-between font-caption text-caption text-on-surface-variant">
+<span>A = L + E verified</span>
+<span class="text-on-surface font-medium">$0.00 suspense</span>
+</div>
+</div>
+<!-- Net Working Capital -->
+<div class="p-space-md bg-surface-container-lowest rounded-xl shadow-sm flex flex-col justify-between">
+<div class="flex items-center justify-between">
+<span class="font-caption text-caption uppercase tracking-wider text-on-surface-variant font-semibold">Net Working Capital</span>
+<span class="material-symbols-outlined text-[18px] text-primary">verified</span>
+</div>
+<div class="my-space-sm flex items-baseline justify-between">
+<span class="font-headline-md text-headline-md text-on-surface font-bold">$218,500.00</span>
+<span class="px-2 py-0.5 bg-primary-fixed text-on-primary-fixed font-caption text-caption font-semibold rounded-full">
+          Healthy (4.3x)
+        </span>
+</div>
+<div class="flex items-center gap-space-xs">
+<div class="h-2 flex-1 rounded bg-surface-container-low overflow-hidden">
+<div class="bg-primary-container h-full w-[78%]"></div>
+</div>
+<span class="font-caption text-caption font-semibold text-primary">Current Ratio 4.3</span>
+</div>
+<div class="mt-space-xs flex justify-between font-caption text-caption text-on-surface-variant">
+<span>Quick Ratio: 2.1x</span>
+<span>Runway: 18.4 Mo</span>
+</div>
+</div>
+</div>
+<!-- Primary Index Container (Polaris Card Pattern) -->
+<div class="bg-surface-container-lowest rounded-xl shadow-sm flex flex-col overflow-hidden">
+<!-- Filter Segment Tabs & Table Header Tooling -->
+<div class="flex flex-col">
+<!-- Segmented Navigation -->
+<div class="flex items-center overflow-x-auto px-space-md bg-surface-container-lowest scrollbar-none">
+<button class="account-tab active-tab px-space-md py-3 font-body-sm-semibold text-body-sm text-on-surface flex items-center gap-1.5 border-b-2 border-primary-container" onclick="filterAccounts('all', this)">
+          All Accounts
+          <span class="bg-surface-container text-on-surface-variant font-caption text-caption px-1.5 py-0.5 rounded-full">48</span>
+</button>
+<button class="account-tab px-space-md py-3 font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface flex items-center gap-1.5" onclick="filterAccounts('assets', this)">
+          Assets
+          <span class="bg-surface-container text-on-surface-variant font-caption text-caption px-1.5 py-0.5 rounded-full">16</span>
+</button>
+<button class="account-tab px-space-md py-3 font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface flex items-center gap-1.5" onclick="filterAccounts('liabilities', this)">
+          Liabilities
+          <span class="bg-surface-container text-on-surface-variant font-caption text-caption px-1.5 py-0.5 rounded-full">9</span>
+</button>
+<button class="account-tab px-space-md py-3 font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface flex items-center gap-1.5" onclick="filterAccounts('equity', this)">
+          Equity
+          <span class="bg-surface-container text-on-surface-variant font-caption text-caption px-1.5 py-0.5 rounded-full">5</span>
+</button>
+<button class="account-tab px-space-md py-3 font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface flex items-center gap-1.5" onclick="filterAccounts('revenue', this)">
+          Revenue
+          <span class="bg-surface-container text-on-surface-variant font-caption text-caption px-1.5 py-0.5 rounded-full">8</span>
+</button>
+<button class="account-tab px-space-md py-3 font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface flex items-center gap-1.5" onclick="filterAccounts('expenses', this)">
+          Cost &amp; Expenses
+          <span class="bg-surface-container text-on-surface-variant font-caption text-caption px-1.5 py-0.5 rounded-full">10</span>
+</button>
+<button class="px-space-md py-3 font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface flex items-center gap-1 ml-auto">
+<span class="material-symbols-outlined text-[16px]">add</span>
+          Custom View
+        </button>
+</div>
+<!-- Search & Attribute Filter Controls -->
+<div class="p-space-md flex flex-col md:flex-row items-stretch md:items-center justify-between gap-space-md bg-surface-container-low">
+<div class="flex items-center flex-1 gap-space-sm max-w-xl">
+<div class="relative w-full">
+<span class="material-symbols-outlined absolute left-3 top-2 text-on-surface-variant text-[18px]">search</span>
+<input class="w-full pl-9 pr-4 py-1.5 bg-surface-container-lowest text-on-surface placeholder:text-on-surface-variant rounded-lg font-body-sm text-body-sm focus:outline-none focus:ring-1 focus:ring-primary shadow-sm" id="accountSearchInput" oninput="searchAccounts(this.value)" placeholder="Search account code, title or Odoo mapping..." type="text"/>
+</div>
+<button class="flex items-center gap-1 px-space-md py-1.5 bg-surface-container-lowest hover:bg-surface-container text-on-surface font-body-sm text-body-sm rounded-lg shadow-sm whitespace-nowrap">
+<span class="material-symbols-outlined text-[16px]">filter_list</span>
+            Filters (2)
+          </button>
+</div>
+<div class="flex items-center gap-space-sm flex-wrap">
+<!-- Currency Filter Pill -->
+<div class="flex items-center gap-1.5 px-space-sm py-1 bg-surface-container-lowest rounded-lg shadow-sm">
+<span class="font-caption text-caption text-on-surface-variant">Currency:</span>
+<select class="bg-transparent font-body-sm-semibold text-body-sm text-on-surface cursor-pointer focus:outline-none">
+<option value="USD">USD ($)</option>
+<option value="EUR">EUR (€)</option>
+<option value="GBP">GBP (£)</option>
+<option value="CAD">CAD ($)</option>
+</select>
+</div>
+<!-- Status Filter Pill -->
+<div class="flex items-center gap-1.5 px-space-sm py-1 bg-surface-container-lowest rounded-lg shadow-sm">
+<span class="font-caption text-caption text-on-surface-variant">Status:</span>
+<select class="bg-transparent font-body-sm-semibold text-body-sm text-on-surface cursor-pointer focus:outline-none">
+<option value="all">Active Only</option>
+<option value="archived">Archived / Closed</option>
+<option value="all_status">All Statuses</option>
+</select>
+</div>
+<!-- Quick Actions -->
+<div class="flex items-center gap-1 bg-surface-container-lowest p-1 rounded-lg shadow-sm">
+<button class="p-1 hover:bg-surface-container rounded text-on-surface-variant hover:text-on-surface" onclick="toggleAllGroups(true)" title="Expand All Groups">
+<span class="material-symbols-outlined text-[18px]">unfold_more</span>
+</button>
+<button class="p-1 hover:bg-surface-container rounded text-on-surface-variant hover:text-on-surface" onclick="toggleAllGroups(false)" title="Collapse All Groups">
+<span class="material-symbols-outlined text-[18px]">unfold_less</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Bulk Actions Bar (Hidden by default, shown upon selection) -->
+<div class="hidden px-space-md py-2 bg-primary text-on-primary flex items-center justify-between transition-all" id="bulk-action-bar">
+<div class="flex items-center gap-space-md font-body-sm-semibold text-body-sm">
+<div class="flex items-center gap-2">
+<input checked="" class="w-4 h-4 rounded text-primary-container focus:ring-0 cursor-pointer" onclick="deselectAll()" type="checkbox"/>
+<span id="selected-count">2 accounts selected</span>
+</div>
+<span class="text-primary-fixed-dim">|</span>
+<span class="font-caption text-caption text-on-primary-container">Total Ledger Impact: $181,070.00 DR</span>
+</div>
+<div class="flex items-center gap-space-xs">
+<button class="px-space-md py-1 bg-surface-container-lowest text-primary hover:bg-primary-fixed font-body-sm-semibold text-body-sm rounded-lg transition-colors">
+            Generate Trial Balance Extract
+          </button>
+<button class="px-space-md py-1 bg-primary-container text-on-primary hover:bg-primary-fixed-variant font-body-sm-semibold text-body-sm rounded-lg transition-colors">
+            Change Ledger Type
+          </button>
+<button class="p-1 text-on-primary hover:text-error-container" onclick="deselectAll()">
+<span class="material-symbols-outlined text-[18px]">close</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Accounts Hierarchical Data Table -->
+<div class="overflow-x-auto">
+<table class="w-full text-left border-collapse" id="coa-table">
+<thead>
+<tr class="bg-surface-container font-caption text-caption uppercase text-on-surface-variant tracking-wider select-none">
+<th class="py-2.5 px-space-md w-10">
+<input class="w-4 h-4 rounded text-primary-container cursor-pointer" id="select-all-checkbox" onchange="toggleSelectAll(this)" type="checkbox"/>
+</th>
+<th class="py-2.5 px-space-sm font-semibold w-24">Code</th>
+<th class="py-2.5 px-space-md font-semibold">Account Name &amp; General Ledger Mapping</th>
+<th class="py-2.5 px-space-md font-semibold w-40">Type / Classification</th>
+<th class="py-2.5 px-space-sm font-semibold w-20">Currency</th>
+<th class="py-2.5 px-space-sm font-semibold w-24 text-center">Normal</th>
+<th class="py-2.5 px-space-md font-semibold text-right w-44">Current Balance</th>
+<th class="py-2.5 px-space-sm font-semibold w-28 text-center">Status</th>
+<th class="py-2.5 px-space-md font-semibold w-16 text-center">Actions</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-surface-container font-body-sm text-body-sm text-on-surface">
+<!-- 1000 - CURRENT ASSETS GROUP HEADER -->
+<tr class="group-header bg-surface-container-low hover:bg-surface-container cursor-pointer select-none transition-colors" data-group="assets" onclick="toggleSection('assets-rows', this)">
+<td class="py-3 px-space-md">
+<span class="material-symbols-outlined text-[18px] text-on-surface-variant group-indicator transform transition-transform">expand_more</span>
+</td>
+<td class="py-3 px-space-sm font-body-sm-semibold text-body-sm-semibold text-primary">1000</td>
+<td class="py-3 px-space-md font-body-sm-semibold text-body-sm-semibold text-on-surface" colspan="4">
+<div class="flex items-center gap-space-sm">
+<span>CURRENT ASSETS &amp; CASH EQUIVALENTS</span>
+<span class="font-caption text-caption bg-surface-container text-on-surface-variant px-1.5 py-0.5 rounded-full">5 Sub-Accounts</span>
+</div>
+</td>
+<td class="py-3 px-space-md text-right font-body-sm-semibold text-body-sm-semibold text-on-surface">
+              $380,665.00
+            </td>
+<td class="py-3 px-space-sm text-center">
+<span class="bg-primary-fixed text-on-primary-fixed font-caption text-caption px-2 py-0.5 rounded-full font-semibold">Debit</span>
+</td>
+<td class="py-3 px-space-md text-center">
+<button class="text-on-surface-variant hover:text-on-surface p-1 rounded" onclick="event.stopPropagation()">
+<span class="material-symbols-outlined text-[18px]">more_horiz</span>
+</button>
+</td>
+</tr>
+<!-- Assets Sub Rows -->
+</tbody><tbody id="assets-rows">
+<!-- 1010 Operating Cash -->
+<tr class="account-row hover:bg-surface-container-low transition-colors group" data-category="assets">
+<td class="py-3 px-space-md">
+<input class="row-checkbox w-4 h-4 rounded text-primary-container cursor-pointer" onchange="rowCheckChanged()" type="checkbox"/>
+</td>
+<td class="py-3 px-space-sm font-caption text-caption font-mono font-semibold text-on-surface">1010</td>
+<td class="py-3 px-space-md">
+<div class="flex items-center gap-space-sm pl-4">
+<span class="material-symbols-outlined text-primary text-[18px]">account_balance</span>
+<div class="flex flex-col">
+<span class="font-body-sm-semibold text-body-sm-semibold text-on-surface group-hover:text-primary transition-colors cursor-pointer">Operating Cash (JPMorgan Chase ****8812)</span>
+<span class="font-caption text-caption text-on-surface-variant">Odoo Code: <span class="font-mono">BNK1/USD/CHASE</span> • Last bank feed import: Today 08:30 AM</span>
+</div>
+</div>
+</td>
+<td class="py-3 px-space-md text-on-surface-variant">Cash &amp; Bank</td>
+<td class="py-3 px-space-sm font-mono text-on-surface-variant">USD</td>
+<td class="py-3 px-space-sm text-center">
+<span class="font-caption text-caption uppercase text-primary font-bold">DR</span>
+</td>
+<td class="py-3 px-space-md text-right font-body-sm-semibold text-body-sm-semibold font-mono text-on-surface">
+                $142,650.00
+              </td>
+<td class="py-3 px-space-sm text-center">
+<span class="inline-flex items-center gap-1 bg-primary-fixed-dim text-on-primary-fixed-variant px-2 py-0.5 rounded-full font-caption text-caption font-semibold">
+<span class="w-1.5 h-1.5 rounded-full bg-primary"></span>
+                  Active
+                </span>
+</td>
+<td class="py-3 px-space-md text-center">
+<button class="text-on-surface-variant hover:text-on-surface p-1 rounded hover:bg-surface-container transition-colors" title="Options">
+<span class="material-symbols-outlined text-[18px]">more_vert</span>
+</button>
+</td>
+</tr>
+<!-- 1020 POS Cash Till Float -->
+<tr class="account-row hover:bg-surface-container-low transition-colors group" data-category="assets">
+<td class="py-3 px-space-md">
+<input class="row-checkbox w-4 h-4 rounded text-primary-container cursor-pointer" onchange="rowCheckChanged()" type="checkbox"/>
+</td>
+<td class="py-3 px-space-sm font-caption text-caption font-mono font-semibold text-on-surface">1020</td>
+<td class="py-3 px-space-md">
+<div class="flex items-center gap-space-sm pl-4">
+<span class="material-symbols-outlined text-on-surface-variant text-[18px]">point_of_sale</span>
+<div class="flex flex-col">
+<span class="font-body-sm-semibold text-body-sm-semibold text-on-surface group-hover:text-primary transition-colors cursor-pointer">POS Cash Till Float (SoHo Flagship Register 01 &amp; 02)</span>
+<span class="font-caption text-caption text-on-surface-variant">Auto-rebalanced by Shopify POS Shift Closing Sessions</span>
+</div>
+</div>
+</td>
+<td class="py-3 px-space-md text-on-surface-variant">Cash on Hand</td>
+<td class="py-3 px-space-sm font-mono text-on-surface-variant">USD</td>
+<td class="py-3 px-space-sm text-center">
+<span class="font-caption text-caption uppercase text-primary font-bold">DR</span>
+</td>
+<td class="py-3 px-space-md text-right font-body-sm-semibold text-body-sm-semibold font-mono text-on-surface">
+                $1,355.00
+              </td>
+<td class="py-3 px-space-sm text-center">
+<span class="inline-flex items-center gap-1 bg-primary-fixed-dim text-on-primary-fixed-variant px-2 py-0.5 rounded-full font-caption text-caption font-semibold">
+<span class="w-1.5 h-1.5 rounded-full bg-primary"></span>
+                  Active
+                </span>
+</td>
+<td class="py-3 px-space-md text-center">
+<button class="text-on-surface-variant hover:text-on-surface p-1 rounded hover:bg-surface-container transition-colors" title="Options">
+<span class="material-symbols-outlined text-[18px]">more_vert</span>
+</button>
+</td>
+</tr>
+<!-- 1050 Accounts Receivable -->
+<tr class="account-row hover:bg-surface-container-low transition-colors group" data-category="assets">
+<td class="py-3 px-space-md">
+<input class="row-checkbox w-4 h-4 rounded text-primary-container cursor-pointer" onchange="rowCheckChanged()" type="checkbox"/>
+</td>
+<td class="py-3 px-space-sm font-caption text-caption font-mono font-semibold text-on-surface">1050</td>
+<td class="py-3 px-space-md">
+<div class="flex items-center gap-space-sm pl-4">
+<span class="material-symbols-outlined text-on-surface-variant text-[18px]">receipt_long</span>
+<div class="flex flex-col">
+<span class="font-body-sm-semibold text-body-sm-semibold text-on-surface group-hover:text-primary transition-colors cursor-pointer">Accounts Receivable (Trade B2B Debtors)</span>
+<span class="font-caption text-caption text-on-surface-variant">Net 30 wholesale invoice ledger • 4 accounts overdue ($2,400)</span>
+</div>
+</div>
+</td>
+<td class="py-3 px-space-md text-on-surface-variant">Current Receivables</td>
+<td class="py-3 px-space-sm font-mono text-on-surface-variant">USD</td>
+<td class="py-3 px-space-sm text-center">
+<span class="font-caption text-caption uppercase text-primary font-bold">DR</span>
+</td>
+<td class="py-3 px-space-md text-right font-body-sm-semibold text-body-sm-semibold font-mono text-on-surface">
+                $38,420.00
+              </td>
+<td class="py-3 px-space-sm text-center">
+<span class="inline-flex items-center gap-1 bg-primary-fixed-dim text-on-primary-fixed-variant px-2 py-0.5 rounded-full font-caption text-caption font-semibold">
+<span class="w-1.5 h-1.5 rounded-full bg-primary"></span>
+                  Active
+                </span>
+</td>
+<td class="py-3 px-space-md text-center">
+<button class="text-on-surface-variant hover:text-on-surface p-1 rounded hover:bg-surface-container transition-colors" title="Options">
+<span class="material-symbols-outlined text-[18px]">more_vert</span>
+</button>
+</td>
+</tr>
+<!-- 1200 Merchandise Inventory -->
+<tr class="account-row hover:bg-surface-container-low transition-colors group" data-category="assets">
+<td class="py-3 px-space-md">
+<input class="row-checkbox w-4 h-4 rounded text-primary-container cursor-pointer" onchange="rowCheckChanged()" type="checkbox"/>
+</td>
+<td class="py-3 px-space-sm font-caption text-caption font-mono font-semibold text-on-surface">1200</td>
+<td class="py-3 px-space-md">
+<div class="flex items-center gap-space-sm pl-4">
+<span class="material-symbols-outlined text-on-surface-variant text-[18px]">inventory_2</span>
+<div class="flex flex-col">
+<span class="font-body-sm-semibold text-body-sm-semibold text-on-surface group-hover:text-primary transition-colors cursor-pointer">Merchandise Inventory (At Weighted Average Cost)</span>
+<span class="font-caption text-caption text-on-surface-variant">Synced across SoHo Warehouse &amp; 3PL Fulfillment Hub (1,420 SKUs)</span>
+</div>
+</div>
+</td>
+<td class="py-3 px-space-md text-on-surface-variant">Inventory Asset</td>
+<td class="py-3 px-space-sm font-mono text-on-surface-variant">USD</td>
+<td class="py-3 px-space-sm text-center">
+<span class="font-caption text-caption uppercase text-primary font-bold">DR</span>
+</td>
+<td class="py-3 px-space-md text-right font-body-sm-semibold text-body-sm-semibold font-mono text-on-surface">
+                $185,400.00
+              </td>
+<td class="py-3 px-space-sm text-center">
+<span class="inline-flex items-center gap-1 bg-primary-fixed-dim text-on-primary-fixed-variant px-2 py-0.5 rounded-full font-caption text-caption font-semibold">
+<span class="w-1.5 h-1.5 rounded-full bg-primary"></span>
+                  Active
+                </span>
+</td>
+<td class="py-3 px-space-md text-center">
+<button class="text-on-surface-variant hover:text-on-surface p-1 rounded hover:bg-surface-container transition-colors" title="Options">
+<span class="material-symbols-outlined text-[18px]">more_vert</span>
+</button>
+</td>
+</tr>
+<!-- 1250 Undeposited Funds -->
+<tr class="account-row hover:bg-surface-container-low transition-colors group" data-category="assets">
+<td class="py-3 px-space-md">
+<input class="row-checkbox w-4 h-4 rounded text-primary-container cursor-pointer" onchange="rowCheckChanged()" type="checkbox"/>
+</td>
+<td class="py-3 px-space-sm font-caption text-caption font-mono font-semibold text-on-surface">1250</td>
+<td class="py-3 px-space-md">
+<div class="flex items-center gap-space-sm pl-4">
+<span class="material-symbols-outlined text-secondary text-[18px]">hourglass_top</span>
+<div class="flex flex-col">
+<span class="font-body-sm-semibold text-body-sm-semibold text-on-surface group-hover:text-primary transition-colors cursor-pointer">Undeposited Funds (Shopify Payments / POS Batches in Clearing)</span>
+<span class="font-caption text-caption text-on-surface-variant">In-transit payout scheduled for transfer tomorrow at 04:00 AM</span>
+</div>
+</div>
+</td>
+<td class="py-3 px-space-md text-on-surface-variant">Clearing Asset</td>
+<td class="py-3 px-space-sm font-mono text-on-surface-variant">USD</td>
+<td class="py-3 px-space-sm text-center">
+<span class="font-caption text-caption uppercase text-primary font-bold">DR</span>
+</td>
+<td class="py-3 px-space-md text-right font-body-sm-semibold text-body-sm-semibold font-mono text-on-surface">
+                $12,840.00
+              </td>
+<td class="py-3 px-space-sm text-center">
+<span class="inline-flex items-center gap-1 bg-secondary-fixed text-on-secondary-fixed-variant px-2 py-0.5 rounded-full font-caption text-caption font-semibold">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+                  Clearing
+                </span>
+</td>
+<td class="py-3 px-space-md text-center">
+<button class="text-on-surface-variant hover:text-on-surface p-1 rounded hover:bg-surface-container transition-colors" title="Options">
+<span class="material-symbols-outlined text-[18px]">more_vert</span>
+</button>
+</td>
+</tr>
+</tbody>
+<!-- 2000 - CURRENT LIABILITIES GROUP HEADER -->
+<tbody><tr class="group-header bg-surface-container-low hover:bg-surface-container cursor-pointer select-none transition-colors" data-group="liabilities" onclick="toggleSection('liabilities-rows', this)">
+<td class="py-3 px-space-md">
+<span class="material-symbols-outlined text-[18px] text-on-surface-variant group-indicator transform transition-transform">expand_more</span>
+</td>
+<td class="py-3 px-space-sm font-body-sm-semibold text-body-sm-semibold text-primary">2000</td>
+<td class="py-3 px-space-md font-body-sm-semibold text-body-sm-semibold text-on-surface" colspan="4">
+<div class="flex items-center gap-space-sm">
+<span>CURRENT LIABILITIES &amp; ACCRUED OBLIGATIONS</span>
+<span class="font-caption text-caption bg-surface-container text-on-surface-variant px-1.5 py-0.5 rounded-full">4 Sub-Accounts</span>
+</div>
+</td>
+<td class="py-3 px-space-md text-right font-body-sm-semibold text-body-sm-semibold text-on-surface">
+              $87,650.00
+            </td>
+<td class="py-3 px-space-sm text-center">
+<span class="bg-surface-container-highest text-on-surface font-caption text-caption px-2 py-0.5 rounded-full font-semibold">Credit</span>
+</td>
+<td class="py-3 px-space-md text-center">
+<button class="text-on-surface-variant hover:text-on-surface p-1 rounded" onclick="event.stopPropagation()">
+<span class="material-symbols-outlined text-[18px]">more_horiz</span>
+</button>
+</td>
+</tr>
+<!-- Liabilities Sub Rows -->
+</tbody><tbody id="liabilities-rows">
+<!-- 2010 Accounts Payable -->
+<tr class="account-row hover:bg-surface-container-low transition-colors group" data-category="liabilities">
+<td class="py-3 px-space-md">
+<input class="row-checkbox w-4 h-4 rounded text-primary-container cursor-pointer" onchange="rowCheckChanged()" type="checkbox"/>
+</td>
+<td class="py-3 px-space-sm font-caption text-caption font-mono font-semibold text-on-surface">2010</td>
+<td class="py-3 px-space-md">
+<div class="flex items-center gap-space-sm pl-4">
+<span class="material-symbols-outlined text-on-surface-variant text-[18px]">local_shipping</span>
+<div class="flex flex-col">
+<span class="font-body-sm-semibold text-body-sm-semibold text-on-surface group-hover:text-primary transition-colors cursor-pointer">Accounts Payable (Vendor Trade Creditors)</span>
+<span class="font-caption text-caption text-on-surface-variant">Textile mills, packaging &amp; freight carriers</span>
+</div>
+</div>
+</td>
+<td class="py-3 px-space-md text-on-surface-variant">Trade Payables</td>
+<td class="py-3 px-space-sm font-mono text-on-surface-variant">USD</td>
+<td class="py-3 px-space-sm text-center">
+<span class="font-caption text-caption uppercase text-on-surface-variant font-bold">CR</span>
+</td>
+<td class="py-3 px-space-md text-right font-body-sm-semibold text-body-sm-semibold font-mono text-on-surface">
+                $46,200.00
+              </td>
+<td class="py-3 px-space-sm text-center">
+<span class="inline-flex items-center gap-1 bg-primary-fixed-dim text-on-primary-fixed-variant px-2 py-0.5 rounded-full font-caption text-caption font-semibold">
+<span class="w-1.5 h-1.5 rounded-full bg-primary"></span>
+                  Active
+                </span>
+</td>
+<td class="py-3 px-space-md text-center">
+<button class="text-on-surface-variant hover:text-on-surface p-1 rounded hover:bg-surface-container transition-colors" title="Options">
+<span class="material-symbols-outlined text-[18px]">more_vert</span>
+</button>
+</td>
+</tr>
+<!-- 2050 Sales Tax / State & Local VAT Payable -->
+<tr class="account-row hover:bg-surface-container-low transition-colors group" data-category="liabilities">
+<td class="py-3 px-space-md">
+<input class="row-checkbox w-4 h-4 rounded text-primary-container cursor-pointer" onchange="rowCheckChanged()" type="checkbox"/>
+</td>
+<td class="py-3 px-space-sm font-caption text-caption font-mono font-semibold text-on-surface">2050</td>
+<td class="py-3 px-space-md">
+<div class="flex items-center gap-space-sm pl-4">
+<span class="material-symbols-outlined text-error text-[18px]">gavel</span>
+<div class="flex flex-col">
+<span class="font-body-sm-semibold text-body-sm-semibold text-on-surface group-hover:text-primary transition-colors cursor-pointer">Sales Tax / State &amp; Local VAT Payable (NY State 8.875%)</span>
+<span class="font-caption text-caption text-on-surface-variant">Shopify Tax Automated Assessment • Q1 Remittance Due in 18 days</span>
+</div>
+</div>
+</td>
+<td class="py-3 px-space-md text-on-surface-variant">Tax Liability</td>
+<td class="py-3 px-space-sm font-mono text-on-surface-variant">USD</td>
+<td class="py-3 px-space-sm text-center">
+<span class="font-caption text-caption uppercase text-on-surface-variant font-bold">CR</span>
+</td>
+<td class="py-3 px-space-md text-right font-body-sm-semibold text-body-sm-semibold font-mono text-on-surface">
+                $18,920.00
+              </td>
+<td class="py-3 px-space-sm text-center">
+<span class="inline-flex items-center gap-1 bg-primary-fixed-dim text-on-primary-fixed-variant px-2 py-0.5 rounded-full font-caption text-caption font-semibold">
+<span class="w-1.5 h-1.5 rounded-full bg-primary"></span>
+                  Active
+                </span>
+</td>
+<td class="py-3 px-space-md text-center">
+<button class="text-on-surface-variant hover:text-on-surface p-1 rounded hover:bg-surface-container transition-colors" title="Options">
+<span class="material-symbols-outlined text-[18px]">more_vert</span>
+</button>
+</td>
+</tr>
+<!-- 2080 Gift Card Deferred Revenue -->
+<tr class="account-row hover:bg-surface-container-low transition-colors group" data-category="liabilities">
+<td class="py-3 px-space-md">
+<input class="row-checkbox w-4 h-4 rounded text-primary-container cursor-pointer" onchange="rowCheckChanged()" type="checkbox"/>
+</td>
+<td class="py-3 px-space-sm font-caption text-caption font-mono font-semibold text-on-surface">2080</td>
+<td class="py-3 px-space-md">
+<div class="flex items-center gap-space-sm pl-4">
+<span class="material-symbols-outlined text-on-surface-variant text-[18px]">card_giftcard</span>
+<div class="flex flex-col">
+<span class="font-body-sm-semibold text-body-sm-semibold text-on-surface group-hover:text-primary transition-colors cursor-pointer">Gift Card Deferred Revenue Liability</span>
+<span class="font-caption text-caption text-on-surface-variant">Outstanding unredeemed digital &amp; physical POS gift cards</span>
+</div>
+</div>
+</td>
+<td class="py-3 px-space-md text-on-surface-variant">Deferred Revenue</td>
+<td class="py-3 px-space-sm font-mono text-on-surface-variant">USD</td>
+<td class="py-3 px-space-sm text-center">
+<span class="font-caption text-caption uppercase text-on-surface-variant font-bold">CR</span>
+</td>
+<td class="py-3 px-space-md text-right font-body-sm-semibold text-body-sm-semibold font-mono text-on-surface">
+                $8,420.00
+              </td>
+<td class="py-3 px-space-sm text-center">
+<span class="inline-flex items-center gap-1 bg-primary-fixed-dim text-on-primary-fixed-variant px-2 py-0.5 rounded-full font-caption text-caption font-semibold">
+<span class="w-1.5 h-1.5 rounded-full bg-primary"></span>
+                  Active
+                </span>
+</td>
+<td class="py-3 px-space-md text-center">
+<button class="text-on-surface-variant hover:text-on-surface p-1 rounded hover:bg-surface-container transition-colors" title="Options">
+<span class="material-symbols-outlined text-[18px]">more_vert</span>
+</button>
+</td>
+</tr>
+<!-- 2100 Accrued Payroll & Staff Commissions -->
+<tr class="account-row hover:bg-surface-container-low transition-colors group" data-category="liabilities">
+<td class="py-3 px-space-md">
+<input class="row-checkbox w-4 h-4 rounded text-primary-container cursor-pointer" onchange="rowCheckChanged()" type="checkbox"/>
+</td>
+<td class="py-3 px-space-sm font-caption text-caption font-mono font-semibold text-on-surface">2100</td>
+<td class="py-3 px-space-md">
+<div class="flex items-center gap-space-sm pl-4">
+<span class="material-symbols-outlined text-on-surface-variant text-[18px]">badge</span>
+<div class="flex flex-col">
+<span class="font-body-sm-semibold text-body-sm-semibold text-on-surface group-hover:text-primary transition-colors cursor-pointer">Accrued Payroll &amp; Staff Commissions</span>
+<span class="font-caption text-caption text-on-surface-variant">Store associates commission earned on POS sales cycle</span>
+</div>
+</div>
+</td>
+<td class="py-3 px-space-md text-on-surface-variant">Accrued Expenses</td>
+<td class="py-3 px-space-sm font-mono text-on-surface-variant">USD</td>
+<td class="py-3 px-space-sm text-center">
+<span class="font-caption text-caption uppercase text-on-surface-variant font-bold">CR</span>
+</td>
+<td class="py-3 px-space-md text-right font-body-sm-semibold text-body-sm-semibold font-mono text-on-surface">
+                $14,110.00
+              </td>
+<td class="py-3 px-space-sm text-center">
+<span class="inline-flex items-center gap-1 bg-primary-fixed-dim text-on-primary-fixed-variant px-2 py-0.5 rounded-full font-caption text-caption font-semibold">
+<span class="w-1.5 h-1.5 rounded-full bg-primary"></span>
+                  Active
+                </span>
+</td>
+<td class="py-3 px-space-md text-center">
+<button class="text-on-surface-variant hover:text-on-surface p-1 rounded hover:bg-surface-container transition-colors" title="Options">
+<span class="material-symbols-outlined text-[18px]">more_vert</span>
+</button>
+</td>
+</tr>
+</tbody>
+<!-- 4000 - OPERATING REVENUE GROUP HEADER -->
+<tbody><tr class="group-header bg-surface-container-low hover:bg-surface-container cursor-pointer select-none transition-colors" data-group="revenue" onclick="toggleSection('revenue-rows', this)">
+<td class="py-3 px-space-md">
+<span class="material-symbols-outlined text-[18px] text-on-surface-variant group-indicator transform transition-transform">expand_more</span>
+</td>
+<td class="py-3 px-space-sm font-body-sm-semibold text-body-sm-semibold text-primary">4000</td>
+<td class="py-3 px-space-md font-body-sm-semibold text-body-sm-semibold text-on-surface" colspan="4">
+<div class="flex items-center gap-space-sm">
+<span>OPERATING REVENUE &amp; SALES CHANNELS</span>
+<span class="font-caption text-caption bg-surface-container text-on-surface-variant px-1.5 py-0.5 rounded-full">3 Sub-Accounts</span>
+</div>
+</td>
+<td class="py-3 px-space-md text-right font-body-sm-semibold text-body-sm-semibold text-on-surface">
+              $410,030.00
+            </td>
+<td class="py-3 px-space-sm text-center">
+<span class="bg-surface-container-highest text-on-surface font-caption text-caption px-2 py-0.5 rounded-full font-semibold">Credit</span>
+</td>
+<td class="py-3 px-space-md text-center">
+<button class="text-on-surface-variant hover:text-on-surface p-1 rounded" onclick="event.stopPropagation()">
+<span class="material-symbols-outlined text-[18px]">more_horiz</span>
+</button>
+</td>
+</tr>
+<!-- Revenue Sub Rows -->
+</tbody><tbody id="revenue-rows">
+<!-- 4010 Retail POS Store Sales -->
+<tr class="account-row hover:bg-surface-container-low transition-colors group" data-category="revenue">
+<td class="py-3 px-space-md">
+<input class="row-checkbox w-4 h-4 rounded text-primary-container cursor-pointer" onchange="rowCheckChanged()" type="checkbox"/>
+</td>
+<td class="py-3 px-space-sm font-caption text-caption font-mono font-semibold text-on-surface">4010</td>
+<td class="py-3 px-space-md">
+<div class="flex items-center gap-space-sm pl-4">
+<span class="material-symbols-outlined text-primary text-[18px]">storefront</span>
+<div class="flex flex-col">
+<span class="font-body-sm-semibold text-body-sm-semibold text-on-surface group-hover:text-primary transition-colors cursor-pointer">Retail POS Store Sales (SoHo Flagship)</span>
+<span class="font-caption text-caption text-on-surface-variant">Real-time daily journal posting directly from counter registers</span>
+</div>
+</div>
+</td>
+<td class="py-3 px-space-md text-on-surface-variant">Direct Revenue</td>
+<td class="py-3 px-space-sm font-mono text-on-surface-variant">USD</td>
+<td class="py-3 px-space-sm text-center">
+<span class="font-caption text-caption uppercase text-on-surface-variant font-bold">CR</span>
+</td>
+<td class="py-3 px-space-md text-right font-body-sm-semibold text-body-sm-semibold font-mono text-on-surface">
+                $184,650.00
+              </td>
+<td class="py-3 px-space-sm text-center">
+<span class="inline-flex items-center gap-1 bg-primary-fixed-dim text-on-primary-fixed-variant px-2 py-0.5 rounded-full font-caption text-caption font-semibold">
+<span class="w-1.5 h-1.5 rounded-full bg-primary"></span>
+                  Active
+                </span>
+</td>
+<td class="py-3 px-space-md text-center">
+<button class="text-on-surface-variant hover:text-on-surface p-1 rounded hover:bg-surface-container transition-colors" title="Options">
+<span class="material-symbols-outlined text-[18px]">more_vert</span>
+</button>
+</td>
+</tr>
+<!-- 4020 Online E-Commerce Sales -->
+<tr class="account-row hover:bg-surface-container-low transition-colors group" data-category="revenue">
+<td class="py-3 px-space-md">
+<input class="row-checkbox w-4 h-4 rounded text-primary-container cursor-pointer" onchange="rowCheckChanged()" type="checkbox"/>
+</td>
+<td class="py-3 px-space-sm font-caption text-caption font-mono font-semibold text-on-surface">4020</td>
+<td class="py-3 px-space-md">
+<div class="flex items-center gap-space-sm pl-4">
+<span class="material-symbols-outlined text-secondary text-[18px]">shopping_cart</span>
+<div class="flex flex-col">
+<span class="font-body-sm-semibold text-body-sm-semibold text-on-surface group-hover:text-primary transition-colors cursor-pointer">Online E-Commerce Sales (Web &amp; Shop App)</span>
+<span class="font-caption text-caption text-on-surface-variant">Storefront orders checkout ledger • 8,240 orders processed</span>
+</div>
+</div>
+</td>
+<td class="py-3 px-space-md text-on-surface-variant">Direct Revenue</td>
+<td class="py-3 px-space-sm font-mono text-on-surface-variant">USD</td>
+<td class="py-3 px-space-sm text-center">
+<span class="font-caption text-caption uppercase text-on-surface-variant font-bold">CR</span>
+</td>
+<td class="py-3 px-space-md text-right font-body-sm-semibold text-body-sm-semibold font-mono text-on-surface">
+                $241,800.00
+              </td>
+<td class="py-3 px-space-sm text-center">
+<span class="inline-flex items-center gap-1 bg-primary-fixed-dim text-on-primary-fixed-variant px-2 py-0.5 rounded-full font-caption text-caption font-semibold">
+<span class="w-1.5 h-1.5 rounded-full bg-primary"></span>
+                  Active
+                </span>
+</td>
+<td class="py-3 px-space-md text-center">
+<button class="text-on-surface-variant hover:text-on-surface p-1 rounded hover:bg-surface-container transition-colors" title="Options">
+<span class="material-symbols-outlined text-[18px]">more_vert</span>
+</button>
+</td>
+</tr>
+<!-- 4090 Sales Discounts & Promotional Allowances -->
+<tr class="account-row hover:bg-surface-container-low transition-colors group" data-category="revenue">
+<td class="py-3 px-space-md">
+<input class="row-checkbox w-4 h-4 rounded text-primary-container cursor-pointer" onchange="rowCheckChanged()" type="checkbox"/>
+</td>
+<td class="py-3 px-space-sm font-caption text-caption font-mono font-semibold text-on-surface">4090</td>
+<td class="py-3 px-space-md">
+<div class="flex items-center gap-space-sm pl-4">
+<span class="material-symbols-outlined text-tertiary text-[18px]">loyalty</span>
+<div class="flex flex-col">
+<span class="font-body-sm-semibold text-body-sm-semibold text-on-surface group-hover:text-primary transition-colors cursor-pointer">Sales Discounts &amp; Promotional Allowances</span>
+<span class="font-caption text-caption text-on-surface-variant">Coupon codes, automatic flash discounts, loyalty redemptions</span>
+</div>
+</div>
+</td>
+<td class="py-3 px-space-md text-on-surface-variant">Contra Revenue</td>
+<td class="py-3 px-space-sm font-mono text-on-surface-variant">USD</td>
+<td class="py-3 px-space-sm text-center">
+<span class="font-caption text-caption uppercase text-primary font-bold">DR</span>
+</td>
+<td class="py-3 px-space-md text-right font-body-sm-semibold text-body-sm-semibold font-mono text-error">
+                -$16,420.00
+              </td>
+<td class="py-3 px-space-sm text-center">
+<span class="inline-flex items-center gap-1 bg-primary-fixed-dim text-on-primary-fixed-variant px-2 py-0.5 rounded-full font-caption text-caption font-semibold">
+<span class="w-1.5 h-1.5 rounded-full bg-primary"></span>
+                  Active
+                </span>
+</td>
+<td class="py-3 px-space-md text-center">
+<button class="text-on-surface-variant hover:text-on-surface p-1 rounded hover:bg-surface-container transition-colors" title="Options">
+<span class="material-symbols-outlined text-[18px]">more_vert</span>
+</button>
+</td>
+</tr>
+</tbody>
+<!-- 5000 - COST OF GOODS SOLD (COGS) -->
+<tbody><tr class="group-header bg-surface-container-low hover:bg-surface-container cursor-pointer select-none transition-colors" data-group="expenses" onclick="toggleSection('cogs-rows', this)">
+<td class="py-3 px-space-md">
+<span class="material-symbols-outlined text-[18px] text-on-surface-variant group-indicator transform transition-transform">expand_more</span>
+</td>
+<td class="py-3 px-space-sm font-body-sm-semibold text-body-sm-semibold text-primary">5000</td>
+<td class="py-3 px-space-md font-body-sm-semibold text-body-sm-semibold text-on-surface" colspan="4">
+<div class="flex items-center gap-space-sm">
+<span>COST OF GOODS SOLD (COGS)</span>
+<span class="font-caption text-caption bg-surface-container text-on-surface-variant px-1.5 py-0.5 rounded-full">1 Sub-Account</span>
+</div>
+</td>
+<td class="py-3 px-space-md text-right font-body-sm-semibold text-body-sm-semibold text-on-surface">
+              $148,200.00
+            </td>
+<td class="py-3 px-space-sm text-center">
+<span class="bg-primary-fixed text-on-primary-fixed font-caption text-caption px-2 py-0.5 rounded-full font-semibold">Debit</span>
+</td>
+<td class="py-3 px-space-md text-center">
+<button class="text-on-surface-variant hover:text-on-surface p-1 rounded" onclick="event.stopPropagation()">
+<span class="material-symbols-outlined text-[18px]">more_horiz</span>
+</button>
+</td>
+</tr>
+<!-- COGS Sub Rows -->
+</tbody><tbody id="cogs-rows">
+<!-- 5010 Cost of Goods Sold -->
+<tr class="account-row hover:bg-surface-container-low transition-colors group" data-category="expenses">
+<td class="py-3 px-space-md">
+<input class="row-checkbox w-4 h-4 rounded text-primary-container cursor-pointer" onchange="rowCheckChanged()" type="checkbox"/>
+</td>
+<td class="py-3 px-space-sm font-caption text-caption font-mono font-semibold text-on-surface">5010</td>
+<td class="py-3 px-space-md">
+<div class="flex items-center gap-space-sm pl-4">
+<span class="material-symbols-outlined text-on-surface-variant text-[18px]">factory</span>
+<div class="flex flex-col">
+<span class="font-body-sm-semibold text-body-sm-semibold text-on-surface group-hover:text-primary transition-colors cursor-pointer">Cost of Goods Sold - Apparel &amp; Accessories</span>
+<span class="font-caption text-caption text-on-surface-variant">Realized on order fulfillment / POS inventory release</span>
+</div>
+</div>
+</td>
+<td class="py-3 px-space-md text-on-surface-variant">Direct Cost of Sales</td>
+<td class="py-3 px-space-sm font-mono text-on-surface-variant">USD</td>
+<td class="py-3 px-space-sm text-center">
+<span class="font-caption text-caption uppercase text-primary font-bold">DR</span>
+</td>
+<td class="py-3 px-space-md text-right font-body-sm-semibold text-body-sm-semibold font-mono text-on-surface">
+                $148,200.00
+              </td>
+<td class="py-3 px-space-sm text-center">
+<span class="inline-flex items-center gap-1 bg-primary-fixed-dim text-on-primary-fixed-variant px-2 py-0.5 rounded-full font-caption text-caption font-semibold">
+<span class="w-1.5 h-1.5 rounded-full bg-primary"></span>
+                  Active
+                </span>
+</td>
+<td class="py-3 px-space-md text-center">
+<button class="text-on-surface-variant hover:text-on-surface p-1 rounded hover:bg-surface-container transition-colors" title="Options">
+<span class="material-symbols-outlined text-[18px]">more_vert</span>
+</button>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<!-- Table Pagination & Ledger Summary Footer -->
+<div class="px-space-md py-space-sm bg-surface-container-low flex flex-col sm:flex-row items-center justify-between gap-space-sm">
+<div class="flex items-center gap-space-md font-caption text-caption text-on-surface-variant">
+<span>Showing <strong class="text-on-surface">13</strong> of <strong class="text-on-surface">48</strong> financial ledgers</span>
+<span>•</span>
+<span class="flex items-center gap-1 text-primary font-medium">
+<span class="material-symbols-outlined text-[14px]">lock_reset</span>
+          Period lock: Feb 28, 2025
+        </span>
+</div>
+<div class="flex items-center gap-space-sm">
+<span class="font-caption text-caption text-on-surface-variant">Rows per page:</span>
+<select class="bg-surface-container-lowest font-body-sm text-body-sm text-on-surface rounded px-2 py-0.5 shadow-sm focus:outline-none">
+<option>25</option>
+<option>50</option>
+<option>100</option>
+</select>
+<div class="flex items-center gap-1">
+<button class="p-1 rounded bg-surface-container-lowest text-on-surface-variant hover:text-on-surface shadow-sm disabled:opacity-50" disabled="">
+<span class="material-symbols-outlined text-[16px]">chevron_left</span>
+</button>
+<button class="p-1 rounded bg-surface-container-lowest text-on-surface-variant hover:text-on-surface shadow-sm">
+<span class="material-symbols-outlined text-[16px]">chevron_right</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+<!-- Real-Time ERP Context & Audit Metadata Section -->
+<div class="mt-space-lg grid grid-cols-1 md:grid-cols-3 gap-space-md">
+<div class="p-space-md bg-surface-container-lowest rounded-xl shadow-sm flex items-start gap-space-sm">
+<span class="material-symbols-outlined text-primary text-[24px]">verified_user</span>
+<div class="flex flex-col">
+<span class="font-body-sm-semibold text-body-sm-semibold text-on-surface">Automated POS Clearing Account</span>
+<p class="font-caption text-caption text-on-surface-variant mt-1">
+          Cash till drifts &gt; $5.00 require store manager override on POS register and auto-generate an entry into <strong>6150 (Cash Over/Short)</strong>.
+        </p>
+</div>
+</div>
+<div class="p-space-md bg-surface-container-lowest rounded-xl shadow-sm flex items-start gap-space-sm">
+<span class="material-symbols-outlined text-secondary text-[24px]">account_tree</span>
+<div class="flex flex-col">
+<span class="font-body-sm-semibold text-body-sm-semibold text-on-surface">Odoo Analytic Distribution</span>
+<p class="font-caption text-caption text-on-surface-variant mt-1">
+          Tag rules assign 100% of retail transactions to Cost Center <strong class="text-on-surface">CC-US-SOHO-01</strong> for multi-store localized P&amp;L reporting.
+        </p>
+</div>
+</div>
+<div class="p-space-md bg-surface-container-lowest rounded-xl shadow-sm flex items-start gap-space-sm">
+<span class="material-symbols-outlined text-on-surface-variant text-[24px]">schedule</span>
+<div class="flex flex-col">
+<span class="font-body-sm-semibold text-body-sm-semibold text-on-surface">Audit Trail &amp; Archival Status</span>
+<p class="font-caption text-caption text-on-surface-variant mt-1">
+          Zero accounts deleted. 2 obsolete accounts from 2023 archived with non-zero historical postings intact for tax compliance.
+        </p>
+</div>
+</div>
+</div>
+<!-- Polaris Modal: New Account Dialog (Hidden by Default) -->
+<div class="hidden fixed inset-0 z-50 flex items-center justify-center bg-black/40 backdrop-blur-xs p-4" id="new-account-modal">
+<div class="bg-surface-container-lowest rounded-xl shadow-xl max-w-lg w-full overflow-hidden flex flex-col animate-fade-in">
+<div class="p-space-md bg-surface-container-low flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-primary text-[20px]">add_circle</span>
+<h3 class="font-headline-sm text-headline-sm text-on-surface font-semibold">Create General Ledger Account</h3>
+</div>
+<button class="text-on-surface-variant hover:text-on-surface" onclick="document.getElementById('new-account-modal').classList.add('hidden')">
+<span class="material-symbols-outlined text-[20px]">close</span>
+</button>
+</div>
+<div class="p-space-md flex flex-col gap-space-md overflow-y-auto max-h-[716px]">
+<div class="grid grid-cols-2 gap-space-md">
+<div class="flex flex-col gap-1">
+<label class="font-label-sm text-label-sm text-on-surface">Account Code <span class="text-error">*</span></label>
+<input class="h-8 px-2 bg-surface-container-low text-on-surface rounded font-body-sm text-body-sm focus:outline-none focus:ring-1 focus:ring-primary" placeholder="e.g. 1060" type="text"/>
+<span class="font-caption text-caption text-on-surface-variant">Recommended: 1060-1090</span>
+</div>
+<div class="flex flex-col gap-1">
+<label class="font-label-sm text-label-sm text-on-surface">Currency</label>
+<select class="h-8 px-2 bg-surface-container-low text-on-surface rounded font-body-sm text-body-sm focus:outline-none">
+<option>USD ($) - Store Base</option>
+<option>EUR (€)</option>
+<option>GBP (£)</option>
+</select>
+</div>
+</div>
+<div class="flex flex-col gap-1">
+<label class="font-label-sm text-label-sm text-on-surface">Account Title <span class="text-error">*</span></label>
+<input class="h-8 px-2 bg-surface-container-low text-on-surface rounded font-body-sm text-body-sm focus:outline-none focus:ring-1 focus:ring-primary" placeholder="e.g. Shopify Capital Merchant Advance Reserve" type="text"/>
+</div>
+<div class="grid grid-cols-2 gap-space-md">
+<div class="flex flex-col gap-1">
+<label class="font-label-sm text-label-sm text-on-surface">Account Classification <span class="text-error">*</span></label>
+<select class="h-8 px-2 bg-surface-container-low text-on-surface rounded font-body-sm text-body-sm focus:outline-none">
+<option>Asset - Current Asset</option>
+<option>Asset - Bank &amp; Cash Float</option>
+<option>Liability - Current Liability</option>
+<option>Equity - Retained Earnings</option>
+<option>Income - Direct Revenue</option>
+<option>Expense - Operational</option>
+</select>
+</div>
+<div class="flex flex-col gap-1">
+<label class="font-label-sm text-label-sm text-on-surface">Normal Balance</label>
+<div class="flex items-center gap-space-sm mt-1">
+<label class="flex items-center gap-1 font-body-sm text-body-sm cursor-pointer">
+<input checked="" class="text-primary" name="balance_nature" type="radio"/> Debit (DR)
+              </label>
+<label class="flex items-center gap-1 font-body-sm text-body-sm cursor-pointer">
+<input class="text-primary" name="balance_nature" type="radio"/> Credit (CR)
+              </label>
+</div>
+</div>
+</div>
+<div class="flex flex-col gap-1">
+<label class="font-label-sm text-label-sm text-on-surface">Odoo ERP General Ledger Map Code</label>
+<input class="h-8 px-2 bg-surface-container-low text-on-surface rounded font-body-sm text-body-sm focus:outline-none focus:ring-1 focus:ring-primary" placeholder="e.g. 101000-NY-RETAIL" type="text"/>
+<span class="font-caption text-caption text-on-surface-variant">Syncs bidirectional journals with Odoo 17 Community/Enterprise</span>
+</div>
+<div class="flex items-center gap-space-sm p-space-sm bg-surface-container-low rounded-lg">
+<input checked="" class="rounded text-primary-container" id="reconciliation_allowed" type="checkbox"/>
+<label class="font-body-sm text-body-sm text-on-surface select-none cursor-pointer" for="reconciliation_allowed">
+            Allow Bank &amp; Payment Processor Auto-Reconciliation
+          </label>
+</div>
+</div>
+<div class="p-space-md bg-surface-container-low flex items-center justify-end gap-space-sm">
+<button class="px-space-md py-1.5 bg-surface-container-lowest text-on-surface hover:bg-surface-container rounded-lg font-body-sm-semibold text-body-sm" onclick="document.getElementById('new-account-modal').classList.add('hidden')">
+          Cancel
+        </button>
+<button class="px-space-md py-1.5 bg-primary-container text-on-primary hover:bg-primary rounded-lg font-body-sm-semibold text-body-sm" onclick="document.getElementById('new-account-modal').classList.add('hidden')">
+          Save Account
+        </button>
+</div>
+</div>
+</div>
+<!-- Interactive Logic Scripts -->
+<script>
+    function toggleSection(sectionId, headerRow) {
+      const section = document.getElementById(sectionId);
+      const icon = headerRow.querySelector('.group-indicator');
+      if (section.style.display === 'none') {
+        section.style.display = '';
+        icon.classList.remove('-rotate-90');
+      } else {
+        section.style.display = 'none';
+        icon.classList.add('-rotate-90');
+      }
+    }
+
+    function toggleAllGroups(expand) {
+      const tbodies = document.querySelectorAll('#coa-table tbody[id]');
+      const icons = document.querySelectorAll('.group-indicator');
+      tbodies.forEach(tb => {
+        tb.style.display = expand ? '' : 'none';
+      });
+      icons.forEach(icon => {
+        if (expand) {
+          icon.classList.remove('-rotate-90');
+        } else {
+          icon.classList.add('-rotate-90');
+        }
+      });
+    }
+
+    function filterAccounts(tabName, btn) {
+      document.querySelectorAll('.account-tab').forEach(b => {
+        b.classList.remove('active-tab', 'border-b-2', 'border-primary-container', 'font-body-sm-semibold', 'text-on-surface');
+        b.classList.add('font-body-sm', 'text-on-surface-variant');
+      });
+      btn.classList.add('active-tab', 'border-b-2', 'border-primary-container', 'font-body-sm-semibold', 'text-on-surface');
+      btn.classList.remove('font-body-sm', 'text-on-surface-variant');
+
+      const headers = document.querySelectorAll('.group-header');
+      const rowBodies = document.querySelectorAll('#coa-table tbody[id]');
+
+      if (tabName === 'all') {
+        headers.forEach(h => h.style.display = '');
+        rowBodies.forEach(b => b.style.display = '');
+      } else {
+        headers.forEach(h => {
+          if (h.getAttribute('data-group') === tabName) {
+            h.style.display = '';
+          } else {
+            h.style.display = 'none';
+          }
+        });
+        rowBodies.forEach(b => {
+          if (b.id.startsWith(tabName)) {
+            b.style.display = '';
+          } else {
+            b.style.display = 'none';
+          }
+        });
+      }
+    }
+
+    function searchAccounts(query) {
+      const lower = query.toLowerCase();
+      const rows = document.querySelectorAll('.account-row');
+      rows.forEach(row => {
+        const text = row.innerText.toLowerCase();
+        if (text.includes(lower)) {
+          row.style.display = '';
+        } else {
+          row.style.display = 'none';
+        }
+      });
+    }
+
+    function toggleSelectAll(masterCheckbox) {
+      const checkboxes = document.querySelectorAll('.row-checkbox');
+      checkboxes.forEach(cb => cb.checked = masterCheckbox.checked);
+      rowCheckChanged();
+    }
+
+    function rowCheckChanged() {
+      const checkedCount = document.querySelectorAll('.row-checkbox:checked').length;
+      const bulkBar = document.getElementById('bulk-action-bar');
+      const countLabel = document.getElementById('selected-count');
+      if (checkedCount > 0) {
+        bulkBar.classList.remove('hidden');
+        countLabel.textContent = `${checkedCount} account${checkedCount > 1 ? 's' : ''} selected`;
+      } else {
+        bulkBar.classList.add('hidden');
+      }
+    }
+
+    function deselectAll() {
+      document.querySelectorAll('.row-checkbox').forEach(cb => cb.checked = false);
+      const master = document.getElementById('select-all-checkbox');
+      if (master) master.checked = false;
+      document.getElementById('bulk-action-bar').classList.add('hidden');
+    }
+  </script>
+</div></main></div></body></html>

@@ -1,0 +1,661 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_standard" name="shell-type"/><title>Apex Apparel Catalog Faceted Search Grid | Shopify Prototype</title><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{"colors":{"surface":"#fbf9f8","on-primary-fixed-variant":"#00513c","tertiary":"#585857","error-container":"#ffdad6","on-error":"#ffffff","primary-fixed-dim":"#75d9b3","surface-container-low":"#f5f3f3","on-secondary-container":"#fefcff","on-background":"#1b1c1c","surface-container-high":"#e9e8e7","surface-dim":"#dbdad9","surface-container":"#efeded","on-tertiary":"#ffffff","error":"#ba1a1a","on-tertiary-fixed":"#1c1b1b","surface-container-lowest":"#ffffff","primary-fixed":"#92f6cf","surface-bright":"#fbf9f8","secondary-fixed-dim":"#b0c6ff","on-tertiary-fixed-variant":"#474746","tertiary-container":"#717070","secondary-container":"#2c6fe7","inverse-on-surface":"#f2f0f0","primary":"#00654b","primary-container":"#008060","on-secondary-fixed":"#001945","outline-variant":"#bdc9c2","secondary":"#0055c7","surface-variant":"#e4e2e2","tertiary-fixed":"#e5e2e1","on-secondary-fixed-variant":"#00419c","on-surface":"#1b1c1c","surface-container-highest":"#e4e2e2","background":"#fbf9f8","surface-tint":"#006c50","on-primary":"#ffffff","tertiary-fixed-dim":"#c8c6c5","on-error-container":"#93000a","on-tertiary-container":"#f8f5f4","inverse-primary":"#75d9b3","secondary-fixed":"#d9e2ff","inverse-surface":"#303031","outline":"#6e7a73","on-primary-container":"#d6ffeb","on-surface-variant":"#3e4944","on-primary-fixed":"#002116","on-secondary":"#ffffff"},"borderRadius":{"DEFAULT":"0.125rem","lg":"0.25rem","xl":"0.5rem","full":"0.75rem"},"spacing":{"space-xl":"1.5rem","margin":"1.5rem","space-xs":"0.25rem","space-md":"1rem","gutter":"1rem","space-lg":"1.25rem","space-sm":"0.5rem"},"fontFamily":{"body-sm-semibold":["Inter"],"body-lg":["Inter"],"headline-md":["Inter"],"body-md-semibold":["Inter"],"label-sm":["Inter"],"label-md":["Inter"],"caption":["Inter"],"headline-lg-mobile":["Inter"],"body-sm":["Inter"],"headline-lg":["Inter"],"body-md":["Inter"],"headline-sm":["Inter"]},"fontSize":{"body-sm-semibold":["13px",{"lineHeight":"18px","fontWeight":"600"}],"body-lg":["15px",{"lineHeight":"22px","fontWeight":"400"}],"headline-md":["20px",{"lineHeight":"28px","letterSpacing":"-0.01em","fontWeight":"600"}],"body-md-semibold":["14px",{"lineHeight":"20px","fontWeight":"600"}],"label-sm":["12px",{"lineHeight":"16px","letterSpacing":"0.01em","fontWeight":"600"}],"label-md":["13px",{"lineHeight":"16px","fontWeight":"500"}],"caption":["11px",{"lineHeight":"14px","fontWeight":"500"}],"headline-lg-mobile":["22px",{"lineHeight":"28px","letterSpacing":"-0.015em","fontWeight":"700"}],"body-sm":["13px",{"lineHeight":"18px","fontWeight":"400"}],"headline-lg":["28px",{"lineHeight":"36px","letterSpacing":"-0.02em","fontWeight":"700"}],"body-md":["14px",{"lineHeight":"20px","fontWeight":"400"}],"headline-sm":["16px",{"lineHeight":"24px","letterSpacing":"-0.005em","fontWeight":"600"}]}}}};</script></head><body class="bg-surface font-body-md text-body-md text-on-surface antialiased"><header class="fixed top-0 left-0 right-0 z-50 bg-surface/90 backdrop-blur-md shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="bg-inverse-surface text-inverse-on-surface text-center py-2 px-margin flex items-center justify-between text-caption font-caption"><div class="hidden lg:flex items-center gap-2"><span class="material-symbols-outlined text-[16px]">storefront</span><span>Omnichannel Experience: Online &amp; In-Store</span></div><div class="mx-auto text-center"><span>Free express shipping on orders over $150 • Visit our SoHo Flagship store for instant fitting &amp; BOPIS pickup</span></div><div class="hidden lg:flex items-center gap-4"><button class="flex items-center gap-1 hover:text-primary-fixed-dim transition-colors"><span class="material-symbols-outlined text-[16px]">location_on</span><span class="font-label-sm text-label-sm">SoHo Flagship: Open until 8 PM</span></button></div></div><div class="h-20 max-w-[1440px] mx-auto px-margin flex items-center justify-between gap-space-lg"><div class="flex items-center gap-space-md"><img alt="Brand logo. - Primary color: #008060
+- Font: inter
+- Mode: light
+- Roundness: rounded-sm
+" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1WPubMgscUINGuisBDvGZbhiRvwxKjFWpAHPA0GXYWeRFqxcZY4G-byYU4PUykJPYVnuurpj_2yFkafDFmBWhplcA2dlqdqMDkr5ufN1GCA1-9Cy6Y74Bk73_KmB_pOSwvk_HQjInJtWpmQfLSQUcNeG5m75CCs-SDUFif7I_eleu-OGwNMldz9nzh1957zHt7Hfbkc1ds6tpanpikt3_aR6SAXkw6znZBFRPYg-rTUbi8f0VwyeBPJuaQ"/><span class="font-headline-md text-headline-md tracking-tight text-on-surface">Apex Apparel</span></div><nav class="hidden xl:flex items-center gap-space-lg h-full" data-active-classes="text-primary font-body-md-semibold border-b-2 border-primary"><a class="font-body-md text-body-md text-on-surface-variant hover:text-on-surface transition-colors py-2" data-path="new-arrivals" href="#">New Arrivals</a><a aria-current="page" class="transition-colors py-2 text-primary font-body-md-semibold border-b-2 border-primary" data-path="men" href="#">Men</a><a class="font-body-md text-body-md text-on-surface-variant hover:text-on-surface transition-colors py-2" data-path="women" href="#">Women</a><a class="font-body-md text-body-md text-on-surface-variant hover:text-on-surface transition-colors py-2" data-path="accessories" href="#">Accessories</a><a class="font-body-md text-body-md text-on-surface-variant hover:text-on-surface transition-colors py-2" data-path="store-locator" href="#">In-Store Pickup / Stores</a><a class="font-body-md text-body-md text-on-surface-variant hover:text-on-surface transition-colors py-2" data-path="editorial" href="#">Editorial / Journal</a></nav><div class="flex items-center gap-space-md"><div class="hidden md:flex items-center bg-surface-container-low px-space-md py-1.5 rounded-lg w-64 justify-between"><div class="flex items-center gap-space-xs text-on-surface-variant"><span class="material-symbols-outlined text-[18px]">search</span><span class="font-body-sm text-body-sm text-tertiary">Search collection...</span></div><kbd class="bg-surface-container-highest text-on-surface-variant font-caption text-caption px-1.5 py-0.5 rounded">⌘K</kbd></div><div class="flex items-center gap-space-sm"><a aria-label="Wishlist" class="p-2 text-on-surface-variant hover:text-on-surface rounded-lg transition-colors" data-path="wishlist" href="#"><span class="material-symbols-outlined text-[22px]">favorite</span></a><button aria-label="Shopping Cart" class="relative p-2 text-on-surface-variant hover:text-on-surface rounded-lg transition-colors"><span class="material-symbols-outlined text-[22px]">shopping_bag</span><span class="absolute top-1 right-1 bg-primary text-on-primary font-caption text-caption w-4 h-4 rounded-full flex items-center justify-center">3</span></button><a aria-label="Account" class="flex items-center gap-2 pl-2 text-on-surface-variant hover:text-on-surface transition-colors" data-path="account" href="#"><img alt="Profile" class="w-8 h-8 rounded-full object-cover" src="https://lh3.googleusercontent.com/aida/AEtjO1XM8bAU6u1SGd73cRUZpDg7te6U8Hd9YuPkqi431L4IWNqZL9tf8Hx7usC0Pr2x5uZFks9b6ZVSsN6pF4qp7qBy14iGcMBDgJ1CkgkmUAjIfndkwn_z2y62oK4m5xXJUzEyvjga7vHBHY5I_yrgT2bDOvV6QCvONuw_NwyDFyHdKZJuuGyK5Pgek_6deKYxGCdGgDgn0o72iDzak64pRiWW1BSKisoh_F_jv3CeZdUD3Qs1uum2E_qsQHaI"/></a></div></div></div></header><main class="w-full pt-20 bg-surface min-h-screen"><div class="flex flex-col w-full">
+<!-- Dynamic Notification / Omnichannel Status Strip -->
+<div class="w-full bg-surface-container py-2.5 px-margin">
+<div class="max-w-[1440px] mx-auto flex flex-wrap items-center justify-between gap-space-sm text-caption font-caption text-on-surface-variant">
+<div class="flex items-center gap-space-sm">
+<span class="inline-flex w-2 h-2 rounded-full bg-primary animate-pulse"></span>
+<span class="font-body-sm-semibold text-body-sm-semibold text-on-surface">Live Atelier Inventory</span>
+<span class="text-tertiary">|</span>
+<span class="text-on-surface-variant">SoHo Flagship locker pickup ready in 120 minutes for orders placed before 5 PM</span>
+</div>
+<div class="flex items-center gap-space-md">
+<span class="flex items-center gap-1 text-primary font-body-sm-semibold text-body-sm-semibold">
+<span class="material-symbols-outlined text-[16px]">verified</span>
+          Fibers Certified OEKO-TEX®
+        </span>
+<span class="hidden sm:inline text-tertiary">|</span>
+<span class="hidden sm:inline text-on-surface-variant">Real-Time Boutique Stock Counter active</span>
+</div>
+</div>
+</div>
+<div class="max-w-[1440px] w-full mx-auto px-margin py-space-lg flex flex-col gap-space-lg">
+<!-- Breadcrumb & Header Hierarchy -->
+<div class="flex flex-col gap-space-xs">
+<nav aria-label="Breadcrumb" class="flex items-center gap-1.5 text-caption font-caption text-tertiary uppercase tracking-wider">
+<a class="hover:text-primary transition-colors" href="#">Home</a>
+<span class="material-symbols-outlined text-[14px]">chevron_right</span>
+<a class="hover:text-primary transition-colors" href="#">Collections</a>
+<span class="material-symbols-outlined text-[14px]">chevron_right</span>
+<span class="text-on-surface font-label-sm">All Apparel &amp; Essentials</span>
+</nav>
+<div class="flex flex-col lg:flex-row lg:items-end justify-between gap-space-md pt-space-xs">
+<div>
+<div class="flex items-baseline gap-space-sm flex-wrap">
+<h1 class="font-headline-lg text-headline-lg text-on-surface tracking-tight">All Apparel &amp; Essentials</h1>
+<span class="bg-surface-container-high px-2 py-0.5 rounded text-tertiary font-label-sm text-label-sm">1,840 Items</span>
+</div>
+<p class="font-body-md text-body-md text-tertiary max-w-2xl mt-1">Everyday silhouettes engineered with architectural precision. Meticulously cut from resilient, low-impact fibers for modern metropolitan movement.</p>
+</div>
+<!-- Quick Boutique Pickup Badge Switcher -->
+<div class="flex items-center gap-space-sm bg-surface-container-low p-1.5 rounded-xl shadow-sm self-start lg:self-auto">
+<div class="p-1.5 bg-primary/10 rounded-lg text-primary flex items-center justify-center">
+<span class="material-symbols-outlined text-[20px]">store</span>
+</div>
+<div class="flex flex-col pr-space-md">
+<span class="font-caption text-caption uppercase text-tertiary tracking-wider">Browsing Atelier</span>
+<span class="font-body-sm-semibold text-body-sm-semibold text-on-surface">SoHo Flagship, NY (Curbside Ready)</span>
+</div>
+<button class="bg-surface-container-highest hover:bg-surface-dim text-on-surface font-label-sm text-label-sm px-2.5 py-1.5 rounded-lg transition-colors">
+            Change
+          </button>
+</div>
+</div>
+</div>
+<!-- Active Filters Row & Quick Clearance -->
+<div class="flex flex-wrap items-center justify-between gap-space-sm bg-surface-container-lowest p-space-md rounded-xl shadow-sm">
+<div class="flex items-center gap-space-xs flex-wrap">
+<span class="font-label-sm text-label-sm text-tertiary mr-1 flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px]">filter_list</span>
+          Active Applied:
+        </span>
+<span class="inline-flex items-center gap-1 bg-surface-container-high text-on-surface px-2.5 py-1 rounded-full font-label-sm text-label-sm shadow-sm">
+<span class="w-1.5 h-1.5 rounded-full bg-primary"></span>
+          SoHo Flagship Pickup
+          <button aria-label="Remove SoHo Flagship Pickup filter" class="hover:text-error transition-colors flex items-center ml-0.5">
+<span class="material-symbols-outlined text-[14px]">close</span>
+</button>
+</span>
+<span class="inline-flex items-center gap-1 bg-surface-container-high text-on-surface px-2.5 py-1 rounded-full font-label-sm text-label-sm shadow-sm">
+          Size: M, L
+          <button aria-label="Remove Size filter" class="hover:text-error transition-colors flex items-center ml-0.5">
+<span class="material-symbols-outlined text-[14px]">close</span>
+</button>
+</span>
+<span class="inline-flex items-center gap-1 bg-surface-container-high text-on-surface px-2.5 py-1 rounded-full font-label-sm text-label-sm shadow-sm">
+          Price: Under $300
+          <button aria-label="Remove Price filter" class="hover:text-error transition-colors flex items-center ml-0.5">
+<span class="material-symbols-outlined text-[14px]">close</span>
+</button>
+</span>
+<button class="text-error hover:text-error/80 font-label-sm text-label-sm px-2 py-1 ml-space-xs transition-colors flex items-center gap-0.5">
+<span class="material-symbols-outlined text-[14px]">restart_alt</span>
+          Clear All
+        </button>
+</div>
+<!-- Quick Metrics Summary on Active Cohort -->
+<div class="hidden xl:flex items-center gap-space-md text-caption font-caption text-tertiary">
+<div class="flex items-center gap-1">
+<span class="w-2 h-2 rounded-full bg-primary-container"></span>
+<span>94% Organic Certified</span>
+</div>
+<span>•</span>
+<div class="flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px] text-primary">schedule</span>
+<span>Avg. Dispatch: 18m</span>
+</div>
+</div>
+</div>
+<!-- Main Workspace Split: Sidebar (Filters) + Right Canvas (Grid & Controls) -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-xl items-start">
+<!-- LEFT FACETED FILTER MATRIX (3 Cols) -->
+<aside class="lg:col-span-3 flex flex-col gap-space-lg bg-surface-container-lowest p-space-lg rounded-xl shadow-sm">
+<div class="flex items-center justify-between pb-space-sm">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[20px] text-primary">tune</span>
+<span class="font-headline-sm text-headline-sm text-on-surface">Filter Matrix</span>
+</div>
+<span class="text-caption font-caption text-tertiary bg-surface-container px-2 py-0.5 rounded">3 Active</span>
+</div>
+<!-- Facet: Store Availability (Omnichannel Pickups) -->
+<div class="flex flex-col gap-space-sm pt-space-sm">
+<div class="flex items-center justify-between">
+<span class="font-label-md text-label-md text-on-surface uppercase tracking-wider">Fulfillment &amp; Location</span>
+<span class="material-symbols-outlined text-[16px] text-tertiary">expand_less</span>
+</div>
+<div class="flex flex-col gap-2 pt-1">
+<label class="flex items-start gap-2.5 cursor-pointer group">
+<input checked="" class="mt-0.5 w-4 h-4 accent-primary rounded bg-surface-container" type="checkbox"/>
+<div class="flex flex-col">
+<span class="font-body-sm-semibold text-body-sm-semibold text-on-surface group-hover:text-primary transition-colors">In-Stock at SoHo Flagship</span>
+<span class="font-caption text-caption text-primary flex items-center gap-0.5">
+<span class="material-symbols-outlined text-[12px]">bolt</span> Ready in 2 hrs (BOPIS)
+                </span>
+</div>
+</label>
+<label class="flex items-start gap-2.5 cursor-pointer group">
+<input class="mt-0.5 w-4 h-4 accent-primary rounded bg-surface-container" type="checkbox"/>
+<div class="flex flex-col">
+<span class="font-body-sm text-body-sm text-on-surface group-hover:text-primary transition-colors">In-Stock at Brooklyn DUMBO</span>
+<span class="font-caption text-caption text-tertiary">Ready in 2 hrs</span>
+</div>
+</label>
+<label class="flex items-start gap-2.5 cursor-pointer group">
+<input class="mt-0.5 w-4 h-4 accent-primary rounded bg-surface-container" type="checkbox"/>
+<div class="flex flex-col">
+<span class="font-body-sm text-body-sm text-on-surface group-hover:text-primary transition-colors">Online Warehouse</span>
+<span class="font-caption text-caption text-tertiary">Ships within 24 hrs</span>
+</div>
+</label>
+</div>
+</div>
+<!-- Facet: Categories & Counts -->
+<div class="flex flex-col gap-space-sm pt-space-md">
+<div class="flex items-center justify-between">
+<span class="font-label-md text-label-md text-on-surface uppercase tracking-wider">Garment Category</span>
+<span class="material-symbols-outlined text-[16px] text-tertiary">expand_less</span>
+</div>
+<div class="flex flex-col gap-1.5 pt-1">
+<a class="flex items-center justify-between py-1 px-2 rounded-lg bg-surface-container-high text-on-surface font-body-sm-semibold text-body-sm-semibold" href="#">
+<span class="flex items-center gap-2">
+<span class="w-1.5 h-1.5 rounded-full bg-primary"></span>
+                Outerwear &amp; Parkas
+              </span>
+<span class="font-caption text-caption text-tertiary">42</span>
+</a>
+<a class="flex items-center justify-between py-1 px-2 rounded-lg hover:bg-surface-container text-on-surface-variant hover:text-on-surface font-body-sm text-body-sm transition-colors" href="#">
+<span>Knitwear &amp; Sweaters</span>
+<span class="font-caption text-caption text-tertiary">88</span>
+</a>
+<a class="flex items-center justify-between py-1 px-2 rounded-lg hover:bg-surface-container text-on-surface-variant hover:text-on-surface font-body-sm text-body-sm transition-colors" href="#">
+<span>Trousers &amp; Pants</span>
+<span class="font-caption text-caption text-tertiary">64</span>
+</a>
+<a class="flex items-center justify-between py-1 px-2 rounded-lg hover:bg-surface-container text-on-surface-variant hover:text-on-surface font-body-sm text-body-sm transition-colors" href="#">
+<span>Shirts &amp; Technical Tees</span>
+<span class="font-caption text-caption text-tertiary">112</span>
+</a>
+<a class="flex items-center justify-between py-1 px-2 rounded-lg hover:bg-surface-container text-on-surface-variant hover:text-on-surface font-body-sm text-body-sm transition-colors" href="#">
+<span>Accessories &amp; Carry</span>
+<span class="font-caption text-caption text-tertiary">54</span>
+</a>
+</div>
+</div>
+<!-- Facet: Size Pills -->
+<div class="flex flex-col gap-space-sm pt-space-md">
+<div class="flex items-center justify-between">
+<span class="font-label-md text-label-md text-on-surface uppercase tracking-wider">Garment Sizing</span>
+<span class="font-caption text-caption text-primary hover:underline cursor-pointer">Size Chart</span>
+</div>
+<div class="grid grid-cols-3 gap-1.5 pt-1">
+<button class="h-8 rounded bg-surface-container-low text-tertiary hover:bg-surface-container-high font-label-sm text-label-sm flex items-center justify-center transition-colors">XS</button>
+<button class="h-8 rounded bg-surface-container-low text-tertiary hover:bg-surface-container-high font-label-sm text-label-sm flex items-center justify-center transition-colors">S</button>
+<button class="h-8 rounded bg-inverse-surface text-inverse-on-surface font-body-sm-semibold text-body-sm-semibold flex items-center justify-center shadow-sm">M</button>
+<button class="h-8 rounded bg-inverse-surface text-inverse-on-surface font-body-sm-semibold text-body-sm-semibold flex items-center justify-center shadow-sm">L</button>
+<button class="h-8 rounded bg-surface-container-low text-tertiary hover:bg-surface-container-high font-label-sm text-label-sm flex items-center justify-center transition-colors">XL</button>
+<button class="h-8 rounded bg-surface-container-low text-tertiary hover:bg-surface-container-high font-label-sm text-label-sm flex items-center justify-center transition-colors">XXL</button>
+</div>
+</div>
+<!-- Facet: Palette Swatches -->
+<div class="flex flex-col gap-space-sm pt-space-md">
+<div class="flex items-center justify-between">
+<span class="font-label-md text-label-md text-on-surface uppercase tracking-wider">Colorways</span>
+<span class="text-caption font-caption text-tertiary">6 Tones</span>
+</div>
+<div class="flex flex-wrap gap-2 pt-1">
+<button aria-label="Onyx Black selected" class="w-8 h-8 rounded-full bg-[#1b1c1c] shadow-sm ring-2 ring-primary ring-offset-2 flex items-center justify-center text-white" title="Onyx Black">
+<span class="material-symbols-outlined text-[14px]">check</span>
+</button>
+<button aria-label="Heather Grey" class="w-8 h-8 rounded-full bg-[#8c9196] shadow-sm hover:scale-105 transition-transform" title="Heather Grey"></button>
+<button aria-label="Sandstone" class="w-8 h-8 rounded-full bg-[#d6cebe] shadow-sm hover:scale-105 transition-transform" title="Sandstone"></button>
+<button aria-label="Pine Green selected" class="w-8 h-8 rounded-full bg-[#00654b] shadow-sm ring-2 ring-primary ring-offset-2 flex items-center justify-center text-white" title="Pine Green">
+<span class="material-symbols-outlined text-[14px]">check</span>
+</button>
+<button aria-label="Navy" class="w-8 h-8 rounded-full bg-[#162744] shadow-sm hover:scale-105 transition-transform" title="Navy"></button>
+<button aria-label="Camel" class="w-8 h-8 rounded-full bg-[#b88656] shadow-sm hover:scale-105 transition-transform" title="Camel"></button>
+</div>
+</div>
+<!-- Facet: Price Range Slider & Inputs -->
+<div class="flex flex-col gap-space-sm pt-space-md">
+<div class="flex items-center justify-between">
+<span class="font-label-md text-label-md text-on-surface uppercase tracking-wider">Price Range (USD)</span>
+<span class="font-label-sm text-label-sm text-primary font-body-sm-semibold">$50 - $300</span>
+</div>
+<!-- Mini SVG Distribution Histogram -->
+<div class="w-full h-10 flex items-end gap-1 px-1 pt-2">
+<div class="bg-surface-container-high w-full h-[20%] rounded-t-sm"></div>
+<div class="bg-surface-container-high w-full h-[40%] rounded-t-sm"></div>
+<div class="bg-primary/40 w-full h-[65%] rounded-t-sm"></div>
+<div class="bg-primary w-full h-[95%] rounded-t-sm"></div>
+<div class="bg-primary w-full h-[80%] rounded-t-sm"></div>
+<div class="bg-primary w-full h-[55%] rounded-t-sm"></div>
+<div class="bg-primary/60 w-full h-[45%] rounded-t-sm"></div>
+<div class="bg-surface-container-high w-full h-[30%] rounded-t-sm"></div>
+<div class="bg-surface-container-high w-full h-[15%] rounded-t-sm"></div>
+<div class="bg-surface-container-high w-full h-[10%] rounded-t-sm"></div>
+</div>
+<input class="w-full accent-primary cursor-pointer h-1.5 bg-surface-container-highest rounded-lg" max="450" min="50" type="range" value="300"/>
+<div class="grid grid-cols-2 gap-space-sm pt-1">
+<div class="bg-surface-container-low px-2 py-1 rounded flex items-center justify-between">
+<span class="text-caption font-caption text-tertiary">Min</span>
+<span class="font-body-sm-semibold text-body-sm-semibold text-on-surface">$50</span>
+</div>
+<div class="bg-surface-container-low px-2 py-1 rounded flex items-center justify-between">
+<span class="text-caption font-caption text-tertiary">Max</span>
+<span class="font-body-sm-semibold text-body-sm-semibold text-on-surface">$300</span>
+</div>
+</div>
+</div>
+<!-- Facet: Sustainability Mandate -->
+<div class="flex flex-col gap-space-sm pt-space-md">
+<span class="font-label-md text-label-md text-on-surface uppercase tracking-wider">Sustainable Standards</span>
+<div class="flex flex-col gap-2 pt-1">
+<label class="flex items-center gap-2 cursor-pointer group">
+<input checked="" class="w-4 h-4 accent-primary rounded bg-surface-container" type="checkbox"/>
+<span class="font-body-sm text-body-sm text-on-surface group-hover:text-primary transition-colors">100% Organic Cotton</span>
+</label>
+<label class="flex items-center gap-2 cursor-pointer group">
+<input checked="" class="w-4 h-4 accent-primary rounded bg-surface-container" type="checkbox"/>
+<span class="font-body-sm text-body-sm text-on-surface group-hover:text-primary transition-colors">Recycled Wool &amp; Cashmere</span>
+</label>
+<label class="flex items-center gap-2 cursor-pointer group">
+<input class="w-4 h-4 accent-primary rounded bg-surface-container" type="checkbox"/>
+<span class="font-body-sm text-body-sm text-on-surface group-hover:text-primary transition-colors">Vegetable Tanned Leather</span>
+</label>
+</div>
+</div>
+<!-- Quick Flagship Booking Promo Card -->
+<div class="bg-surface-container p-space-md rounded-xl flex flex-col gap-space-xs mt-2">
+<div class="flex items-center gap-1.5 text-primary">
+<span class="material-symbols-outlined text-[18px]">dry_cleaning</span>
+<span class="font-body-sm-semibold text-body-sm-semibold">Private Fitting Suite</span>
+</div>
+<p class="font-caption text-caption text-on-surface-variant">Reserve an appointment at our Greene St Atelier. Your selections will be pre-steamed and staged in your size.</p>
+<a class="font-label-sm text-label-sm text-primary hover:underline mt-1 inline-flex items-center gap-1" href="#">
+            Reserve Suite <span class="material-symbols-outlined text-[14px]">arrow_forward</span>
+</a>
+</div>
+</aside>
+<!-- RIGHT RESULTS & GRID CANVAS (9 Cols) -->
+<main class="lg:col-span-9 flex flex-col gap-space-lg">
+<!-- Utility Bar: Sorters & Density Views -->
+<div class="flex flex-col sm:flex-row items-center justify-between gap-space-md bg-surface-container-lowest p-space-md rounded-xl shadow-sm">
+<div class="flex items-center gap-space-sm w-full sm:w-auto">
+<span class="font-body-sm text-body-sm text-tertiary">Showing</span>
+<span class="font-body-sm-semibold text-body-sm-semibold text-on-surface">1–12 of 1,840</span>
+<span class="font-body-sm text-body-sm text-tertiary">products</span>
+</div>
+<div class="flex items-center justify-between sm:justify-end gap-space-md w-full sm:w-auto">
+<!-- View Mode Switcher -->
+<div class="flex items-center bg-surface-container p-0.5 rounded-lg shadow-sm">
+<button aria-label="Switch to 4-column layout" class="p-1.5 rounded bg-surface-container-lowest text-on-surface shadow-sm" title="Dense 4-Column Grid">
+<span class="material-symbols-outlined text-[18px]">grid_view</span>
+</button>
+<button aria-label="Switch to 3-column layout" class="p-1.5 rounded text-tertiary hover:text-on-surface transition-colors" title="Comfortable 3-Column Grid">
+<span class="material-symbols-outlined text-[18px]">view_module</span>
+</button>
+</div>
+<!-- Sorting Dropdown -->
+<div class="flex items-center gap-2">
+<span class="font-label-sm text-label-sm text-tertiary hidden md:inline">Sort:</span>
+<div class="relative">
+<select class="appearance-none bg-surface-container-low hover:bg-surface-container text-on-surface font-body-sm-semibold text-body-sm-semibold py-1.5 pl-3 pr-8 rounded-lg cursor-pointer focus:outline-none transition-colors">
+<option selected="">Featured &amp; Curated</option>
+<option>Newest Arrivals</option>
+<option>Price: Low to High</option>
+<option>Price: High to Low</option>
+<option>Best Selling Velocity</option>
+</select>
+<span class="material-symbols-outlined absolute right-2 top-2 pointer-events-none text-[16px] text-tertiary">expand_more</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Products Matrix Grid (8 Detailed Cards) -->
+<div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-space-lg">
+<!-- Product Card 1 -->
+<div class="group relative flex flex-col bg-surface-container-lowest rounded-xl p-space-sm shadow-sm hover:shadow-md transition-shadow">
+<!-- Media Container -->
+<div class="relative w-full aspect-[3/4] bg-surface-container-high rounded-lg overflow-hidden">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="High-fashion editorial shot of a minimalist men's waterproof trench coat in deep forest spruce green, clean studio backdrop, sharp architectural shadows, modern tactile drape." src="https://lh3.googleusercontent.com/aida-public/AB6AXuD4dqVlCuVgAxXFtIZ0htf3xJBvxqdNwBu9WsvE4NvbDvKYbd3iJN_Hq3yuU5zYTGBJ-Z6wCLiFFH_DLrIMxt1yuxFqQdexVYXvYWljCF7DDt9x9ZizGndd5j_-dcKZJajiTDva6AzS9V3EUGxYyvte4_uuWiOZJyFHhogmvo0F8m8ZJEs8NBqshFHcQGzyal3xbhaw5ZeEVVWKhulSXw2sTh5M36UqSuqB52Lb88GqfeQj9Uq4nXJ-2A"/>
+<!-- Badges Stack -->
+<div class="absolute top-2 left-2 flex flex-col gap-1 items-start">
+<span class="bg-primary text-on-primary font-caption text-caption px-2 py-0.5 rounded shadow-sm">Atelier Signature</span>
+<span class="bg-inverse-surface/90 text-inverse-on-surface backdrop-blur-sm font-caption text-caption px-2 py-0.5 rounded shadow-sm">Organic Hemp Weave</span>
+</div>
+<!-- Quick Heart Action -->
+<button aria-label="Save to Wishlist" class="absolute top-2 right-2 p-1.5 rounded-full bg-surface-container-lowest/80 backdrop-blur-sm text-on-surface hover:text-error transition-colors shadow-sm">
+<span class="material-symbols-outlined text-[18px]">favorite</span>
+</button>
+<!-- Instant Add Overlay Tray -->
+<div class="absolute inset-x-2 bottom-2 translate-y-12 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-300">
+<button class="w-full h-9 bg-inverse-surface/95 text-inverse-on-surface hover:bg-inverse-surface font-body-sm-semibold text-body-sm-semibold rounded-lg shadow-md flex items-center justify-center gap-1.5 backdrop-blur-sm">
+<span class="material-symbols-outlined text-[16px]">shopping_bag</span>
+                  Quick Add • $295
+                </button>
+</div>
+</div>
+<!-- Content Container -->
+<div class="flex flex-col gap-1 pt-space-sm px-1">
+<div class="flex items-center justify-between">
+<span class="text-caption font-caption text-tertiary uppercase tracking-wider">Outerwear</span>
+<div class="flex items-center gap-1 text-primary font-caption text-caption">
+<span class="material-symbols-outlined text-[13px]">storefront</span>
+<span>SoHo: 3 in stock</span>
+</div>
+</div>
+<h2 class="font-body-md-semibold text-body-md-semibold text-on-surface group-hover:text-primary transition-colors line-clamp-1">
+                Koto All-Weather Trench Coat
+              </h2>
+<div class="flex items-baseline gap-2">
+<span class="font-body-md-semibold text-body-md-semibold text-on-surface">$295</span>
+<span class="text-caption font-caption text-tertiary">M, L, XL</span>
+</div>
+<!-- Colorway Dots -->
+<div class="flex items-center gap-1.5 pt-1">
+<span class="w-3.5 h-3.5 rounded-full bg-[#00654b] ring-1 ring-offset-1 ring-primary"></span>
+<span class="w-3.5 h-3.5 rounded-full bg-[#1b1c1c]"></span>
+<span class="w-3.5 h-3.5 rounded-full bg-[#d6cebe]"></span>
+</div>
+</div>
+</div>
+<!-- Product Card 2 -->
+<div class="group relative flex flex-col bg-surface-container-lowest rounded-xl p-space-sm shadow-sm hover:shadow-md transition-shadow">
+<div class="relative w-full aspect-[3/4] bg-surface-container-high rounded-lg overflow-hidden">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="Chunky textured waffle-knit crewneck sweater in warm oatmeal camel color draped naturally on neutral studio set, architectural shadows, sustainable styling." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDUnDjhpfKhZzWO0CcWPpvd2m4vHDEHn_kUkShZr-EGmlAdWIeU8y0kZIYHw6dWukXbYYyos54k8zUwncdW7l57DXRqiuUUpy6oL22N9Ui1IG1bnLNmGOzxku6FO2TUIlEnZq0zkn8B2CF6DvroYqbQjb_758dyyUl5-wJ_7ydxZz1MJmh0xiImdXZyJONttnxHV5n84jmSU0Xp0qYXbLDl63a9fv2AazvMq_xR4cIwDFrda4V1HpEvfw"/>
+<div class="absolute top-2 left-2 flex flex-col gap-1 items-start">
+<span class="bg-surface-container-lowest/90 backdrop-blur-sm text-on-surface font-caption text-caption px-2 py-0.5 rounded shadow-sm">Recycled Merino</span>
+</div>
+<button aria-label="Save to Wishlist" class="absolute top-2 right-2 p-1.5 rounded-full bg-surface-container-lowest/80 backdrop-blur-sm text-on-surface hover:text-error transition-colors shadow-sm">
+<span class="material-symbols-outlined text-[18px]">favorite</span>
+</button>
+<div class="absolute inset-x-2 bottom-2 translate-y-12 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-300">
+<button class="w-full h-9 bg-inverse-surface/95 text-inverse-on-surface hover:bg-inverse-surface font-body-sm-semibold text-body-sm-semibold rounded-lg shadow-md flex items-center justify-center gap-1.5 backdrop-blur-sm">
+<span class="material-symbols-outlined text-[16px]">shopping_bag</span>
+                  Quick Add • $185
+                </button>
+</div>
+</div>
+<div class="flex flex-col gap-1 pt-space-sm px-1">
+<div class="flex items-center justify-between">
+<span class="text-caption font-caption text-tertiary uppercase tracking-wider">Knitwear</span>
+<div class="flex items-center gap-1 text-primary font-caption text-caption">
+<span class="material-symbols-outlined text-[13px]">bolt</span>
+<span>Ready in 2 hrs</span>
+</div>
+</div>
+<h2 class="font-body-md-semibold text-body-md-semibold text-on-surface group-hover:text-primary transition-colors line-clamp-1">
+                Waffle Architectural Crewneck
+              </h2>
+<div class="flex items-baseline gap-2">
+<span class="font-body-md-semibold text-body-md-semibold text-on-surface">$185</span>
+<span class="text-caption font-caption text-tertiary">XS, S, M, L</span>
+</div>
+<div class="flex items-center gap-1.5 pt-1">
+<span class="w-3.5 h-3.5 rounded-full bg-[#b88656] ring-1 ring-offset-1 ring-primary"></span>
+<span class="w-3.5 h-3.5 rounded-full bg-[#8c9196]"></span>
+</div>
+</div>
+</div>
+<!-- Product Card 3 -->
+<div class="group relative flex flex-col bg-surface-container-lowest rounded-xl p-space-sm shadow-sm hover:shadow-md transition-shadow">
+<div class="relative w-full aspect-[3/4] bg-surface-container-high rounded-lg overflow-hidden">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="Relaxed tailored pleated trousers in deep jet black cotton-wool blend, minimalist Scandinavian aesthetic, studio lighting capturing precise folds and waistband detailing." src="https://lh3.googleusercontent.com/aida-public/AB6AXuALxCF8GFCgAEutaHCg34Qdk89aVIG37XAzgSyII6p6ObMSDtQBtPqpWJgNL2BgcMN5B1F0dDOPiP5gJFJEGHMSFNkvs5A_LqEPzNwsvN4-XURn29XF8lmoaVxxuAfOw7EMb4uUttLccy74Oc53fQwArBJpFE5VueXrNtq3P26N2ZSH2y7zJBTHHa1cp0ifu_q8GVZ30f0bY-0ZfVZRCsS68OBo05Q2EYcKUotZsGrce8WdnCBRWLaVqA"/>
+<div class="absolute top-2 left-2 flex flex-col gap-1 items-start">
+<span class="bg-primary-container text-on-primary-container font-caption text-caption px-2 py-0.5 rounded shadow-sm">Popular in SoHo</span>
+</div>
+<button aria-label="Save to Wishlist" class="absolute top-2 right-2 p-1.5 rounded-full bg-surface-container-lowest/80 backdrop-blur-sm text-on-surface hover:text-error transition-colors shadow-sm">
+<span class="material-symbols-outlined text-[18px]">favorite</span>
+</button>
+<div class="absolute inset-x-2 bottom-2 translate-y-12 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-300">
+<button class="w-full h-9 bg-inverse-surface/95 text-inverse-on-surface hover:bg-inverse-surface font-body-sm-semibold text-body-sm-semibold rounded-lg shadow-md flex items-center justify-center gap-1.5 backdrop-blur-sm">
+<span class="material-symbols-outlined text-[16px]">shopping_bag</span>
+                  Quick Add • $210
+                </button>
+</div>
+</div>
+<div class="flex flex-col gap-1 pt-space-sm px-1">
+<div class="flex items-center justify-between">
+<span class="text-caption font-caption text-tertiary uppercase tracking-wider">Trousers</span>
+<div class="flex items-center gap-1 text-primary font-caption text-caption">
+<span class="material-symbols-outlined text-[13px]">storefront</span>
+<span>SoHo: 5 in stock</span>
+</div>
+</div>
+<h2 class="font-body-md-semibold text-body-md-semibold text-on-surface group-hover:text-primary transition-colors line-clamp-1">
+                Linear Pleated Tailored Trouser
+              </h2>
+<div class="flex items-baseline gap-2">
+<span class="font-body-md-semibold text-body-md-semibold text-on-surface">$210</span>
+<span class="text-caption font-caption text-tertiary">All Sizes</span>
+</div>
+<div class="flex items-center gap-1.5 pt-1">
+<span class="w-3.5 h-3.5 rounded-full bg-[#1b1c1c] ring-1 ring-offset-1 ring-primary"></span>
+<span class="w-3.5 h-3.5 rounded-full bg-[#162744]"></span>
+<span class="w-3.5 h-3.5 rounded-full bg-[#8c9196]"></span>
+</div>
+</div>
+</div>
+<!-- Product Card 4 -->
+<div class="group relative flex flex-col bg-surface-container-lowest rounded-xl p-space-sm shadow-sm hover:shadow-md transition-shadow">
+<div class="relative w-full aspect-[3/4] bg-surface-container-high rounded-lg overflow-hidden">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="Heavyweight organic cotton mockneck long sleeve shirt in chalk sandstone color, contemporary loose fit silhouette, soft directional atelier light." src="https://lh3.googleusercontent.com/aida-public/AB6AXuD57k9YM65KMl6_ezrsp0i4zwdG6RGLqe9woi_QFpwdP_4fDN0lmwDDPQGpPKBSa_QOdCqJmoyHWZWRhuhjXzV-9u-W7c11HHXLw8o_V4MPa_rEN1v_9_qf7FY0b4E-gWRzE6_10HAFfXi-z7z4158SsJY-f8u4LWISn3msXf3o5UvpkJItGT1BYaN7tMm7f29Pz08Nxso0sCEP2IrHg49ZcV7u00cEDM-lOjkjEYW8zWm-dCtSeR-Uaw"/>
+<div class="absolute top-2 left-2 flex flex-col gap-1 items-start">
+<span class="bg-surface-container-lowest/90 backdrop-blur-sm text-on-surface font-caption text-caption px-2 py-0.5 rounded shadow-sm">100% Organic</span>
+</div>
+<button aria-label="Save to Wishlist" class="absolute top-2 right-2 p-1.5 rounded-full bg-surface-container-lowest/80 backdrop-blur-sm text-on-surface hover:text-error transition-colors shadow-sm">
+<span class="material-symbols-outlined text-[18px]">favorite</span>
+</button>
+<div class="absolute inset-x-2 bottom-2 translate-y-12 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-300">
+<button class="w-full h-9 bg-inverse-surface/95 text-inverse-on-surface hover:bg-inverse-surface font-body-sm-semibold text-body-sm-semibold rounded-lg shadow-md flex items-center justify-center gap-1.5 backdrop-blur-sm">
+<span class="material-symbols-outlined text-[16px]">shopping_bag</span>
+                  Quick Add • $98
+                </button>
+</div>
+</div>
+<div class="flex flex-col gap-1 pt-space-sm px-1">
+<div class="flex items-center justify-between">
+<span class="text-caption font-caption text-tertiary uppercase tracking-wider">Shirts &amp; Tees</span>
+<div class="flex items-center gap-1 text-primary font-caption text-caption">
+<span class="material-symbols-outlined text-[13px]">bolt</span>
+<span>Ready in 2 hrs</span>
+</div>
+</div>
+<h2 class="font-body-md-semibold text-body-md-semibold text-on-surface group-hover:text-primary transition-colors line-clamp-1">
+                Heavy Gauge Mockneck Tee
+              </h2>
+<div class="flex items-baseline gap-2">
+<span class="font-body-md-semibold text-body-md-semibold text-on-surface">$98</span>
+<span class="text-caption font-caption text-tertiary">M, L</span>
+</div>
+<div class="flex items-center gap-1.5 pt-1">
+<span class="w-3.5 h-3.5 rounded-full bg-[#d6cebe] ring-1 ring-offset-1 ring-primary"></span>
+<span class="w-3.5 h-3.5 rounded-full bg-[#1b1c1c]"></span>
+</div>
+</div>
+</div>
+<!-- Product Card 5 -->
+<div class="group relative flex flex-col bg-surface-container-lowest rounded-xl p-space-sm shadow-sm hover:shadow-md transition-shadow">
+<div class="relative w-full aspect-[3/4] bg-surface-container-high rounded-lg overflow-hidden">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="Technical lightweight coach jacket in dark midnight navy with matte metallic snap buttons, modern urban outerwear, crisp clean presentation." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCEGAulxCP04WfO5iTMIRfGi_yp9QgYjo2xIaUMqxQ2tueIry0xGJ9ZDYlNgsOwfEzNWtdjhw5ynpWfyfmRDUTNeCBPTuUJWgsNaHVbN0vmBG7yLIRpAY6JkWUHwC65dDzp5QvTI0QkWnqv2mYt49qgTjar618ymoRiF6EpLEEN2RaOv7d693RN_TkGPogDNJyZ-0seavnkfCjoltr1mPn4xYpJbGEbrL_flQEc2uRIZdas3mr8LMHaMw"/>
+<div class="absolute top-2 left-2 flex flex-col gap-1 items-start">
+<span class="bg-primary text-on-primary font-caption text-caption px-2 py-0.5 rounded shadow-sm">Water-Repellent</span>
+</div>
+<button aria-label="Save to Wishlist" class="absolute top-2 right-2 p-1.5 rounded-full bg-surface-container-lowest/80 backdrop-blur-sm text-on-surface hover:text-error transition-colors shadow-sm">
+<span class="material-symbols-outlined text-[18px]">favorite</span>
+</button>
+<div class="absolute inset-x-2 bottom-2 translate-y-12 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-300">
+<button class="w-full h-9 bg-inverse-surface/95 text-inverse-on-surface hover:bg-inverse-surface font-body-sm-semibold text-body-sm-semibold rounded-lg shadow-md flex items-center justify-center gap-1.5 backdrop-blur-sm">
+<span class="material-symbols-outlined text-[16px]">shopping_bag</span>
+                  Quick Add • $240
+                </button>
+</div>
+</div>
+<div class="flex flex-col gap-1 pt-space-sm px-1">
+<div class="flex items-center justify-between">
+<span class="text-caption font-caption text-tertiary uppercase tracking-wider">Outerwear</span>
+<div class="flex items-center gap-1 text-primary font-caption text-caption">
+<span class="material-symbols-outlined text-[13px]">storefront</span>
+<span>SoHo: 2 in stock</span>
+</div>
+</div>
+<h2 class="font-body-md-semibold text-body-md-semibold text-on-surface group-hover:text-primary transition-colors line-clamp-1">
+                Atelier Wind Coach Overshirt
+              </h2>
+<div class="flex items-baseline gap-2">
+<span class="font-body-md-semibold text-body-md-semibold text-on-surface">$240</span>
+<span class="text-caption font-caption text-tertiary">S, M, L</span>
+</div>
+<div class="flex items-center gap-1.5 pt-1">
+<span class="w-3.5 h-3.5 rounded-full bg-[#162744] ring-1 ring-offset-1 ring-primary"></span>
+<span class="w-3.5 h-3.5 rounded-full bg-[#1b1c1c]"></span>
+</div>
+</div>
+</div>
+<!-- Product Card 6 -->
+<div class="group relative flex flex-col bg-surface-container-lowest rounded-xl p-space-sm shadow-sm hover:shadow-md transition-shadow">
+<div class="relative w-full aspect-[3/4] bg-surface-container-high rounded-lg overflow-hidden">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="Minimalist structured cross-body messenger sling bag in vegetable tanned black matte leather with burnished edges, displayed on an architectural concrete slab." src="https://lh3.googleusercontent.com/aida-public/AB6AXuA1jBef7XEYQxliPjiTOXeBAOhMjAGjxQ72UaD7-S37FWayBt1rEIcPduk29Wljh63SK8yMiIpbFLrnSUCgxjI4Jy-hrPQqPrgaGw8KLKIYWdUw2DswN0hdPwRSP2iW2o1EErpqJe94x2ZCJK3GZUuRuXuFCNKNpNU04HugsKe3aFCh-j3NNiUf6S_Ts1TAyjVaHTMKETFl6Q5LS_9x2WPXQmUe3oSBt9fo1vqXRffIBu41BkKlZ85D4w"/>
+<div class="absolute top-2 left-2 flex flex-col gap-1 items-start">
+<span class="bg-surface-container-lowest/90 backdrop-blur-sm text-on-surface font-caption text-caption px-2 py-0.5 rounded shadow-sm">Handcrafted</span>
+</div>
+<button aria-label="Save to Wishlist" class="absolute top-2 right-2 p-1.5 rounded-full bg-surface-container-lowest/80 backdrop-blur-sm text-on-surface hover:text-error transition-colors shadow-sm">
+<span class="material-symbols-outlined text-[18px]">favorite</span>
+</button>
+<div class="absolute inset-x-2 bottom-2 translate-y-12 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-300">
+<button class="w-full h-9 bg-inverse-surface/95 text-inverse-on-surface hover:bg-inverse-surface font-body-sm-semibold text-body-sm-semibold rounded-lg shadow-md flex items-center justify-center gap-1.5 backdrop-blur-sm">
+<span class="material-symbols-outlined text-[16px]">shopping_bag</span>
+                  Quick Add • $165
+                </button>
+</div>
+</div>
+<div class="flex flex-col gap-1 pt-space-sm px-1">
+<div class="flex items-center justify-between">
+<span class="text-caption font-caption text-tertiary uppercase tracking-wider">Accessories</span>
+<div class="flex items-center gap-1 text-primary font-caption text-caption">
+<span class="material-symbols-outlined text-[13px]">bolt</span>
+<span>Ready in 2 hrs</span>
+</div>
+</div>
+<h2 class="font-body-md-semibold text-body-md-semibold text-on-surface group-hover:text-primary transition-colors line-clamp-1">
+                Metropolitan Veg-Tanned Sling
+              </h2>
+<div class="flex items-baseline gap-2">
+<span class="font-body-md-semibold text-body-md-semibold text-on-surface">$165</span>
+<span class="text-caption font-caption text-tertiary">One Size</span>
+</div>
+<div class="flex items-center gap-1.5 pt-1">
+<span class="w-3.5 h-3.5 rounded-full bg-[#1b1c1c] ring-1 ring-offset-1 ring-primary"></span>
+<span class="w-3.5 h-3.5 rounded-full bg-[#b88656]"></span>
+</div>
+</div>
+</div>
+<!-- Product Card 7 -->
+<div class="group relative flex flex-col bg-surface-container-lowest rounded-xl p-space-sm shadow-sm hover:shadow-md transition-shadow">
+<div class="relative w-full aspect-[3/4] bg-surface-container-high rounded-lg overflow-hidden">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="Tailored tapered utility cargo pants in muted olive pine green with seamless magnetic welt pockets, modern high-function tailoring presentation." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBA3eZaRvwyakqb90CZsGp9-W3p5i-PvSya8SjCBnMss-RortZz3SQNehj3rqRVqZ4YRS4s4__WddzxOKjkGScdfs2TqDM4vJhBTjbOZjFMxwLIlSnrGGGrtejDgGxt0PW4EpCAUPiBU1G61sGjWrrKhSzIOvI036p9JvRWh8vug5AGPp5U0pdYJLIFRhP-OvENOdg0mgHv17_MSarOIUcc5Gnl94ujPDVAcAc-12HlPeM2fHqKy5s-Zw"/>
+<div class="absolute top-2 left-2 flex flex-col gap-1 items-start">
+<span class="bg-inverse-surface/90 text-inverse-on-surface backdrop-blur-sm font-caption text-caption px-2 py-0.5 rounded shadow-sm">Magnetic Hardware</span>
+</div>
+<button aria-label="Save to Wishlist" class="absolute top-2 right-2 p-1.5 rounded-full bg-surface-container-lowest/80 backdrop-blur-sm text-on-surface hover:text-error transition-colors shadow-sm">
+<span class="material-symbols-outlined text-[18px]">favorite</span>
+</button>
+<div class="absolute inset-x-2 bottom-2 translate-y-12 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-300">
+<button class="w-full h-9 bg-inverse-surface/95 text-inverse-on-surface hover:bg-inverse-surface font-body-sm-semibold text-body-sm-semibold rounded-lg shadow-md flex items-center justify-center gap-1.5 backdrop-blur-sm">
+<span class="material-symbols-outlined text-[16px]">shopping_bag</span>
+                  Quick Add • $195
+                </button>
+</div>
+</div>
+<div class="flex flex-col gap-1 pt-space-sm px-1">
+<div class="flex items-center justify-between">
+<span class="text-caption font-caption text-tertiary uppercase tracking-wider">Trousers</span>
+<div class="flex items-center gap-1 text-primary font-caption text-caption">
+<span class="material-symbols-outlined text-[13px]">storefront</span>
+<span>SoHo: 4 in stock</span>
+</div>
+</div>
+<h2 class="font-body-md-semibold text-body-md-semibold text-on-surface group-hover:text-primary transition-colors line-clamp-1">
+                Modular Technical Cargo Trouser
+              </h2>
+<div class="flex items-baseline gap-2">
+<span class="font-body-md-semibold text-body-md-semibold text-on-surface">$195</span>
+<span class="text-caption font-caption text-tertiary">M, L</span>
+</div>
+<div class="flex items-center gap-1.5 pt-1">
+<span class="w-3.5 h-3.5 rounded-full bg-[#00654b] ring-1 ring-offset-1 ring-primary"></span>
+<span class="w-3.5 h-3.5 rounded-full bg-[#8c9196]"></span>
+</div>
+</div>
+</div>
+<!-- Product Card 8 -->
+<div class="group relative flex flex-col bg-surface-container-lowest rounded-xl p-space-sm shadow-sm hover:shadow-md transition-shadow">
+<div class="relative w-full aspect-[3/4] bg-surface-container-high rounded-lg overflow-hidden">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="Seamless fine-gauge merino turtleneck sweater in muted heather graphite grey, sculptural studio lighting highlighting neck seam precision." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDTQ9tI_V7wMazqca5LAslyVB0ykzbQ6lzKQBkdImcEgjYi4P3mL9_-GFHqJyIjOPd2jBUsMhrSFN6sqDM6-NVeVlRUe7ilrUHnXzU4l_LzOkQwz2L5wWl4xwjNZnEaPgiCpE9Je2bNURIzh0nFuR9mgr2EeIlzRYo1ylNO5ruxzcWFej8mWu83bE7khNvZD_OaZLcIcyG-tiltxSBncswz1y5rxM_x5_hzbC87hRCKJO3ln69TCYfg3w"/>
+<div class="absolute top-2 left-2 flex flex-col gap-1 items-start">
+<span class="bg-primary text-on-primary font-caption text-caption px-2 py-0.5 rounded shadow-sm">Zero Waste Knit</span>
+</div>
+<button aria-label="Save to Wishlist" class="absolute top-2 right-2 p-1.5 rounded-full bg-surface-container-lowest/80 backdrop-blur-sm text-on-surface hover:text-error transition-colors shadow-sm">
+<span class="material-symbols-outlined text-[18px]">favorite</span>
+</button>
+<div class="absolute inset-x-2 bottom-2 translate-y-12 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-300">
+<button class="w-full h-9 bg-inverse-surface/95 text-inverse-on-surface hover:bg-inverse-surface font-body-sm-semibold text-body-sm-semibold rounded-lg shadow-md flex items-center justify-center gap-1.5 backdrop-blur-sm">
+<span class="material-symbols-outlined text-[16px]">shopping_bag</span>
+                  Quick Add • $160
+                </button>
+</div>
+</div>
+<div class="flex flex-col gap-1 pt-space-sm px-1">
+<div class="flex items-center justify-between">
+<span class="text-caption font-caption text-tertiary uppercase tracking-wider">Knitwear</span>
+<div class="flex items-center gap-1 text-primary font-caption text-caption">
+<span class="material-symbols-outlined text-[13px]">bolt</span>
+<span>Ready in 2 hrs</span>
+</div>
+</div>
+<h2 class="font-body-md-semibold text-body-md-semibold text-on-surface group-hover:text-primary transition-colors line-clamp-1">
+                Fine Merino Seamless Turtleneck
+              </h2>
+<div class="flex items-baseline gap-2">
+<span class="font-body-md-semibold text-body-md-semibold text-on-surface">$160</span>
+<span class="text-caption font-caption text-tertiary">S, M, L, XL</span>
+</div>
+<div class="flex items-center gap-1.5 pt-1">
+<span class="w-3.5 h-3.5 rounded-full bg-[#8c9196] ring-1 ring-offset-1 ring-primary"></span>
+<span class="w-3.5 h-3.5 rounded-full bg-[#1b1c1c]"></span>
+</div>
+</div>
+</div>
+</div>
+<!-- Pagination & Real-Time Infinite Scroll Progress -->
+<div class="flex flex-col items-center justify-center gap-space-md py-space-xl bg-surface-container-lowest rounded-xl shadow-sm mt-space-sm">
+<div class="flex flex-col items-center gap-2 max-w-sm w-full px-space-md text-center">
+<span class="font-label-sm text-label-sm text-tertiary">
+              Viewing <span class="text-on-surface font-body-sm-semibold">12</span> of <span class="text-on-surface font-body-sm-semibold">1,840</span> architectural pieces
+            </span>
+<!-- Progress Bar -->
+<div class="w-full h-1.5 bg-surface-container rounded-full overflow-hidden">
+<div class="h-full bg-primary rounded-full transition-all duration-300" style="width: 2.8%;"></div>
+</div>
+</div>
+<div class="flex flex-col sm:flex-row items-center gap-space-md">
+<button class="h-10 px-space-xl bg-inverse-surface hover:bg-on-surface text-inverse-on-surface font-body-sm-semibold text-body-sm-semibold rounded-lg shadow-sm transition-colors flex items-center gap-2">
+<span class="material-symbols-outlined text-[18px]">expand_circle_down</span>
+              Load More Products
+            </button>
+<button class="h-10 px-space-md bg-surface-container-high hover:bg-surface-dim text-on-surface font-body-sm-semibold text-body-sm-semibold rounded-lg transition-colors flex items-center gap-1">
+              View All 1,840
+            </button>
+</div>
+<div class="flex items-center gap-space-lg text-caption font-caption text-tertiary pt-space-xs">
+<span class="flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">local_shipping</span>
+              Express delivery dispatched daily at 4 PM EST
+            </span>
+<span class="hidden md:inline">•</span>
+<span class="hidden md:flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">autorenew</span>
+              Complimentary 30-day returns in-store
+            </span>
+</div>
+</div>
+</main>
+</div>
+</div>
+</div></main><footer class="w-full bg-surface-container-low mt-space-xl text-on-surface-variant"><div class="bg-surface-container py-space-lg"><div class="max-w-[1440px] mx-auto px-margin grid grid-cols-1 md:grid-cols-3 gap-space-lg text-center md:text-left"><div class="flex items-center justify-center md:justify-start gap-space-md"><div class="p-3 bg-surface-container-highest rounded-lg text-primary"><span class="material-symbols-outlined text-[24px]">assignment_return</span></div><div><h4 class="font-body-md-semibold text-body-md-semibold text-on-surface">Free In-Store Returns</h4><p class="font-body-sm text-body-sm text-tertiary">Drop returns off at any of our flagship boutiques nationwide</p></div></div><div class="flex items-center justify-center md:justify-start gap-space-md"><div class="p-3 bg-surface-container-highest rounded-lg text-primary"><span class="material-symbols-outlined text-[24px]">local_shipping</span></div><div><h4 class="font-body-md-semibold text-body-md-semibold text-on-surface">Same-Day Courier Delivery</h4><p class="font-body-sm text-body-sm text-tertiary">Metro orders placed before 2 PM dispatched instantly</p></div></div><div class="flex items-center justify-center md:justify-start gap-space-md"><div class="p-3 bg-surface-container-highest rounded-lg text-primary"><span class="material-symbols-outlined text-[24px]">verified</span></div><div><h4 class="font-body-md-semibold text-body-md-semibold text-on-surface">2-Year Guarantee</h4><p class="font-body-sm text-body-sm text-tertiary">Meticulous tailoring backed by complimentary stitch repairs</p></div></div></div></div><div class="max-w-[1440px] mx-auto px-margin py-space-xl grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-space-xl"><div class="lg:col-span-2 flex flex-col gap-space-md"><div class="flex items-center gap-space-sm"><img alt="Apex Apparel Logo" class="h-7 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1WPubMgscUINGuisBDvGZbhiRvwxKjFWpAHPA0GXYWeRFqxcZY4G-byYU4PUykJPYVnuurpj_2yFkafDFmBWhplcA2dlqdqMDkr5ufN1GCA1-9Cy6Y74Bk73_KmB_pOSwvk_HQjInJtWpmQfLSQUcNeG5m75CCs-SDUFif7I_eleu-OGwNMldz9nzh1957zHt7Hfbkc1ds6tpanpikt3_aR6SAXkw6znZBFRPYg-rTUbi8f0VwyeBPJuaQ"/><span class="font-headline-sm text-headline-sm text-on-surface">Apex Apparel</span></div><p class="font-body-sm text-body-sm text-tertiary max-w-sm">Architectural silhouettes tailored from sustainably sourced botanical fibers. Purposeful garments engineered for metropolitan momentum.</p><div class="flex flex-col gap-space-xs"><span class="font-body-md-semibold text-body-md-semibold text-on-surface">Get 15% off your first order</span><p class="font-body-sm text-body-sm text-tertiary">Subscribe to journal dispatches, seasonal private previews, and atelier notes.</p><form class="flex items-center gap-space-xs mt-space-xs"><input class="h-10 px-space-md rounded-lg bg-surface-container-lowest font-body-sm text-body-sm text-on-surface placeholder:text-tertiary flex-1 focus:outline-none focus:ring-2 focus:ring-primary" placeholder="Enter your email" type="email"/><button class="h-10 px-space-md bg-inverse-surface text-inverse-on-surface font-body-sm-semibold text-body-sm-semibold rounded-lg hover:bg-on-surface transition-colors" type="button">Subscribe</button></form></div></div><div class="flex flex-col gap-space-sm"><span class="font-label-md text-label-md text-on-surface uppercase tracking-wider">Shop Collection</span><ul class="flex flex-col gap-2 font-body-sm text-body-sm"><li class="text-on-surface-variant hover:text-on-surface cursor-pointer">New Arrivals</li><li class="text-on-surface-variant hover:text-on-surface cursor-pointer">Men's Outerwear</li><li class="text-on-surface-variant hover:text-on-surface cursor-pointer">Women's Tailoring</li><li class="text-on-surface-variant hover:text-on-surface cursor-pointer">Technical Knits</li><li class="text-on-surface-variant hover:text-on-surface cursor-pointer">Bags &amp; Travel</li></ul></div><div class="flex flex-col gap-space-sm"><span class="font-label-md text-label-md text-on-surface uppercase tracking-wider">Client Care</span><ul class="flex flex-col gap-2 font-body-sm text-body-sm"><li class="text-on-surface-variant hover:text-on-surface cursor-pointer">Order Tracking</li><li class="text-on-surface-variant hover:text-on-surface cursor-pointer">BOPIS Store Pickup</li><li class="text-on-surface-variant hover:text-on-surface cursor-pointer">Returns &amp; Exchanges</li><li class="text-on-surface-variant hover:text-on-surface cursor-pointer">Garment Care Guide</li><li class="text-on-surface-variant hover:text-on-surface cursor-pointer">Contact Atelier</li></ul></div><div class="flex flex-col gap-space-sm"><span class="font-label-md text-label-md text-on-surface uppercase tracking-wider">Atelier &amp; Stores</span><ul class="flex flex-col gap-2 font-body-sm text-body-sm"><li class="text-on-surface-variant hover:text-on-surface cursor-pointer">SoHo Flagship (NY)</li><li class="text-on-surface-variant hover:text-on-surface cursor-pointer">Le Marais (Paris)</li><li class="text-on-surface-variant hover:text-on-surface cursor-pointer">Ginza (Tokyo)</li><li class="text-on-surface-variant hover:text-on-surface cursor-pointer">Sustainability Mandate</li><li class="text-on-surface-variant hover:text-on-surface cursor-pointer">Careers</li></ul></div></div><div class="bg-surface-container py-space-md"><div class="max-w-[1440px] mx-auto px-margin flex flex-col md:flex-row items-center justify-between gap-space-md text-caption font-caption text-tertiary"><div class="flex items-center gap-space-lg"><div class="flex items-center gap-1"><span class="material-symbols-outlined text-[16px]">public</span><span class="font-body-sm text-body-sm text-on-surface">United States (USD $)</span></div><span>© 2025 Apex Apparel Inc. All rights reserved.</span></div><div class="flex items-center gap-space-sm"><span class="bg-surface-container-highest px-2 py-1 rounded text-on-surface-variant font-label-sm text-label-sm">Apple Pay</span><span class="bg-surface-container-highest px-2 py-1 rounded text-on-surface-variant font-label-sm text-label-sm">Visa</span><span class="bg-surface-container-highest px-2 py-1 rounded text-on-surface-variant font-label-sm text-label-sm">Mastercard</span><span class="bg-surface-container-highest px-2 py-1 rounded text-on-surface-variant font-label-sm text-label-sm">Shop Pay</span><span class="bg-surface-container-highest px-2 py-1 rounded text-on-surface-variant font-label-sm text-label-sm">Klarna</span></div></div></div></footer></body></html>

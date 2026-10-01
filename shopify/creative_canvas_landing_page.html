@@ -1,0 +1,698 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Creative Canvas Landing Page | Shopify Prototype</title>
+<!-- Tailwind CSS CDN with forms and container queries plugins -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Inter', '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'sans-serif'],
+          },
+          colors: {
+            brand: {
+              black: '#0c0c0d',
+              dark: '#1e1e1e',
+              muted: '#666666',
+              border: '#e6e6e6',
+              accent: '#0d99ff',
+              purple: '#7b61ff',
+              green: '#10b981'
+            }
+          }
+        }
+      }
+    }
+  </script>
+<!-- Custom CSS for specialized visual elements -->
+<style data-purpose="base-styling">
+    body {
+      color: #0c0c0d;
+      background-color: #ffffff;
+      -webkit-font-smoothing: antialiased;
+      text-rendering: optimizeLegibility;
+    }
+    .tracking-tight-custom {
+      letter-spacing: -0.035em;
+    }
+    .custom-scrollbar::-webkit-scrollbar {
+      display: none;
+    }
+    .custom-scrollbar {
+      -ms-overflow-style: none;
+      scrollbar-width: none;
+    }
+  </style>
+</head>
+<body class="font-sans min-h-screen flex flex-col bg-white">
+<!-- BEGIN: NotificationBanner -->
+<div class="bg-[#2c2c2c] text-white text-xs sm:text-sm py-2 px-4 flex items-center justify-between sticky top-0 z-50 transition-colors" data-purpose="top-announcement">
+<div class="flex items-center gap-2 mx-auto">
+<div class="flex items-center gap-1.5 font-medium">
+<span class="inline-flex items-center justify-center p-0.5 rounded text-[#a259ff]">
+<svg class="w-4 h-4" fill="currentColor" viewbox="0 0 24 24">
+<path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"></path>
+</svg>
+</span>
+<span class="font-semibold text-white">Release Notes:</span>
+</div>
+<span class="text-neutral-300 hidden md:inline">Be the first to learn about new feature drops for Figma Motion and more. Join us live Sept 30.</span>
+<a class="bg-purple-600 hover:bg-purple-500 text-white font-medium px-3 py-1 rounded-full text-xs transition duration-150 inline-flex items-center gap-1" href="#register">
+        Save your spot
+      </a>
+</div>
+<button aria-label="Dismiss banner" class="text-neutral-400 hover:text-white p-1" onclick="this.parentElement.style.display='none'" type="button">
+<svg class="w-4 h-4" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M6 18L18 6M6 6l12 12" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</button>
+</div>
+<!-- END: NotificationBanner -->
+<!-- BEGIN: MainHeader -->
+<header class="border-b border-[#e5e5e5] bg-white sticky top-[37px] z-40">
+<div class="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
+<!-- Left side: Logo & Navigation items -->
+<div class="flex items-center gap-8">
+<!-- Figma Logo -->
+<a aria-label="Figma Homepage" class="flex items-center gap-2" href="#">
+<svg fill="none" height="36" viewbox="0 0 38 57" width="24" xmlns="http://www.w3.org/2000/svg">
+<path d="M19 28.5C19 23.2533 23.2533 19 28.5 19C33.7467 19 38 23.2533 38 28.5C38 33.7467 33.7467 38 28.5 38C23.2533 38 19 33.7467 19 28.5Z" fill="#1ABCFE"></path>
+<path d="M0 47.5C0 42.2533 4.25329 38 9.5 38H19V47.5C19 52.7467 14.7467 57 9.5 57C4.25329 57 0 52.7467 0 47.5Z" fill="#0ACF83"></path>
+<path d="M19 0V19H28.5C33.7467 19 38 14.7467 38 9.5C38 4.25329 33.7467 0 28.5 0H19Z" fill="#FF7262"></path>
+<path d="M0 9.5C0 14.7467 4.25329 19 9.5 19H19V0H9.5C4.25329 0 0 4.25329 0 9.5Z" fill="#F24E1E"></path>
+<path d="M0 28.5C0 33.7467 4.25329 38 9.5 38H19V19H9.5C4.25329 19 0 23.2533 0 28.5Z" fill="#A259FF"></path>
+</svg>
+</a>
+<!-- Main Navigation Links -->
+<nav aria-label="Main Navigation" class="hidden lg:flex items-center gap-6 text-sm font-semibold text-[#111111]">
+<div class="relative group">
+<button class="flex items-center gap-1 hover:text-neutral-600 transition">
+              Products
+              <svg class="w-3.5 h-3.5 text-neutral-500" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path d="M19 9l-7 7-7-7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
+</button>
+</div>
+<div class="relative group">
+<button class="flex items-center gap-1 hover:text-neutral-600 transition">
+              Solutions
+              <svg class="w-3.5 h-3.5 text-neutral-500" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path d="M19 9l-7 7-7-7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
+</button>
+</div>
+<div class="relative group">
+<button class="flex items-center gap-1 hover:text-neutral-600 transition">
+              Community
+              <svg class="w-3.5 h-3.5 text-neutral-500" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path d="M19 9l-7 7-7-7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
+</button>
+</div>
+<div class="relative group">
+<button class="flex items-center gap-1 hover:text-neutral-600 transition">
+              Resources
+              <svg class="w-3.5 h-3.5 text-neutral-500" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path d="M19 9l-7 7-7-7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
+</button>
+</div>
+<a class="hover:text-neutral-600 transition" href="#pricing">Pricing</a>
+</nav>
+</div>
+<!-- Right Navigation Actions -->
+<div class="flex items-center gap-4">
+<a class="text-sm font-semibold hover:text-neutral-600 transition px-2 py-1" href="#login">Log in</a>
+<a class="hidden sm:inline-flex text-sm font-semibold border border-neutral-300 hover:border-black rounded-full px-4 py-2 transition" href="#contact">Contact sales</a>
+<a class="text-sm font-semibold bg-black text-white hover:bg-neutral-800 rounded-full px-5 py-2.5 transition" href="#get-started">Get started for free</a>
+</div>
+</div>
+</header>
+<!-- END: MainHeader -->
+<main class="flex-grow">
+<!-- BEGIN: HeroSection -->
+<section class="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8 pt-16 sm:pt-24 pb-16">
+<div class="flex flex-col lg:flex-row items-start justify-between gap-12">
+<!-- Hero headline and Call To Action -->
+<div class="w-full lg:w-5/12 pt-4">
+<h1 class="text-5xl sm:text-6xl lg:text-7xl font-bold tracking-tight-custom leading-[1.05] text-black">
+            The full-stack creative canvas
+          </h1>
+<div class="mt-8">
+<a class="inline-flex items-center justify-center px-8 py-4 bg-black text-white hover:bg-neutral-800 rounded-full text-lg font-medium shadow-sm transition" href="#get-started">
+              Get started
+            </a>
+</div>
+</div>
+<!-- Hero visual layered stack -->
+<div class="w-full lg:w-7/12 relative min-h-[460px] flex items-center justify-center">
+<!-- Background canvas visual card -->
+<div class="absolute w-[92%] h-[400px] bg-gradient-to-tr from-[#99a87d] to-[#606f4e] rounded-2xl shadow-xl overflow-hidden opacity-90 rotate-[-1.5deg] scale-95 flex items-center justify-center">
+<div class="absolute inset-0 bg-black/10"></div>
+<span class="text-white/30 text-8xl font-black select-none tracking-widest uppercase">Canvas</span>
+</div>
+<!-- Mid layer orange design card -->
+<div class="absolute left-4 top-12 w-64 sm:w-80 bg-[#e76f51] text-white p-5 rounded-xl shadow-2xl rotate-[-3deg] border border-white/20">
+<div class="flex items-center gap-2 mb-3">
+<div class="w-6 h-6 rounded-full bg-white/30"></div>
+<span class="text-xs font-semibold text-white/90">Design tokens &amp; specs</span>
+</div>
+<p class="text-xs text-white/80 leading-relaxed font-mono">
+              Hi Eunice! The component states are all covered in the design spec. We also noted the dynamic motion curves. Let me know if you need more!
+            </p>
+</div>
+<!-- Foreground dark modern music player card mockup -->
+<div class="relative z-10 w-72 sm:w-80 bg-[#161616] text-white rounded-3xl p-5 shadow-2xl border border-neutral-700/60 ml-auto mr-4 sm:mr-16">
+<!-- App header -->
+<div class="flex items-center justify-between text-neutral-400 text-xs mb-4">
+<svg class="w-4 h-4" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path d="M15 19l-7-7 7-7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
+<span class="font-medium text-neutral-200">18:41</span>
+<svg class="w-4 h-4" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path d="M12 5v.01M12 12v.01M12 19v.01M12 6a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
+</div>
+<!-- Song details -->
+<div class="mb-4">
+<h4 class="text-base font-semibold leading-tight">Black-capped Chickadee</h4>
+<p class="text-xs text-neutral-400">Poecile atricapillus</p>
+</div>
+<!-- Artwork circle -->
+<div class="w-40 h-40 mx-auto my-4 rounded-full bg-neutral-800 border-2 border-neutral-700 p-2 flex items-center justify-center relative overflow-hidden">
+<div class="w-full h-full rounded-full bg-gradient-to-br from-amber-400/20 via-neutral-700 to-neutral-900 flex items-center justify-center">
+<svg class="w-16 h-16 text-neutral-300" fill="none" stroke="currentColor" stroke-width="1.5" viewbox="0 0 24 24">
+<path d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+</div>
+</div>
+<!-- Audio waveform visual representation -->
+<div class="flex items-center justify-center gap-1 my-3 h-8">
+<span class="w-1 h-3 bg-amber-400 rounded-full animate-pulse"></span>
+<span class="w-1 h-5 bg-amber-400 rounded-full"></span>
+<span class="w-1 h-7 bg-amber-400 rounded-full"></span>
+<span class="w-1 h-4 bg-amber-400 rounded-full"></span>
+<span class="w-1 h-6 bg-amber-300 rounded-full"></span>
+<span class="w-1 h-3 bg-amber-200 rounded-full"></span>
+</div>
+<div class="text-center text-[10px] text-neutral-400 font-mono tracking-wider mb-4">00:43:05</div>
+<!-- Audio Controls -->
+<div class="flex items-center justify-between px-6 pt-2">
+<button class="text-neutral-400 hover:text-white"><svg class="w-4 h-4" fill="currentColor" viewbox="0 0 24 24"><path d="M6 6h2v12H6zm3.5 6l8.5 6V6z"></path></svg></button>
+<button class="w-10 h-10 rounded-full bg-white text-black flex items-center justify-center hover:scale-105 transition"><svg class="w-4 h-4 fill-current" viewbox="0 0 24 24"><path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"></path></svg></button>
+<button class="text-neutral-400 hover:text-white"><svg class="w-4 h-4" fill="currentColor" viewbox="0 0 24 24"><path d="M6 18l8.5-6L6 6v12zM16 6v12h2V6h-2z"></path></svg></button>
+</div>
+</div>
+<!-- Video play icon indicator -->
+<div class="absolute bottom-2 right-6 z-20 w-8 h-8 rounded-full bg-black/80 text-white flex items-center justify-center backdrop-blur-md shadow-md cursor-pointer hover:scale-110 transition">
+<svg class="w-3.5 h-3.5 ml-0.5 fill-current" viewbox="0 0 24 24"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg>
+</div>
+</div>
+</div>
+</section>
+<!-- END: HeroSection -->
+<!-- BEGIN: ValuePropositionSection -->
+<section class="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8 py-20 border-t border-neutral-100">
+<div class="max-w-3xl mx-auto text-center mb-16">
+<h2 class="text-3xl sm:text-4xl font-bold tracking-tight text-black mb-3">
+          One workspace for your entire product development process.
+        </h2>
+<p class="text-lg sm:text-xl text-neutral-600 font-normal">
+          Made so your whole team can go from WIP to ship, together.
+        </p>
+</div>
+<!-- Feature Split Grid -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-12 max-w-4xl mx-auto">
+<!-- Feature 1: Design -->
+<div class="flex flex-col items-start space-y-3">
+<div class="w-3 h-3 rounded-full bg-black mb-1"></div>
+<h3 class="text-base font-bold text-black">Design anything you can imagine</h3>
+<p class="text-neutral-600 text-sm leading-relaxed">
+            Turn your ideas into apps, websites, and products.
+          </p>
+<a class="text-sm font-semibold text-black hover:text-neutral-600 inline-flex items-center gap-1 group" href="#explore-design">
+            Explore design tools <span class="transition-transform group-hover:translate-x-1">→</span>
+</a>
+</div>
+<!-- Feature 2: Build -->
+<div class="flex flex-col items-start space-y-3">
+<div class="w-3 h-3 bg-black mb-1"></div>
+<h3 class="text-base font-bold text-black">Build with intention</h3>
+<p class="text-neutral-600 text-sm leading-relaxed">
+            Dev tools that take you all the way to production.
+          </p>
+<a class="text-sm font-semibold text-black hover:text-neutral-600 inline-flex items-center gap-1 group" href="#explore-build">
+            Explore build tools <span class="transition-transform group-hover:translate-x-1">→</span>
+</a>
+</div>
+</div>
+</section>
+<!-- END: ValuePropositionSection -->
+<!-- BEGIN: CollaborativeAiSection -->
+<section class="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8 py-20 bg-neutral-50 rounded-3xl my-8">
+<div class="max-w-3xl mx-auto text-center mb-16">
+<h2 class="text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight text-black mb-4">
+          Move fast in the right direction on an AI-native canvas.
+        </h2>
+<p class="text-base sm:text-lg text-neutral-600">
+          Teammates and AI agents work in the same space with shared context. Generate new design directions, refine, and align—together.
+        </p>
+</div>
+<!-- Canvas Interactive Artboard Simulation -->
+<div class="relative bg-white border border-neutral-200 rounded-2xl p-6 sm:p-10 shadow-sm max-w-4xl mx-auto min-h-[380px] overflow-hidden flex flex-col justify-between">
+<!-- Floating Collaborator Badges & Cursors -->
+<div class="absolute top-12 left-16 z-20 flex items-center gap-2 pointer-events-none">
+<svg class="w-5 h-5 text-blue-500 fill-current drop-shadow" viewbox="0 0 24 24"><path d="M3 3l7 18 3-7 7-3L3 3z"></path></svg>
+<span class="bg-blue-500 text-white text-xs px-2.5 py-0.5 rounded-full font-medium shadow-sm">Sarah (Designer)</span>
+</div>
+<div class="absolute bottom-20 right-24 z-20 flex items-center gap-2 pointer-events-none">
+<svg class="w-5 h-5 text-purple-600 fill-current drop-shadow" viewbox="0 0 24 24"><path d="M3 3l7 18 3-7 7-3L3 3z"></path></svg>
+<span class="bg-purple-600 text-white text-xs px-2.5 py-0.5 rounded-full font-medium shadow-sm">Figma AI Agent</span>
+</div>
+<!-- Center AI prompt visual modal -->
+<div class="my-auto mx-auto max-w-lg w-full bg-white border border-neutral-300 rounded-xl p-4 shadow-lg z-10">
+<div class="flex items-center gap-2 text-xs font-semibold text-neutral-500 mb-2">
+<span class="w-2 h-2 rounded-full bg-purple-500"></span>
+            GENERATE VARIATIONS
+          </div>
+<p class="text-sm text-neutral-800 font-medium mb-3">
+            "Adapt modern checkout card for iOS mobile view with Apple Pay integration"
+          </p>
+<div class="flex items-center justify-between pt-2 border-t border-neutral-100">
+<div class="flex gap-2 text-xs">
+<span class="px-2 py-1 bg-neutral-100 rounded-md text-neutral-600">3 options ready</span>
+<span class="px-2 py-1 bg-green-50 text-green-700 rounded-md font-medium">Tokens synced</span>
+</div>
+<button class="bg-black text-white text-xs font-semibold px-3 py-1.5 rounded-md hover:bg-neutral-800 transition">Apply change</button>
+</div>
+</div>
+<!-- Section play button indicator bottom right -->
+<div class="self-end">
+<div class="w-8 h-8 rounded-full bg-black text-white flex items-center justify-center shadow hover:scale-105 transition cursor-pointer">
+<svg class="w-3.5 h-3.5 ml-0.5 fill-current" viewbox="0 0 24 24"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg>
+</div>
+</div>
+</div>
+</section>
+<!-- END: CollaborativeAiSection -->
+<!-- BEGIN: PrecisionCraftShowcaseSection -->
+<section class="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8 py-20">
+<div class="flex flex-col sm:flex-row sm:items-end justify-between mb-12">
+<div>
+<h2 class="text-3xl sm:text-4xl font-bold tracking-tight text-black mb-2">
+            Powerfully expressive. Incredibly precise.
+          </h2>
+<p class="text-lg text-neutral-600">
+            Every technical tool you need to dial in the details.
+          </p>
+</div>
+<a class="mt-4 sm:mt-0 text-sm font-semibold text-black hover:text-neutral-600 inline-flex items-center gap-1 group" href="#explore-figma-design">
+          Explore Figma Design <span class="transition-transform group-hover:translate-x-1">→</span>
+</a>
+</div>
+<!-- Feature Grid: 4 Interactive Visual Blocks -->
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+<!-- Card 1: Texture & Shader Control -->
+<div class="group relative bg-[#d6cfbe] rounded-2xl h-96 p-6 flex flex-col justify-between overflow-hidden shadow-sm hover:shadow-md transition">
+<div class="bg-white/90 backdrop-blur-md rounded-xl p-3 border border-neutral-200/60 shadow-sm max-w-[200px]">
+<div class="flex items-center justify-between text-xs font-semibold mb-2">
+<div class="flex items-center gap-1.5">
+<svg class="w-4 h-4 text-neutral-700" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path d="M4 6h16M4 12h16M4 18h7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
+<span>Texture</span>
+</div>
+<span class="text-neutral-500 font-mono text-[11px]">$ 1 - R 50</span>
+</div>
+<div class="w-full bg-neutral-200 h-1.5 rounded-full overflow-hidden">
+<div class="bg-black h-full w-2/3"></div>
+</div>
+</div>
+<p class="text-xs text-neutral-800 font-mono bg-white/50 p-2 rounded backdrop-blur-sm">
+            Shader diffusion flow. Grain controls and procedural noise maps render directly inside standard layers.
+          </p>
+<div class="self-end">
+<div class="w-7 h-7 rounded-full bg-black text-white flex items-center justify-center hover:scale-105 transition cursor-pointer">
+<svg class="w-3 h-3 ml-0.5 fill-current" viewbox="0 0 24 24"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg>
+</div>
+</div>
+</div>
+<!-- Card 2: Vector Pen & Node Tool -->
+<div class="group relative bg-[#0d59f2] text-white rounded-2xl h-96 p-6 flex flex-col justify-between overflow-hidden shadow-sm hover:shadow-md transition">
+<div class="relative w-full h-48 flex items-center justify-center">
+<!-- Simulated bezier vector path -->
+<svg class="w-full h-full text-white" fill="none" viewbox="0 0 200 120">
+<path d="M 10 100 C 60 10, 140 110, 190 20" stroke="white" stroke-linecap="round" stroke-width="3"></path>
+<circle cx="100" cy="58" fill="#38ef7d" r="5"></circle>
+<line stroke="#a5b4fc" stroke-dasharray="3 3" stroke-width="1.5" x1="60" x2="140" y1="25" y2="90"></line>
+<circle cx="60" cy="25" fill="white" r="4"></circle>
+<circle cx="140" cy="90" fill="white" r="4"></circle>
+</svg>
+<div class="absolute top-6 right-8">
+<svg class="w-5 h-5 text-white fill-current" viewbox="0 0 24 24"><path d="M3 3l7 18 3-7 7-3L3 3z"></path></svg>
+</div>
+</div>
+<div class="text-xs text-blue-100 font-medium">
+            Vector Networks™ let you connect multiple paths to a single point without rebuilding geometries.
+          </div>
+<div class="self-end">
+<div class="w-7 h-7 rounded-full bg-white text-black flex items-center justify-center hover:scale-105 transition cursor-pointer">
+<svg class="w-3 h-3 ml-0.5 fill-current" viewbox="0 0 24 24"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg>
+</div>
+</div>
+</div>
+<!-- Card 3: Kinetic Type & Distortion Warping -->
+<div class="group relative bg-[#05e599] rounded-2xl h-96 p-6 flex flex-col justify-between overflow-hidden shadow-sm hover:shadow-md transition">
+<div class="flex items-center justify-center flex-grow">
+<!-- S-curved warped text simulation -->
+<div class="relative w-full text-center">
+<span class="block text-4xl sm:text-5xl font-black text-black tracking-tight transform -skew-y-6">YEAR</span>
+<span class="block text-4xl sm:text-5xl font-black text-purple-600 tracking-tight transform skew-y-6">PRINT</span>
+<span class="block text-4xl sm:text-5xl font-black text-black tracking-tight transform -skew-y-3">SALE</span>
+</div>
+</div>
+<div class="text-xs text-neutral-900 font-semibold">
+            Non-destructive kinetic text formatting &amp; warp meshes.
+          </div>
+<div class="self-end">
+<div class="w-7 h-7 rounded-full bg-black text-white flex items-center justify-center hover:scale-105 transition cursor-pointer">
+<svg class="w-3 h-3 ml-0.5 fill-current" viewbox="0 0 24 24"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg>
+</div>
+</div>
+</div>
+<!-- Card 4: Physics & Spring Dynamics Panel -->
+<div class="group relative bg-[#7fa356] rounded-2xl h-96 p-6 flex flex-col justify-between overflow-hidden shadow-sm hover:shadow-md transition">
+<!-- Floating Spring inspector panel -->
+<div class="bg-white rounded-xl p-3 shadow-lg border border-neutral-200 text-neutral-900 text-xs font-sans">
+<div class="flex items-center justify-between font-semibold pb-2 border-b border-neutral-100">
+<div class="flex items-center gap-1.5">
+<span class="w-2.5 h-2.5 rounded-full bg-emerald-500"></span>
+<span>Spring motion</span>
+</div>
+<span class="text-neutral-400">···</span>
+</div>
+<div class="space-y-2 mt-2 font-mono text-[11px]">
+<div class="flex justify-between items-center text-neutral-600">
+<span>Damping</span>
+<span class="font-bold text-neutral-900">24</span>
+</div>
+<div class="w-full bg-neutral-100 h-1 rounded-full">
+<div class="bg-neutral-800 h-full w-3/4"></div>
+</div>
+<div class="flex justify-between items-center text-neutral-600">
+<span>Stiffness</span>
+<span class="font-bold text-neutral-900">220</span>
+</div>
+<div class="w-full bg-neutral-100 h-1 rounded-full">
+<div class="bg-neutral-800 h-full w-1/2"></div>
+</div>
+</div>
+</div>
+<div class="text-xs text-white font-medium">
+            Natural fluid physics with native spring math exported to iOS &amp; Android.
+          </div>
+<div class="self-end">
+<div class="w-7 h-7 rounded-full bg-black text-white flex items-center justify-center hover:scale-105 transition cursor-pointer">
+<svg class="w-3 h-3 ml-0.5 fill-current" viewbox="0 0 24 24"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- END: PrecisionCraftShowcaseSection -->
+<!-- BEGIN: ContextConsistencySection -->
+<section class="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8 py-20 border-t border-neutral-100">
+<div class="max-w-3xl">
+<h2 class="text-3xl sm:text-4xl font-bold tracking-tight text-black mb-3">
+          Start with design context. Build with consistency.
+        </h2>
+<p class="text-lg text-neutral-600 leading-relaxed mb-6">
+          Your context, codebase, and agents stay connected so what you design is what gets shipped.
+        </p>
+<a class="text-sm font-semibold text-black hover:text-neutral-600 inline-flex items-center gap-1 group" href="#explore-figma-make">
+          Explore Figma Make <span class="transition-transform group-hover:translate-x-1">→</span>
+</a>
+</div>
+</section>
+<!-- END: ContextConsistencySection -->
+<!-- BEGIN: SocialProofSection -->
+<section class="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8 py-20 bg-[#fafafa] rounded-3xl">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
+<!-- Testimonial Quote -->
+<div class="lg:col-span-8 flex flex-col justify-between">
+<blockquote class="text-2xl sm:text-3xl lg:text-4xl font-semibold tracking-tight text-black leading-snug">
+            “Everyone is able to influence, inspire, and give input without ever leaving the design file. That creates a really transparent, open, and honest process throughout the whole project.”
+          </blockquote>
+<!-- Author attribution -->
+<div class="flex items-center gap-3 mt-8">
+<div class="w-11 h-11 rounded-full bg-neutral-300 flex items-center justify-center font-bold text-neutral-700">
+              FS
+            </div>
+<div>
+<div class="font-semibold text-sm text-black">Francisco Saiz</div>
+<div class="text-xs text-neutral-500">Senior Design Director, Code and Theory</div>
+</div>
+</div>
+</div>
+<!-- Metric Stat Callout -->
+<div class="lg:col-span-4 border-t lg:border-t-0 lg:border-l border-neutral-300 lg:pl-12 pt-8 lg:pt-0">
+<div class="text-7xl sm:text-8xl font-black tracking-tight text-black leading-none">
+            95%
+          </div>
+<p class="mt-4 text-base font-medium text-neutral-800">
+            95% of the Fortune 500 uses Figma
+          </p>
+<p class="text-xs text-neutral-400 mt-1">
+            Based on data from March 2025.
+          </p>
+</div>
+</div>
+<!-- Monochrome Logo Wall -->
+<div class="mt-16 pt-12 border-t border-neutral-200">
+<div class="flex flex-wrap items-center justify-between gap-8 opacity-80 grayscale">
+<!-- Netflix logo text -->
+<span class="text-2xl font-black tracking-widest uppercase font-serif">NETFLIX</span>
+<!-- Pentagram text -->
+<span class="text-xl font-bold tracking-normal font-sans">Pentagram</span>
+<!-- Slack text -->
+<span class="text-2xl font-bold tracking-tight flex items-center gap-1 font-sans">
+<span class="font-black text-3xl">#</span>slack
+          </span>
+<!-- Stripe logo text -->
+<span class="text-2xl font-black tracking-tight font-sans">stripe</span>
+<!-- The New York Times text -->
+<span class="text-xl font-serif font-bold italic">The New York Times</span>
+<!-- Zoom text -->
+<span class="text-2xl font-bold tracking-tight font-sans">zoom</span>
+</div>
+</div>
+</section>
+<!-- END: SocialProofSection -->
+<!-- BEGIN: MidPageCtaSection -->
+<section class="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8 py-28 text-center">
+<h2 class="text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight text-black mb-8">
+        Ideas no longer have to wait their turn
+      </h2>
+<div>
+<a class="inline-flex items-center justify-center px-12 py-5 bg-black text-white hover:bg-neutral-800 rounded-full text-xl font-semibold shadow-md transition transform hover:-translate-y-0.5" href="#get-started">
+          Get started
+        </a>
+</div>
+</section>
+<!-- END: MidPageCtaSection -->
+<!-- BEGIN: CommunityResourcesSection -->
+<section class="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8 py-16 border-t border-neutral-200">
+<!-- Section Header with carousel controls -->
+<div class="flex flex-col md:flex-row md:items-end justify-between mb-10">
+<div>
+<h2 class="text-2xl sm:text-3xl font-bold tracking-tight text-black mb-2">
+            Explore what you can do in Figma.
+          </h2>
+<p class="text-base text-neutral-600 mb-2">
+            Browse resources made by the community.
+          </p>
+<a class="text-sm font-semibold text-black hover:text-neutral-600 inline-flex items-center gap-1 group" href="#templates">
+            Browse all templates <span class="transition-transform group-hover:translate-x-1">→</span>
+</a>
+</div>
+<div class="flex items-center gap-4 mt-6 md:mt-0">
+<span class="text-xs text-neutral-500 font-medium">1 of 10</span>
+<div class="flex gap-2">
+<button aria-label="Previous template" class="w-8 h-8 rounded-full border border-neutral-300 flex items-center justify-center hover:bg-neutral-100 transition">
+<svg class="w-4 h-4 text-neutral-600" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path d="M15 19l-7-7 7-7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
+</button>
+<button aria-label="Next template" class="w-8 h-8 rounded-full border border-neutral-300 flex items-center justify-center hover:bg-neutral-100 transition">
+<svg class="w-4 h-4 text-neutral-600" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
+</button>
+</div>
+</div>
+</div>
+<!-- Resource Grid Showcase Cards -->
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+<!-- Resource 1: UI Kits -->
+<div class="group cursor-pointer">
+<div class="w-full h-64 rounded-2xl bg-slate-100 border border-neutral-200 overflow-hidden relative p-4 flex flex-col justify-between">
+<div class="bg-white p-3 rounded-lg shadow-sm space-y-2 border border-neutral-200">
+<div class="flex items-center justify-between text-[11px] font-mono text-neutral-500">
+<span>Button / Primary</span>
+<span class="text-blue-500">Active</span>
+</div>
+<div class="h-6 w-20 bg-blue-600 rounded flex items-center justify-center text-white text-[10px] font-semibold">Confirm</div>
+<div class="h-4 w-32 bg-neutral-200 rounded"></div>
+</div>
+<div class="text-[10px] text-neutral-500 font-mono">Polaris Design System v12.4</div>
+</div>
+<div class="mt-3">
+<a class="text-sm font-semibold text-black hover:text-neutral-600 inline-flex items-center gap-1 group" href="#ui-kits">
+              UI Kits <span class="transition-transform group-hover:translate-x-1">→</span>
+</a>
+</div>
+</div>
+<!-- Resource 2: Websites -->
+<div class="group cursor-pointer">
+<div class="w-full h-64 rounded-2xl bg-amber-50 border border-neutral-200 overflow-hidden relative p-4 flex items-center justify-center">
+<!-- Simulated Laptop frame -->
+<div class="w-48 bg-neutral-900 rounded-lg p-1.5 shadow-md">
+<div class="bg-white rounded p-2 text-center">
+<span class="text-[9px] font-bold text-neutral-800">Wire Magazine Report</span>
+<div class="mt-1 h-12 bg-neutral-100 rounded"></div>
+</div>
+</div>
+</div>
+<div class="mt-3">
+<a class="text-sm font-semibold text-black hover:text-neutral-600 inline-flex items-center gap-1 group" href="#websites">
+              Websites <span class="transition-transform group-hover:translate-x-1">→</span>
+</a>
+</div>
+</div>
+<!-- Resource 3: Social media -->
+<div class="group cursor-pointer">
+<div class="w-full h-64 rounded-2xl bg-rose-50 border border-neutral-200 overflow-hidden relative p-4 flex items-center justify-center">
+<div class="bg-red-800 text-white p-3 rounded-lg w-40 text-center shadow">
+<span class="text-[9px] tracking-widest uppercase block font-semibold">Brunch Is Here To Stay</span>
+<span class="text-xs font-serif italic block mt-1">11AM-3PM Every Saturday</span>
+</div>
+</div>
+<div class="mt-3">
+<a class="text-sm font-semibold text-black hover:text-neutral-600 inline-flex items-center gap-1 group" href="#social-media">
+              Social media <span class="transition-transform group-hover:translate-x-1">→</span>
+</a>
+</div>
+</div>
+<!-- Resource 4: Mobile apps -->
+<div class="group cursor-pointer">
+<div class="w-full h-64 rounded-2xl bg-stone-100 border border-neutral-200 overflow-hidden relative p-4 flex items-center justify-center">
+<!-- Simulated Mobile Screen -->
+<div class="w-28 h-48 bg-black rounded-2xl p-1.5 shadow-md border-2 border-neutral-800">
+<div class="bg-neutral-900 h-full rounded-xl p-2 flex flex-col justify-between text-white">
+<div class="w-4 h-1 bg-neutral-700 rounded-full mx-auto"></div>
+<div class="text-[8px] font-bold text-orange-400">Map Nav</div>
+<div class="h-10 bg-neutral-800 rounded"></div>
+</div>
+</div>
+</div>
+<div class="mt-3">
+<a class="text-sm font-semibold text-black hover:text-neutral-600 inline-flex items-center gap-1 group" href="#mobile-apps">
+              Mobile apps <span class="transition-transform group-hover:translate-x-1">→</span>
+</a>
+</div>
+</div>
+</div>
+</section>
+<!-- END: CommunityResourcesSection -->
+</main>
+<!-- BEGIN: MainFooter -->
+<footer class="bg-black text-white text-xs pt-16 pb-12 border-t border-neutral-800">
+<div class="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8">
+<div class="grid grid-cols-2 md:grid-cols-6 gap-8 pb-16 border-b border-neutral-800">
+<!-- Brand & Social Icons -->
+<div class="col-span-2">
+<!-- Figma Logo White -->
+<div class="mb-6">
+<span class="text-2xl font-bold tracking-tight text-white">Figma</span>
+</div>
+<!-- Social Icons -->
+<div class="flex items-center space-x-4 text-neutral-400">
+<!-- X / Twitter -->
+<a aria-label="X Twitter" class="hover:text-white transition" href="#">
+<svg class="w-4 h-4 fill-current" viewbox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"></path></svg>
+</a>
+<!-- YouTube -->
+<a aria-label="YouTube" class="hover:text-white transition" href="#">
+<svg class="w-4 h-4 fill-current" viewbox="0 0 24 24"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"></path></svg>
+</a>
+<!-- Instagram -->
+<a aria-label="Instagram" class="hover:text-white transition" href="#">
+<svg class="w-4 h-4 fill-current" viewbox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"></path></svg>
+</a>
+<!-- Facebook -->
+<a aria-label="Facebook" class="hover:text-white transition" href="#">
+<svg class="w-4 h-4 fill-current" viewbox="0 0 24 24"><path d="M9 8H6v4h3v12h5V12h3.642L18 8h-4V6.333C14 5.374 14.5 5 15.5 5H18V0h-3.808C10.595 0 9 1.583 9 4.615V8z"></path></svg>
+</a>
+</div>
+</div>
+<!-- Product Column -->
+<div class="space-y-3">
+<p class="font-bold text-white uppercase tracking-wider text-[11px]">Product</p>
+<ul class="space-y-2 text-neutral-400">
+<li><a class="hover:text-white transition" href="#">Figma Design</a></li>
+<li><a class="hover:text-white transition" href="#">Figma Make</a></li>
+<li><a class="hover:text-white transition flex items-center gap-1" href="#">Figma Weave <span class="bg-neutral-800 text-[10px] text-neutral-300 px-1 rounded">BETA</span></a></li>
+<li><a class="hover:text-white transition" href="#">Dev Mode</a></li>
+<li><a class="hover:text-white transition flex items-center gap-1" href="#">Figma Motion <span class="bg-neutral-800 text-[10px] text-neutral-300 px-1 rounded">NEW</span></a></li>
+<li><a class="hover:text-white transition" href="#">FigJam</a></li>
+<li><a class="hover:text-white transition" href="#">Figma Slides</a></li>
+</ul>
+</div>
+<!-- Use Cases Column -->
+<div class="space-y-3">
+<p class="font-bold text-white uppercase tracking-wider text-[11px]">Use Cases</p>
+<ul class="space-y-2 text-neutral-400">
+<li><a class="hover:text-white transition" href="#">UI design</a></li>
+<li><a class="hover:text-white transition" href="#">UX design</a></li>
+<li><a class="hover:text-white transition" href="#">Wireframing</a></li>
+<li><a class="hover:text-white transition" href="#">Diagramming</a></li>
+<li><a class="hover:text-white transition" href="#">Prototyping</a></li>
+<li><a class="hover:text-white transition" href="#">Brainstorming</a></li>
+<li><a class="hover:text-white transition" href="#">Presentation Maker</a></li>
+</ul>
+</div>
+<!-- Resources Column -->
+<div class="space-y-3">
+<p class="font-bold text-white uppercase tracking-wider text-[11px]">Resources</p>
+<ul class="space-y-2 text-neutral-400">
+<li><a class="hover:text-white transition" href="#">Blog</a></li>
+<li><a class="hover:text-white transition" href="#">Best practices</a></li>
+<li><a class="hover:text-white transition" href="#">Gradient Library</a></li>
+<li><a class="hover:text-white transition" href="#">Gradient Generator</a></li>
+<li><a class="hover:text-white transition" href="#">GIF maker</a></li>
+<li><a class="hover:text-white transition" href="#">Color wheel</a></li>
+<li><a class="hover:text-white transition" href="#">Colors</a></li>
+</ul>
+</div>
+<!-- Company Column -->
+<div class="space-y-3">
+<p class="font-bold text-white uppercase tracking-wider text-[11px]">Company</p>
+<ul class="space-y-2 text-neutral-400">
+<li><a class="hover:text-white transition" href="#">Events</a></li>
+<li><a class="hover:text-white transition" href="#">Customers</a></li>
+<li><a class="hover:text-white transition" href="#">Careers</a></li>
+<li><a class="hover:text-white transition" href="#">Newsroom</a></li>
+<li><a class="hover:text-white transition" href="#">Brand assets</a></li>
+</ul>
+</div>
+</div>
+<!-- Footer Bottom Bar: Language & Legal -->
+<div class="pt-8 flex flex-col sm:flex-row items-center justify-between text-neutral-500 gap-4">
+<!-- Language selector -->
+<div class="flex items-center gap-2 hover:text-white cursor-pointer">
+<svg class="w-4 h-4" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+<span class="text-xs">English</span>
+<svg class="w-3 h-3 ml-0.5" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path d="M19 9l-7 7-7-7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
+</div>
+<!-- Legal Links -->
+<div class="flex flex-wrap gap-4 text-xs text-neutral-500">
+<a class="hover:text-white transition" href="#">Status</a>
+<a class="hover:text-white transition" href="#">Legal and privacy</a>
+<a class="hover:text-white transition" href="#">Modern slavery statement</a>
+<a class="hover:text-white transition" href="#">Climate disclosure</a>
+<a class="hover:text-white transition" href="#">Impressum</a>
+<span>© 2025 Figma, Inc.</span>
+</div>
+</div>
+</div>
+</footer>
+<!-- END: MainFooter -->
+</body></html>

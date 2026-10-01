@@ -1,0 +1,789 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = {
+    darkMode: "class",
+    theme: {
+      extend: {
+        "colors": {
+          "on-tertiary": "#ffffff",
+          "primary-fixed": "#92f6cf",
+          "tertiary-container": "#717070",
+          "surface": "#fbf9f8",
+          "secondary": "#0055c7",
+          "surface-bright": "#fbf9f8",
+          "on-surface": "#1b1c1c",
+          "surface-container-low": "#f5f3f3",
+          "background": "#fbf9f8",
+          "on-tertiary-container": "#f8f5f4",
+          "surface-container-highest": "#e4e2e2",
+          "error": "#ba1a1a",
+          "on-primary-container": "#d6ffeb",
+          "on-secondary-container": "#fefcff",
+          "on-primary-fixed-variant": "#00513c",
+          "tertiary-fixed-dim": "#c8c6c5",
+          "tertiary": "#585857",
+          "surface-tint": "#006c50",
+          "surface-dim": "#dbdad9",
+          "secondary-fixed-dim": "#b0c6ff",
+          "secondary-container": "#2c6fe7",
+          "surface-container-lowest": "#ffffff",
+          "on-secondary-fixed": "#001945",
+          "on-secondary-fixed-variant": "#00419c",
+          "primary": "#00654b",
+          "on-background": "#1b1c1c",
+          "on-tertiary-fixed-variant": "#474746",
+          "secondary-fixed": "#d9e2ff",
+          "on-surface-variant": "#3e4944",
+          "surface-container-high": "#e9e8e7",
+          "inverse-primary": "#75d9b3",
+          "outline": "#6e7a73",
+          "inverse-surface": "#303031",
+          "on-primary-fixed": "#002116",
+          "on-primary": "#ffffff",
+          "outline-variant": "#bdc9c2",
+          "primary-fixed-dim": "#75d9b3",
+          "on-secondary": "#ffffff",
+          "on-error-container": "#93000a",
+          "inverse-on-surface": "#f2f0f0",
+          "on-error": "#ffffff",
+          "tertiary-fixed": "#e5e2e1",
+          "error-container": "#ffdad6",
+          "surface-container": "#efeded",
+          "surface-variant": "#e4e2e2",
+          "primary-container": "#008060",
+          "on-tertiary-fixed": "#1c1b1b"
+        },
+        "borderRadius": {
+          "DEFAULT": "0.125rem",
+          "lg": "0.25rem",
+          "xl": "0.5rem",
+          "full": "0.75rem"
+        },
+        "spacing": {
+          "space-md": "1rem",
+          "space-sm": "0.5rem",
+          "margin": "1.5rem",
+          "space-xs": "0.25rem",
+          "space-lg": "1.25rem",
+          "space-xl": "1.5rem",
+          "gutter": "1rem"
+        },
+        "fontFamily": {
+          "body-md": [
+            "Inter"
+          ],
+          "headline-lg": [
+            "Inter"
+          ],
+          "headline-sm": [
+            "Inter"
+          ],
+          "body-sm": [
+            "Inter"
+          ],
+          "body-md-semibold": [
+            "Inter"
+          ],
+          "headline-lg-mobile": [
+            "Inter"
+          ],
+          "label-sm": [
+            "Inter"
+          ],
+          "body-sm-semibold": [
+            "Inter"
+          ],
+          "label-md": [
+            "Inter"
+          ],
+          "headline-md": [
+            "Inter"
+          ],
+          "caption": [
+            "Inter"
+          ],
+          "body-lg": [
+            "Inter"
+          ]
+        },
+        "fontSize": {
+          "body-md": [
+            "14px",
+            {
+              "lineHeight": "20px",
+              "fontWeight": "400"
+            }
+          ],
+          "headline-lg": [
+            "28px",
+            {
+              "lineHeight": "36px",
+              "letterSpacing": "-0.02em",
+              "fontWeight": "700"
+            }
+          ],
+          "headline-sm": [
+            "16px",
+            {
+              "lineHeight": "24px",
+              "letterSpacing": "-0.005em",
+              "fontWeight": "600"
+            }
+          ],
+          "body-sm": [
+            "13px",
+            {
+              "lineHeight": "18px",
+              "fontWeight": "400"
+            }
+          ],
+          "body-md-semibold": [
+            "14px",
+            {
+              "lineHeight": "20px",
+              "fontWeight": "600"
+            }
+          ],
+          "headline-lg-mobile": [
+            "22px",
+            {
+              "lineHeight": "28px",
+              "letterSpacing": "-0.015em",
+              "fontWeight": "700"
+            }
+          ],
+          "label-sm": [
+            "12px",
+            {
+              "lineHeight": "16px",
+              "letterSpacing": "0.01em",
+              "fontWeight": "600"
+            }
+          ],
+          "body-sm-semibold": [
+            "13px",
+            {
+              "lineHeight": "18px",
+              "fontWeight": "600"
+            }
+          ],
+          "label-md": [
+            "13px",
+            {
+              "lineHeight": "16px",
+              "fontWeight": "500"
+            }
+          ],
+          "headline-md": [
+            "20px",
+            {
+              "lineHeight": "28px",
+              "letterSpacing": "-0.01em",
+              "fontWeight": "600"
+            }
+          ],
+          "caption": [
+            "11px",
+            {
+              "lineHeight": "14px",
+              "fontWeight": "500"
+            }
+          ],
+          "body-lg": [
+            "15px",
+            {
+              "lineHeight": "22px",
+              "fontWeight": "400"
+            }
+          ]
+        }
+      },
+    },
+  }</script><title>Sales Agent Cashier Commission Report | Shopify Prototype</title>
+</head><body class="bg-surface font-body-md text-body-md text-on-surface"><aside class="fixed left-0 top-0 h-full w-60 bg-surface-container-low z-40 flex flex-col justify-between shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="flex flex-col overflow-y-auto"><div class="h-14 flex items-center px-margin gap-space-sm bg-surface-container-lowest shrink-0"><img alt="Shopify logo" class="h-7 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1WPubMgscUINGuisBDvGZbhiRvwxKjFWpAHPA0GXYWeRFqxcZY4G-byYU4PUykJPYVnuurpj_2yFkafDFmBWhplcA2dlqdqMDkr5ufN1GCA1-9Cy6Y74Bk73_KmB_pOSwvk_HQjInJtWpmQfLSQUcNeG5m75CCs-SDUFif7I_eleu-OGwNMldz9nzh1957zHt7Hfbkc1ds6tpanpikt3_aR6SAXkw6znZBFRPYg-rTUbi8f0VwyeBPJuaQ"/><div class="flex flex-col"><span class="font-body-md-semibold text-body-md-semibold text-on-surface leading-tight">Shopify Admin</span><span class="font-caption text-caption text-on-surface-variant leading-tight">Operations &amp; Finance</span></div></div><div class="px-space-md pt-space-sm"><div class="px-space-sm py-space-xs font-caption text-caption uppercase text-on-surface-variant tracking-wider">Store Management</div></div><nav class="flex flex-col gap-space-xs px-space-md py-space-xs" data-active-classes="bg-primary-container text-on-primary font-body-sm-semibold text-body-sm-semibold rounded-xl"><a class="flex items-center px-space-md py-space-sm text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface rounded-xl transition-colors font-body-sm text-body-sm" data-path="shopify-admin-home" href="#">Home</a><a class="flex items-center px-space-md py-space-sm text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface rounded-xl transition-colors font-body-sm text-body-sm" data-path="shopify-admin-orders" href="#">Orders</a><a class="flex items-center px-space-md py-space-sm text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface rounded-xl transition-colors font-body-sm text-body-sm" data-path="shopify-admin-products" href="#">Products</a><a class="flex items-center px-space-md py-space-sm text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface rounded-xl transition-colors font-body-sm text-body-sm" data-path="shopify-admin-multi-location-inventory-stock-hub" href="#">Multi-Location Inventory</a><a class="flex items-center px-space-md py-space-sm text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface rounded-xl transition-colors font-body-sm text-body-sm" data-path="shopify-admin-customers" href="#">Customers</a></nav><div class="px-space-md pt-space-sm"><div class="px-space-sm py-space-xs font-caption text-caption uppercase text-on-surface-variant tracking-wider">Procurement &amp; Billing</div></div><nav class="flex flex-col gap-space-xs px-space-md py-space-xs" data-active-classes="bg-primary-container text-on-primary font-body-sm-semibold text-body-sm-semibold rounded-xl"><a class="flex items-center px-space-md py-space-sm text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface rounded-xl transition-colors font-body-sm text-body-sm" data-path="shopify-admin-purchase-orders-vendor-directory" href="#">Purchase Orders &amp; Vendors</a><a class="flex items-center px-space-md py-space-sm text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface rounded-xl transition-colors font-body-sm text-body-sm" data-path="shopify-admin-vendor-bills-accounts-payable" href="#">Vendor Bills &amp; AP</a><a class="flex items-center px-space-md py-space-sm text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface rounded-xl transition-colors font-body-sm text-body-sm" data-path="shopify-admin-customer-b2b-invoices-ar" href="#">Customer Invoices &amp; AR</a><a class="flex items-center px-space-md py-space-sm text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface rounded-xl transition-colors font-body-sm text-body-sm" data-path="shopify-admin-payments-cash-flow-register" href="#">Payments &amp; Cash Flow</a><a class="flex items-center px-space-md py-space-sm text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface rounded-xl transition-colors font-body-sm text-body-sm" data-path="shopify-admin-goods-receipt-landed-costs" href="#">Goods Receipt &amp; Landed Costs</a></nav><div class="px-space-md pt-space-sm"><div class="px-space-sm py-space-xs font-caption text-caption uppercase text-on-surface-variant tracking-wider">Accounting &amp; Finance</div></div><nav class="flex flex-col gap-space-xs px-space-md py-space-xs" data-active-classes="bg-primary-container text-on-primary font-body-sm-semibold text-body-sm-semibold rounded-xl"><a class="flex items-center px-space-md py-space-sm text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface rounded-xl transition-colors font-body-sm text-body-sm" data-path="shopify-admin-chart-of-accounts" href="#">Chart of Accounts</a><a class="flex items-center px-space-md py-space-sm text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface rounded-xl transition-colors font-body-sm text-body-sm" data-path="shopify-admin-journal-entries" href="#">Journal Entries</a><a class="flex items-center px-space-md py-space-sm text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface rounded-xl transition-colors font-body-sm text-body-sm" data-path="shopify-admin-bank-reconciliation" href="#">Bank Reconciliation</a><a class="flex items-center px-space-md py-space-sm text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface rounded-xl transition-colors font-body-sm text-body-sm" data-path="shopify-admin-tax-vat-gst" href="#">Tax / VAT &amp; GST</a><a class="flex items-center px-space-md py-space-sm text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface rounded-xl transition-colors font-body-sm text-body-sm" data-path="shopify-admin-financial-reports-trial-balance" href="#">Financial Reports &amp; Trial Balance</a></nav><div class="px-space-md pt-space-sm"><div class="px-space-sm py-space-xs font-caption text-caption uppercase text-on-surface-variant tracking-wider">Financial &amp; Compliance Reports</div></div><nav class="flex flex-col gap-space-xs px-space-md py-space-xs" data-active-classes="bg-primary-container text-on-primary font-body-sm-semibold text-body-sm-semibold rounded-xl"><a class="flex items-center px-space-md py-space-sm text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface rounded-xl transition-colors font-body-sm text-body-sm" data-path="pos-daily-sales-tender-settlement-report" href="#">POS Settlement Report</a><a class="flex items-center px-space-md py-space-sm text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface rounded-xl transition-colors font-body-sm text-body-sm" data-path="tax-vat-return-audit-report" href="#">Tax &amp; VAT Audit Report</a><a class="flex items-center px-space-md py-space-sm text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface rounded-xl transition-colors font-body-sm text-body-sm" data-path="profit-loss-and-cash-flow-statement" href="#">Profit &amp; Loss &amp; Cash Flow</a><a class="flex items-center px-space-md py-space-sm text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface rounded-xl transition-colors font-body-sm text-body-sm" data-path="inventory-valuation-cogs-report" href="#">Inventory Valuation &amp; COGS</a></nav><div class="px-space-md pt-space-sm"><div class="px-space-sm py-space-xs font-caption text-caption uppercase text-on-surface-variant tracking-wider">Sales &amp; Marketing</div></div><nav class="flex flex-col gap-space-xs px-space-md py-space-xs" data-active-classes="bg-primary-container text-on-primary font-body-sm-semibold text-body-sm-semibold rounded-xl"><a class="flex items-center px-space-md py-space-sm text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface rounded-xl transition-colors font-body-sm text-body-sm" data-path="shopify-admin-analytics" href="#">Analytics</a><a class="flex items-center px-space-md py-space-sm text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface rounded-xl transition-colors font-body-sm text-body-sm" data-path="sales-agent-cashier-commission-report" href="#">Agent &amp; Cashier Commissions</a><a class="flex items-center px-space-md py-space-sm text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface rounded-xl transition-colors font-body-sm text-body-sm" data-path="shopify-admin-marketing" href="#">Marketing</a><a class="flex items-center px-space-md py-space-sm text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface rounded-xl transition-colors font-body-sm text-body-sm" data-path="shopify-admin-discounts" href="#">Discounts</a><a class="flex items-center px-space-md py-space-sm text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface rounded-xl transition-colors font-body-sm text-body-sm" data-path="shopify-admin-point-of-sale" href="#">Point of Sale</a></nav></div><div class="p-space-md flex flex-col gap-space-xs bg-surface-container shrink-0"><nav class="flex flex-col gap-space-xs" data-active-classes="bg-primary-container text-on-primary font-body-sm-semibold text-body-sm-semibold rounded-xl"><a class="flex items-center px-space-md py-space-sm text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface rounded-xl transition-colors font-body-sm text-body-sm" data-path="shopify-admin-settings" href="#">Settings</a></nav><div class="flex items-center justify-between px-space-md py-space-sm bg-surface-container-lowest rounded-xl"><div class="flex items-center gap-space-sm"><span class="w-2 h-2 rounded-full bg-primary-container"></span><span class="font-caption text-caption text-on-surface-variant">Ledger Engine Synced</span></div><span class="material-symbols-outlined text-[16px] text-primary">sync</span></div></div></aside><div class="pl-60"><header class="fixed top-0 left-60 right-0 h-14 bg-surface-container-lowest shadow-[0_1px_8px_rgba(0,0,0,0.04)] z-30 flex items-center justify-between px-margin"><div class="flex items-center gap-space-md"><div class="flex items-center gap-space-sm px-space-md py-1 bg-surface-container rounded-full"><span class="material-symbols-outlined text-primary text-[18px]">store</span><span class="font-label-sm text-label-sm text-on-surface">Apex Apparel SoHo</span><span class="material-symbols-outlined text-on-surface-variant text-[16px]">expand_more</span></div><div class="hidden lg:flex items-center gap-space-xs text-on-surface-variant font-caption text-caption"><span class="hover:text-on-surface cursor-pointer">Admin</span><span>/</span><span class="text-on-surface font-label-sm text-label-sm">Finance &amp; Operations</span></div><div class="relative flex items-center w-64 md:w-80 ml-space-xs"><span class="material-symbols-outlined absolute left-space-sm text-on-surface-variant text-[18px]">search</span><input class="w-full h-8 pl-8 pr-space-md py-1 bg-surface-container-low text-on-surface placeholder:text-on-surface-variant rounded-lg font-body-sm text-body-sm border-none focus:outline-none focus:ring-1 focus:ring-primary" placeholder="Search orders, products, accounts (⌘K)" type="text"/></div></div><div class="flex items-center gap-space-md"><div class="flex items-center gap-space-sm px-space-md py-1 bg-surface-container-low rounded-xl"><span class="material-symbols-outlined text-on-surface-variant text-[18px]">badge</span><div class="flex flex-col text-left"><span class="font-caption text-caption text-on-surface-variant leading-none">Staff Operator</span><span class="font-label-sm text-label-sm text-on-surface leading-tight">Elena Rostova</span></div></div><button class="relative p-1.5 text-on-surface-variant hover:text-on-surface hover:bg-surface-container rounded-lg transition-colors" title="Notifications"><span class="material-symbols-outlined text-[20px]">notifications</span><span class="absolute top-1 right-1 w-2 h-2 rounded-full bg-error"></span></button><div class="flex items-center gap-space-sm"><img alt="Elena Rostova avatar" class="w-8 h-8 rounded-full object-cover" src="https://lh3.googleusercontent.com/aida/AEtjO1XM8bAU6u1SGd73cRUZpDg7te6U8Hd9YuPkqi431L4IWNqZL9tf8Hx7usC0Pr2x5uZFks9b6ZVSsN6pF4qp7qBy14iGcMBDgJ1CkgkmUAjIfndkwn_z2y62oK4m5xXJUzEyvjga7vHBHY5I_yrgT2bDOvV6QCvONuw_NwyDFyHdKZJuuGyK5Pgek_6deKYxGCdGgDgn0o72iDzak64pRiWW1BSKisoh_F_jv3CeZdUD3Qs1uum2E_qsQHaI"/><button class="flex items-center justify-center p-1.5 text-on-surface-variant hover:text-error hover:bg-surface-container rounded-lg transition-colors" title="Lock Terminal / Sign Out"><span class="material-symbols-outlined text-[20px]">lock</span></button></div></div></header><main class="w-full pt-14 px-margin"><div class="flex flex-col w-full pb-16 space-y-space-lg">
+<!-- Top Context Navigation / Breadcrumb & Header Title -->
+<div class="flex flex-col md:flex-row md:items-center justify-between gap-space-md pt-space-xs">
+<div class="flex flex-col space-y-space-xs">
+<div class="flex items-center gap-space-xs font-caption text-caption text-on-surface-variant">
+<span>Staff &amp; Operations</span>
+<span>/</span>
+<span class="text-on-surface font-label-sm text-label-sm">Sales Agent &amp; Cashier Commission</span>
+</div>
+<h1 class="font-headline-lg text-headline-lg text-on-surface tracking-tight">Sales Agent &amp; Cashier Commission Report</h1>
+<p class="font-body-sm text-body-sm text-on-surface-variant max-w-3xl">
+        In-store POS cashier sales attribution, assisted omnichannel order commissions, tiered incentive calculations, and payroll export to GL #2100 (Accrued Commissions).
+      </p>
+</div>
+<!-- Quick Actions & Date Controls -->
+<div class="flex flex-wrap items-center gap-space-sm self-start md:self-auto">
+<div class="flex items-center gap-space-xs bg-surface-container-lowest px-space-md py-1.5 rounded-lg shadow-sm">
+<span class="material-symbols-outlined text-primary text-[18px]">calendar_today</span>
+<select class="bg-transparent font-label-md text-label-md text-on-surface focus:outline-none cursor-pointer">
+<option>Current Pay Cycle: Nov 01 - Nov 30, 2024</option>
+<option>Previous Pay Cycle: Oct 01 - Oct 31, 2024</option>
+<option>Q3 Settled: Jul 01 - Sep 30, 2024</option>
+</select>
+</div>
+<div class="flex items-center gap-space-xs bg-surface-container-lowest px-space-md py-1.5 rounded-lg shadow-sm">
+<span class="material-symbols-outlined text-on-surface-variant text-[18px]">storefront</span>
+<select class="bg-transparent font-label-md text-label-md text-on-surface focus:outline-none cursor-pointer">
+<option>All Retail Stores: SoHo Flagship &amp; Brooklyn DUMBO</option>
+<option>SoHo Flagship Store only</option>
+<option>Brooklyn DUMBO Store only</option>
+</select>
+</div>
+<button class="flex items-center gap-space-xs px-space-md py-1.5 bg-surface-container-lowest hover:bg-surface-container text-on-surface font-body-sm-semibold text-body-sm-semibold rounded-lg shadow-sm transition-colors">
+<span class="material-symbols-outlined text-[16px]">file_download</span>
+<span>Export Payroll CSV</span>
+</button>
+<button class="flex items-center gap-space-xs px-space-md py-1.5 bg-primary-container text-on-primary font-body-sm-semibold text-body-sm-semibold rounded-lg shadow-sm hover:opacity-95 transition-opacity">
+<span class="material-symbols-outlined text-[16px]">verified</span>
+<span>Approve Commission Payouts</span>
+</button>
+</div>
+</div>
+<!-- Metric Cards Bento Grid -->
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-space-md">
+<!-- Metric 1 -->
+<div class="bg-surface-container-lowest p-space-md rounded-xl shadow-sm flex flex-col justify-between space-y-space-sm relative overflow-hidden">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant">Total Commissionable Sales</span>
+<span class="material-symbols-outlined text-primary text-[20px] p-1 bg-primary-fixed/20 rounded-md">point_of_sale</span>
+</div>
+<div>
+<div class="font-headline-lg text-headline-lg text-on-surface font-bold">$184,650.00</div>
+<div class="flex items-center gap-1 font-caption text-caption text-on-surface-variant mt-1">
+<span class="text-primary font-bold flex items-center"><span class="material-symbols-outlined text-[14px]">trending_up</span> +14.8%</span>
+<span>vs previous pay period</span>
+</div>
+</div>
+<div class="pt-2 font-caption text-caption text-on-surface-variant bg-surface-container-low px-2 py-1 rounded">
+        In-store POS merchandise + assisted omnichannel sales
+      </div>
+</div>
+<!-- Metric 2 -->
+<div class="bg-surface-container-lowest p-space-md rounded-xl shadow-sm flex flex-col justify-between space-y-space-sm">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant">Total Commission Earned</span>
+<span class="material-symbols-outlined text-primary text-[20px] p-1 bg-primary-fixed/20 rounded-md">payments</span>
+</div>
+<div>
+<div class="font-headline-lg text-headline-lg text-on-surface font-bold">$7,386.00</div>
+<div class="flex items-center gap-1 font-caption text-caption text-on-surface-variant mt-1">
+<span class="text-primary font-bold">Blended 4.0%</span>
+<span>payout rate on eligible items</span>
+</div>
+</div>
+<div class="pt-2 font-caption text-caption text-on-surface-variant bg-surface-container-low px-2 py-1 rounded">
+        GL #2100 liability scheduled for settlement
+      </div>
+</div>
+<!-- Metric 3 -->
+<div class="bg-surface-container-lowest p-space-md rounded-xl shadow-sm flex flex-col justify-between space-y-space-sm">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant">Top Performing Store</span>
+<span class="material-symbols-outlined text-secondary text-[20px] p-1 bg-secondary-fixed/30 rounded-md">apartment</span>
+</div>
+<div>
+<div class="font-headline-md text-headline-md text-on-surface font-bold truncate">SoHo Flagship Store</div>
+<div class="flex items-center gap-1 font-caption text-caption text-on-surface-variant mt-1">
+<span class="text-primary font-bold">$124,300.00</span>
+<span>(67.3% of retail target)</span>
+</div>
+</div>
+<div class="w-full bg-surface-container-high rounded-full h-1.5 overflow-hidden">
+<div class="bg-primary-container h-1.5 rounded-full" style="width: 67.3%"></div>
+</div>
+</div>
+<!-- Metric 4 -->
+<div class="bg-surface-container-lowest p-space-md rounded-xl shadow-sm flex flex-col justify-between space-y-space-sm">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant">Payout Status</span>
+<span class="material-symbols-outlined text-primary text-[20px] p-1 bg-primary-fixed/20 rounded-md">verified_user</span>
+</div>
+<div>
+<div class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-primary-fixed text-on-primary-fixed-variant font-label-sm text-label-sm">
+<span class="w-1.5 h-1.5 rounded-full bg-primary"></span>
+          Accrued &amp; Ready for Sign-off
+        </div>
+<div class="font-caption text-caption text-on-surface-variant mt-2">
+          Lock scheduled: Nov 30 payroll cutoff (23:59 EST)
+        </div>
+</div>
+<div class="pt-2 font-caption text-caption text-on-surface-variant bg-surface-container-low px-2 py-1 rounded">
+        Direct feed to Gusto &amp; ADP active
+      </div>
+</div>
+</div>
+<!-- Section 1: Staff Commission & Performance Leaderboard Table -->
+<div class="bg-surface-container-lowest rounded-xl shadow-sm overflow-hidden flex flex-col">
+<!-- Table Header & Segment Tabs -->
+<div class="p-space-md flex flex-col sm:flex-row sm:items-center justify-between gap-space-sm bg-surface-container-lowest">
+<div class="flex items-center gap-space-xs" id="table-tabs">
+<button class="px-space-md py-1.5 font-body-sm-semibold text-body-sm-semibold text-on-surface bg-surface-container rounded-lg shadow-sm transition-all tab-btn" onclick="filterStore('all', this)">
+          All Staff Members (6)
+        </button>
+<button class="px-space-md py-1.5 font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface hover:bg-surface-container-low rounded-lg transition-all tab-btn" onclick="filterStore('soho', this)">
+          SoHo Flagship (4)
+        </button>
+<button class="px-space-md py-1.5 font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface hover:bg-surface-container-low rounded-lg transition-all tab-btn" onclick="filterStore('dumbo', this)">
+          Brooklyn DUMBO (2)
+        </button>
+</div>
+<div class="flex items-center gap-space-xs">
+<div class="relative flex items-center">
+<span class="material-symbols-outlined absolute left-2.5 text-on-surface-variant text-[16px]">search</span>
+<input class="pl-8 pr-3 py-1 bg-surface-container-low rounded-lg font-body-sm text-body-sm text-on-surface focus:outline-none w-56 placeholder:text-on-surface-variant" id="staffSearch" oninput="searchStaff(this.value)" placeholder="Filter staff name or tier..." type="text"/>
+</div>
+<button class="p-1.5 bg-surface-container-low hover:bg-surface-container rounded-lg text-on-surface-variant hover:text-on-surface transition-colors" title="Customize Columns">
+<span class="material-symbols-outlined text-[18px]">view_column</span>
+</button>
+</div>
+</div>
+<!-- Data Table Container -->
+<div class="overflow-x-auto w-full">
+<table class="w-full text-left border-collapse" id="staffTable">
+<thead>
+<tr class="bg-surface-container-low font-label-sm text-label-sm text-on-surface-variant tracking-wider uppercase">
+<th class="py-2.5 px-space-md">Staff Member</th>
+<th class="py-2.5 px-space-md">Role &amp; Store</th>
+<th class="py-2.5 px-space-md text-right">Shift Hrs</th>
+<th class="py-2.5 px-space-md text-right">POS Receipts</th>
+<th class="py-2.5 px-space-md text-right">Attributed Sales</th>
+<th class="py-2.5 px-space-md text-right">AOV</th>
+<th class="py-2.5 px-space-md text-right">Upsell Rate</th>
+<th class="py-2.5 px-space-md text-center">Tier</th>
+<th class="py-2.5 px-space-md text-right">Accrued Commission</th>
+<th class="py-2.5 px-space-md text-center">Sign-off</th>
+<th class="py-2.5 px-space-md text-right">Actions</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-surface-container text-body-sm font-body-sm text-on-surface">
+<!-- Row 1: Elena Rostova -->
+<tr class="hover:bg-surface-container-low transition-colors staff-row" data-name="elena rostova gold" data-store="soho">
+<td class="py-3 px-space-md">
+<div class="flex items-center gap-space-sm">
+<div class="relative">
+<img class="w-8 h-8 rounded-full object-cover shadow-sm" data-alt="Portrait of Elena Rostova, fashionable retail sales manager with warm professional expression wearing neutral slate apparel in an elegant boutique atmosphere, soft natural studio lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAjrPSZFBJFrpVwov4KL8JN1anOwOcoFWpQiXHLF6Z9pp5133o-K22al3oXaIYXZdPOE8AcQnR-A38jzC8KC6VDtktmcwbsk2fWbQM_dneCa0wDbBB_PUFTxM1xGNrfx6mUiUgXNUBlWoz8PiOo8YUpl3gg3OoKZPNd9tAhYVVcalCBjL0Votkxa_TO0iB3fteTF9TR88UGvWZHp2kL4DdeWuIp-j4i0My8y_Bga_dQbQVK5_Yw8B4Scw"/>
+<span class="absolute -top-1 -right-1 bg-primary text-on-primary rounded-full p-0.5 flex items-center justify-center text-[10px]" title="Top Store Performer">
+<span class="material-symbols-outlined text-[10px]">star</span>
+</span>
+</div>
+<div class="flex flex-col">
+<span class="font-body-md-semibold text-body-md-semibold leading-tight text-on-surface">Elena Rostova</span>
+<span class="font-caption text-caption text-primary flex items-center gap-0.5 font-bold">
+                    Top Performer #1
+                  </span>
+</div>
+</div>
+</td>
+<td class="py-3 px-space-md">
+<div class="flex flex-col">
+<span class="text-on-surface font-medium">Senior Sales Lead</span>
+<span class="font-caption text-caption text-on-surface-variant">SoHo Flagship</span>
+</div>
+</td>
+<td class="py-3 px-space-md text-right font-medium">138 hrs</td>
+<td class="py-3 px-space-md text-right font-medium">412</td>
+<td class="py-3 px-space-md text-right font-bold text-on-surface">$58,400.00</td>
+<td class="py-3 px-space-md text-right">$141.75</td>
+<td class="py-3 px-space-md text-right text-primary font-semibold">28.4%</td>
+<td class="py-3 px-space-md text-center">
+<span class="px-2 py-0.5 rounded-full text-caption font-bold bg-amber-100 text-amber-900 shadow-sm">Gold (4.5%)</span>
+</td>
+<td class="py-3 px-space-md text-right font-bold text-primary text-body-md-semibold">$2,628.00</td>
+<td class="py-3 px-space-md text-center">
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full font-caption text-caption bg-primary-fixed text-on-primary-fixed-variant font-semibold">
+<span class="w-1.5 h-1.5 rounded-full bg-primary"></span> Approved
+              </span>
+</td>
+<td class="py-3 px-space-md text-right">
+<div class="flex items-center justify-end gap-1">
+<button class="px-2 py-1 rounded bg-surface-container hover:bg-surface-container-high text-caption font-semibold transition-colors">Inspect</button>
+<button class="px-2 py-1 rounded bg-surface-container hover:bg-surface-container-high text-caption font-semibold transition-colors">Adjust</button>
+</div>
+</td>
+</tr>
+<!-- Row 2: Marcus Vance -->
+<tr class="hover:bg-surface-container-low transition-colors staff-row" data-name="marcus vance silver" data-store="soho">
+<td class="py-3 px-space-md">
+<div class="flex items-center gap-space-sm">
+<img class="w-8 h-8 rounded-full object-cover shadow-sm" data-alt="Portrait of Marcus Vance, charismatic menswear style consultant in modern minimalist retail store, natural daylight, confident smile" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAJn_k094FMOLVxy_wITngZFWMVgZJOVoC_SxQFlcbxF0ivavutcYUDEBWb8v-LEcv4uzdIkKFy1yMLApElr_S7kZM8nYuDVxXhSzsCC6M1Aunm5PjCfc0kqx1edWRPsLTZZ2yqxE66mPTxNJgFjIXHehIakjSXvz4Ha54ap9RoSgfLQYB6EioCcdvz6vuKoZuhj23YjUAcsrn33GoK0MsfBOb14DVF0ytC6AFAuVu-X489V7hxl-b--g"/>
+<div class="flex flex-col">
+<span class="font-body-md-semibold text-body-md-semibold leading-tight text-on-surface">Marcus Vance</span>
+<span class="font-caption text-caption text-on-surface-variant">ID: EMP-0419</span>
+</div>
+</div>
+</td>
+<td class="py-3 px-space-md">
+<div class="flex flex-col">
+<span class="text-on-surface font-medium">Retail Specialist</span>
+<span class="font-caption text-caption text-on-surface-variant">SoHo Flagship</span>
+</div>
+</td>
+<td class="py-3 px-space-md text-right font-medium">124 hrs</td>
+<td class="py-3 px-space-md text-right font-medium">340</td>
+<td class="py-3 px-space-md text-right font-bold text-on-surface">$42,600.00</td>
+<td class="py-3 px-space-md text-right">$125.30</td>
+<td class="py-3 px-space-md text-right text-primary font-semibold">22.1%</td>
+<td class="py-3 px-space-md text-center">
+<span class="px-2 py-0.5 rounded-full text-caption font-bold bg-slate-200 text-slate-800 shadow-sm">Silver (4.0%)</span>
+</td>
+<td class="py-3 px-space-md text-right font-bold text-primary text-body-md-semibold">$1,704.00</td>
+<td class="py-3 px-space-md text-center">
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full font-caption text-caption bg-primary-fixed text-on-primary-fixed-variant font-semibold">
+<span class="w-1.5 h-1.5 rounded-full bg-primary"></span> Approved
+              </span>
+</td>
+<td class="py-3 px-space-md text-right">
+<div class="flex items-center justify-end gap-1">
+<button class="px-2 py-1 rounded bg-surface-container hover:bg-surface-container-high text-caption font-semibold transition-colors">Inspect</button>
+<button class="px-2 py-1 rounded bg-surface-container hover:bg-surface-container-high text-caption font-semibold transition-colors">Adjust</button>
+</div>
+</td>
+</tr>
+<!-- Row 3: Chloe Chevalier (Pending Review) -->
+<tr class="hover:bg-surface-container-low transition-colors staff-row" data-name="chloe chevalier bronze" data-store="soho">
+<td class="py-3 px-space-md">
+<div class="flex items-center gap-space-sm">
+<img class="w-8 h-8 rounded-full object-cover shadow-sm" data-alt="Portrait photo of Chloe Chevalier, young creative retail stylist in contemporary boutique, soft bokeh background, wearing tailored blazer" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAikbWVbZbll71xY0qRA6djeqLtWH9l5Uz94plsLXUSxrDQLJr2MFtcKhL2hGkF3ecTGHCjnCNHz1K00m4iR4GLMrWKfsscAiSNUOKg0gUivV1inmsJ_En6bTycDxMz-S3O1KxiZyEkR_bPz61WGjgN2m-oNMTIwViXdQzQQR2Y5e7Q_NErw9m1yG8fPKjJNrkTNT5kpC9BFNYjCQyjz2umrf8VRE7SSv6bx2jWKMmv4KncYyrUS5ZCdg"/>
+<div class="flex flex-col">
+<span class="font-body-md-semibold text-body-md-semibold leading-tight text-on-surface">Chloe Chevalier</span>
+<span class="font-caption text-caption text-on-surface-variant">ID: EMP-0882</span>
+</div>
+</div>
+</td>
+<td class="py-3 px-space-md">
+<div class="flex flex-col">
+<span class="text-on-surface font-medium">Customer Stylist</span>
+<span class="font-caption text-caption text-on-surface-variant">SoHo Flagship</span>
+</div>
+</td>
+<td class="py-3 px-space-md text-right font-medium">110 hrs</td>
+<td class="py-3 px-space-md text-right font-medium">210</td>
+<td class="py-3 px-space-md text-right font-bold text-on-surface">$23,300.00</td>
+<td class="py-3 px-space-md text-right">$110.95</td>
+<td class="py-3 px-space-md text-right text-primary font-semibold">19.5%</td>
+<td class="py-3 px-space-md text-center">
+<span class="px-2 py-0.5 rounded-full text-caption font-bold bg-orange-100 text-orange-900 shadow-sm">Bronze (3.5%)</span>
+</td>
+<td class="py-3 px-space-md text-right font-bold text-primary text-body-md-semibold">$815.50</td>
+<td class="py-3 px-space-md text-center">
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full font-caption text-caption bg-amber-100 text-amber-800 font-semibold">
+<span class="w-1.5 h-1.5 rounded-full bg-amber-600"></span> Pending Review
+              </span>
+</td>
+<td class="py-3 px-space-md text-right">
+<div class="flex items-center justify-end gap-1">
+<button class="px-2 py-1 rounded bg-primary-container text-on-primary hover:opacity-90 text-caption font-semibold transition-opacity">Approve</button>
+<button class="px-2 py-1 rounded bg-surface-container hover:bg-surface-container-high text-caption font-semibold transition-colors">Adjust</button>
+</div>
+</td>
+</tr>
+<!-- Row 4: David Kim -->
+<tr class="hover:bg-surface-container-low transition-colors staff-row" data-name="david kim silver" data-store="dumbo">
+<td class="py-3 px-space-md">
+<div class="flex items-center gap-space-sm">
+<img class="w-8 h-8 rounded-full object-cover shadow-sm" data-alt="Portrait of David Kim, approachable retail cashier in Brooklyn boutique with glasses, crisp polo shirt, bright clean indoor retail background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBITBVbjBPAXsPPTux9dwVwGTQyUhmXHKIFXC2AZ6ysFvdNnhCQ2Brfa4byAorsX3Ps9o_aiOCa_W1XGd3KLr8T0RPUHbNoCFPeEM-NnVP0iadBY7p14wVuHIqZ9qZIVNyAbxIONbjpKAn4AYaiBucfUHU3NKv3PQsYr3XPmsVGDK21la8O0yhwhAKBob3U3Ge8QiOZVk6YQH2AhBmsROejy2o7TEkFOAUMHOj3zB5rloI12evyjJKb3A"/>
+<div class="flex flex-col">
+<span class="font-body-md-semibold text-body-md-semibold leading-tight text-on-surface">David Kim</span>
+<span class="font-caption text-caption text-on-surface-variant">ID: EMP-0211</span>
+</div>
+</div>
+</td>
+<td class="py-3 px-space-md">
+<div class="flex flex-col">
+<span class="text-on-surface font-medium">POS Cashier</span>
+<span class="font-caption text-caption text-on-surface-variant">Brooklyn DUMBO</span>
+</div>
+</td>
+<td class="py-3 px-space-md text-right font-medium">120 hrs</td>
+<td class="py-3 px-space-md text-right font-medium">280</td>
+<td class="py-3 px-space-md text-right font-bold text-on-surface">$32,150.00</td>
+<td class="py-3 px-space-md text-right">$114.80</td>
+<td class="py-3 px-space-md text-right text-primary font-semibold">18.2%</td>
+<td class="py-3 px-space-md text-center">
+<span class="px-2 py-0.5 rounded-full text-caption font-bold bg-slate-200 text-slate-800 shadow-sm">Silver (4.0%)</span>
+</td>
+<td class="py-3 px-space-md text-right font-bold text-primary text-body-md-semibold">$1,286.00</td>
+<td class="py-3 px-space-md text-center">
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full font-caption text-caption bg-primary-fixed text-on-primary-fixed-variant font-semibold">
+<span class="w-1.5 h-1.5 rounded-full bg-primary"></span> Approved
+              </span>
+</td>
+<td class="py-3 px-space-md text-right">
+<div class="flex items-center justify-end gap-1">
+<button class="px-2 py-1 rounded bg-surface-container hover:bg-surface-container-high text-caption font-semibold transition-colors">Inspect</button>
+<button class="px-2 py-1 rounded bg-surface-container hover:bg-surface-container-high text-caption font-semibold transition-colors">Adjust</button>
+</div>
+</td>
+</tr>
+<!-- Row 5: Sarah Jenkins -->
+<tr class="hover:bg-surface-container-low transition-colors staff-row" data-name="sarah jenkins bronze" data-store="dumbo">
+<td class="py-3 px-space-md">
+<div class="flex items-center gap-space-sm">
+<img class="w-8 h-8 rounded-full object-cover shadow-sm" data-alt="Portrait of Sarah Jenkins, enthusiastic young retail assistant in modern Brooklyn apparel shop, warm friendly smile, natural lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDtaagc95YrfuebPpLjqYOTt3m3IrvJGwhEWOAvJEWHUMjhRdkttWnT2NjB5DcFdUt2AYgj30ZN4Q508z4F10XHnUxs_ITdtgvqHMtWihNUCAiWYKr6RPCrlb06jhZ-y4Rr3_YJaJr9Z7Wn7dKMA0IfOrjdC3SMaL2nggHpmHm-Mj8kfVqI8TZy3DquwiQ6PEuGX2lKlVxug7qu2aIYz8sE1xoehl_oAWJaL6tnuYes5AcWeqwgF6YDBQ"/>
+<div class="flex flex-col">
+<span class="font-body-md-semibold text-body-md-semibold leading-tight text-on-surface">Sarah Jenkins</span>
+<span class="font-caption text-caption text-on-surface-variant">ID: EMP-0744</span>
+</div>
+</div>
+</td>
+<td class="py-3 px-space-md">
+<div class="flex flex-col">
+<span class="text-on-surface font-medium">Part-Time Associate</span>
+<span class="font-caption text-caption text-on-surface-variant">Brooklyn DUMBO</span>
+</div>
+</td>
+<td class="py-3 px-space-md text-right font-medium">82 hrs</td>
+<td class="py-3 px-space-md text-right font-medium">195</td>
+<td class="py-3 px-space-md text-right font-bold text-on-surface">$18,200.00</td>
+<td class="py-3 px-space-md text-right">$93.30</td>
+<td class="py-3 px-space-md text-right text-primary font-semibold">15.0%</td>
+<td class="py-3 px-space-md text-center">
+<span class="px-2 py-0.5 rounded-full text-caption font-bold bg-orange-100 text-orange-900 shadow-sm">Bronze (3.5%)</span>
+</td>
+<td class="py-3 px-space-md text-right font-bold text-primary text-body-md-semibold">$637.00</td>
+<td class="py-3 px-space-md text-center">
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full font-caption text-caption bg-primary-fixed text-on-primary-fixed-variant font-semibold">
+<span class="w-1.5 h-1.5 rounded-full bg-primary"></span> Approved
+              </span>
+</td>
+<td class="py-3 px-space-md text-right">
+<div class="flex items-center justify-end gap-1">
+<button class="px-2 py-1 rounded bg-surface-container hover:bg-surface-container-high text-caption font-semibold transition-colors">Inspect</button>
+<button class="px-2 py-1 rounded bg-surface-container hover:bg-surface-container-high text-caption font-semibold transition-colors">Adjust</button>
+</div>
+</td>
+</tr>
+<!-- Row 6: Arthur Pendelton -->
+<tr class="hover:bg-surface-container-low transition-colors staff-row" data-name="arthur pendelton base" data-store="soho">
+<td class="py-3 px-space-md">
+<div class="flex items-center gap-space-sm">
+<img class="w-8 h-8 rounded-full object-cover shadow-sm" data-alt="Portrait of Arthur Pendelton, retail inventory associate in clean branded apron smiling warmly, urban warehouse stockroom background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD2B--NWJi5yOdb0Nvn_amwLmcbYwbZYm9OQbJa82sPfODRXJulLi2uK--cwwLP2tF_wmJZV7-_1U_vJhxE62RkeautW4Ghy9KZhTUqDlUMWZvbskBR5wnMhE5PtGlNXdCS3JUxfsqgQ21kHhYVduzmjgPxmd2Gk2-24oYn9Ktc7MLhl3cgJckSIK27boweT9uBBV1MiXWlqwhdl4coaQd7qh8BtsypNBQntEmbmbZILFdsSLXj-Caubg"/>
+<div class="flex flex-col">
+<span class="font-body-md-semibold text-body-md-semibold leading-tight text-on-surface">Arthur Pendelton</span>
+<span class="font-caption text-caption text-on-surface-variant">ID: EMP-0903</span>
+</div>
+</div>
+</td>
+<td class="py-3 px-space-md">
+<div class="flex flex-col">
+<span class="text-on-surface font-medium">Stock &amp; Floor Assistant</span>
+<span class="font-caption text-caption text-on-surface-variant">SoHo Flagship</span>
+</div>
+</td>
+<td class="py-3 px-space-md text-right font-medium">65 hrs</td>
+<td class="py-3 px-space-md text-right font-medium">110</td>
+<td class="py-3 px-space-md text-right font-bold text-on-surface">$10,000.00</td>
+<td class="py-3 px-space-md text-right">$90.90</td>
+<td class="py-3 px-space-md text-right text-primary font-semibold">12.0%</td>
+<td class="py-3 px-space-md text-center">
+<span class="px-2 py-0.5 rounded-full text-caption font-bold bg-surface-container-high text-on-surface-variant shadow-sm">Base (3.0%)</span>
+</td>
+<td class="py-3 px-space-md text-right font-bold text-primary text-body-md-semibold">$300.00</td>
+<td class="py-3 px-space-md text-center">
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full font-caption text-caption bg-primary-fixed text-on-primary-fixed-variant font-semibold">
+<span class="w-1.5 h-1.5 rounded-full bg-primary"></span> Approved
+              </span>
+</td>
+<td class="py-3 px-space-md text-right">
+<div class="flex items-center justify-end gap-1">
+<button class="px-2 py-1 rounded bg-surface-container hover:bg-surface-container-high text-caption font-semibold transition-colors">Inspect</button>
+<button class="px-2 py-1 rounded bg-surface-container hover:bg-surface-container-high text-caption font-semibold transition-colors">Adjust</button>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<!-- Table Footer Summary Bar -->
+<div class="p-space-md bg-surface-container-low flex flex-col md:flex-row items-center justify-between gap-space-sm text-body-sm font-body-sm text-on-surface-variant">
+<div class="flex items-center gap-space-md">
+<span>Showing <strong>6 active staff associates</strong></span>
+<span>•</span>
+<span>Total POS Transactions: <strong>1,547 receipts</strong></span>
+<span>•</span>
+<span>Average Shift AOV: <strong>$119.33</strong></span>
+</div>
+<div class="flex items-center gap-space-sm font-body-md-semibold text-body-md-semibold text-on-surface">
+<span>Cycle Total Accrued Commission:</span>
+<span class="text-primary text-headline-sm font-headline-sm font-bold">$7,386.00</span>
+</div>
+</div>
+</div>
+<!-- Section 2: Commission Incentive Tiers & General Ledger Accrual Mapping Split View -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-md">
+<!-- Left: Incentive Tier Rules (6 cols) -->
+<div class="lg:col-span-6 bg-surface-container-lowest p-space-lg rounded-xl shadow-sm flex flex-col justify-between space-y-space-md">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-primary text-[20px]">military_tech</span>
+<h2 class="font-headline-sm text-headline-sm text-on-surface font-semibold">Commission Incentive Tier Structure</h2>
+</div>
+<span class="font-caption text-caption px-2 py-0.5 bg-surface-container text-on-surface-variant rounded">FY24 Retail Schedule</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+        Staff commissions calculate automatically based on net settled receipts (returns deducted from staff attribution balance).
+      </p>
+<div class="space-y-space-xs">
+<!-- Tier 1 -->
+<div class="flex items-center justify-between p-space-sm bg-surface-container-low rounded-lg">
+<div class="flex items-center gap-space-sm">
+<span class="w-2.5 h-2.5 rounded-full bg-tertiary"></span>
+<div>
+<div class="font-body-sm-semibold text-body-sm-semibold text-on-surface">Tier 1: Base Floor</div>
+<div class="font-caption text-caption text-on-surface-variant">Attributed sales under $15,000.00</div>
+</div>
+</div>
+<span class="font-body-md-semibold text-body-md-semibold text-on-surface bg-surface-container-lowest px-2.5 py-1 rounded shadow-sm">3.0%</span>
+</div>
+<!-- Tier 2 -->
+<div class="flex items-center justify-between p-space-sm bg-surface-container-low rounded-lg">
+<div class="flex items-center gap-space-sm">
+<span class="w-2.5 h-2.5 rounded-full bg-amber-700"></span>
+<div>
+<div class="font-body-sm-semibold text-body-sm-semibold text-on-surface">Tier 2: Bronze</div>
+<div class="font-caption text-caption text-on-surface-variant">Attributed sales $15,000.00 – $30,000.00</div>
+</div>
+</div>
+<span class="font-body-md-semibold text-body-md-semibold text-on-surface bg-surface-container-lowest px-2.5 py-1 rounded shadow-sm">3.5%</span>
+</div>
+<!-- Tier 3 -->
+<div class="flex items-center justify-between p-space-sm bg-surface-container-low rounded-lg">
+<div class="flex items-center gap-space-sm">
+<span class="w-2.5 h-2.5 rounded-full bg-slate-400"></span>
+<div>
+<div class="font-body-sm-semibold text-body-sm-semibold text-on-surface">Tier 3: Silver</div>
+<div class="font-caption text-caption text-on-surface-variant">Attributed sales $30,000.00 – $50,000.00</div>
+</div>
+</div>
+<span class="font-body-md-semibold text-body-md-semibold text-on-surface bg-surface-container-lowest px-2.5 py-1 rounded shadow-sm">4.0%</span>
+</div>
+<!-- Tier 4 -->
+<div class="flex items-center justify-between p-space-sm bg-primary-fixed/30 rounded-lg">
+<div class="flex items-center gap-space-sm">
+<span class="w-2.5 h-2.5 rounded-full bg-amber-500"></span>
+<div>
+<div class="font-body-sm-semibold text-body-sm-semibold text-on-surface">Tier 4: Gold Accelerator</div>
+<div class="font-caption text-caption text-on-surface-variant">Attributed sales over $50,000.00 + $250 quarterly bonus</div>
+</div>
+</div>
+<span class="font-body-md-semibold text-body-md-semibold text-primary bg-surface-container-lowest px-2.5 py-1 rounded shadow-sm font-bold">4.5%</span>
+</div>
+</div>
+<div class="flex items-center justify-between pt-space-xs font-caption text-caption text-on-surface-variant">
+<span>Returns clawback window: 14 days</span>
+<button class="text-primary hover:underline font-semibold">Modify Plan Configuration</button>
+</div>
+</div>
+<!-- Right: General Ledger Accrual Mapping (6 cols) -->
+<div class="lg:col-span-6 bg-surface-container-lowest p-space-lg rounded-xl shadow-sm flex flex-col justify-between space-y-space-md">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-secondary text-[20px]">account_balance</span>
+<h2 class="font-headline-sm text-headline-sm text-on-surface font-semibold">General Ledger Payroll Accrual Mapping</h2>
+</div>
+<span class="font-caption text-caption px-2 py-0.5 bg-primary-fixed text-on-primary-fixed-variant rounded font-semibold flex items-center gap-1">
+<span class="w-1.5 h-1.5 rounded-full bg-primary"></span> Balanced
+        </span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+        Accrual journal entry #JE-2024-1184 prepared for synchronization with enterprise accounting suite.
+      </p>
+<div class="bg-surface-container-low p-space-md rounded-lg space-y-space-sm font-body-sm text-body-sm">
+<div class="flex items-center justify-between pb-space-xs">
+<span class="font-label-sm text-label-sm uppercase text-on-surface-variant">Ledger Account &amp; Cost Center</span>
+<div class="flex gap-8 font-label-sm text-label-sm uppercase text-on-surface-variant">
+<span>Debit</span>
+<span>Credit</span>
+</div>
+</div>
+<!-- Line 1: Debit Expense -->
+<div class="flex items-center justify-between bg-surface-container-lowest p-space-sm rounded">
+<div class="flex flex-col">
+<span class="font-body-md-semibold text-body-md-semibold text-on-surface">GL #6020 • Staff Payroll &amp; Commission Expense</span>
+<span class="font-caption text-caption text-on-surface-variant">Retail Store Operations Cost Center (Dept 104)</span>
+</div>
+<div class="flex gap-8 font-mono font-medium">
+<span class="text-on-surface font-bold">$7,386.00</span>
+<span class="text-on-surface-variant">—</span>
+</div>
+</div>
+<!-- Line 2: Credit Liability -->
+<div class="flex items-center justify-between bg-surface-container-lowest p-space-sm rounded">
+<div class="flex flex-col">
+<span class="font-body-md-semibold text-body-md-semibold text-on-surface">GL #2100 • Accrued Payroll &amp; Staff Commissions Payable</span>
+<span class="font-caption text-caption text-on-surface-variant">Current Liabilities • Clearing Payroll Account</span>
+</div>
+<div class="flex gap-8 font-mono font-medium">
+<span class="text-on-surface-variant">—</span>
+<span class="text-on-surface font-bold">$7,386.00</span>
+</div>
+</div>
+</div>
+<!-- Journal Entry Reconciliation Summary -->
+<div class="flex items-center justify-between p-space-sm bg-surface-container rounded-lg font-body-sm text-body-sm">
+<div class="flex items-center gap-space-xs text-on-surface font-medium">
+<span class="material-symbols-outlined text-primary text-[18px]">check_circle</span>
+<span>Double-entry balanced (Variance: $0.00)</span>
+</div>
+<span class="font-caption text-caption text-on-surface-variant">ERP Connector: Active (NetSuite / QBO)</span>
+</div>
+</div>
+</div>
+<!-- Bottom Payroll Lock Notification / Action Bar -->
+<div class="p-space-md bg-surface-container-lowest rounded-xl shadow-sm flex flex-col md:flex-row items-center justify-between gap-space-md">
+<div class="flex items-center gap-space-md">
+<div class="w-10 h-10 rounded-full bg-amber-100 flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-amber-800 text-[22px]">lock_clock</span>
+</div>
+<div class="flex flex-col">
+<span class="font-body-md-semibold text-body-md-semibold text-on-surface">Commission ledger locking scheduled for Nov 30 at 23:59 EST</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">
+          All shift hours, POS checkout overrides, and returned line items will be frozen for payroll processing.
+        </span>
+</div>
+</div>
+<div class="flex items-center gap-space-sm w-full md:w-auto justify-end">
+<button class="px-space-md py-1.5 bg-surface-container-low hover:bg-surface-container text-on-surface font-body-sm-semibold text-body-sm-semibold rounded-lg shadow-sm transition-colors flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[16px]">print</span>
+<span>Download Statements</span>
+</button>
+<button class="px-space-md py-1.5 bg-primary-container text-on-primary font-body-sm-semibold text-body-sm-semibold rounded-lg shadow-sm hover:opacity-95 transition-opacity flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[16px]">send</span>
+<span>Push to Gusto / ADP Run</span>
+</button>
+</div>
+</div>
+</div>
+<script>
+  function filterStore(store, btn) {
+    const tabs = document.querySelectorAll('#table-tabs .tab-btn');
+    tabs.forEach(t => {
+      t.className = 'px-space-md py-1.5 font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface hover:bg-surface-container-low rounded-lg transition-all tab-btn';
+    });
+    btn.className = 'px-space-md py-1.5 font-body-sm-semibold text-body-sm-semibold text-on-surface bg-surface-container rounded-lg shadow-sm transition-all tab-btn';
+
+    const rows = document.querySelectorAll('#staffTable .staff-row');
+    rows.forEach(row => {
+      if (store === 'all' || row.dataset.store === store) {
+        row.style.display = '';
+      } else {
+        row.style.display = 'none';
+      }
+    });
+  }
+
+  function searchStaff(query) {
+    const term = query.toLowerCase();
+    const rows = document.querySelectorAll('#staffTable .staff-row');
+    rows.forEach(row => {
+      const match = row.dataset.name.toLowerCase().includes(term);
+      row.style.display = match ? '' : 'none';
+    });
+  }
+</script></main></div></body></html>

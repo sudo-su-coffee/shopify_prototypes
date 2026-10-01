@@ -1,0 +1,588 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{colors:{"error":"#ba1a1a","secondary-fixed-dim":"#b0c6ff","outline-variant":"#bdc9c2","tertiary-fixed":"#e5e2e1","surface-variant":"#e4e2e2","surface":"#fbf9f8","surface-container-high":"#e9e8e7","secondary-container":"#2c6fe7","tertiary":"#585857","surface-bright":"#fbf9f8","on-tertiary-fixed-variant":"#474746","background":"#fbf9f8","on-background":"#1b1c1c","error-container":"#ffdad6","secondary":"#0055c7","primary":"#00654b","on-secondary-container":"#fefcff","on-primary-container":"#d6ffeb","surface-tint":"#006c50","outline":"#6e7a73","on-primary-fixed":"#002116","primary-container":"#008060","inverse-surface":"#303031","on-primary":"#ffffff","on-tertiary-container":"#f8f5f4","on-surface":"#1b1c1c","on-secondary":"#ffffff","primary-fixed":"#92f6cf","on-error-container":"#93000a","on-primary-fixed-variant":"#00513c","surface-container-highest":"#e4e2e2","inverse-primary":"#75d9b3","tertiary-fixed-dim":"#c8c6c5","surface-dim":"#dbdad9","on-secondary-fixed-variant":"#00419c","primary-fixed-dim":"#75d9b3","surface-container-lowest":"#ffffff","inverse-on-surface":"#f2f0f0","secondary-fixed":"#d9e2ff","on-tertiary-fixed":"#1c1b1b","on-error":"#ffffff","surface-container-low":"#f5f3f3","on-secondary-fixed":"#001945","surface-container":"#efeded","tertiary-container":"#717070","on-surface-variant":"#3e4944","on-tertiary":"#ffffff"},borderRadius:{"DEFAULT":"0.125rem","lg":"0.25rem","xl":"0.5rem","full":"0.75rem"},spacing:{"space-lg":"1.25rem","space-md":"1rem","space-sm":"0.5rem","space-xl":"1.5rem","space-xs":"0.25rem","gutter":"1rem","margin":"1.5rem"},fontFamily:{"body-sm":["Inter"],"body-md":["Inter"],"headline-sm":["Inter"],"body-lg":["Inter"],"label-sm":["Inter"],"headline-lg-mobile":["Inter"],"headline-lg":["Inter"],"caption":["Inter"],"body-md-semibold":["Inter"],"headline-md":["Inter"],"body-sm-semibold":["Inter"],"label-md":["Inter"]},fontSize:{"body-sm":["13px",{lineHeight:"18px",fontWeight:"400"}],"body-md":["14px",{lineHeight:"20px",fontWeight:"400"}],"headline-sm":["16px",{lineHeight:"24px",letterSpacing:"-0.005em",fontWeight:"600"}],"body-lg":["15px",{lineHeight:"22px",fontWeight:"400"}],"label-sm":["12px",{lineHeight:"16px",letterSpacing:"0.01em",fontWeight:"600"}],"headline-lg-mobile":["22px",{lineHeight:"28px",letterSpacing:"-0.015em",fontWeight:"700"}],"headline-lg":["28px",{lineHeight:"36px",letterSpacing:"-0.02em",fontWeight:"700"}],"caption":["11px",{lineHeight:"14px",fontWeight:"500"}],"body-md-semibold":["14px",{lineHeight:"20px",fontWeight:"600"}],"headline-md":["20px",{lineHeight:"28px",letterSpacing:"-0.01em",fontWeight:"600"}],"body-sm-semibold":["13px",{lineHeight:"18px",fontWeight:"600"}],"label-md":["13px",{lineHeight:"16px",fontWeight:"500"}]}}}}</script><title>Shopify Admin Orders Fulfillment | Shopify Prototype</title>
+</head><body class="bg-surface font-body-md text-body-md text-on-surface antialiased"><header class="fixed top-0 left-0 right-0 h-14 bg-surface-container-lowest border-b border-surface-container-high z-50 flex items-center justify-between px-space-md shadow-[0_1px_0_rgba(0,0,0,0.04)]"><div class="flex items-center gap-space-md"><a class="flex items-center gap-space-sm" data-path="home" href="#"><img alt="Brand logo. - Primary color: #008060
+- Font: inter
+- Mode: light
+- Roundness: rounded-sm
+" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1WPubMgscUINGuisBDvGZbhiRvwxKjFWpAHPA0GXYWeRFqxcZY4G-byYU4PUykJPYVnuurpj_2yFkafDFmBWhplcA2dlqdqMDkr5ufN1GCA1-9Cy6Y74Bk73_KmB_pOSwvk_HQjInJtWpmQfLSQUcNeG5m75CCs-SDUFif7I_eleu-OGwNMldz9nzh1957zHt7Hfbkc1ds6tpanpikt3_aR6SAXkw6znZBFRPYg-rTUbi8f0VwyeBPJuaQ"/><span class="font-headline-sm text-headline-sm text-on-surface hidden sm:inline-block tracking-tight">Shopify</span></a><button class="flex items-center gap-space-xs px-space-sm py-1 rounded bg-surface-container-low hover:bg-surface-container hover:text-on-surface border border-outline-variant/50 text-on-surface transition-colors" type="button"><span class="material-symbols-outlined text-[18px] text-primary">storefront</span><span class="font-label-md text-label-md truncate max-w-[140px]">Apex Apparel SoHo</span><span class="material-symbols-outlined text-[16px] text-tertiary">unfold_more</span></button></div><div class="flex-1 max-w-xl mx-space-md hidden md:block"><div class="relative flex items-center"><span class="material-symbols-outlined absolute left-2.5 text-[18px] text-tertiary pointer-events-none">search</span><input class="w-full h-8 pl-9 pr-12 rounded bg-surface-container-low border border-outline-variant/60 font-body-sm text-body-sm text-on-surface placeholder:text-tertiary focus:outline-none focus:border-secondary focus:ring-1 focus:ring-secondary/30 transition-all" placeholder="Search products, orders, customers..." type="text"/><kbd class="absolute right-2 px-1.5 py-0.5 rounded bg-surface-container-high border border-outline-variant font-caption text-caption text-on-surface-variant font-mono">⌘K</kbd></div></div><div class="flex items-center gap-space-sm"><button aria-label="Notifications" class="relative p-1.5 rounded hover:bg-surface-container hover:text-on-surface text-on-surface-variant transition-colors" type="button"><span class="material-symbols-outlined text-[20px]">notifications</span><span class="absolute top-1 right-1 w-2 h-2 rounded-full bg-primary-container ring-2 ring-surface-container-lowest"></span></button><button aria-label="Feedback" class="p-1.5 rounded hover:bg-surface-container hover:text-on-surface text-on-surface-variant transition-colors hidden sm:inline-flex" type="button"><span class="material-symbols-outlined text-[20px]">help_outline</span></button><div class="h-5 w-[1px] bg-surface-container-high mx-0.5"></div><button aria-label="Merchant Profile" class="flex items-center gap-space-xs p-0.5 rounded-full hover:ring-2 hover:ring-outline-variant transition-all" type="button"><img alt="Profile" class="w-8 h-8 rounded-full object-cover" src="https://lh3.googleusercontent.com/aida/AEtjO1XM8bAU6u1SGd73cRUZpDg7te6U8Hd9YuPkqi431L4IWNqZL9tf8Hx7usC0Pr2x5uZFks9b6ZVSsN6pF4qp7qBy14iGcMBDgJ1CkgkmUAjIfndkwn_z2y62oK4m5xXJUzEyvjga7vHBHY5I_yrgT2bDOvV6QCvONuw_NwyDFyHdKZJuuGyK5Pgek_6deKYxGCdGgDgn0o72iDzak64pRiWW1BSKisoh_F_jv3CeZdUD3Qs1uum2E_qsQHaI"/></button></div></header><aside class="fixed left-0 top-14 bottom-0 w-60 bg-surface-container-low border-r border-surface-container-high z-40 flex flex-col justify-between overflow-y-auto"><div class="py-space-sm px-space-xs"><nav class="flex flex-col gap-0.5" data-active-classes="bg-surface-container-lowest text-on-surface shadow-[0_1px_2px_rgba(0,0,0,0.06)] font-body-sm-semibold"><a class="flex items-center justify-between px-space-sm py-1.5 rounded text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors font-body-sm text-body-sm" data-path="home" href="#"><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-[18px]">home</span><span>Home</span></div></a><a aria-current="page" class="flex items-center justify-between px-space-sm py-1.5 rounded transition-colors bg-surface-container-lowest text-on-surface shadow-[0_1px_2px_rgba(0,0,0,0.06)] font-body-sm-semibold" data-path="orders" href="#"><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-[18px]">inbox</span><span>Orders</span></div><span class="px-1.5 py-0.2 rounded-full font-label-sm text-label-sm bg-surface-container-high text-on-surface-variant font-medium">14</span></a><a class="flex items-center justify-between px-space-sm py-1.5 rounded text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors font-body-sm text-body-sm" data-path="products" href="#"><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-[18px]">sell</span><span>Products</span></div></a><a class="flex items-center justify-between px-space-sm py-1.5 rounded text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors font-body-sm text-body-sm" data-path="customers" href="#"><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-[18px]">person</span><span>Customers</span></div></a><a class="flex items-center justify-between px-space-sm py-1.5 rounded text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors font-body-sm text-body-sm" data-path="content" href="#"><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-[18px]">article</span><span>Content</span></div></a><a class="flex items-center justify-between px-space-sm py-1.5 rounded text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors font-body-sm text-body-sm" data-path="analytics" href="#"><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-[18px]">bar_chart</span><span>Analytics</span></div></a><a class="flex items-center justify-between px-space-sm py-1.5 rounded text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors font-body-sm text-body-sm" data-path="marketing" href="#"><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-[18px]">campaign</span><span>Marketing</span></div></a><a class="flex items-center justify-between px-space-sm py-1.5 rounded text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors font-body-sm text-body-sm" data-path="discounts" href="#"><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-[18px]">local_offer</span><span>Discounts</span></div></a></nav><div class="my-space-sm mx-space-sm border-t border-surface-container-high"></div><div class="px-space-sm py-1 flex items-center justify-between"><span class="font-label-sm text-label-sm uppercase tracking-wider text-tertiary">Sales Channels</span><button class="p-0.5 rounded text-tertiary hover:bg-surface-container hover:text-on-surface transition-colors" type="button"><span class="material-symbols-outlined text-[14px]">add</span></button></div><nav class="flex flex-col gap-0.5" data-active-classes="bg-surface-container-lowest text-on-surface shadow-[0_1px_2px_rgba(0,0,0,0.06)] font-body-sm-semibold"><a class="flex items-center justify-between px-space-sm py-1.5 rounded text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors font-body-sm text-body-sm" data-path="online-store" href="#"><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-[18px]">language</span><span>Online Store</span></div><span class="material-symbols-outlined text-[16px] text-tertiary opacity-0 hover:opacity-100">visibility</span></a><a class="flex items-center justify-between px-space-sm py-1.5 rounded text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors font-body-sm text-body-sm" data-path="point-of-sale" href="#"><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-[18px]">point_of_sale</span><span>Point of Sale</span></div></a></nav></div><div class="p-space-xs border-t border-surface-container-high bg-surface-container-low"><nav class="flex flex-col" data-active-classes="bg-surface-container-lowest text-on-surface shadow-[0_1px_2px_rgba(0,0,0,0.06)] font-body-sm-semibold"><a class="flex items-center gap-space-sm px-space-sm py-2 rounded text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors font-body-sm text-body-sm" data-path="settings" href="#"><span class="material-symbols-outlined text-[18px]">settings</span><span>Settings</span></a></nav></div></aside><div class="pl-60"><main class="w-full min-h-[calc(100vh-3.5rem)] pt-14 px-space-xl pb-12 bg-surface"><div class="flex flex-col w-full max-w-[1440px] mx-auto pb-12">
+<!-- Page Header -->
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-space-md mb-space-lg">
+<div class="flex items-center gap-space-sm">
+<h1 class="font-headline-lg text-headline-lg text-on-surface tracking-tight">Orders</h1>
+<span class="px-2.5 py-0.5 rounded-full font-label-sm text-label-sm bg-surface-container-high text-on-surface-variant font-medium">1,284 orders</span>
+</div>
+<div class="flex items-center gap-space-sm">
+<button class="h-8 px-3 rounded-lg bg-surface-container-lowest hover:bg-surface-container-low text-on-surface font-body-sm-semibold text-body-sm-semibold shadow-sm transition-colors flex items-center gap-1.5" type="button">
+<span class="material-symbols-outlined text-[16px] text-tertiary">file_upload</span>
+<span>Export</span>
+</button>
+<button class="h-8 px-3 rounded-lg bg-surface-container-lowest hover:bg-surface-container-low text-on-surface font-body-sm-semibold text-body-sm-semibold shadow-sm transition-colors flex items-center gap-1.5" type="button">
+<span class="material-symbols-outlined text-[16px] text-tertiary">file_download</span>
+<span>Import</span>
+</button>
+<button class="h-8 px-3.5 rounded-lg bg-primary text-on-primary hover:bg-primary-container font-body-sm-semibold text-body-sm-semibold shadow-sm transition-all flex items-center gap-1" type="button">
+<span class="material-symbols-outlined text-[16px]">add</span>
+<span>Create order</span>
+</button>
+</div>
+</div>
+<!-- Realtime Fulfillment Metrics Ribbon -->
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-space-md mb-space-lg">
+<div class="bg-surface-container-lowest p-space-md rounded-xl shadow-sm flex items-center justify-between">
+<div class="flex flex-col">
+<span class="font-caption text-caption text-tertiary uppercase tracking-wider">Unfulfilled Orders</span>
+<span class="font-headline-md text-headline-md text-on-surface font-semibold mt-0.5">14</span>
+<span class="font-caption text-caption text-primary flex items-center gap-0.5 mt-1 font-medium">
+<span class="material-symbols-outlined text-[14px]">bolt</span> Ready for packing
+        </span>
+</div>
+<div class="w-10 h-10 rounded-full bg-primary-fixed/40 flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[20px]">package_2</span>
+</div>
+</div>
+<div class="bg-surface-container-lowest p-space-md rounded-xl shadow-sm flex items-center justify-between">
+<div class="flex flex-col">
+<span class="font-caption text-caption text-tertiary uppercase tracking-wider">Store Pickups</span>
+<span class="font-headline-md text-headline-md text-on-surface font-semibold mt-0.5">4</span>
+<span class="font-caption text-caption text-secondary flex items-center gap-0.5 mt-1 font-medium">
+<span class="material-symbols-outlined text-[14px]">storefront</span> SoHo Flagship
+        </span>
+</div>
+<div class="w-10 h-10 rounded-full bg-secondary-fixed/50 flex items-center justify-center text-secondary">
+<span class="material-symbols-outlined text-[20px]">shopping_bag</span>
+</div>
+</div>
+<div class="bg-surface-container-lowest p-space-md rounded-xl shadow-sm flex items-center justify-between">
+<div class="flex flex-col">
+<span class="font-caption text-caption text-tertiary uppercase tracking-wider">Returns Requested</span>
+<span class="font-headline-md text-headline-md text-on-surface font-semibold mt-0.5">2</span>
+<span class="font-caption text-caption text-tertiary flex items-center gap-0.5 mt-1 font-medium">
+          Requires authorization
+        </span>
+</div>
+<div class="w-10 h-10 rounded-full bg-surface-container-high flex items-center justify-center text-tertiary">
+<span class="material-symbols-outlined text-[20px]">assignment_return</span>
+</div>
+</div>
+<div class="bg-surface-container-lowest p-space-md rounded-xl shadow-sm flex items-center justify-between">
+<div class="flex flex-col">
+<span class="font-caption text-caption text-tertiary uppercase tracking-wider">24h Volume</span>
+<span class="font-headline-md text-headline-md text-on-surface font-semibold mt-0.5">$8,429.80</span>
+<span class="font-caption text-caption text-primary flex items-center gap-0.5 mt-1 font-medium">
+<span class="material-symbols-outlined text-[14px]">trending_up</span> +14.2% from yesterday
+        </span>
+</div>
+<div class="w-10 h-10 rounded-full bg-primary-fixed/40 flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[20px]">payments</span>
+</div>
+</div>
+</div>
+<!-- Primary IndexCard Container -->
+<div class="bg-surface-container-lowest rounded-xl shadow-sm overflow-hidden flex flex-col">
+<!-- Polaris Segment Tabs -->
+<div class="px-space-md pt-space-xs bg-surface-container-lowest flex items-center justify-between overflow-x-auto shadow-[inset_0_-1px_0_rgba(0,0,0,0.06)]">
+<div class="flex items-center gap-space-xs min-w-max">
+<button class="tab-btn px-3 py-2.5 font-body-sm-semibold text-body-sm-semibold text-on-surface relative after:content-[''] after:absolute after:bottom-0 after:left-0 after:right-0 after:h-0.5 after:bg-primary" type="button">
+          All
+        </button>
+<button class="tab-btn px-3 py-2.5 font-body-sm text-body-sm text-tertiary hover:text-on-surface transition-colors flex items-center gap-1.5" type="button">
+<span>Unfulfilled</span>
+<span class="px-1.5 py-0.2 rounded-full font-caption text-caption bg-surface-container-high text-on-surface-variant font-semibold">14</span>
+</button>
+<button class="tab-btn px-3 py-2.5 font-body-sm text-body-sm text-tertiary hover:text-on-surface transition-colors flex items-center gap-1.5" type="button">
+<span>Unpaid</span>
+<span class="px-1.5 py-0.2 rounded-full font-caption text-caption bg-error-container text-on-error-container font-semibold">3</span>
+</button>
+<button class="tab-btn px-3 py-2.5 font-body-sm text-body-sm text-tertiary hover:text-on-surface transition-colors" type="button">
+          Open
+        </button>
+<button class="tab-btn px-3 py-2.5 font-body-sm text-body-sm text-tertiary hover:text-on-surface transition-colors" type="button">
+          Closed
+        </button>
+<button class="tab-btn px-3 py-2.5 font-body-sm text-body-sm text-tertiary hover:text-on-surface transition-colors" type="button">
+          Local delivery
+        </button>
+<button class="tab-btn px-3 py-2.5 font-body-sm text-body-sm text-tertiary hover:text-on-surface transition-colors" type="button">
+          Local pickup
+        </button>
+</div>
+<button class="p-1.5 rounded-lg text-tertiary hover:bg-surface-container hover:text-on-surface transition-colors" title="Create view" type="button">
+<span class="material-symbols-outlined text-[18px]">add</span>
+</button>
+</div>
+<!-- Filter & Query Control Strip -->
+<div class="p-space-md bg-surface-container-lowest flex flex-wrap items-center justify-between gap-space-sm">
+<div class="flex-1 min-w-[260px] max-w-md relative flex items-center">
+<span class="material-symbols-outlined absolute left-2.5 text-[18px] text-tertiary pointer-events-none">search</span>
+<input class="w-full h-8 pl-9 pr-3 rounded-lg bg-surface-container-low font-body-sm text-body-sm text-on-surface placeholder:text-tertiary focus:bg-surface-container-lowest focus:outline-none transition-all shadow-[inset_0_0_0_1px_rgba(0,0,0,0.08)] focus:shadow-[inset_0_0_0_1.5px_#0055c7]" id="order-search" placeholder="Filter orders by customer, tag, or SKU..." type="text"/>
+</div>
+<div class="flex flex-wrap items-center gap-space-xs">
+<button class="h-8 px-2.5 rounded-lg bg-surface-container-low hover:bg-surface-container text-on-surface font-body-sm text-body-sm flex items-center gap-1.5 transition-colors" type="button">
+<span class="material-symbols-outlined text-[16px] text-tertiary">store</span>
+<span>Sales Channel</span>
+<span class="material-symbols-outlined text-[16px] text-tertiary">keyboard_arrow_down</span>
+</button>
+<button class="h-8 px-2.5 rounded-lg bg-surface-container-low hover:bg-surface-container text-on-surface font-body-sm text-body-sm flex items-center gap-1.5 transition-colors" type="button">
+<span class="material-symbols-outlined text-[16px] text-tertiary">local_shipping</span>
+<span>Fulfillment status</span>
+<span class="material-symbols-outlined text-[16px] text-tertiary">keyboard_arrow_down</span>
+</button>
+<button class="h-8 px-2.5 rounded-lg bg-surface-container-low hover:bg-surface-container text-on-surface font-body-sm text-body-sm flex items-center gap-1.5 transition-colors" type="button">
+<span class="material-symbols-outlined text-[16px] text-tertiary">payments</span>
+<span>Payment status</span>
+<span class="material-symbols-outlined text-[16px] text-tertiary">keyboard_arrow_down</span>
+</button>
+<button class="h-8 px-2.5 rounded-lg bg-surface-container-low hover:bg-surface-container text-on-surface font-body-sm text-body-sm flex items-center gap-1.5 transition-colors" type="button">
+<span class="material-symbols-outlined text-[16px] text-tertiary">rv_hookup</span>
+<span>Delivery method</span>
+<span class="material-symbols-outlined text-[16px] text-tertiary">keyboard_arrow_down</span>
+</button>
+<div class="h-5 w-[1px] bg-surface-container-high mx-1 hidden sm:block"></div>
+<button class="h-8 px-2.5 rounded-lg bg-surface-container-lowest hover:bg-surface-container-low text-on-surface-variant hover:text-on-surface font-body-sm text-body-sm flex items-center gap-1.5 transition-colors shadow-sm" type="button">
+<span class="material-symbols-outlined text-[16px]">swap_vert</span>
+<span>Sort</span>
+<span class="font-caption text-caption text-tertiary font-semibold">Newest</span>
+</button>
+</div>
+</div>
+<!-- Floating Bulk Selection Bar (Dynamic trigger via JS) -->
+<div class="hidden px-space-md py-2.5 bg-inverse-surface text-inverse-on-surface items-center justify-between transition-all duration-200" id="bulk-action-bar">
+<div class="flex items-center gap-space-md">
+<span class="font-body-sm-semibold text-body-sm-semibold" id="selected-counter">3 orders selected</span>
+<button class="font-caption text-caption underline opacity-80 hover:opacity-100" id="select-all-btn" type="button">Select all 1,284 orders</button>
+</div>
+<div class="flex items-center gap-space-sm">
+<button class="h-7 px-2.5 rounded bg-surface-container-lowest/10 hover:bg-surface-container-lowest/20 font-body-sm text-body-sm text-inverse-on-surface transition-colors flex items-center gap-1" type="button">
+<span class="material-symbols-outlined text-[15px]">print</span>
+<span>Print packing slips</span>
+</button>
+<button class="h-7 px-2.5 rounded bg-surface-container-lowest/10 hover:bg-surface-container-lowest/20 font-body-sm text-body-sm text-inverse-on-surface transition-colors flex items-center gap-1" type="button">
+<span class="material-symbols-outlined text-[15px]">done_all</span>
+<span>Mark as paid</span>
+</button>
+<button class="h-7 px-3 rounded bg-primary font-body-sm-semibold text-body-sm-semibold text-on-primary hover:bg-primary-container transition-colors flex items-center gap-1 shadow-sm" type="button">
+<span class="material-symbols-outlined text-[15px]">local_shipping</span>
+<span>Fulfill items</span>
+</button>
+</div>
+</div>
+<!-- IndexTable Grid -->
+<div class="w-full overflow-x-auto">
+<table class="w-full text-left border-collapse">
+<thead>
+<tr class="bg-surface-container-low text-tertiary font-caption text-caption uppercase tracking-wider h-9">
+<th class="w-10 px-space-md">
+<input class="w-4 h-4 rounded text-primary focus:ring-0 cursor-pointer accent-primary" id="header-select-all" type="checkbox"/>
+</th>
+<th class="px-space-sm font-semibold">Order</th>
+<th class="px-space-sm font-semibold">Date</th>
+<th class="px-space-sm font-semibold">Customer</th>
+<th class="px-space-sm font-semibold">Channel</th>
+<th class="px-space-sm font-semibold text-right">Total</th>
+<th class="px-space-sm font-semibold">Payment</th>
+<th class="px-space-sm font-semibold">Fulfillment</th>
+<th class="px-space-sm font-semibold">Items</th>
+<th class="px-space-md font-semibold">Delivery Method</th>
+</tr>
+</thead>
+<tbody class="divide-none text-on-surface font-body-sm text-body-sm">
+<!-- Row 1 -->
+<tr class="order-row group hover:bg-surface-container-low/60 transition-colors h-14 bg-surface-container-lowest">
+<td class="w-10 px-space-md">
+<input class="row-checkbox w-4 h-4 rounded text-primary focus:ring-0 cursor-pointer accent-primary" type="checkbox"/>
+</td>
+<td class="px-space-sm font-body-sm-semibold text-body-sm-semibold text-secondary hover:underline cursor-pointer">
+              #1044
+            </td>
+<td class="px-space-sm text-on-surface-variant whitespace-nowrap">
+              Today at 3:18 pm
+            </td>
+<td class="px-space-sm font-medium whitespace-nowrap">
+<div class="flex items-center gap-1.5">
+<div class="w-6 h-6 rounded-full bg-surface-container-high flex items-center justify-center font-caption text-caption text-on-surface-variant font-semibold">SJ</div>
+<span>Sarah Jenkins</span>
+</div>
+</td>
+<td class="px-space-sm whitespace-nowrap">
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full font-caption text-caption bg-surface-container-high text-on-surface-variant font-medium">
+<span class="material-symbols-outlined text-[13px] text-tertiary">storefront</span>
+                POS • SoHo
+              </span>
+</td>
+<td class="px-space-sm font-body-sm-semibold text-body-sm-semibold text-right whitespace-nowrap">
+              $218.00
+            </td>
+<td class="px-space-sm whitespace-nowrap">
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full font-label-sm text-label-sm bg-on-primary-container text-primary font-semibold">
+<span class="w-1.5 h-1.5 rounded-full bg-primary"></span>
+                Paid
+              </span>
+</td>
+<td class="px-space-sm whitespace-nowrap">
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full font-label-sm text-label-sm bg-surface-container-high text-on-surface font-semibold">
+<span class="w-1.5 h-1.5 rounded-full bg-amber-500"></span>
+                Unfulfilled (Pickup)
+              </span>
+</td>
+<td class="px-space-sm text-on-surface-variant whitespace-nowrap">
+              1 item
+            </td>
+<td class="px-space-md text-on-surface-variant whitespace-nowrap">
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[16px] text-primary">store</span>
+<span>Store Pickup</span>
+</div>
+</td>
+</tr>
+<!-- Row 2 -->
+<tr class="order-row group hover:bg-surface-container-low/60 transition-colors h-14 bg-surface-container-lowest">
+<td class="w-10 px-space-md">
+<input class="row-checkbox w-4 h-4 rounded text-primary focus:ring-0 cursor-pointer accent-primary" type="checkbox"/>
+</td>
+<td class="px-space-sm font-body-sm-semibold text-body-sm-semibold text-secondary hover:underline cursor-pointer">
+              #1043
+            </td>
+<td class="px-space-sm text-on-surface-variant whitespace-nowrap">
+              Today at 2:14 pm
+            </td>
+<td class="px-space-sm font-medium whitespace-nowrap">
+<div class="flex items-center gap-1.5">
+<div class="w-6 h-6 rounded-full bg-surface-container-high flex items-center justify-center font-caption text-caption text-on-surface-variant font-semibold">EW</div>
+<span>Emma Watson</span>
+</div>
+</td>
+<td class="px-space-sm whitespace-nowrap">
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full font-caption text-caption bg-surface-container-high text-on-surface-variant font-medium">
+<span class="material-symbols-outlined text-[13px] text-tertiary">storefront</span>
+                POS • SoHo
+              </span>
+</td>
+<td class="px-space-sm font-body-sm-semibold text-body-sm-semibold text-right whitespace-nowrap">
+              $188.00
+            </td>
+<td class="px-space-sm whitespace-nowrap">
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full font-label-sm text-label-sm bg-on-primary-container text-primary font-semibold">
+<span class="w-1.5 h-1.5 rounded-full bg-primary"></span>
+                Paid
+              </span>
+</td>
+<td class="px-space-sm whitespace-nowrap">
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full font-label-sm text-label-sm bg-on-primary-container/70 text-primary font-semibold">
+<span class="material-symbols-outlined text-[14px]">check</span>
+                Fulfilled
+              </span>
+</td>
+<td class="px-space-sm text-on-surface-variant whitespace-nowrap">
+              2 items
+            </td>
+<td class="px-space-md text-on-surface-variant whitespace-nowrap">
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[16px] text-tertiary">point_of_sale</span>
+<span>In-store POS</span>
+</div>
+</td>
+</tr>
+<!-- Row 3 -->
+<tr class="order-row group hover:bg-surface-container-low/60 transition-colors h-14 bg-surface-container-lowest">
+<td class="w-10 px-space-md">
+<input class="row-checkbox w-4 h-4 rounded text-primary focus:ring-0 cursor-pointer accent-primary" type="checkbox"/>
+</td>
+<td class="px-space-sm font-body-sm-semibold text-body-sm-semibold text-secondary hover:underline cursor-pointer">
+              #1042
+            </td>
+<td class="px-space-sm text-on-surface-variant whitespace-nowrap">
+              Yesterday at 5:20 pm
+            </td>
+<td class="px-space-sm font-medium whitespace-nowrap">
+<div class="flex items-center gap-1.5">
+<div class="w-6 h-6 rounded-full bg-surface-container-high flex items-center justify-center font-caption text-caption text-on-surface-variant font-semibold">MB</div>
+<span>Marcus Brody</span>
+</div>
+</td>
+<td class="px-space-sm whitespace-nowrap">
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full font-caption text-caption bg-surface-container-high text-on-surface-variant font-medium">
+<span class="material-symbols-outlined text-[13px] text-secondary">language</span>
+                Online Store
+              </span>
+</td>
+<td class="px-space-sm font-body-sm-semibold text-body-sm-semibold text-right whitespace-nowrap">
+              $76.32
+            </td>
+<td class="px-space-sm whitespace-nowrap">
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full font-label-sm text-label-sm bg-on-primary-container text-primary font-semibold">
+<span class="w-1.5 h-1.5 rounded-full bg-primary"></span>
+                Paid
+              </span>
+</td>
+<td class="px-space-sm whitespace-nowrap">
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full font-label-sm text-label-sm bg-surface-container-high text-on-surface font-semibold">
+<span class="material-symbols-outlined text-[13px] text-tertiary">sync_problem</span>
+                Fulfilled (1 return)
+              </span>
+</td>
+<td class="px-space-sm text-on-surface-variant whitespace-nowrap">
+              2 items
+            </td>
+<td class="px-space-md text-on-surface-variant whitespace-nowrap">
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[16px] text-tertiary">local_shipping</span>
+<span>Standard DHL</span>
+</div>
+</td>
+</tr>
+<!-- Row 4 -->
+<tr class="order-row group hover:bg-surface-container-low/60 transition-colors h-14 bg-surface-container-lowest">
+<td class="w-10 px-space-md">
+<input class="row-checkbox w-4 h-4 rounded text-primary focus:ring-0 cursor-pointer accent-primary" type="checkbox"/>
+</td>
+<td class="px-space-sm font-body-sm-semibold text-body-sm-semibold text-secondary hover:underline cursor-pointer">
+              #1041
+            </td>
+<td class="px-space-sm text-on-surface-variant whitespace-nowrap">
+              Nov 24 at 11:05 am
+            </td>
+<td class="px-space-sm font-medium whitespace-nowrap">
+<div class="flex items-center gap-1.5">
+<div class="w-6 h-6 rounded-full bg-surface-container-high flex items-center justify-center font-caption text-caption text-on-surface-variant font-semibold">DK</div>
+<span>David Kim</span>
+</div>
+</td>
+<td class="px-space-sm whitespace-nowrap">
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full font-caption text-caption bg-surface-container-high text-on-surface-variant font-medium">
+<span class="material-symbols-outlined text-[13px] text-secondary">language</span>
+                Online Store
+              </span>
+</td>
+<td class="px-space-sm font-body-sm-semibold text-body-sm-semibold text-right whitespace-nowrap">
+              $120.00
+            </td>
+<td class="px-space-sm whitespace-nowrap">
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full font-label-sm text-label-sm bg-on-primary-container text-primary font-semibold">
+<span class="w-1.5 h-1.5 rounded-full bg-primary"></span>
+                Paid
+              </span>
+</td>
+<td class="px-space-sm whitespace-nowrap">
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full font-label-sm text-label-sm bg-on-primary-container/70 text-primary font-semibold">
+<span class="material-symbols-outlined text-[14px]">check</span>
+                Fulfilled
+              </span>
+</td>
+<td class="px-space-sm text-on-surface-variant whitespace-nowrap">
+              1 item
+            </td>
+<td class="px-space-md text-on-surface-variant whitespace-nowrap">
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[16px] text-tertiary">flight_takeoff</span>
+<span>Express Courier</span>
+</div>
+</td>
+</tr>
+<!-- Row 5 -->
+<tr class="order-row group hover:bg-surface-container-low/60 transition-colors h-14 bg-surface-container-lowest">
+<td class="w-10 px-space-md">
+<input class="row-checkbox w-4 h-4 rounded text-primary focus:ring-0 cursor-pointer accent-primary" type="checkbox"/>
+</td>
+<td class="px-space-sm font-body-sm-semibold text-body-sm-semibold text-secondary hover:underline cursor-pointer">
+              #1040
+            </td>
+<td class="px-space-sm text-on-surface-variant whitespace-nowrap">
+              Nov 24 at 9:42 am
+            </td>
+<td class="px-space-sm font-medium whitespace-nowrap">
+<div class="flex items-center gap-1.5">
+<div class="w-6 h-6 rounded-full bg-surface-container-high flex items-center justify-center font-caption text-caption text-on-surface-variant font-semibold">CC</div>
+<span>Chloe Chevalier</span>
+</div>
+</td>
+<td class="px-space-sm whitespace-nowrap">
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full font-caption text-caption bg-surface-container-high text-on-surface-variant font-medium">
+<span class="material-symbols-outlined text-[13px] text-secondary">language</span>
+                Online Store
+              </span>
+</td>
+<td class="px-space-sm font-body-sm-semibold text-body-sm-semibold text-right whitespace-nowrap">
+              $340.50
+            </td>
+<td class="px-space-sm whitespace-nowrap">
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full font-label-sm text-label-sm bg-secondary-fixed text-on-secondary-fixed font-semibold">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+                Authorized
+              </span>
+</td>
+<td class="px-space-sm whitespace-nowrap">
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full font-label-sm text-label-sm bg-surface-container-high text-on-surface font-semibold">
+<span class="w-1.5 h-1.5 rounded-full bg-amber-500"></span>
+                Unfulfilled
+              </span>
+</td>
+<td class="px-space-sm text-on-surface-variant whitespace-nowrap">
+              3 items
+            </td>
+<td class="px-space-md text-on-surface-variant whitespace-nowrap">
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[16px] text-tertiary">airplanemode_active</span>
+<span>Next-day Air</span>
+</div>
+</td>
+</tr>
+<!-- Row 6 -->
+<tr class="order-row group hover:bg-surface-container-low/60 transition-colors h-14 bg-surface-container-lowest">
+<td class="w-10 px-space-md">
+<input class="row-checkbox w-4 h-4 rounded text-primary focus:ring-0 cursor-pointer accent-primary" type="checkbox"/>
+</td>
+<td class="px-space-sm font-body-sm-semibold text-body-sm-semibold text-secondary hover:underline cursor-pointer">
+              #1039
+            </td>
+<td class="px-space-sm text-on-surface-variant whitespace-nowrap">
+              Nov 23 at 4:15 pm
+            </td>
+<td class="px-space-sm font-medium whitespace-nowrap">
+<div class="flex items-center gap-1.5">
+<div class="w-6 h-6 rounded-full bg-surface-container-high flex items-center justify-center font-caption text-caption text-on-surface-variant font-semibold">JD</div>
+<span>Julian De Vries</span>
+</div>
+</td>
+<td class="px-space-sm whitespace-nowrap">
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full font-caption text-caption bg-surface-container-high text-on-surface-variant font-medium">
+<span class="material-symbols-outlined text-[13px] text-tertiary">storefront</span>
+                POS • SoHo
+              </span>
+</td>
+<td class="px-space-sm font-body-sm-semibold text-body-sm-semibold text-right whitespace-nowrap">
+              $64.00
+            </td>
+<td class="px-space-sm whitespace-nowrap">
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full font-label-sm text-label-sm bg-on-primary-container text-primary font-semibold">
+<span class="w-1.5 h-1.5 rounded-full bg-primary"></span>
+                Paid
+              </span>
+</td>
+<td class="px-space-sm whitespace-nowrap">
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full font-label-sm text-label-sm bg-on-primary-container/70 text-primary font-semibold">
+<span class="material-symbols-outlined text-[14px]">check</span>
+                Fulfilled
+              </span>
+</td>
+<td class="px-space-sm text-on-surface-variant whitespace-nowrap">
+              1 item
+            </td>
+<td class="px-space-md text-on-surface-variant whitespace-nowrap">
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[16px] text-tertiary">point_of_sale</span>
+<span>In-store POS</span>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<!-- Pagination & Summary Footer -->
+<div class="px-space-md py-3 bg-surface-container-lowest flex items-center justify-between shadow-[inset_0_1px_0_rgba(0,0,0,0.06)]">
+<div class="font-body-sm text-body-sm text-tertiary">
+        Showing <span class="font-medium text-on-surface">1–25</span> of <span class="font-medium text-on-surface">1,284</span> orders
+      </div>
+<div class="flex items-center gap-space-xs">
+<button class="p-1 rounded-lg text-tertiary opacity-40 cursor-not-allowed hover:bg-surface-container flex items-center justify-center" disabled="" type="button">
+<span class="material-symbols-outlined text-[20px]">chevron_left</span>
+</button>
+<span class="px-2 font-caption text-caption font-semibold text-on-surface">Page 1 of 52</span>
+<button class="p-1 rounded-lg text-on-surface hover:bg-surface-container flex items-center justify-center transition-colors" type="button">
+<span class="material-symbols-outlined text-[20px]">chevron_right</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Operational Alert Card / Fulfillment Assistant -->
+<div class="mt-space-lg bg-surface-container-lowest p-space-md rounded-xl shadow-sm flex flex-col md:flex-row items-start md:items-center justify-between gap-space-md">
+<div class="flex items-start gap-space-md">
+<div class="w-8 h-8 rounded-lg bg-primary-fixed/50 flex items-center justify-center text-primary mt-0.5">
+<span class="material-symbols-outlined text-[20px]">inventory</span>
+</div>
+<div>
+<h2 class="font-body-md-semibold text-body-md-semibold text-on-surface">Batch fulfillment recommended</h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">8 online store orders ready for automated shipping label generation via DHL Express Courier.</p>
+</div>
+</div>
+<div class="flex items-center gap-space-sm self-end md:self-auto">
+<button class="h-8 px-3 rounded-lg bg-surface-container-low hover:bg-surface-container text-on-surface font-body-sm-semibold text-body-sm-semibold transition-colors" type="button">
+        Dismiss
+      </button>
+<button class="h-8 px-3.5 rounded-lg bg-primary text-on-primary hover:bg-primary-container font-body-sm-semibold text-body-sm-semibold transition-colors shadow-sm flex items-center gap-1" type="button">
+<span class="material-symbols-outlined text-[16px]">print</span>
+<span>Create batch (8)</span>
+</button>
+</div>
+</div>
+</div>
+<script>
+  (function() {
+    const masterCheckbox = document.getElementById('header-select-all');
+    const rowCheckboxes = document.querySelectorAll('.row-checkbox');
+    const bulkBar = document.getElementById('bulk-action-bar');
+    const selectedCounter = document.getElementById('selected-counter');
+    const searchInput = document.getElementById('order-search');
+    const rows = document.querySelectorAll('.order-row');
+
+    function updateBulkState() {
+      const checkedCount = document.querySelectorAll('.row-checkbox:checked').length;
+      if (checkedCount > 0) {
+        bulkBar.classList.remove('hidden');
+        bulkBar.classList.add('flex');
+        selectedCounter.textContent = checkedCount + (checkedCount === 1 ? ' order selected' : ' orders selected');
+      } else {
+        bulkBar.classList.add('hidden');
+        bulkBar.classList.remove('flex');
+      }
+
+      if (masterCheckbox) {
+        masterCheckbox.checked = checkedCount === rowCheckboxes.length && rowCheckboxes.length > 0;
+        masterCheckbox.indeterminate = checkedCount > 0 && checkedCount < rowCheckboxes.length;
+      }
+    }
+
+    if (masterCheckbox) {
+      masterCheckbox.addEventListener('change', function() {
+        rowCheckboxes.forEach(cb => {
+          cb.checked = masterCheckbox.checked;
+          const tr = cb.closest('tr');
+          if (masterCheckbox.checked) {
+            tr.classList.add('bg-surface-container-low');
+          } else {
+            tr.classList.remove('bg-surface-container-low');
+          }
+        });
+        updateBulkState();
+      });
+    }
+
+    rowCheckboxes.forEach(cb => {
+      cb.addEventListener('change', function() {
+        const tr = cb.closest('tr');
+        if (cb.checked) {
+          tr.classList.add('bg-surface-container-low');
+        } else {
+          tr.classList.remove('bg-surface-container-low');
+        }
+        updateBulkState();
+      });
+    });
+
+    if (searchInput) {
+      searchInput.addEventListener('input', function(e) {
+        const val = e.target.value.toLowerCase().trim();
+        rows.forEach(r => {
+          const text = r.textContent.toLowerCase();
+          if (text.includes(val)) {
+            r.style.display = '';
+          } else {
+            r.style.display = 'none';
+          }
+        });
+      });
+    }
+  })();
+</script></main></div></body></html>

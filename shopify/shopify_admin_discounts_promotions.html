@@ -1,0 +1,605 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{colors:{"error":"#ba1a1a","secondary-fixed-dim":"#b0c6ff","outline-variant":"#bdc9c2","tertiary-fixed":"#e5e2e1","surface-variant":"#e4e2e2","surface":"#fbf9f8","surface-container-high":"#e9e8e7","secondary-container":"#2c6fe7","tertiary":"#585857","surface-bright":"#fbf9f8","on-tertiary-fixed-variant":"#474746","background":"#fbf9f8","on-background":"#1b1c1c","error-container":"#ffdad6","secondary":"#0055c7","primary":"#00654b","on-secondary-container":"#fefcff","on-primary-container":"#d6ffeb","surface-tint":"#006c50","outline":"#6e7a73","on-primary-fixed":"#002116","primary-container":"#008060","inverse-surface":"#303031","on-primary":"#ffffff","on-tertiary-container":"#f8f5f4","on-surface":"#1b1c1c","on-secondary":"#ffffff","primary-fixed":"#92f6cf","on-error-container":"#93000a","on-primary-fixed-variant":"#00513c","surface-container-highest":"#e4e2e2","inverse-primary":"#75d9b3","tertiary-fixed-dim":"#c8c6c5","surface-dim":"#dbdad9","on-secondary-fixed-variant":"#00419c","primary-fixed-dim":"#75d9b3","surface-container-lowest":"#ffffff","inverse-on-surface":"#f2f0f0","secondary-fixed":"#d9e2ff","on-tertiary-fixed":"#1c1b1b","on-error":"#ffffff","surface-container-low":"#f5f3f3","on-secondary-fixed":"#001945","surface-container":"#efeded","tertiary-container":"#717070","on-surface-variant":"#3e4944","on-tertiary":"#ffffff"},borderRadius:{"DEFAULT":"0.125rem","lg":"0.25rem","xl":"0.5rem","full":"0.75rem"},spacing:{"space-lg":"1.25rem","space-md":"1rem","space-sm":"0.5rem","space-xl":"1.5rem","space-xs":"0.25rem","gutter":"1rem","margin":"1.5rem"},fontFamily:{"body-sm":["Inter"],"body-md":["Inter"],"headline-sm":["Inter"],"body-lg":["Inter"],"label-sm":["Inter"],"headline-lg-mobile":["Inter"],"headline-lg":["Inter"],"caption":["Inter"],"body-md-semibold":["Inter"],"headline-md":["Inter"],"body-sm-semibold":["Inter"],"label-md":["Inter"]},fontSize:{"body-sm":["13px",{lineHeight:"18px",fontWeight:"400"}],"body-md":["14px",{lineHeight:"20px",fontWeight:"400"}],"headline-sm":["16px",{lineHeight:"24px",letterSpacing:"-0.005em",fontWeight:"600"}],"body-lg":["15px",{lineHeight:"22px",fontWeight:"400"}],"label-sm":["12px",{lineHeight:"16px",letterSpacing:"0.01em",fontWeight:"600"}],"headline-lg-mobile":["22px",{lineHeight:"28px",letterSpacing:"-0.015em",fontWeight:"700"}],"headline-lg":["28px",{lineHeight:"36px",letterSpacing:"-0.02em",fontWeight:"700"}],"caption":["11px",{lineHeight:"14px",fontWeight:"500"}],"body-md-semibold":["14px",{lineHeight:"20px",fontWeight:"600"}],"headline-md":["20px",{lineHeight:"28px",letterSpacing:"-0.01em",fontWeight:"600"}],"body-sm-semibold":["13px",{lineHeight:"18px",fontWeight:"600"}],"label-md":["13px",{lineHeight:"16px",fontWeight:"500"}]}}}}</script><title>Shopify Admin Discounts Promotions | Shopify Prototype</title>
+</head><body class="bg-surface font-body-md text-body-md text-on-surface antialiased"><header class="fixed top-0 left-0 right-0 h-14 bg-surface-container-lowest border-b border-surface-container-high z-50 flex items-center justify-between px-space-md shadow-[0_1px_0_rgba(0,0,0,0.04)]"><div class="flex items-center gap-space-md"><a class="flex items-center gap-space-sm" data-path="home" href="#"><img alt="Brand logo. - Primary color: #008060
+- Font: inter
+- Mode: light
+- Roundness: rounded-sm
+" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1WPubMgscUINGuisBDvGZbhiRvwxKjFWpAHPA0GXYWeRFqxcZY4G-byYU4PUykJPYVnuurpj_2yFkafDFmBWhplcA2dlqdqMDkr5ufN1GCA1-9Cy6Y74Bk73_KmB_pOSwvk_HQjInJtWpmQfLSQUcNeG5m75CCs-SDUFif7I_eleu-OGwNMldz9nzh1957zHt7Hfbkc1ds6tpanpikt3_aR6SAXkw6znZBFRPYg-rTUbi8f0VwyeBPJuaQ"/><span class="font-headline-sm text-headline-sm text-on-surface hidden sm:inline-block tracking-tight">Shopify</span></a><button class="flex items-center gap-space-xs px-space-sm py-1 rounded bg-surface-container-low hover:bg-surface-container hover:text-on-surface border border-outline-variant/50 text-on-surface transition-colors" type="button"><span class="material-symbols-outlined text-[18px] text-primary">storefront</span><span class="font-label-md text-label-md truncate max-w-[140px]">Apex Apparel SoHo</span><span class="material-symbols-outlined text-[16px] text-tertiary">unfold_more</span></button></div><div class="flex-1 max-w-xl mx-space-md hidden md:block"><div class="relative flex items-center"><span class="material-symbols-outlined absolute left-2.5 text-[18px] text-tertiary pointer-events-none">search</span><input class="w-full h-8 pl-9 pr-12 rounded bg-surface-container-low border border-outline-variant/60 font-body-sm text-body-sm text-on-surface placeholder:text-tertiary focus:outline-none focus:border-secondary focus:ring-1 focus:ring-secondary/30 transition-all" placeholder="Search products, orders, customers..." type="text"/><kbd class="absolute right-2 px-1.5 py-0.5 rounded bg-surface-container-high border border-outline-variant font-caption text-caption text-on-surface-variant font-mono">⌘K</kbd></div></div><div class="flex items-center gap-space-sm"><button aria-label="Notifications" class="relative p-1.5 rounded hover:bg-surface-container hover:text-on-surface text-on-surface-variant transition-colors" type="button"><span class="material-symbols-outlined text-[20px]">notifications</span><span class="absolute top-1 right-1 w-2 h-2 rounded-full bg-primary-container ring-2 ring-surface-container-lowest"></span></button><button aria-label="Feedback" class="p-1.5 rounded hover:bg-surface-container hover:text-on-surface text-on-surface-variant transition-colors hidden sm:inline-flex" type="button"><span class="material-symbols-outlined text-[20px]">help_outline</span></button><div class="h-5 w-[1px] bg-surface-container-high mx-0.5"></div><button aria-label="Merchant Profile" class="flex items-center gap-space-xs p-0.5 rounded-full hover:ring-2 hover:ring-outline-variant transition-all" type="button"><img alt="Profile" class="w-8 h-8 rounded-full object-cover" src="https://lh3.googleusercontent.com/aida/AEtjO1XM8bAU6u1SGd73cRUZpDg7te6U8Hd9YuPkqi431L4IWNqZL9tf8Hx7usC0Pr2x5uZFks9b6ZVSsN6pF4qp7qBy14iGcMBDgJ1CkgkmUAjIfndkwn_z2y62oK4m5xXJUzEyvjga7vHBHY5I_yrgT2bDOvV6QCvONuw_NwyDFyHdKZJuuGyK5Pgek_6deKYxGCdGgDgn0o72iDzak64pRiWW1BSKisoh_F_jv3CeZdUD3Qs1uum2E_qsQHaI"/></button></div></header><aside class="fixed left-0 top-14 bottom-0 w-60 bg-surface-container-low border-r border-surface-container-high z-40 flex flex-col justify-between overflow-y-auto"><div class="py-space-sm px-space-xs"><nav class="flex flex-col gap-0.5" data-active-classes="bg-surface-container-lowest text-on-surface shadow-[0_1px_2px_rgba(0,0,0,0.06)] font-body-sm-semibold"><a class="flex items-center justify-between px-space-sm py-1.5 rounded text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors font-body-sm text-body-sm" data-path="home" href="#"><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-[18px]">home</span><span>Home</span></div></a><a class="flex items-center justify-between px-space-sm py-1.5 rounded text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors font-body-sm text-body-sm" data-path="orders" href="#"><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-[18px]">inbox</span><span>Orders</span></div><span class="px-1.5 py-0.2 rounded-full font-label-sm text-label-sm bg-surface-container-high text-on-surface-variant font-medium">14</span></a><a class="flex items-center justify-between px-space-sm py-1.5 rounded text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors font-body-sm text-body-sm" data-path="products" href="#"><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-[18px]">sell</span><span>Products</span></div></a><a class="flex items-center justify-between px-space-sm py-1.5 rounded text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors font-body-sm text-body-sm" data-path="customers" href="#"><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-[18px]">person</span><span>Customers</span></div></a><a class="flex items-center justify-between px-space-sm py-1.5 rounded text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors font-body-sm text-body-sm" data-path="content" href="#"><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-[18px]">article</span><span>Content</span></div></a><a class="flex items-center justify-between px-space-sm py-1.5 rounded text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors font-body-sm text-body-sm" data-path="analytics" href="#"><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-[18px]">bar_chart</span><span>Analytics</span></div></a><a class="flex items-center justify-between px-space-sm py-1.5 rounded text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors font-body-sm text-body-sm" data-path="marketing" href="#"><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-[18px]">campaign</span><span>Marketing</span></div></a><a aria-current="page" class="flex items-center justify-between px-space-sm py-1.5 rounded transition-colors bg-surface-container-lowest text-on-surface shadow-[0_1px_2px_rgba(0,0,0,0.06)] font-body-sm-semibold" data-path="discounts" href="#"><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-[18px]">local_offer</span><span>Discounts</span></div></a></nav><div class="my-space-sm mx-space-sm border-t border-surface-container-high"></div><div class="px-space-sm py-1 flex items-center justify-between"><span class="font-label-sm text-label-sm uppercase tracking-wider text-tertiary">Sales Channels</span><button class="p-0.5 rounded text-tertiary hover:bg-surface-container hover:text-on-surface transition-colors" type="button"><span class="material-symbols-outlined text-[14px]">add</span></button></div><nav class="flex flex-col gap-0.5" data-active-classes="bg-surface-container-lowest text-on-surface shadow-[0_1px_2px_rgba(0,0,0,0.06)] font-body-sm-semibold"><a class="flex items-center justify-between px-space-sm py-1.5 rounded text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors font-body-sm text-body-sm" data-path="online-store" href="#"><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-[18px]">language</span><span>Online Store</span></div><span class="material-symbols-outlined text-[16px] text-tertiary opacity-0 hover:opacity-100">visibility</span></a><a class="flex items-center justify-between px-space-sm py-1.5 rounded text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors font-body-sm text-body-sm" data-path="point-of-sale" href="#"><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-[18px]">point_of_sale</span><span>Point of Sale</span></div></a></nav></div><div class="p-space-xs border-t border-surface-container-high bg-surface-container-low"><nav class="flex flex-col" data-active-classes="bg-surface-container-lowest text-on-surface shadow-[0_1px_2px_rgba(0,0,0,0.06)] font-body-sm-semibold"><a class="flex items-center gap-space-sm px-space-sm py-2 rounded text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors font-body-sm text-body-sm" data-path="settings" href="#"><span class="material-symbols-outlined text-[18px]">settings</span><span>Settings</span></a></nav></div></aside><div class="pl-60"><main class="w-full min-h-[calc(100vh-3.5rem)] pt-14 px-space-xl pb-12 bg-surface"><div class="flex flex-col w-full">
+<div class="flex flex-col gap-space-lg w-full max-w-[1440px] mx-auto pb-16">
+<!-- Top Action Bar -->
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-space-md pt-2">
+<div class="flex items-center gap-space-sm">
+<h1 class="font-headline-lg text-headline-lg text-on-surface tracking-tight">Discounts</h1>
+<span class="inline-flex items-center justify-center px-2 py-0.5 rounded-full bg-surface-container-high font-label-sm text-label-sm text-on-surface-variant font-semibold">18 total</span>
+</div>
+<div class="flex items-center gap-space-sm self-start sm:self-auto">
+<button class="h-8 px-space-md inline-flex items-center gap-1.5 rounded-lg bg-surface-container-lowest text-on-surface font-body-sm-semibold text-body-sm-semibold shadow-sm hover:bg-surface-container transition-colors" type="button">
+<span class="material-symbols-outlined text-[18px] text-tertiary">ios_share</span>
+<span>Export</span>
+</button>
+<!-- Primary Dropdown Action -->
+<div class="relative inline-block text-left" id="create-discount-dropdown">
+<button class="h-8 px-space-md inline-flex items-center gap-1.5 rounded-lg bg-primary-container text-on-primary font-body-sm-semibold text-body-sm-semibold shadow-sm hover:opacity-95 transition-all" onclick="document.getElementById('discount-menu').classList.toggle('hidden')" type="button">
+<span class="material-symbols-outlined text-[18px]">add</span>
+<span>Create discount</span>
+<span class="material-symbols-outlined text-[16px] -mr-1">keyboard_arrow_down</span>
+</button>
+<!-- Dropdown Menu -->
+<div class="hidden absolute right-0 mt-1 w-64 rounded-xl bg-surface-container-lowest shadow-xl z-50 p-1.5 flex flex-col gap-0.5" id="discount-menu">
+<a class="flex items-center gap-space-sm px-space-sm py-2 rounded-lg hover:bg-surface-container transition-colors group" href="#">
+<span class="material-symbols-outlined text-[20px] text-primary">percent</span>
+<div class="flex flex-col">
+<span class="font-body-sm-semibold text-body-sm-semibold text-on-surface">Amount off products</span>
+<span class="font-caption text-caption text-tertiary">Discount specific items or collections</span>
+</div>
+</a>
+<a class="flex items-center gap-space-sm px-space-sm py-2 rounded-lg hover:bg-surface-container transition-colors group" href="#">
+<span class="material-symbols-outlined text-[20px] text-primary">shopping_bag</span>
+<div class="flex flex-col">
+<span class="font-body-sm-semibold text-body-sm-semibold text-on-surface">Amount off order</span>
+<span class="font-caption text-caption text-tertiary">Deduct fixed value or % from cart</span>
+</div>
+</a>
+<a class="flex items-center gap-space-sm px-space-sm py-2 rounded-lg hover:bg-surface-container transition-colors group" href="#">
+<span class="material-symbols-outlined text-[20px] text-primary">redeem</span>
+<div class="flex flex-col">
+<span class="font-body-sm-semibold text-body-sm-semibold text-on-surface">Buy X get Y</span>
+<span class="font-caption text-caption text-tertiary">Discount product based on cart quantity</span>
+</div>
+</a>
+<a class="flex items-center gap-space-sm px-space-sm py-2 rounded-lg hover:bg-surface-container transition-colors group" href="#">
+<span class="material-symbols-outlined text-[20px] text-primary">local_shipping</span>
+<div class="flex flex-col">
+<span class="font-body-sm-semibold text-body-sm-semibold text-on-surface">Free shipping</span>
+<span class="font-caption text-caption text-tertiary">Zero-cost shipping rate trigger</span>
+</div>
+</a>
+</div>
+</div>
+</div>
+</div>
+<!-- Metric Pulse Strip -->
+<div class="grid grid-cols-1 md:grid-cols-3 gap-space-md">
+<!-- Metric 1: Revenue -->
+<div class="p-space-md rounded-xl bg-surface-container-lowest shadow-sm flex flex-col justify-between relative overflow-hidden group">
+<div class="flex items-center justify-between mb-2">
+<span class="font-label-sm text-label-sm text-tertiary uppercase tracking-wider">Promotion Revenue</span>
+<span class="inline-flex items-center gap-0.5 text-primary font-caption text-caption bg-on-primary-container/40 px-1.5 py-0.5 rounded-full font-semibold">
+<span class="material-symbols-outlined text-[14px]">trending_up</span>+18.4%
+          </span>
+</div>
+<div class="flex items-baseline gap-space-sm">
+<span class="font-headline-lg text-headline-lg text-on-surface tracking-tight">$66,900</span>
+<span class="font-caption text-caption text-tertiary">assisted sales</span>
+</div>
+<!-- Inline Sparkline SVG -->
+<div class="mt-3 w-full h-8 flex items-end">
+<svg class="w-full h-8 overflow-visible" preserveaspectratio="none" viewbox="0 0 100 24">
+<path class="text-primary-container" d="M0,20 Q12,18 25,12 T50,14 T75,4 T100,2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-width="2"></path>
+<path class="text-primary-container/10" d="M0,20 Q12,18 25,12 T50,14 T75,4 T100,2 L100,24 L0,24 Z" fill="currentColor"></path>
+</svg>
+</div>
+</div>
+<!-- Metric 2: Average Depth -->
+<div class="p-space-md rounded-xl bg-surface-container-lowest shadow-sm flex flex-col justify-between relative overflow-hidden">
+<div class="flex items-center justify-between mb-2">
+<span class="font-label-sm text-label-sm text-tertiary uppercase tracking-wider">Avg Discount Depth</span>
+<span class="inline-flex items-center gap-0.5 text-tertiary font-caption text-caption bg-surface-container px-1.5 py-0.5 rounded-full">
+            Optimal margin target
+          </span>
+</div>
+<div class="flex items-baseline gap-space-sm">
+<span class="font-headline-lg text-headline-lg text-on-surface tracking-tight">16.4%</span>
+<span class="font-caption text-caption text-tertiary">order level</span>
+</div>
+<div class="mt-3 w-full">
+<div class="w-full h-2 rounded-full bg-surface-container-high overflow-hidden flex">
+<div class="h-full bg-primary-container rounded-full" style="width: 64%"></div>
+</div>
+<div class="flex justify-between items-center mt-1.5">
+<span class="font-caption text-caption text-tertiary">Safe boundary ≤ 20%</span>
+<span class="font-caption text-caption text-primary font-semibold">Healthy</span>
+</div>
+</div>
+</div>
+<!-- Metric 3: Gift Cards in Circulation -->
+<div class="p-space-md rounded-xl bg-surface-container-lowest shadow-sm flex flex-col justify-between">
+<div class="flex items-center justify-between mb-2">
+<span class="font-label-sm text-label-sm text-tertiary uppercase tracking-wider">Gift Card Liability</span>
+<a class="font-label-sm text-label-sm text-secondary hover:underline inline-flex items-center gap-0.5" href="#">
+            Issue card <span class="material-symbols-outlined text-[14px]">arrow_forward</span>
+</a>
+</div>
+<div class="flex items-baseline gap-space-sm">
+<span class="font-headline-lg text-headline-lg text-on-surface tracking-tight">$8,420</span>
+<span class="font-caption text-caption text-tertiary">across 142 cards</span>
+</div>
+<div class="mt-3 flex items-center justify-between pt-2">
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-primary text-[18px]">card_membership</span>
+<span class="font-caption text-caption text-on-surface-variant">96 Digital / 46 Physical</span>
+</div>
+<span class="px-2 py-0.5 rounded bg-surface-container-high text-on-surface-variant font-caption text-caption font-mono">Apex POS Sync</span>
+</div>
+</div>
+</div>
+<!-- Main Content Panel: Filters + IndexTable -->
+<div class="rounded-xl bg-surface-container-lowest shadow-sm overflow-hidden flex flex-col">
+<!-- Segment Tabs Navigation -->
+<div class="flex items-center justify-between px-space-md pt-2 bg-surface-container-lowest overflow-x-auto">
+<div class="flex items-center gap-space-md min-w-max" id="segment-tabs">
+<button class="pb-2.5 px-1 font-body-sm-semibold text-body-sm-semibold text-on-surface relative text-primary-container" onclick="setActiveTab(this)" type="button">
+            All
+            <span class="ml-1 px-1.5 py-0.2 rounded-full font-label-sm text-label-sm bg-surface-container-high text-on-surface font-semibold">18</span>
+<span class="absolute bottom-0 left-0 right-0 h-0.5 bg-primary-container rounded-full"></span>
+</button>
+<button class="pb-2.5 px-1 font-body-sm text-body-sm text-tertiary hover:text-on-surface relative transition-colors" onclick="setActiveTab(this)" type="button">
+            Active
+            <span class="ml-1 px-1.5 py-0.2 rounded-full font-label-sm text-label-sm bg-surface-container-high text-tertiary font-semibold">6</span>
+</button>
+<button class="pb-2.5 px-1 font-body-sm text-body-sm text-tertiary hover:text-on-surface relative transition-colors" onclick="setActiveTab(this)" type="button">
+            Scheduled
+            <span class="ml-1 px-1.5 py-0.2 rounded-full font-label-sm text-label-sm bg-surface-container-high text-tertiary font-semibold">2</span>
+</button>
+<button class="pb-2.5 px-1 font-body-sm text-body-sm text-tertiary hover:text-on-surface relative transition-colors" onclick="setActiveTab(this)" type="button">
+            Expired
+            <span class="ml-1 px-1.5 py-0.2 rounded-full font-label-sm text-label-sm bg-surface-container-high text-tertiary font-semibold">10</span>
+</button>
+</div>
+<button class="text-tertiary hover:text-on-surface p-1 rounded-md hover:bg-surface-container transition-colors mb-2" title="Create view" type="button">
+<span class="material-symbols-outlined text-[18px]">add</span>
+</button>
+</div>
+<!-- Controls & Filter Toolbar -->
+<div class="p-space-md bg-surface-container-low/50 flex flex-wrap items-center justify-between gap-space-sm">
+<div class="flex-1 min-w-[260px] max-w-lg relative flex items-center">
+<span class="material-symbols-outlined absolute left-2.5 text-[18px] text-tertiary pointer-events-none">search</span>
+<input class="w-full h-8 pl-9 pr-4 rounded-lg bg-surface-container-lowest font-body-sm text-body-sm text-on-surface placeholder:text-tertiary focus:outline-none focus:bg-surface-container-lowest shadow-sm" id="discount-search" onkeyup="filterRows()" placeholder="Filter discounts by name or code..." type="text"/>
+</div>
+<div class="flex items-center gap-space-xs flex-wrap">
+<!-- Type Filter -->
+<div class="relative">
+<select class="h-8 pl-2.5 pr-8 rounded-lg bg-surface-container-lowest font-body-sm text-body-sm text-on-surface shadow-sm focus:outline-none cursor-pointer appearance-none" id="type-filter" onchange="filterRows()">
+<option value="all">All Methods</option>
+<option value="Code">Code</option>
+<option value="Automatic">Automatic</option>
+</select>
+<span class="material-symbols-outlined absolute right-2 top-2 text-[16px] text-tertiary pointer-events-none">expand_more</span>
+</div>
+<!-- Channel Filter -->
+<div class="relative">
+<select class="h-8 pl-2.5 pr-8 rounded-lg bg-surface-container-lowest font-body-sm text-body-sm text-on-surface shadow-sm focus:outline-none cursor-pointer appearance-none" id="channel-filter" onchange="filterRows()">
+<option value="all">All Channels</option>
+<option value="POS">Point of Sale (POS)</option>
+<option value="Online">Online Store</option>
+</select>
+<span class="material-symbols-outlined absolute right-2 top-2 text-[16px] text-tertiary pointer-events-none">expand_more</span>
+</div>
+<button class="h-8 px-2.5 rounded-lg bg-surface-container-lowest text-tertiary hover:text-on-surface shadow-sm flex items-center gap-1 font-body-sm text-body-sm transition-colors" title="Saved Views" type="button">
+<span class="material-symbols-outlined text-[16px]">bookmark_border</span>
+<span>Saved</span>
+</button>
+<button class="h-8 px-2.5 rounded-lg bg-surface-container-lowest text-tertiary hover:text-on-surface shadow-sm flex items-center gap-1 font-body-sm text-body-sm transition-colors" title="Sort Table" type="button">
+<span class="material-symbols-outlined text-[16px]">swap_vert</span>
+<span>Sort</span>
+</button>
+</div>
+</div>
+<!-- Bulk Action Bar (Hidden by default, triggered on checkbox) -->
+<div class="hidden px-space-md py-2 bg-on-background text-surface flex items-center justify-between transition-all" id="bulk-action-bar">
+<div class="flex items-center gap-space-md">
+<span class="font-body-sm-semibold text-body-sm-semibold" id="selected-count">0 selected</span>
+<button class="font-body-sm text-body-sm px-2 py-1 rounded bg-surface-container-highest/20 hover:bg-surface-container-highest/40 transition-colors" type="button">Deactivate</button>
+<button class="font-body-sm text-body-sm px-2 py-1 rounded bg-surface-container-highest/20 hover:bg-surface-container-highest/40 transition-colors" type="button">Archive</button>
+<button class="font-body-sm text-body-sm px-2 py-1 rounded bg-surface-container-highest/20 hover:bg-surface-container-highest/40 transition-colors text-error-container" type="button">Delete</button>
+</div>
+<button class="text-tertiary-fixed font-caption text-caption hover:underline" onclick="clearSelection()" type="button">Deselect all</button>
+</div>
+<!-- IndexTable Component -->
+<div class="overflow-x-auto w-full">
+<table class="w-full text-left font-body-sm text-body-sm border-collapse">
+<thead>
+<tr class="bg-surface-container-low text-tertiary uppercase font-label-sm text-label-sm tracking-wider h-9">
+<th class="w-10 px-space-md py-2">
+<input class="rounded text-primary-container focus:ring-0 cursor-pointer w-4 h-4 accent-primary-container" id="select-all-box" onchange="toggleSelectAll(this)" type="checkbox"/>
+</th>
+<th class="px-space-md py-2 font-semibold">Title / Code</th>
+<th class="px-space-md py-2 font-semibold">Status</th>
+<th class="px-space-md py-2 font-semibold">Type</th>
+<th class="px-space-md py-2 font-semibold">Method</th>
+<th class="px-space-md py-2 font-semibold">Channels</th>
+<th class="px-space-md py-2 font-semibold">Usage</th>
+<th class="px-space-md py-2 font-semibold text-right">Sales Generated</th>
+<th class="w-10 px-space-sm py-2"></th>
+</tr>
+</thead>
+<tbody class="divide-y-0" id="discounts-table-body">
+<!-- Row 1 -->
+<tr class="group hover:bg-surface-container-low/70 transition-colors cursor-pointer row-item" data-channels="POS Online" data-method="Code" data-status="Active">
+<td class="px-space-md py-3.5" onclick="event.stopPropagation()">
+<input class="row-checkbox rounded text-primary-container focus:ring-0 cursor-pointer w-4 h-4 accent-primary-container" onchange="updateBulkBar()" type="checkbox"/>
+</td>
+<td class="px-space-md py-3.5">
+<div class="flex items-center gap-space-sm">
+<div class="w-7 h-7 rounded bg-surface-container-high flex items-center justify-center text-primary flex-shrink-0">
+<span class="material-symbols-outlined text-[16px]">confirmation_number</span>
+</div>
+<div class="flex flex-col">
+<span class="font-body-md-semibold text-body-md-semibold text-on-surface group-hover:text-secondary transition-colors font-mono">BLACKFRIDAY24</span>
+<span class="font-caption text-caption text-tertiary">20% off all apparel</span>
+</div>
+</div>
+</td>
+<td class="px-space-md py-3.5">
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full font-label-sm text-label-sm bg-on-primary-container text-primary font-semibold">
+<span class="w-1.5 h-1.5 rounded-full bg-primary"></span>
+                  Active
+                </span>
+</td>
+<td class="px-space-md py-3.5 text-on-surface-variant font-medium">Percentage</td>
+<td class="px-space-md py-3.5">
+<span class="px-1.5 py-0.5 rounded bg-surface-container font-caption text-caption text-on-surface-variant font-mono">Code</span>
+</td>
+<td class="px-space-md py-3.5">
+<div class="flex items-center gap-1 text-on-surface-variant">
+<span class="material-symbols-outlined text-[16px] text-tertiary" title="Online Store">language</span>
+<span class="material-symbols-outlined text-[16px] text-tertiary" title="Point of Sale">point_of_sale</span>
+<span class="font-caption text-caption ml-0.5">All channels</span>
+</div>
+</td>
+<td class="px-space-md py-3.5 font-medium text-on-surface">342 used</td>
+<td class="px-space-md py-3.5 text-right font-body-md-semibold text-body-md-semibold text-on-surface">$24,180</td>
+<td class="px-space-sm py-3.5 text-right" onclick="event.stopPropagation()">
+<button class="p-1 text-tertiary hover:text-on-surface rounded hover:bg-surface-container opacity-0 group-hover:opacity-100 transition-opacity" type="button">
+<span class="material-symbols-outlined text-[18px]">more_horiz</span>
+</button>
+</td>
+</tr>
+<!-- Row 2 -->
+<tr class="group hover:bg-surface-container-low/70 transition-colors cursor-pointer row-item" data-channels="POS" data-method="Code" data-status="Active">
+<td class="px-space-md py-3.5" onclick="event.stopPropagation()">
+<input class="row-checkbox rounded text-primary-container focus:ring-0 cursor-pointer w-4 h-4 accent-primary-container" onchange="updateBulkBar()" type="checkbox"/>
+</td>
+<td class="px-space-md py-3.5">
+<div class="flex items-center gap-space-sm">
+<div class="w-7 h-7 rounded bg-surface-container-high flex items-center justify-center text-primary flex-shrink-0">
+<span class="material-symbols-outlined text-[16px]">storefront</span>
+</div>
+<div class="flex flex-col">
+<span class="font-body-md-semibold text-body-md-semibold text-on-surface group-hover:text-secondary transition-colors font-mono">IN-STORE-VIP</span>
+<span class="font-caption text-caption text-tertiary">$15 off orders over $100</span>
+</div>
+</div>
+</td>
+<td class="px-space-md py-3.5">
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full font-label-sm text-label-sm bg-on-primary-container text-primary font-semibold">
+<span class="w-1.5 h-1.5 rounded-full bg-primary"></span>
+                  Active
+                </span>
+</td>
+<td class="px-space-md py-3.5 text-on-surface-variant font-medium">Amount off order</td>
+<td class="px-space-md py-3.5">
+<span class="px-1.5 py-0.5 rounded bg-surface-container font-caption text-caption text-on-surface-variant font-mono">Code</span>
+</td>
+<td class="px-space-md py-3.5">
+<div class="flex items-center gap-1 text-on-surface-variant">
+<span class="material-symbols-outlined text-[16px] text-primary" title="Point of Sale">point_of_sale</span>
+<span class="font-caption text-caption ml-0.5">POS only</span>
+</div>
+</td>
+<td class="px-space-md py-3.5 font-medium text-on-surface">84 used</td>
+<td class="px-space-md py-3.5 text-right font-body-md-semibold text-body-md-semibold text-on-surface">$9,240</td>
+<td class="px-space-sm py-3.5 text-right" onclick="event.stopPropagation()">
+<button class="p-1 text-tertiary hover:text-on-surface rounded hover:bg-surface-container opacity-0 group-hover:opacity-100 transition-opacity" type="button">
+<span class="material-symbols-outlined text-[18px]">more_horiz</span>
+</button>
+</td>
+</tr>
+<!-- Row 3 -->
+<tr class="group hover:bg-surface-container-low/70 transition-colors cursor-pointer row-item" data-channels="POS Online" data-method="Automatic" data-status="Active">
+<td class="px-space-md py-3.5" onclick="event.stopPropagation()">
+<input class="row-checkbox rounded text-primary-container focus:ring-0 cursor-pointer w-4 h-4 accent-primary-container" onchange="updateBulkBar()" type="checkbox"/>
+</td>
+<td class="px-space-md py-3.5">
+<div class="flex items-center gap-space-sm">
+<div class="w-7 h-7 rounded bg-surface-container-high flex items-center justify-center text-primary flex-shrink-0">
+<span class="material-symbols-outlined text-[16px]">sync_alt</span>
+</div>
+<div class="flex flex-col">
+<span class="font-body-md-semibold text-body-md-semibold text-on-surface group-hover:text-secondary transition-colors font-mono">HOODIE-BOGO</span>
+<span class="font-caption text-caption text-tertiary">Buy 1 Hoodie get 1 Crewneck 50% off</span>
+</div>
+</div>
+</td>
+<td class="px-space-md py-3.5">
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full font-label-sm text-label-sm bg-on-primary-container text-primary font-semibold">
+<span class="w-1.5 h-1.5 rounded-full bg-primary"></span>
+                  Active
+                </span>
+</td>
+<td class="px-space-md py-3.5 text-on-surface-variant font-medium">Buy X get Y</td>
+<td class="px-space-md py-3.5">
+<span class="px-1.5 py-0.5 rounded bg-surface-container-high font-caption text-caption text-tertiary font-mono">Automatic</span>
+</td>
+<td class="px-space-md py-3.5">
+<div class="flex items-center gap-1 text-on-surface-variant">
+<span class="material-symbols-outlined text-[16px] text-tertiary" title="Online Store">language</span>
+<span class="material-symbols-outlined text-[16px] text-tertiary" title="Point of Sale">point_of_sale</span>
+<span class="font-caption text-caption ml-0.5">All channels</span>
+</div>
+</td>
+<td class="px-space-md py-3.5 font-medium text-on-surface">112 used</td>
+<td class="px-space-md py-3.5 text-right font-body-md-semibold text-body-md-semibold text-on-surface">$14,560</td>
+<td class="px-space-sm py-3.5 text-right" onclick="event.stopPropagation()">
+<button class="p-1 text-tertiary hover:text-on-surface rounded hover:bg-surface-container opacity-0 group-hover:opacity-100 transition-opacity" type="button">
+<span class="material-symbols-outlined text-[18px]">more_horiz</span>
+</button>
+</td>
+</tr>
+<!-- Row 4 -->
+<tr class="group hover:bg-surface-container-low/70 transition-colors cursor-pointer row-item" data-channels="Online" data-method="Automatic" data-status="Scheduled">
+<td class="px-space-md py-3.5" onclick="event.stopPropagation()">
+<input class="row-checkbox rounded text-primary-container focus:ring-0 cursor-pointer w-4 h-4 accent-primary-container" onchange="updateBulkBar()" type="checkbox"/>
+</td>
+<td class="px-space-md py-3.5">
+<div class="flex items-center gap-space-sm">
+<div class="w-7 h-7 rounded bg-secondary-fixed/40 flex items-center justify-center text-secondary flex-shrink-0">
+<span class="material-symbols-outlined text-[16px]">local_shipping</span>
+</div>
+<div class="flex flex-col">
+<span class="font-body-md-semibold text-body-md-semibold text-on-surface group-hover:text-secondary transition-colors font-mono">FREESHIP-HOLIDAY</span>
+<span class="font-caption text-caption text-tertiary">Free standard shipping on $75+</span>
+</div>
+</div>
+</td>
+<td class="px-space-md py-3.5">
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full font-label-sm text-label-sm bg-secondary-fixed text-on-secondary-fixed-variant font-semibold">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+                  Starts Dec 01
+                </span>
+</td>
+<td class="px-space-md py-3.5 text-on-surface-variant font-medium">Free shipping</td>
+<td class="px-space-md py-3.5">
+<span class="px-1.5 py-0.5 rounded bg-surface-container-high font-caption text-caption text-tertiary font-mono">Automatic</span>
+</td>
+<td class="px-space-md py-3.5">
+<div class="flex items-center gap-1 text-on-surface-variant">
+<span class="material-symbols-outlined text-[16px] text-tertiary" title="Online Store">language</span>
+<span class="font-caption text-caption ml-0.5">Online only</span>
+</div>
+</td>
+<td class="px-space-md py-3.5 font-medium text-tertiary">0 used</td>
+<td class="px-space-md py-3.5 text-right font-body-md-semibold text-body-md-semibold text-tertiary">$0</td>
+<td class="px-space-sm py-3.5 text-right" onclick="event.stopPropagation()">
+<button class="p-1 text-tertiary hover:text-on-surface rounded hover:bg-surface-container opacity-0 group-hover:opacity-100 transition-opacity" type="button">
+<span class="material-symbols-outlined text-[18px]">more_horiz</span>
+</button>
+</td>
+</tr>
+<!-- Row 5 -->
+<tr class="group hover:bg-surface-container-low/70 transition-colors cursor-pointer row-item" data-channels="Online" data-method="Code" data-status="Active">
+<td class="px-space-md py-3.5" onclick="event.stopPropagation()">
+<input class="row-checkbox rounded text-primary-container focus:ring-0 cursor-pointer w-4 h-4 accent-primary-container" onchange="updateBulkBar()" type="checkbox"/>
+</td>
+<td class="px-space-md py-3.5">
+<div class="flex items-center gap-space-sm">
+<div class="w-7 h-7 rounded bg-surface-container-high flex items-center justify-center text-primary flex-shrink-0">
+<span class="material-symbols-outlined text-[16px]">mail</span>
+</div>
+<div class="flex flex-col">
+<span class="font-body-md-semibold text-body-md-semibold text-on-surface group-hover:text-secondary transition-colors font-mono">WELCOME10</span>
+<span class="font-caption text-caption text-tertiary">10% off first order for subscribers</span>
+</div>
+</div>
+</td>
+<td class="px-space-md py-3.5">
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full font-label-sm text-label-sm bg-on-primary-container text-primary font-semibold">
+<span class="w-1.5 h-1.5 rounded-full bg-primary"></span>
+                  Active
+                </span>
+</td>
+<td class="px-space-md py-3.5 text-on-surface-variant font-medium">Percentage</td>
+<td class="px-space-md py-3.5">
+<span class="px-1.5 py-0.5 rounded bg-surface-container font-caption text-caption text-on-surface-variant font-mono">Code</span>
+</td>
+<td class="px-space-md py-3.5">
+<div class="flex items-center gap-1 text-on-surface-variant">
+<span class="material-symbols-outlined text-[16px] text-tertiary" title="Online Store">language</span>
+<span class="font-caption text-caption ml-0.5">Online only</span>
+</div>
+</td>
+<td class="px-space-md py-3.5 font-medium text-on-surface">428 used</td>
+<td class="px-space-md py-3.5 text-right font-body-md-semibold text-body-md-semibold text-on-surface">$18,920</td>
+<td class="px-space-sm py-3.5 text-right" onclick="event.stopPropagation()">
+<button class="p-1 text-tertiary hover:text-on-surface rounded hover:bg-surface-container opacity-0 group-hover:opacity-100 transition-opacity" type="button">
+<span class="material-symbols-outlined text-[18px]">more_horiz</span>
+</button>
+</td>
+</tr>
+<!-- Row 6 -->
+<tr class="group hover:bg-surface-container-low/70 transition-colors cursor-pointer row-item" data-channels="POS Online" data-method="Code" data-status="Expired">
+<td class="px-space-md py-3.5" onclick="event.stopPropagation()">
+<input class="row-checkbox rounded text-primary-container focus:ring-0 cursor-pointer w-4 h-4 accent-primary-container" onchange="updateBulkBar()" type="checkbox"/>
+</td>
+<td class="px-space-md py-3.5">
+<div class="flex items-center gap-space-sm opacity-75">
+<div class="w-7 h-7 rounded bg-surface-container-high flex items-center justify-center text-tertiary flex-shrink-0">
+<span class="material-symbols-outlined text-[16px]">history</span>
+</div>
+<div class="flex flex-col">
+<span class="font-body-md-semibold text-body-md-semibold text-on-surface group-hover:text-secondary transition-colors font-mono">SUMMEREND2024</span>
+<span class="font-caption text-caption text-tertiary">30% off summer collection</span>
+</div>
+</div>
+</td>
+<td class="px-space-md py-3.5">
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full font-label-sm text-label-sm bg-surface-container-high text-tertiary font-semibold">
+                  Expired
+                </span>
+</td>
+<td class="px-space-md py-3.5 text-tertiary font-medium">Percentage</td>
+<td class="px-space-md py-3.5">
+<span class="px-1.5 py-0.5 rounded bg-surface-container font-caption text-caption text-tertiary font-mono">Code</span>
+</td>
+<td class="px-space-md py-3.5">
+<div class="flex items-center gap-1 text-tertiary">
+<span class="material-symbols-outlined text-[16px]" title="Online Store">language</span>
+<span class="material-symbols-outlined text-[16px]" title="Point of Sale">point_of_sale</span>
+<span class="font-caption text-caption ml-0.5">All channels</span>
+</div>
+</td>
+<td class="px-space-md py-3.5 font-medium text-tertiary">512 used</td>
+<td class="px-space-md py-3.5 text-right font-body-md-semibold text-body-md-semibold text-tertiary">$31,200</td>
+<td class="px-space-sm py-3.5 text-right" onclick="event.stopPropagation()">
+<button class="p-1 text-tertiary hover:text-on-surface rounded hover:bg-surface-container opacity-0 group-hover:opacity-100 transition-opacity" type="button">
+<span class="material-symbols-outlined text-[18px]">more_horiz</span>
+</button>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<!-- Pagination / Footer Bar -->
+<div class="px-space-md py-3 bg-surface-container-lowest flex items-center justify-between">
+<span class="font-caption text-caption text-tertiary">Showing 1-6 of 18 discounts</span>
+<div class="flex items-center gap-space-xs">
+<button class="p-1 rounded bg-surface-container-high text-tertiary opacity-50 cursor-not-allowed" disabled="" type="button">
+<span class="material-symbols-outlined text-[18px]">chevron_left</span>
+</button>
+<span class="font-caption text-caption text-on-surface px-2">1 of 3</span>
+<button class="p-1 rounded bg-surface-container hover:bg-surface-container-high text-on-surface transition-colors" type="button">
+<span class="material-symbols-outlined text-[18px]">chevron_right</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Merchant Guidance & Marketing Callout Bento -->
+<div class="grid grid-cols-1 lg:grid-cols-3 gap-space-md">
+<!-- Callout: Automatic Discounts Best Practice -->
+<div class="lg:col-span-2 p-space-md rounded-xl bg-surface-container-lowest shadow-sm flex flex-col sm:flex-row items-start sm:items-center justify-between gap-space-md">
+<div class="flex items-start gap-space-md">
+<div class="w-10 h-10 rounded-xl bg-primary/10 text-primary flex items-center justify-center flex-shrink-0">
+<span class="material-symbols-outlined text-[24px]">insights</span>
+</div>
+<div class="flex flex-col">
+<span class="font-body-md-semibold text-body-md-semibold text-on-surface">Automatic discounts drive 23% higher checkout completion</span>
+<p class="font-body-sm text-body-sm text-tertiary mt-0.5">Customers in Apex Apparel SoHo abandon 14% less often when promotional codes are pre-applied to the bag at POS checkout.</p>
+</div>
+</div>
+<button class="h-8 px-space-md rounded-lg bg-surface-container-high hover:bg-surface-container text-on-surface font-body-sm-semibold text-body-sm-semibold transition-colors flex-shrink-0" type="button">
+          Learn more
+        </button>
+</div>
+<!-- Callout: Sync Status Card -->
+<div class="p-space-md rounded-xl bg-surface-container-lowest shadow-sm flex items-center justify-between">
+<div class="flex items-center gap-space-sm">
+<div class="w-2.5 h-2.5 rounded-full bg-primary animate-pulse"></div>
+<div class="flex flex-col">
+<span class="font-body-sm-semibold text-body-sm-semibold text-on-surface">Omnichannel Sync Live</span>
+<span class="font-caption text-caption text-tertiary">Apex POS Terminal • SoHo NY</span>
+</div>
+</div>
+<span class="material-symbols-outlined text-tertiary text-[20px]">check_circle</span>
+</div>
+</div>
+</div>
+<script>
+    let activeFilterStatus = 'All';
+
+    function setActiveTab(el) {
+      const container = document.getElementById('segment-tabs');
+      const buttons = container.querySelectorAll('button');
+      buttons.forEach(b => {
+        b.className = 'pb-2.5 px-1 font-body-sm text-body-sm text-tertiary hover:text-on-surface relative transition-colors';
+        const indicator = b.querySelector('.absolute');
+        if (indicator) indicator.remove();
+        const badge = b.querySelector('span');
+        if (badge) {
+          badge.className = 'ml-1 px-1.5 py-0.2 rounded-full font-label-sm text-label-sm bg-surface-container-high text-tertiary font-semibold';
+        }
+      });
+
+      el.className = 'pb-2.5 px-1 font-body-sm-semibold text-body-sm-semibold text-on-surface relative text-primary-container';
+      const badge = el.querySelector('span');
+      if (badge) {
+        badge.className = 'ml-1 px-1.5 py-0.2 rounded-full font-label-sm text-label-sm bg-surface-container-high text-on-surface font-semibold';
+      }
+      
+      const line = document.createElement('span');
+      line.className = 'absolute bottom-0 left-0 right-0 h-0.5 bg-primary-container rounded-full';
+      el.appendChild(line);
+
+      activeFilterStatus = el.innerText.trim().split('\n')[0].split(' ')[0];
+      filterRows();
+    }
+
+    function filterRows() {
+      const searchVal = document.getElementById('discount-search').value.toLowerCase();
+      const methodVal = document.getElementById('type-filter').value;
+      const channelVal = document.getElementById('channel-filter').value;
+      const rows = document.querySelectorAll('.row-item');
+
+      rows.forEach(row => {
+        const text = row.innerText.toLowerCase();
+        const rowStatus = row.getAttribute('data-status');
+        const rowMethod = row.getAttribute('data-method');
+        const rowChannels = row.getAttribute('data-channels');
+
+        const matchesSearch = text.includes(searchVal);
+        const matchesStatus = (activeFilterStatus === 'All') || (rowStatus === activeFilterStatus);
+        const matchesMethod = (methodVal === 'all') || (rowMethod === methodVal);
+        const matchesChannel = (channelVal === 'all') || (rowChannels.includes(channelVal));
+
+        if (matchesSearch && matchesStatus && matchesMethod && matchesChannel) {
+          row.style.display = '';
+        } else {
+          row.style.display = 'none';
+        }
+      });
+    }
+
+    function toggleSelectAll(master) {
+      const checkboxes = document.querySelectorAll('.row-checkbox');
+      checkboxes.forEach(cb => {
+        if (cb.closest('tr').style.display !== 'none') {
+          cb.checked = master.checked;
+        }
+      });
+      updateBulkBar();
+    }
+
+    function updateBulkBar() {
+      const checked = document.querySelectorAll('.row-checkbox:checked');
+      const bar = document.getElementById('bulk-action-bar');
+      const countLabel = document.getElementById('selected-count');
+      const master = document.getElementById('select-all-box');
+
+      if (checked.length > 0) {
+        bar.classList.remove('hidden');
+        countLabel.textContent = `${checked.length} selected`;
+      } else {
+        bar.classList.add('hidden');
+        master.checked = false;
+      }
+    }
+
+    function clearSelection() {
+      const checkboxes = document.querySelectorAll('.row-checkbox');
+      checkboxes.forEach(cb => cb.checked = false);
+      document.getElementById('select-all-box').checked = false;
+      updateBulkBar();
+    }
+
+    // Dismiss dropdown when clicking outside
+    document.addEventListener('click', function(e) {
+      const dropdown = document.getElementById('create-discount-dropdown');
+      const menu = document.getElementById('discount-menu');
+      if (dropdown && !dropdown.contains(e.target)) {
+        menu.classList.add('hidden');
+      }
+    });
+  </script>
+</div></main></div></body></html>

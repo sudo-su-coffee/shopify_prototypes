@@ -1,0 +1,884 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = {
+    darkMode: "class",
+    theme: {
+      extend: {
+        "colors": {
+          "on-tertiary": "#ffffff",
+          "primary-fixed": "#92f6cf",
+          "tertiary-container": "#717070",
+          "surface": "#fbf9f8",
+          "secondary": "#0055c7",
+          "surface-bright": "#fbf9f8",
+          "on-surface": "#1b1c1c",
+          "surface-container-low": "#f5f3f3",
+          "background": "#fbf9f8",
+          "on-tertiary-container": "#f8f5f4",
+          "surface-container-highest": "#e4e2e2",
+          "error": "#ba1a1a",
+          "on-primary-container": "#d6ffeb",
+          "on-secondary-container": "#fefcff",
+          "on-primary-fixed-variant": "#00513c",
+          "tertiary-fixed-dim": "#c8c6c5",
+          "tertiary": "#585857",
+          "surface-tint": "#006c50",
+          "surface-dim": "#dbdad9",
+          "secondary-fixed-dim": "#b0c6ff",
+          "secondary-container": "#2c6fe7",
+          "surface-container-lowest": "#ffffff",
+          "on-secondary-fixed": "#001945",
+          "on-secondary-fixed-variant": "#00419c",
+          "primary": "#00654b",
+          "on-background": "#1b1c1c",
+          "on-tertiary-fixed-variant": "#474746",
+          "secondary-fixed": "#d9e2ff",
+          "on-surface-variant": "#3e4944",
+          "surface-container-high": "#e9e8e7",
+          "inverse-primary": "#75d9b3",
+          "outline": "#6e7a73",
+          "inverse-surface": "#303031",
+          "on-primary-fixed": "#002116",
+          "on-primary": "#ffffff",
+          "outline-variant": "#bdc9c2",
+          "primary-fixed-dim": "#75d9b3",
+          "on-secondary": "#ffffff",
+          "on-error-container": "#93000a",
+          "inverse-on-surface": "#f2f0f0",
+          "on-error": "#ffffff",
+          "tertiary-fixed": "#e5e2e1",
+          "error-container": "#ffdad6",
+          "surface-container": "#efeded",
+          "surface-variant": "#e4e2e2",
+          "primary-container": "#008060",
+          "on-tertiary-fixed": "#1c1b1b"
+        },
+        "borderRadius": {
+          "DEFAULT": "0.125rem",
+          "lg": "0.25rem",
+          "xl": "0.5rem",
+          "full": "0.75rem"
+        },
+        "spacing": {
+          "space-md": "1rem",
+          "space-sm": "0.5rem",
+          "margin": "1.5rem",
+          "space-xs": "0.25rem",
+          "space-lg": "1.25rem",
+          "space-xl": "1.5rem",
+          "gutter": "1rem"
+        },
+        "fontFamily": {
+          "body-md": [
+            "Inter"
+          ],
+          "headline-lg": [
+            "Inter"
+          ],
+          "headline-sm": [
+            "Inter"
+          ],
+          "body-sm": [
+            "Inter"
+          ],
+          "body-md-semibold": [
+            "Inter"
+          ],
+          "headline-lg-mobile": [
+            "Inter"
+          ],
+          "label-sm": [
+            "Inter"
+          ],
+          "body-sm-semibold": [
+            "Inter"
+          ],
+          "label-md": [
+            "Inter"
+          ],
+          "headline-md": [
+            "Inter"
+          ],
+          "caption": [
+            "Inter"
+          ],
+          "body-lg": [
+            "Inter"
+          ]
+        },
+        "fontSize": {
+          "body-md": [
+            "14px",
+            {
+              "lineHeight": "20px",
+              "fontWeight": "400"
+            }
+          ],
+          "headline-lg": [
+            "28px",
+            {
+              "lineHeight": "36px",
+              "letterSpacing": "-0.02em",
+              "fontWeight": "700"
+            }
+          ],
+          "headline-sm": [
+            "16px",
+            {
+              "lineHeight": "24px",
+              "letterSpacing": "-0.005em",
+              "fontWeight": "600"
+            }
+          ],
+          "body-sm": [
+            "13px",
+            {
+              "lineHeight": "18px",
+              "fontWeight": "400"
+            }
+          ],
+          "body-md-semibold": [
+            "14px",
+            {
+              "lineHeight": "20px",
+              "fontWeight": "600"
+            }
+          ],
+          "headline-lg-mobile": [
+            "22px",
+            {
+              "lineHeight": "28px",
+              "letterSpacing": "-0.015em",
+              "fontWeight": "700"
+            }
+          ],
+          "label-sm": [
+            "12px",
+            {
+              "lineHeight": "16px",
+              "letterSpacing": "0.01em",
+              "fontWeight": "600"
+            }
+          ],
+          "body-sm-semibold": [
+            "13px",
+            {
+              "lineHeight": "18px",
+              "fontWeight": "600"
+            }
+          ],
+          "label-md": [
+            "13px",
+            {
+              "lineHeight": "16px",
+              "fontWeight": "500"
+            }
+          ],
+          "headline-md": [
+            "20px",
+            {
+              "lineHeight": "28px",
+              "letterSpacing": "-0.01em",
+              "fontWeight": "600"
+            }
+          ],
+          "caption": [
+            "11px",
+            {
+              "lineHeight": "14px",
+              "fontWeight": "500"
+            }
+          ],
+          "body-lg": [
+            "15px",
+            {
+              "lineHeight": "22px",
+              "fontWeight": "400"
+            }
+          ]
+        }
+      },
+    },
+  }</script><title>Shopify Admin POS Daily Sales Tender Settlement Report | Shopify Prototype</title>
+</head><body class="bg-surface font-body-md text-body-md text-on-surface"><aside class="fixed left-0 top-0 h-full w-60 bg-surface-container-low z-40 flex flex-col justify-between shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="flex flex-col overflow-y-auto"><div class="h-14 flex items-center px-margin gap-space-sm bg-surface-container-lowest shrink-0"><img alt="Shopify logo" class="h-7 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1WPubMgscUINGuisBDvGZbhiRvwxKjFWpAHPA0GXYWeRFqxcZY4G-byYU4PUykJPYVnuurpj_2yFkafDFmBWhplcA2dlqdqMDkr5ufN1GCA1-9Cy6Y74Bk73_KmB_pOSwvk_HQjInJtWpmQfLSQUcNeG5m75CCs-SDUFif7I_eleu-OGwNMldz9nzh1957zHt7Hfbkc1ds6tpanpikt3_aR6SAXkw6znZBFRPYg-rTUbi8f0VwyeBPJuaQ"/><div class="flex flex-col"><span class="font-body-md-semibold text-body-md-semibold text-on-surface leading-tight">Shopify Admin</span><span class="font-caption text-caption text-on-surface-variant leading-tight">Operations &amp; Finance</span></div></div><div class="px-space-md pt-space-sm"><div class="px-space-sm py-space-xs font-caption text-caption uppercase text-on-surface-variant tracking-wider">Store Management</div></div><nav class="flex flex-col gap-space-xs px-space-md py-space-xs" data-active-classes="bg-primary-container text-on-primary font-body-sm-semibold text-body-sm-semibold rounded-xl"><a class="flex items-center px-space-md py-space-sm text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface rounded-xl transition-colors font-body-sm text-body-sm" data-path="shopify-admin-home" href="#">Home</a><a class="flex items-center px-space-md py-space-sm text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface rounded-xl transition-colors font-body-sm text-body-sm" data-path="shopify-admin-orders" href="#">Orders</a><a class="flex items-center px-space-md py-space-sm text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface rounded-xl transition-colors font-body-sm text-body-sm" data-path="shopify-admin-products" href="#">Products</a><a class="flex items-center px-space-md py-space-sm text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface rounded-xl transition-colors font-body-sm text-body-sm" data-path="shopify-admin-multi-location-inventory-stock-hub" href="#">Multi-Location Inventory</a><a class="flex items-center px-space-md py-space-sm text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface rounded-xl transition-colors font-body-sm text-body-sm" data-path="shopify-admin-customers" href="#">Customers</a></nav><div class="px-space-md pt-space-sm"><div class="px-space-sm py-space-xs font-caption text-caption uppercase text-on-surface-variant tracking-wider">Procurement &amp; Billing</div></div><nav class="flex flex-col gap-space-xs px-space-md py-space-xs" data-active-classes="bg-primary-container text-on-primary font-body-sm-semibold text-body-sm-semibold rounded-xl"><a class="flex items-center px-space-md py-space-sm text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface rounded-xl transition-colors font-body-sm text-body-sm" data-path="shopify-admin-purchase-orders-vendor-directory" href="#">Purchase Orders &amp; Vendors</a><a class="flex items-center px-space-md py-space-sm text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface rounded-xl transition-colors font-body-sm text-body-sm" data-path="shopify-admin-vendor-bills-accounts-payable" href="#">Vendor Bills &amp; AP</a><a class="flex items-center px-space-md py-space-sm text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface rounded-xl transition-colors font-body-sm text-body-sm" data-path="shopify-admin-customer-b2b-invoices-ar" href="#">Customer Invoices &amp; AR</a><a class="flex items-center px-space-md py-space-sm text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface rounded-xl transition-colors font-body-sm text-body-sm" data-path="shopify-admin-payments-cash-flow-register" href="#">Payments &amp; Cash Flow</a><a class="flex items-center px-space-md py-space-sm text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface rounded-xl transition-colors font-body-sm text-body-sm" data-path="shopify-admin-goods-receipt-landed-costs" href="#">Goods Receipt &amp; Landed Costs</a></nav><div class="px-space-md pt-space-sm"><div class="px-space-sm py-space-xs font-caption text-caption uppercase text-on-surface-variant tracking-wider">Accounting &amp; Finance</div></div><nav class="flex flex-col gap-space-xs px-space-md py-space-xs" data-active-classes="bg-primary-container text-on-primary font-body-sm-semibold text-body-sm-semibold rounded-xl"><a class="flex items-center px-space-md py-space-sm text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface rounded-xl transition-colors font-body-sm text-body-sm" data-path="shopify-admin-chart-of-accounts" href="#">Chart of Accounts</a><a class="flex items-center px-space-md py-space-sm text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface rounded-xl transition-colors font-body-sm text-body-sm" data-path="shopify-admin-journal-entries" href="#">Journal Entries</a><a class="flex items-center px-space-md py-space-sm text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface rounded-xl transition-colors font-body-sm text-body-sm" data-path="shopify-admin-bank-reconciliation" href="#">Bank Reconciliation</a><a class="flex items-center px-space-md py-space-sm text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface rounded-xl transition-colors font-body-sm text-body-sm" data-path="shopify-admin-tax-vat-gst" href="#">Tax / VAT &amp; GST</a><a class="flex items-center px-space-md py-space-sm text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface rounded-xl transition-colors font-body-sm text-body-sm" data-path="shopify-admin-financial-reports-trial-balance" href="#">Financial Reports &amp; Trial Balance</a></nav><div class="px-space-md pt-space-sm"><div class="px-space-sm py-space-xs font-caption text-caption uppercase text-on-surface-variant tracking-wider">Sales &amp; Marketing</div></div><nav class="flex flex-col gap-space-xs px-space-md py-space-xs" data-active-classes="bg-primary-container text-on-primary font-body-sm-semibold text-body-sm-semibold rounded-xl"><a class="flex items-center px-space-md py-space-sm text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface rounded-xl transition-colors font-body-sm text-body-sm" data-path="shopify-admin-analytics" href="#">Analytics</a><a class="flex items-center px-space-md py-space-sm text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface rounded-xl transition-colors font-body-sm text-body-sm" data-path="shopify-admin-marketing" href="#">Marketing</a><a class="flex items-center px-space-md py-space-sm text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface rounded-xl transition-colors font-body-sm text-body-sm" data-path="shopify-admin-discounts" href="#">Discounts</a><a class="flex items-center px-space-md py-space-sm text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface rounded-xl transition-colors font-body-sm text-body-sm" data-path="shopify-admin-point-of-sale" href="#">Point of Sale</a></nav></div><div class="p-space-md flex flex-col gap-space-xs bg-surface-container shrink-0"><nav class="flex flex-col gap-space-xs" data-active-classes="bg-primary-container text-on-primary font-body-sm-semibold text-body-sm-semibold rounded-xl"><a class="flex items-center px-space-md py-space-sm text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface rounded-xl transition-colors font-body-sm text-body-sm" data-path="shopify-admin-settings" href="#">Settings</a></nav><div class="flex items-center justify-between px-space-md py-space-sm bg-surface-container-lowest rounded-xl"><div class="flex items-center gap-space-sm"><span class="w-2 h-2 rounded-full bg-primary-container"></span><span class="font-caption text-caption text-on-surface-variant">Ledger Engine Synced</span></div><span class="material-symbols-outlined text-[16px] text-primary">sync</span></div></div></aside><div class="pl-60"><header class="fixed top-0 left-60 right-0 h-14 bg-surface-container-lowest shadow-[0_1px_8px_rgba(0,0,0,0.04)] z-30 flex items-center justify-between px-margin"><div class="flex items-center gap-space-md"><div class="flex items-center gap-space-sm px-space-md py-1 bg-surface-container rounded-full"><span class="material-symbols-outlined text-primary text-[18px]">store</span><span class="font-label-sm text-label-sm text-on-surface">Apex Apparel SoHo</span><span class="material-symbols-outlined text-on-surface-variant text-[16px]">expand_more</span></div><div class="hidden lg:flex items-center gap-space-xs text-on-surface-variant font-caption text-caption"><span class="hover:text-on-surface cursor-pointer">Admin</span><span>/</span><span class="text-on-surface font-label-sm text-label-sm">Finance &amp; Operations</span></div><div class="relative flex items-center w-64 md:w-80 ml-space-xs"><span class="material-symbols-outlined absolute left-space-sm text-on-surface-variant text-[18px]">search</span><input class="w-full h-8 pl-8 pr-space-md py-1 bg-surface-container-low text-on-surface placeholder:text-on-surface-variant rounded-lg font-body-sm text-body-sm border-none focus:outline-none focus:ring-1 focus:ring-primary" placeholder="Search orders, products, accounts (⌘K)" type="text"/></div></div><div class="flex items-center gap-space-md"><div class="flex items-center gap-space-sm px-space-md py-1 bg-surface-container-low rounded-xl"><span class="material-symbols-outlined text-on-surface-variant text-[18px]">badge</span><div class="flex flex-col text-left"><span class="font-caption text-caption text-on-surface-variant leading-none">Staff Operator</span><span class="font-label-sm text-label-sm text-on-surface leading-tight">Elena Rostova</span></div></div><button class="relative p-1.5 text-on-surface-variant hover:text-on-surface hover:bg-surface-container rounded-lg transition-colors" title="Notifications"><span class="material-symbols-outlined text-[20px]">notifications</span><span class="absolute top-1 right-1 w-2 h-2 rounded-full bg-error"></span></button><div class="flex items-center gap-space-sm"><img alt="Elena Rostova avatar" class="w-8 h-8 rounded-full object-cover" src="https://lh3.googleusercontent.com/aida/AEtjO1XM8bAU6u1SGd73cRUZpDg7te6U8Hd9YuPkqi431L4IWNqZL9tf8Hx7usC0Pr2x5uZFks9b6ZVSsN6pF4qp7qBy14iGcMBDgJ1CkgkmUAjIfndkwn_z2y62oK4m5xXJUzEyvjga7vHBHY5I_yrgT2bDOvV6QCvONuw_NwyDFyHdKZJuuGyK5Pgek_6deKYxGCdGgDgn0o72iDzak64pRiWW1BSKisoh_F_jv3CeZdUD3Qs1uum2E_qsQHaI"/><button class="flex items-center justify-center p-1.5 text-on-surface-variant hover:text-error hover:bg-surface-container rounded-lg transition-colors" title="Lock Terminal / Sign Out"><span class="material-symbols-outlined text-[20px]">lock</span></button></div></div></header><main class="w-full pt-14 px-margin"><div class="flex flex-col w-full pb-16">
+<!-- Top Context / Breadcrumb Bar -->
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-space-sm pt-space-md pb-space-sm">
+<div class="flex items-center gap-space-xs text-on-surface-variant font-caption text-caption">
+<span class="hover:text-on-surface cursor-pointer">Analytics &amp; Reports</span>
+<span class="text-tertiary">/</span>
+<span class="hover:text-on-surface cursor-pointer">Financial Settlement</span>
+<span class="text-tertiary">/</span>
+<span class="text-on-surface font-body-sm-semibold text-body-sm-semibold">POS Daily Sales &amp; Tender Settlement</span>
+</div>
+<div class="flex items-center gap-space-xs">
+<span class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-surface-container-high text-on-surface-variant font-caption text-caption">
+<span class="w-1.5 h-1.5 rounded-full bg-primary-container"></span>
+        POS Register Link v4.8 Active
+      </span>
+<span class="text-tertiary font-caption text-caption">Z-Report #ZR-20241125-NY01</span>
+</div>
+</div>
+<!-- Header Title & Primary Action Controls -->
+<div class="flex flex-col lg:flex-row lg:items-end justify-between gap-space-md pb-space-lg">
+<div class="flex flex-col gap-1">
+<div class="flex items-center gap-space-sm flex-wrap">
+<h1 class="font-headline-lg text-headline-lg text-on-surface tracking-tight">
+          POS Daily Sales &amp; Tender Settlement
+        </h1>
+<span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-primary-container text-on-primary font-label-sm text-label-sm shadow-sm">
+<span class="material-symbols-outlined text-[15px]">verified</span>
+          Shift &amp; Terminal Balanced
+        </span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant max-w-2xl">
+        Consolidated merchant reconciliation for retail cash registers, contactless EMV terminals, and multi-tender liability journals.
+      </p>
+</div>
+<!-- Right Global Actions -->
+<div class="flex items-center gap-space-sm shrink-0">
+<button class="inline-flex items-center gap-1.5 px-3 py-1.5 bg-surface-container-lowest text-on-surface hover:bg-surface-container font-body-sm-semibold text-body-sm-semibold rounded-lg shadow-sm transition-colors">
+<span class="material-symbols-outlined text-[17px] text-on-surface-variant">download</span>
+        Export CSV/PDF
+      </button>
+<button class="inline-flex items-center gap-1.5 px-3 py-1.5 bg-primary-container hover:bg-primary text-on-primary font-body-sm-semibold text-body-sm-semibold rounded-lg shadow-sm transition-colors">
+<span class="material-symbols-outlined text-[17px]">print</span>
+        Print Consolidated Z-Report
+      </button>
+</div>
+</div>
+<!-- Filter Bar Controls Strip -->
+<div class="bg-surface-container-lowest rounded-xl p-space-sm shadow-sm mb-space-lg flex flex-wrap items-center gap-space-sm justify-between">
+<div class="flex flex-wrap items-center gap-space-sm">
+<!-- Store Location Dropdown -->
+<div class="relative inline-flex items-center bg-surface-container-low rounded-lg px-space-sm py-1.5 hover:bg-surface-container transition-colors cursor-pointer">
+<span class="material-symbols-outlined text-[18px] text-primary mr-1.5">storefront</span>
+<div class="flex flex-col text-left mr-2">
+<span class="font-caption text-caption text-on-surface-variant leading-none">Location</span>
+<span class="font-body-sm-semibold text-body-sm-semibold text-on-surface leading-tight">SoHo Flagship Store #0421</span>
+</div>
+<span class="material-symbols-outlined text-[16px] text-on-surface-variant">keyboard_arrow_down</span>
+</div>
+<!-- Date Range Selector -->
+<div class="relative inline-flex items-center bg-surface-container-low rounded-lg px-space-sm py-1.5 hover:bg-surface-container transition-colors cursor-pointer">
+<span class="material-symbols-outlined text-[18px] text-on-surface-variant mr-1.5">calendar_today</span>
+<div class="flex flex-col text-left mr-2">
+<span class="font-caption text-caption text-on-surface-variant leading-none">Reporting Date</span>
+<span class="font-body-sm-semibold text-body-sm-semibold text-on-surface leading-tight">Today, Nov 25, 2024</span>
+</div>
+<span class="material-symbols-outlined text-[16px] text-on-surface-variant">keyboard_arrow_down</span>
+</div>
+<!-- Shift Filter -->
+<div class="relative inline-flex items-center bg-surface-container-low rounded-lg px-space-sm py-1.5 hover:bg-surface-container transition-colors cursor-pointer">
+<span class="material-symbols-outlined text-[18px] text-on-surface-variant mr-1.5">schedule</span>
+<div class="flex flex-col text-left mr-2">
+<span class="font-caption text-caption text-on-surface-variant leading-none">Shift Scope</span>
+<span class="font-body-sm-semibold text-body-sm-semibold text-on-surface leading-tight">All Shifts (Morning &amp; Evening Close)</span>
+</div>
+<span class="material-symbols-outlined text-[16px] text-on-surface-variant">keyboard_arrow_down</span>
+</div>
+</div>
+<!-- Active Terminal Status Summary Pill -->
+<div class="hidden sm:flex items-center gap-space-md pr-space-sm">
+<div class="flex items-center gap-1.5">
+<span class="w-2 h-2 rounded-full bg-primary-container"></span>
+<span class="font-body-sm text-body-sm text-on-surface">Registers Active: <strong class="font-body-sm-semibold text-body-sm-semibold">3 / 3</strong></span>
+</div>
+<div class="h-4 w-px bg-surface-container-highest"></div>
+<button class="text-secondary hover:underline font-body-sm-semibold text-body-sm-semibold inline-flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px]">refresh</span>
+        Sync Tills
+      </button>
+</div>
+</div>
+<!-- Top KPI Summary Cards (4 Columns) -->
+<div class="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-space-md mb-space-xl">
+<!-- KPI 1 -->
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm flex flex-col justify-between relative overflow-hidden group hover:shadow-md transition-shadow">
+<div class="flex items-start justify-between">
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Gross POS Sales</span>
+<span class="font-headline-lg text-headline-lg text-on-surface font-bold tracking-tight mt-1">$14,860.00</span>
+</div>
+<div class="p-2 bg-surface-container-low rounded-lg text-primary">
+<span class="material-symbols-outlined text-[20px]">point_of_sale</span>
+</div>
+</div>
+<div class="mt-4 flex items-center justify-between font-caption text-caption">
+<span class="inline-flex items-center gap-0.5 text-primary font-body-sm-semibold text-body-sm-semibold bg-surface-container px-1.5 py-0.5 rounded">
+<span class="material-symbols-outlined text-[14px]">arrow_upward</span>
+          +8.4%
+        </span>
+<span class="text-on-surface-variant">vs last Monday (248 txns)</span>
+</div>
+</div>
+<!-- KPI 2 -->
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm flex flex-col justify-between relative overflow-hidden group hover:shadow-md transition-shadow">
+<div class="flex items-start justify-between">
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Net Tender Collected</span>
+<span class="font-headline-lg text-headline-lg text-on-surface font-bold tracking-tight mt-1">$14,240.00</span>
+</div>
+<div class="p-2 bg-surface-container-low rounded-lg text-secondary">
+<span class="material-symbols-outlined text-[20px]">account_balance_wallet</span>
+</div>
+</div>
+<div class="mt-4 flex items-center justify-between font-caption text-caption">
+<span class="text-on-surface-variant">Discounts: -$380.00</span>
+<span class="text-error font-body-sm-semibold text-body-sm-semibold">Returns: -$240.00</span>
+</div>
+</div>
+<!-- KPI 3 -->
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm flex flex-col justify-between relative overflow-hidden group hover:shadow-md transition-shadow">
+<div class="flex items-start justify-between">
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Cash Drawer Variance</span>
+<div class="flex items-baseline gap-1 mt-1">
+<span class="font-headline-lg text-headline-lg text-primary font-bold tracking-tight">+$4.50</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant font-medium">Over</span>
+</div>
+</div>
+<div class="p-2 bg-primary-fixed text-on-primary-fixed-variant rounded-lg">
+<span class="material-symbols-outlined text-[20px]">price_check</span>
+</div>
+</div>
+<div class="mt-4 flex items-center justify-between font-caption text-caption">
+<span class="text-primary-container font-body-sm-semibold text-body-sm-semibold bg-surface-container px-1.5 py-0.5 rounded">
+          Within $5.00 tolerance
+        </span>
+<span class="text-on-surface-variant">Across 4 registers</span>
+</div>
+</div>
+<!-- KPI 4 -->
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm flex flex-col justify-between relative overflow-hidden group hover:shadow-md transition-shadow">
+<div class="flex items-start justify-between">
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Settled Card Batches</span>
+<span class="font-headline-lg text-headline-lg text-on-surface font-bold tracking-tight mt-1">$11,840.00</span>
+</div>
+<div class="p-2 bg-surface-container-low rounded-lg text-primary">
+<span class="material-symbols-outlined text-[20px]">credit_card</span>
+</div>
+</div>
+<div class="mt-4 flex items-center justify-between font-caption text-caption">
+<span class="inline-flex items-center gap-1 text-primary font-body-sm-semibold text-body-sm-semibold">
+<span class="material-symbols-outlined text-[13px]">check_circle</span>
+          100% Batched (Stripe POS)
+        </span>
+<span class="text-on-surface-variant">Autocut 11:00 PM EST</span>
+</div>
+</div>
+</div>
+<!-- Main Content Section 1: Tender Breakdown & Cash Drawer Reconciliation Matrix -->
+<div class="bg-surface-container-lowest rounded-xl shadow-sm mb-space-xl overflow-hidden">
+<div class="px-space-md py-space-sm bg-surface-container-low flex flex-col sm:flex-row sm:items-center justify-between gap-space-sm">
+<div class="flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-primary text-[20px]">table_chart_view</span>
+<div>
+<h2 class="font-headline-sm text-headline-sm text-on-surface">Tender Breakdown &amp; Cash Drawer Reconciliation</h2>
+<span class="font-caption text-caption text-on-surface-variant">Comparison of expected till receipts against audited gateway counts</span>
+</div>
+</div>
+<div class="flex items-center gap-space-xs text-caption font-caption text-on-surface-variant">
+<span class="inline-block w-2 h-2 rounded-full bg-primary-container"></span>
+        Audit Timestamp: 21:45 EST
+      </div>
+</div>
+<!-- Data Table -->
+<div class="overflow-x-auto">
+<table class="w-full text-left font-body-sm text-body-sm">
+<thead class="bg-surface-container font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">
+<tr>
+<th class="py-2.5 px-space-md">Tender Type / Gateway</th>
+<th class="py-2.5 px-space-sm text-right">Transactions</th>
+<th class="py-2.5 px-space-sm text-right">Opening Float</th>
+<th class="py-2.5 px-space-sm text-right">Gross Sales</th>
+<th class="py-2.5 px-space-sm text-right">Drops / Payouts</th>
+<th class="py-2.5 px-space-sm text-right">Expected in Till</th>
+<th class="py-2.5 px-space-sm text-right">Actual Count</th>
+<th class="py-2.5 px-space-md text-right">Variance (Over/Short)</th>
+</tr>
+</thead>
+<tbody class="text-on-surface divide-y-0">
+<!-- Row 1: Cash -->
+<tr class="hover:bg-surface-container-low transition-colors">
+<td class="py-3 px-space-md">
+<div class="flex items-center gap-2">
+<span class="p-1 rounded bg-surface-container text-primary">
+<span class="material-symbols-outlined text-[18px]">payments</span>
+</span>
+<div>
+<span class="font-body-sm-semibold text-body-sm-semibold block">In-Store Physical Cash</span>
+<span class="font-caption text-caption text-on-surface-variant">Safe drops scheduled post-15:00</span>
+</div>
+</div>
+</td>
+<td class="py-3 px-space-sm text-right font-medium">38 txns</td>
+<td class="py-3 px-space-sm text-right">$400.00</td>
+<td class="py-3 px-space-sm text-right font-body-sm-semibold text-body-sm-semibold">$1,850.00</td>
+<td class="py-3 px-space-sm text-right text-error font-medium">-$1,500.00</td>
+<td class="py-3 px-space-sm text-right font-medium">$750.00</td>
+<td class="py-3 px-space-sm text-right font-body-sm-semibold text-body-sm-semibold">$754.50</td>
+<td class="py-3 px-space-md text-right">
+<span class="inline-flex items-center px-2 py-0.5 rounded text-primary font-body-sm-semibold text-body-sm-semibold bg-surface-container">
+                +$4.50 Over
+              </span>
+</td>
+</tr>
+<!-- Row 2: Visa/Mastercard Contactless -->
+<tr class="hover:bg-surface-container-low transition-colors">
+<td class="py-3 px-space-md">
+<div class="flex items-center gap-2">
+<span class="p-1 rounded bg-surface-container text-secondary">
+<span class="material-symbols-outlined text-[18px]">contactless</span>
+</span>
+<div>
+<span class="font-body-sm-semibold text-body-sm-semibold block">Visa / Mastercard Contactless EMV</span>
+<span class="font-caption text-caption text-on-surface-variant">Stripe POS Terminal Hardware 100% Auth</span>
+</div>
+</div>
+</td>
+<td class="py-3 px-space-sm text-right font-medium">142 txns</td>
+<td class="py-3 px-space-sm text-right text-on-surface-variant">-</td>
+<td class="py-3 px-space-sm text-right font-body-sm-semibold text-body-sm-semibold">$8,420.00</td>
+<td class="py-3 px-space-sm text-right text-on-surface-variant">$0.00</td>
+<td class="py-3 px-space-sm text-right font-medium">$8,420.00</td>
+<td class="py-3 px-space-sm text-right font-body-sm-semibold text-body-sm-semibold">$8,420.00</td>
+<td class="py-3 px-space-md text-right">
+<span class="inline-flex items-center px-2 py-0.5 rounded text-on-surface-variant font-body-sm-semibold text-body-sm-semibold bg-surface-container">
+                $0.00 Exact
+              </span>
+</td>
+</tr>
+<!-- Row 3: Apple Pay / Google Pay -->
+<tr class="hover:bg-surface-container-low transition-colors">
+<td class="py-3 px-space-md">
+<div class="flex items-center gap-2">
+<span class="p-1 rounded bg-surface-container text-on-surface">
+<span class="material-symbols-outlined text-[18px]">phone_android</span>
+</span>
+<div>
+<span class="font-body-sm-semibold text-body-sm-semibold block">Apple Pay &amp; Google Pay (NFC)</span>
+<span class="font-caption text-caption text-on-surface-variant">Digital Wallet Tokenized Routing</span>
+</div>
+</div>
+</td>
+<td class="py-3 px-space-sm text-right font-medium">48 txns</td>
+<td class="py-3 px-space-sm text-right text-on-surface-variant">-</td>
+<td class="py-3 px-space-sm text-right font-body-sm-semibold text-body-sm-semibold">$2,120.00</td>
+<td class="py-3 px-space-sm text-right text-on-surface-variant">$0.00</td>
+<td class="py-3 px-space-sm text-right font-medium">$2,120.00</td>
+<td class="py-3 px-space-sm text-right font-body-sm-semibold text-body-sm-semibold">$2,120.00</td>
+<td class="py-3 px-space-md text-right">
+<span class="inline-flex items-center px-2 py-0.5 rounded text-on-surface-variant font-body-sm-semibold text-body-sm-semibold bg-surface-container">
+                $0.00 Exact
+              </span>
+</td>
+</tr>
+<!-- Row 4: Store Gift Cards -->
+<tr class="hover:bg-surface-container-low transition-colors">
+<td class="py-3 px-space-md">
+<div class="flex items-center gap-2">
+<span class="p-1 rounded bg-surface-container text-tertiary">
+<span class="material-symbols-outlined text-[18px]">featured_seasonal_and_gifts</span>
+</span>
+<div>
+<span class="font-body-sm-semibold text-body-sm-semibold block">Shopify Store Gift Cards</span>
+<span class="font-caption text-caption text-on-surface-variant">Liability Account #2080 Settlement</span>
+</div>
+</div>
+</td>
+<td class="py-3 px-space-sm text-right font-medium">14 txns</td>
+<td class="py-3 px-space-sm text-right text-on-surface-variant">-</td>
+<td class="py-3 px-space-sm text-right font-body-sm-semibold text-body-sm-semibold">$880.00</td>
+<td class="py-3 px-space-sm text-right text-on-surface-variant">$0.00</td>
+<td class="py-3 px-space-sm text-right font-medium">$880.00</td>
+<td class="py-3 px-space-sm text-right font-body-sm-semibold text-body-sm-semibold">$880.00</td>
+<td class="py-3 px-space-md text-right">
+<span class="inline-flex items-center px-2 py-0.5 rounded text-on-surface-variant font-body-sm-semibold text-body-sm-semibold bg-surface-container">
+                $0.00 Exact
+              </span>
+</td>
+</tr>
+<!-- Row 5: Store Credit & Exchanges -->
+<tr class="hover:bg-surface-container-low transition-colors">
+<td class="py-3 px-space-md">
+<div class="flex items-center gap-2">
+<span class="p-1 rounded bg-surface-container text-on-surface-variant">
+<span class="material-symbols-outlined text-[18px]">published_with_changes</span>
+</span>
+<div>
+<span class="font-body-sm-semibold text-body-sm-semibold block">Store Credit &amp; In-Store Exchanges</span>
+<span class="font-caption text-caption text-on-surface-variant">Customer Ledger Adjustments</span>
+</div>
+</div>
+</td>
+<td class="py-3 px-space-sm text-right font-medium">6 txns</td>
+<td class="py-3 px-space-sm text-right text-on-surface-variant">-</td>
+<td class="py-3 px-space-sm text-right font-body-sm-semibold text-body-sm-semibold">$320.00</td>
+<td class="py-3 px-space-sm text-right text-on-surface-variant">$0.00</td>
+<td class="py-3 px-space-sm text-right font-medium">$320.00</td>
+<td class="py-3 px-space-sm text-right font-body-sm-semibold text-body-sm-semibold">$320.00</td>
+<td class="py-3 px-space-md text-right">
+<span class="inline-flex items-center px-2 py-0.5 rounded text-on-surface-variant font-body-sm-semibold text-body-sm-semibold bg-surface-container">
+                $0.00 Exact
+              </span>
+</td>
+</tr>
+<!-- Sub-Row: Split-Tender note -->
+<tr class="bg-surface-container-low/40 text-on-surface-variant font-caption text-caption">
+<td class="py-2 px-space-md" colspan="8">
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[15px] text-tertiary">info</span>
+<span>* Notice: <strong>$650.00</strong> of gross sales involved multi-tender split combinations (e.g. Gift Card + Card EMV) aggregated across respective tender buckets above.</span>
+</div>
+</td>
+</tr>
+</tbody>
+<!-- Table Footer / Total Row -->
+<tfoot class="bg-surface-container-low font-body-sm-semibold text-body-sm-semibold text-on-surface">
+<tr>
+<td class="py-3 px-space-md">Total Reconciled Tenders</td>
+<td class="py-3 px-space-sm text-right">248 txns</td>
+<td class="py-3 px-space-sm text-right">$400.00</td>
+<td class="py-3 px-space-sm text-right text-headline-sm font-headline-sm">$13,590.00*</td>
+<td class="py-3 px-space-sm text-right text-error">-$1,500.00</td>
+<td class="py-3 px-space-sm text-right">$12,490.00</td>
+<td class="py-3 px-space-sm text-right font-bold text-headline-sm font-headline-sm">$12,494.50</td>
+<td class="py-3 px-space-md text-right text-primary font-bold">+$4.50 Over</td>
+</tr>
+</tfoot>
+</table>
+</div>
+</div>
+<!-- Main Content Section 2: Shift-by-Shift Terminal Breakdown Table -->
+<div class="bg-surface-container-lowest rounded-xl shadow-sm mb-space-xl overflow-hidden">
+<div class="px-space-md py-space-sm bg-surface-container-low flex flex-col sm:flex-row sm:items-center justify-between gap-space-sm">
+<div class="flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-primary text-[20px]">badge</span>
+<div>
+<h2 class="font-headline-sm text-headline-sm text-on-surface">Shift-by-Shift Terminal Audits</h2>
+<span class="font-caption text-caption text-on-surface-variant">Breakdown of cashier shifts, cash drops, and register closure balances</span>
+</div>
+</div>
+<div class="flex items-center gap-space-xs">
+<span class="px-2 py-0.5 rounded bg-surface-container text-on-surface-variant font-caption text-caption">3 Shifts Audited</span>
+</div>
+</div>
+<div class="overflow-x-auto">
+<table class="w-full text-left font-body-sm text-body-sm">
+<thead class="bg-surface-container font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">
+<tr>
+<th class="py-2.5 px-space-md">Terminal &amp; Operator</th>
+<th class="py-2.5 px-space-sm">Shift Hours</th>
+<th class="py-2.5 px-space-sm text-right">Gross Sales</th>
+<th class="py-2.5 px-space-sm text-right">Returns / Refunds</th>
+<th class="py-2.5 px-space-sm">Drawer Close Status</th>
+<th class="py-2.5 px-space-sm">Card Batch</th>
+<th class="py-2.5 px-space-sm text-right">Over / Short</th>
+<th class="py-2.5 px-space-md text-right">Action</th>
+</tr>
+</thead>
+<tbody class="text-on-surface divide-y-0">
+<!-- Terminal 1: Elena -->
+<tr class="hover:bg-surface-container-low transition-colors">
+<td class="py-3 px-space-md">
+<div class="flex items-center gap-space-sm">
+<div class="w-8 h-8 rounded-full bg-primary-fixed text-on-primary-fixed-variant flex items-center justify-center font-body-sm-semibold text-body-sm-semibold">
+                  ER
+                </div>
+<div class="flex flex-col">
+<span class="font-body-sm-semibold text-body-sm-semibold text-on-surface">Terminal 01 · Morning Shift</span>
+<span class="font-caption text-caption text-on-surface-variant">Elena Rostova (Lead Cashier)</span>
+</div>
+</div>
+</td>
+<td class="py-3 px-space-sm text-on-surface-variant">
+<span class="font-body-sm-semibold text-body-sm-semibold text-on-surface">08:30 - 15:00</span>
+<span class="block font-caption text-caption text-on-surface-variant">6.5 hrs logged</span>
+</td>
+<td class="py-3 px-space-sm text-right font-body-sm-semibold text-body-sm-semibold">$4,850.00</td>
+<td class="py-3 px-space-sm text-right text-error font-medium">-$120.00</td>
+<td class="py-3 px-space-sm">
+<div class="inline-flex items-center gap-1.5 px-2 py-0.5 rounded-full bg-surface-container font-caption text-caption text-on-surface">
+<span class="w-1.5 h-1.5 rounded-full bg-primary-container"></span>
+                Closed ($200 float kept)
+              </div>
+</td>
+<td class="py-3 px-space-sm">
+<span class="inline-flex items-center gap-1 text-primary font-caption text-caption font-semibold">
+<span class="material-symbols-outlined text-[14px]">lock</span>
+                Batched (Stripe #9841)
+              </span>
+</td>
+<td class="py-3 px-space-sm text-right font-body-sm-semibold text-body-sm-semibold text-on-surface-variant">
+              $0.00
+            </td>
+<td class="py-3 px-space-md text-right">
+<button class="px-2.5 py-1 rounded bg-surface-container text-on-surface hover:bg-surface-container-high font-body-sm-semibold text-body-sm-semibold transition-colors">
+                View Shift Summary
+              </button>
+</td>
+</tr>
+<!-- Terminal 1: Marcus -->
+<tr class="hover:bg-surface-container-low transition-colors">
+<td class="py-3 px-space-md">
+<div class="flex items-center gap-space-sm">
+<div class="w-8 h-8 rounded-full bg-secondary-fixed text-on-secondary-fixed-variant flex items-center justify-center font-body-sm-semibold text-body-sm-semibold">
+                  MV
+                </div>
+<div class="flex flex-col">
+<span class="font-body-sm-semibold text-body-sm-semibold text-on-surface">Terminal 01 · Evening Shift</span>
+<span class="font-caption text-caption text-on-surface-variant">Marcus Vance (Retail Associate)</span>
+</div>
+</div>
+</td>
+<td class="py-3 px-space-sm text-on-surface-variant">
+<span class="font-body-sm-semibold text-body-sm-semibold text-on-surface">15:00 - 21:30</span>
+<span class="block font-caption text-caption text-on-surface-variant">6.5 hrs logged</span>
+</td>
+<td class="py-3 px-space-sm text-right font-body-sm-semibold text-body-sm-semibold">$3,920.00</td>
+<td class="py-3 px-space-sm text-right text-error font-medium">-$80.00</td>
+<td class="py-3 px-space-sm">
+<div class="inline-flex items-center gap-1.5 px-2 py-0.5 rounded-full bg-surface-container font-caption text-caption text-on-surface">
+<span class="w-1.5 h-1.5 rounded-full bg-primary-container"></span>
+                Closed ($200 float kept)
+              </div>
+</td>
+<td class="py-3 px-space-sm">
+<span class="inline-flex items-center gap-1 text-primary font-caption text-caption font-semibold">
+<span class="material-symbols-outlined text-[14px]">lock</span>
+                Batched (Stripe #9842)
+              </span>
+</td>
+<td class="py-3 px-space-sm text-right font-body-sm-semibold text-body-sm-semibold text-primary">
+              +$2.50
+            </td>
+<td class="py-3 px-space-md text-right">
+<button class="px-2.5 py-1 rounded bg-surface-container text-on-surface hover:bg-surface-container-high font-body-sm-semibold text-body-sm-semibold transition-colors">
+                View Shift Summary
+              </button>
+</td>
+</tr>
+<!-- Terminal 2: Chloe -->
+<tr class="hover:bg-surface-container-low transition-colors">
+<td class="py-3 px-space-md">
+<div class="flex items-center gap-space-sm">
+<div class="w-8 h-8 rounded-full bg-surface-container-high text-on-surface-variant flex items-center justify-center font-body-sm-semibold text-body-sm-semibold">
+                  CM
+                </div>
+<div class="flex flex-col">
+<span class="font-body-sm-semibold text-body-sm-semibold text-on-surface">Terminal 02 · Full Day Roster</span>
+<span class="font-caption text-caption text-on-surface-variant">Chloe Miller (Store Supervisor)</span>
+</div>
+</div>
+</td>
+<td class="py-3 px-space-sm text-on-surface-variant">
+<span class="font-body-sm-semibold text-body-sm-semibold text-on-surface">10:00 - 20:00</span>
+<span class="block font-caption text-caption text-on-surface-variant">10.0 hrs logged</span>
+</td>
+<td class="py-3 px-space-sm text-right font-body-sm-semibold text-body-sm-semibold">$6,090.00</td>
+<td class="py-3 px-space-sm text-right text-error font-medium">-$420.00</td>
+<td class="py-3 px-space-sm">
+<div class="inline-flex items-center gap-1.5 px-2 py-0.5 rounded-full bg-surface-container font-caption text-caption text-on-surface">
+<span class="w-1.5 h-1.5 rounded-full bg-primary-container"></span>
+                Closed ($200 float kept)
+              </div>
+</td>
+<td class="py-3 px-space-sm">
+<span class="inline-flex items-center gap-1 text-primary font-caption text-caption font-semibold">
+<span class="material-symbols-outlined text-[14px]">lock</span>
+                Batched (Stripe #9843)
+              </span>
+</td>
+<td class="py-3 px-space-sm text-right font-body-sm-semibold text-body-sm-semibold text-primary">
+              +$2.00
+            </td>
+<td class="py-3 px-space-md text-right">
+<button class="px-2.5 py-1 rounded bg-surface-container text-on-surface hover:bg-surface-container-high font-body-sm-semibold text-body-sm-semibold transition-colors">
+                View Shift Summary
+              </button>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<!-- Bottom Layout Grid: General Ledger Preview (8 col) & Cash Drawer Visuals (4 col) -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-lg">
+<!-- Main Content Section 3: General Ledger Posting Preview (8 Cols) -->
+<div class="lg:col-span-8 bg-surface-container-lowest rounded-xl shadow-sm p-space-lg flex flex-col justify-between">
+<div>
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-space-sm pb-space-md">
+<div class="flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-primary text-[22px]">account_balance</span>
+<div>
+<h2 class="font-headline-sm text-headline-sm text-on-surface">General Ledger Posting Preview</h2>
+<span class="font-caption text-caption text-on-surface-variant">Automated Journal Voucher #JV-20241125-POS01 for ERP Synchronization</span>
+</div>
+</div>
+<span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-primary-fixed text-on-primary-fixed-variant font-label-sm text-label-sm font-semibold">
+<span class="w-2 h-2 rounded-full bg-primary-container"></span>
+            GL Balanced &amp; Sync Ready
+          </span>
+</div>
+<!-- GL Matrix Table -->
+<div class="overflow-x-auto">
+<table class="w-full text-left font-body-sm text-body-sm">
+<thead class="bg-surface-container-low font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">
+<tr>
+<th class="py-2 px-space-sm">GL Account # &amp; Description</th>
+<th class="py-2 px-space-sm">Type</th>
+<th class="py-2 px-space-sm text-right">Debit (DR)</th>
+<th class="py-2 px-space-sm text-right">Credit (CR)</th>
+</tr>
+</thead>
+<tbody class="text-on-surface">
+<tr class="hover:bg-surface-container-low/50 transition-colors">
+<td class="py-2.5 px-space-sm">
+<span class="font-body-sm-semibold text-body-sm-semibold text-on-surface">1010 · Cash in Bank (Main Vault Deposit)</span>
+<span class="block font-caption text-caption text-on-surface-variant">Includes +$4.50 cash overage adjustment</span>
+</td>
+<td class="py-2.5 px-space-sm text-on-surface-variant">Current Asset</td>
+<td class="py-2.5 px-space-sm text-right font-body-sm-semibold text-body-sm-semibold text-primary">$1,854.50</td>
+<td class="py-2.5 px-space-sm text-right text-on-surface-variant">-</td>
+</tr>
+<tr class="hover:bg-surface-container-low/50 transition-colors">
+<td class="py-2.5 px-space-sm">
+<span class="font-body-sm-semibold text-body-sm-semibold text-on-surface">1250 · Undeposited Card Clearing (Stripe Gateway)</span>
+<span class="block font-caption text-caption text-on-surface-variant">Scheduled T+1 settlement to Chase Operating</span>
+</td>
+<td class="py-2.5 px-space-sm text-on-surface-variant">Current Asset</td>
+<td class="py-2.5 px-space-sm text-right font-body-sm-semibold text-body-sm-semibold text-primary">$10,540.00</td>
+<td class="py-2.5 px-space-sm text-right text-on-surface-variant">-</td>
+</tr>
+<tr class="hover:bg-surface-container-low/50 transition-colors">
+<td class="py-2.5 px-space-sm">
+<span class="font-body-sm-semibold text-body-sm-semibold text-on-surface">2080 · Gift Card Deferred Revenue Liability</span>
+<span class="block font-caption text-caption text-on-surface-variant">Liability redeemed at terminal checkout</span>
+</td>
+<td class="py-2.5 px-space-sm text-on-surface-variant">Liability</td>
+<td class="py-2.5 px-space-sm text-right font-body-sm-semibold text-body-sm-semibold text-primary">$880.00</td>
+<td class="py-2.5 px-space-sm text-right text-on-surface-variant">-</td>
+</tr>
+<tr class="hover:bg-surface-container-low/50 transition-colors">
+<td class="py-2.5 px-space-sm">
+<span class="font-body-sm-semibold text-body-sm-semibold text-on-surface">4010 · In-Store POS Retail Merchandise Revenue</span>
+<span class="block font-caption text-caption text-on-surface-variant">Recognized gross sales net of line item markdowns</span>
+</td>
+<td class="py-2.5 px-space-sm text-on-surface-variant">Operating Revenue</td>
+<td class="py-2.5 px-space-sm text-right text-on-surface-variant">-</td>
+<td class="py-2.5 px-space-sm text-right font-body-sm-semibold text-body-sm-semibold">$12,650.00</td>
+</tr>
+<tr class="hover:bg-surface-container-low/50 transition-colors">
+<td class="py-2.5 px-space-sm">
+<span class="font-body-sm-semibold text-body-sm-semibold text-on-surface">2050 · Sales Tax Collected (New York State &amp; NYC Local)</span>
+<span class="block font-caption text-caption text-on-surface-variant">8.875% combined retail sales liability</span>
+</td>
+<td class="py-2.5 px-space-sm text-on-surface-variant">Current Liability</td>
+<td class="py-2.5 px-space-sm text-right text-on-surface-variant">-</td>
+<td class="py-2.5 px-space-sm text-right font-body-sm-semibold text-body-sm-semibold">$1,624.50</td>
+</tr>
+</tbody>
+<tfoot class="bg-surface-container font-body-sm-semibold text-body-sm-semibold">
+<tr>
+<td class="py-2.5 px-space-sm text-on-surface" colspan="2">Total Balanced Posting Sum</td>
+<td class="py-2.5 px-space-sm text-right text-primary font-bold">$13,274.50</td>
+<td class="py-2.5 px-space-sm text-right text-on-surface font-bold">$13,274.50</td>
+</tr>
+</tfoot>
+</table>
+</div>
+</div>
+<div class="mt-space-md pt-space-sm flex items-center justify-between bg-surface-container-low rounded-lg p-space-sm">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[18px] text-primary">cloud_done</span>
+<span class="font-caption text-caption text-on-surface">QuickBooks Enterprise / NetSuite sync token ready. Next scheduled push: 23:59 EST.</span>
+</div>
+<button class="px-3 py-1 bg-surface-container-lowest text-on-surface hover:bg-surface-container font-body-sm-semibold text-body-sm-semibold rounded shadow-sm text-xs transition-colors">
+          Push Journal Now
+        </button>
+</div>
+</div>
+<!-- Store Visual & Audit Certification Card (4 Cols) -->
+<div class="lg:col-span-4 flex flex-col gap-space-md">
+<!-- Store Front Snap & Cash Drawer Seal -->
+<div class="bg-surface-container-lowest rounded-xl shadow-sm overflow-hidden flex flex-col">
+<div class="relative h-36 w-full">
+<img class="w-full h-full object-cover" data-alt="Modern clean upscale fashion apparel boutique interior in SoHo New York with minimalist wooden counters, brass hanging fixtures, polished concrete floor, and sleek checkout registers bathed in soft architectural lighting." src="https://lh3.googleusercontent.com/aida-public/AB6AXuA_y38KN12RQGAV0gJKf6zcRAnVvzlKNC8Y6oKPiEyAkZiwEJofkc6itc55WdmZjPFClzn88bCesC04KkM-2pXgraansRSlF45nUfguZK5o-uDxOGB5ER-En7K51B9fA99cH1wDa1zygkgE9aXlhw4y4eRNHcYb4haTLjS866CuOKYOwUq3pOzlHUoNw_9TJBAUX7c6QYmO6MLQ5-FAMHV21F-ozaOGUnRPBW_DLkObr7dyHGy9nVVXqg"/>
+<div class="absolute inset-0 bg-gradient-to-t from-inverse-surface/80 via-inverse-surface/20 to-transparent flex items-end p-space-md">
+<div>
+<span class="inline-block px-2 py-0.5 rounded bg-primary text-on-primary font-caption text-caption font-semibold uppercase tracking-wider mb-1">Store #0421</span>
+<h3 class="font-body-md-semibold text-body-md-semibold text-surface leading-snug">Apex Apparel · SoHo Flagship</h3>
+<p class="font-caption text-caption text-surface/80">524 Broadway, New York, NY</p>
+</div>
+</div>
+</div>
+<div class="p-space-md flex flex-col gap-space-sm">
+<div class="flex items-center justify-between text-body-sm">
+<span class="text-on-surface-variant font-caption text-caption">Safe Drop Envelope:</span>
+<span class="font-body-sm-semibold text-body-sm-semibold font-mono text-on-surface">#ENV-99420-DROP</span>
+</div>
+<div class="flex items-center justify-between text-body-sm">
+<span class="text-on-surface-variant font-caption text-caption">Drop Witness:</span>
+<span class="font-body-sm-semibold text-body-sm-semibold text-on-surface">Marcus Vance (Evening Lead)</span>
+</div>
+<div class="flex items-center justify-between text-body-sm">
+<span class="text-on-surface-variant font-caption text-caption">Armored Pickup Carrier:</span>
+<span class="font-body-sm-semibold text-body-sm-semibold text-on-surface">Brink's Logistics (08:00 AM)</span>
+</div>
+<div class="mt-space-xs p-space-sm bg-surface-container-low rounded-lg flex items-start gap-space-sm">
+<span class="material-symbols-outlined text-primary text-[20px] shrink-0 mt-0.5">verified_user</span>
+<div class="flex flex-col">
+<span class="font-body-sm-semibold text-body-sm-semibold text-on-surface">Manager Shift Sign-Off</span>
+<p class="font-caption text-caption text-on-surface-variant">Elena Rostova verified all 3 till balances and signed physical dual-custody cash envelope.</p>
+</div>
+</div>
+</div>
+</div>
+<!-- Quick Tender Distribution Mini-Chart (Pure SVG) -->
+<div class="bg-surface-container-lowest rounded-xl shadow-sm p-space-md flex flex-col justify-between flex-1">
+<div class="flex items-center justify-between mb-2">
+<span class="font-label-sm text-label-sm text-on-surface uppercase tracking-wider font-semibold">Tender Volume Share</span>
+<span class="font-caption text-caption text-on-surface-variant">Today's Ratio</span>
+</div>
+<div class="flex items-center gap-space-md my-2">
+<!-- Mini Donut SVG -->
+<svg class="w-16 h-16 shrink-0" viewbox="0 0 36 36">
+<!-- Background circle -->
+<path class="text-surface-container" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" fill="none" stroke="currentColor" stroke-width="4.5"></path>
+<!-- Card EMV (62%) -->
+<path class="text-primary-container" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" fill="none" stroke="currentColor" stroke-dasharray="62, 100" stroke-linecap="round" stroke-width="4.5"></path>
+<!-- Cash (14%) -->
+<path class="text-secondary" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" fill="none" stroke="currentColor" stroke-dasharray="16, 100" stroke-dashoffset="-62" stroke-width="4.5"></path>
+<!-- Apple Pay / Digital (15%) -->
+<path class="text-tertiary" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" fill="none" stroke="currentColor" stroke-dasharray="15, 100" stroke-dashoffset="-78" stroke-width="4.5"></path>
+</svg>
+<div class="flex flex-col gap-1 w-full text-caption font-caption">
+<div class="flex items-center justify-between">
+<span class="flex items-center gap-1.5"><span class="w-2 h-2 rounded-full bg-primary-container"></span> EMV Cards</span>
+<span class="font-body-sm-semibold text-body-sm-semibold text-on-surface">62%</span>
+</div>
+<div class="flex items-center justify-between">
+<span class="flex items-center gap-1.5"><span class="w-2 h-2 rounded-full bg-secondary"></span> Physical Cash</span>
+<span class="font-body-sm-semibold text-body-sm-semibold text-on-surface">14%</span>
+</div>
+<div class="flex items-center justify-between">
+<span class="flex items-center gap-1.5"><span class="w-2 h-2 rounded-full bg-tertiary"></span> NFC &amp; Mobile</span>
+<span class="font-body-sm-semibold text-body-sm-semibold text-on-surface">16%</span>
+</div>
+<div class="flex items-center justify-between">
+<span class="flex items-center gap-1.5"><span class="w-2 h-2 rounded-full bg-surface-container-highest"></span> Store Gift Cards</span>
+<span class="font-body-sm-semibold text-body-sm-semibold text-on-surface">8%</span>
+</div>
+</div>
+</div>
+<button class="w-full mt-2 py-1.5 bg-surface-container hover:bg-surface-container-high rounded text-on-surface font-body-sm-semibold text-body-sm-semibold transition-colors text-center text-xs">
+          View Merchant Statement Reconciliation
+        </button>
+</div>
+</div>
+</div>
+</div></main></div></body></html>

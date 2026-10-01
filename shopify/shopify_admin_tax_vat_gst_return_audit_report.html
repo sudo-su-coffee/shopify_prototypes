@@ -1,0 +1,755 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = {
+    darkMode: "class",
+    theme: {
+      extend: {
+        "colors": {
+          "on-tertiary": "#ffffff",
+          "primary-fixed": "#92f6cf",
+          "tertiary-container": "#717070",
+          "surface": "#fbf9f8",
+          "secondary": "#0055c7",
+          "surface-bright": "#fbf9f8",
+          "on-surface": "#1b1c1c",
+          "surface-container-low": "#f5f3f3",
+          "background": "#fbf9f8",
+          "on-tertiary-container": "#f8f5f4",
+          "surface-container-highest": "#e4e2e2",
+          "error": "#ba1a1a",
+          "on-primary-container": "#d6ffeb",
+          "on-secondary-container": "#fefcff",
+          "on-primary-fixed-variant": "#00513c",
+          "tertiary-fixed-dim": "#c8c6c5",
+          "tertiary": "#585857",
+          "surface-tint": "#006c50",
+          "surface-dim": "#dbdad9",
+          "secondary-fixed-dim": "#b0c6ff",
+          "secondary-container": "#2c6fe7",
+          "surface-container-lowest": "#ffffff",
+          "on-secondary-fixed": "#001945",
+          "on-secondary-fixed-variant": "#00419c",
+          "primary": "#00654b",
+          "on-background": "#1b1c1c",
+          "on-tertiary-fixed-variant": "#474746",
+          "secondary-fixed": "#d9e2ff",
+          "on-surface-variant": "#3e4944",
+          "surface-container-high": "#e9e8e7",
+          "inverse-primary": "#75d9b3",
+          "outline": "#6e7a73",
+          "inverse-surface": "#303031",
+          "on-primary-fixed": "#002116",
+          "on-primary": "#ffffff",
+          "outline-variant": "#bdc9c2",
+          "primary-fixed-dim": "#75d9b3",
+          "on-secondary": "#ffffff",
+          "on-error-container": "#93000a",
+          "inverse-on-surface": "#f2f0f0",
+          "on-error": "#ffffff",
+          "tertiary-fixed": "#e5e2e1",
+          "error-container": "#ffdad6",
+          "surface-container": "#efeded",
+          "surface-variant": "#e4e2e2",
+          "primary-container": "#008060",
+          "on-tertiary-fixed": "#1c1b1b"
+        },
+        "borderRadius": {
+          "DEFAULT": "0.125rem",
+          "lg": "0.25rem",
+          "xl": "0.5rem",
+          "full": "0.75rem"
+        },
+        "spacing": {
+          "space-md": "1rem",
+          "space-sm": "0.5rem",
+          "margin": "1.5rem",
+          "space-xs": "0.25rem",
+          "space-lg": "1.25rem",
+          "space-xl": "1.5rem",
+          "gutter": "1rem"
+        },
+        "fontFamily": {
+          "body-md": [
+            "Inter"
+          ],
+          "headline-lg": [
+            "Inter"
+          ],
+          "headline-sm": [
+            "Inter"
+          ],
+          "body-sm": [
+            "Inter"
+          ],
+          "body-md-semibold": [
+            "Inter"
+          ],
+          "headline-lg-mobile": [
+            "Inter"
+          ],
+          "label-sm": [
+            "Inter"
+          ],
+          "body-sm-semibold": [
+            "Inter"
+          ],
+          "label-md": [
+            "Inter"
+          ],
+          "headline-md": [
+            "Inter"
+          ],
+          "caption": [
+            "Inter"
+          ],
+          "body-lg": [
+            "Inter"
+          ]
+        },
+        "fontSize": {
+          "body-md": [
+            "14px",
+            {
+              "lineHeight": "20px",
+              "fontWeight": "400"
+            }
+          ],
+          "headline-lg": [
+            "28px",
+            {
+              "lineHeight": "36px",
+              "letterSpacing": "-0.02em",
+              "fontWeight": "700"
+            }
+          ],
+          "headline-sm": [
+            "16px",
+            {
+              "lineHeight": "24px",
+              "letterSpacing": "-0.005em",
+              "fontWeight": "600"
+            }
+          ],
+          "body-sm": [
+            "13px",
+            {
+              "lineHeight": "18px",
+              "fontWeight": "400"
+            }
+          ],
+          "body-md-semibold": [
+            "14px",
+            {
+              "lineHeight": "20px",
+              "fontWeight": "600"
+            }
+          ],
+          "headline-lg-mobile": [
+            "22px",
+            {
+              "lineHeight": "28px",
+              "letterSpacing": "-0.015em",
+              "fontWeight": "700"
+            }
+          ],
+          "label-sm": [
+            "12px",
+            {
+              "lineHeight": "16px",
+              "letterSpacing": "0.01em",
+              "fontWeight": "600"
+            }
+          ],
+          "body-sm-semibold": [
+            "13px",
+            {
+              "lineHeight": "18px",
+              "fontWeight": "600"
+            }
+          ],
+          "label-md": [
+            "13px",
+            {
+              "lineHeight": "16px",
+              "fontWeight": "500"
+            }
+          ],
+          "headline-md": [
+            "20px",
+            {
+              "lineHeight": "28px",
+              "letterSpacing": "-0.01em",
+              "fontWeight": "600"
+            }
+          ],
+          "caption": [
+            "11px",
+            {
+              "lineHeight": "14px",
+              "fontWeight": "500"
+            }
+          ],
+          "body-lg": [
+            "15px",
+            {
+              "lineHeight": "22px",
+              "fontWeight": "400"
+            }
+          ]
+        }
+      },
+    },
+  }</script><title>Shopify Admin Tax VAT GST Return Audit Report | Shopify Prototype</title>
+</head><body class="bg-surface font-body-md text-body-md text-on-surface"><aside class="fixed left-0 top-0 h-full w-60 bg-surface-container-low z-40 flex flex-col justify-between shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="flex flex-col overflow-y-auto"><div class="h-14 flex items-center px-margin gap-space-sm bg-surface-container-lowest shrink-0"><img alt="Shopify logo" class="h-7 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1WPubMgscUINGuisBDvGZbhiRvwxKjFWpAHPA0GXYWeRFqxcZY4G-byYU4PUykJPYVnuurpj_2yFkafDFmBWhplcA2dlqdqMDkr5ufN1GCA1-9Cy6Y74Bk73_KmB_pOSwvk_HQjInJtWpmQfLSQUcNeG5m75CCs-SDUFif7I_eleu-OGwNMldz9nzh1957zHt7Hfbkc1ds6tpanpikt3_aR6SAXkw6znZBFRPYg-rTUbi8f0VwyeBPJuaQ"/><div class="flex flex-col"><span class="font-body-md-semibold text-body-md-semibold text-on-surface leading-tight">Shopify Admin</span><span class="font-caption text-caption text-on-surface-variant leading-tight">Operations &amp; Finance</span></div></div><div class="px-space-md pt-space-sm"><div class="px-space-sm py-space-xs font-caption text-caption uppercase text-on-surface-variant tracking-wider">Store Management</div></div><nav class="flex flex-col gap-space-xs px-space-md py-space-xs" data-active-classes="bg-primary-container text-on-primary font-body-sm-semibold text-body-sm-semibold rounded-xl"><a class="flex items-center px-space-md py-space-sm text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface rounded-xl transition-colors font-body-sm text-body-sm" data-path="shopify-admin-home" href="#">Home</a><a class="flex items-center px-space-md py-space-sm text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface rounded-xl transition-colors font-body-sm text-body-sm" data-path="shopify-admin-orders" href="#">Orders</a><a class="flex items-center px-space-md py-space-sm text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface rounded-xl transition-colors font-body-sm text-body-sm" data-path="shopify-admin-products" href="#">Products</a><a class="flex items-center px-space-md py-space-sm text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface rounded-xl transition-colors font-body-sm text-body-sm" data-path="shopify-admin-multi-location-inventory-stock-hub" href="#">Multi-Location Inventory</a><a class="flex items-center px-space-md py-space-sm text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface rounded-xl transition-colors font-body-sm text-body-sm" data-path="shopify-admin-customers" href="#">Customers</a></nav><div class="px-space-md pt-space-sm"><div class="px-space-sm py-space-xs font-caption text-caption uppercase text-on-surface-variant tracking-wider">Procurement &amp; Billing</div></div><nav class="flex flex-col gap-space-xs px-space-md py-space-xs" data-active-classes="bg-primary-container text-on-primary font-body-sm-semibold text-body-sm-semibold rounded-xl"><a class="flex items-center px-space-md py-space-sm text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface rounded-xl transition-colors font-body-sm text-body-sm" data-path="shopify-admin-purchase-orders-vendor-directory" href="#">Purchase Orders &amp; Vendors</a><a class="flex items-center px-space-md py-space-sm text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface rounded-xl transition-colors font-body-sm text-body-sm" data-path="shopify-admin-vendor-bills-accounts-payable" href="#">Vendor Bills &amp; AP</a><a class="flex items-center px-space-md py-space-sm text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface rounded-xl transition-colors font-body-sm text-body-sm" data-path="shopify-admin-customer-b2b-invoices-ar" href="#">Customer Invoices &amp; AR</a><a class="flex items-center px-space-md py-space-sm text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface rounded-xl transition-colors font-body-sm text-body-sm" data-path="shopify-admin-payments-cash-flow-register" href="#">Payments &amp; Cash Flow</a><a class="flex items-center px-space-md py-space-sm text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface rounded-xl transition-colors font-body-sm text-body-sm" data-path="shopify-admin-goods-receipt-landed-costs" href="#">Goods Receipt &amp; Landed Costs</a></nav><div class="px-space-md pt-space-sm"><div class="px-space-sm py-space-xs font-caption text-caption uppercase text-on-surface-variant tracking-wider">Accounting &amp; Finance</div></div><nav class="flex flex-col gap-space-xs px-space-md py-space-xs" data-active-classes="bg-primary-container text-on-primary font-body-sm-semibold text-body-sm-semibold rounded-xl"><a class="flex items-center px-space-md py-space-sm text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface rounded-xl transition-colors font-body-sm text-body-sm" data-path="shopify-admin-chart-of-accounts" href="#">Chart of Accounts</a><a class="flex items-center px-space-md py-space-sm text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface rounded-xl transition-colors font-body-sm text-body-sm" data-path="shopify-admin-journal-entries" href="#">Journal Entries</a><a class="flex items-center px-space-md py-space-sm text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface rounded-xl transition-colors font-body-sm text-body-sm" data-path="shopify-admin-bank-reconciliation" href="#">Bank Reconciliation</a><a class="flex items-center px-space-md py-space-sm text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface rounded-xl transition-colors font-body-sm text-body-sm" data-path="shopify-admin-tax-vat-gst" href="#">Tax / VAT &amp; GST</a><a class="flex items-center px-space-md py-space-sm text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface rounded-xl transition-colors font-body-sm text-body-sm" data-path="shopify-admin-financial-reports-trial-balance" href="#">Financial Reports &amp; Trial Balance</a></nav><div class="px-space-md pt-space-sm"><div class="px-space-sm py-space-xs font-caption text-caption uppercase text-on-surface-variant tracking-wider">Sales &amp; Marketing</div></div><nav class="flex flex-col gap-space-xs px-space-md py-space-xs" data-active-classes="bg-primary-container text-on-primary font-body-sm-semibold text-body-sm-semibold rounded-xl"><a class="flex items-center px-space-md py-space-sm text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface rounded-xl transition-colors font-body-sm text-body-sm" data-path="shopify-admin-analytics" href="#">Analytics</a><a class="flex items-center px-space-md py-space-sm text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface rounded-xl transition-colors font-body-sm text-body-sm" data-path="shopify-admin-marketing" href="#">Marketing</a><a class="flex items-center px-space-md py-space-sm text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface rounded-xl transition-colors font-body-sm text-body-sm" data-path="shopify-admin-discounts" href="#">Discounts</a><a class="flex items-center px-space-md py-space-sm text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface rounded-xl transition-colors font-body-sm text-body-sm" data-path="shopify-admin-point-of-sale" href="#">Point of Sale</a></nav></div><div class="p-space-md flex flex-col gap-space-xs bg-surface-container shrink-0"><nav class="flex flex-col gap-space-xs" data-active-classes="bg-primary-container text-on-primary font-body-sm-semibold text-body-sm-semibold rounded-xl"><a class="flex items-center px-space-md py-space-sm text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface rounded-xl transition-colors font-body-sm text-body-sm" data-path="shopify-admin-settings" href="#">Settings</a></nav><div class="flex items-center justify-between px-space-md py-space-sm bg-surface-container-lowest rounded-xl"><div class="flex items-center gap-space-sm"><span class="w-2 h-2 rounded-full bg-primary-container"></span><span class="font-caption text-caption text-on-surface-variant">Ledger Engine Synced</span></div><span class="material-symbols-outlined text-[16px] text-primary">sync</span></div></div></aside><div class="pl-60"><header class="fixed top-0 left-60 right-0 h-14 bg-surface-container-lowest shadow-[0_1px_8px_rgba(0,0,0,0.04)] z-30 flex items-center justify-between px-margin"><div class="flex items-center gap-space-md"><div class="flex items-center gap-space-sm px-space-md py-1 bg-surface-container rounded-full"><span class="material-symbols-outlined text-primary text-[18px]">store</span><span class="font-label-sm text-label-sm text-on-surface">Apex Apparel SoHo</span><span class="material-symbols-outlined text-on-surface-variant text-[16px]">expand_more</span></div><div class="hidden lg:flex items-center gap-space-xs text-on-surface-variant font-caption text-caption"><span class="hover:text-on-surface cursor-pointer">Admin</span><span>/</span><span class="text-on-surface font-label-sm text-label-sm">Finance &amp; Operations</span></div><div class="relative flex items-center w-64 md:w-80 ml-space-xs"><span class="material-symbols-outlined absolute left-space-sm text-on-surface-variant text-[18px]">search</span><input class="w-full h-8 pl-8 pr-space-md py-1 bg-surface-container-low text-on-surface placeholder:text-on-surface-variant rounded-lg font-body-sm text-body-sm border-none focus:outline-none focus:ring-1 focus:ring-primary" placeholder="Search orders, products, accounts (⌘K)" type="text"/></div></div><div class="flex items-center gap-space-md"><div class="flex items-center gap-space-sm px-space-md py-1 bg-surface-container-low rounded-xl"><span class="material-symbols-outlined text-on-surface-variant text-[18px]">badge</span><div class="flex flex-col text-left"><span class="font-caption text-caption text-on-surface-variant leading-none">Staff Operator</span><span class="font-label-sm text-label-sm text-on-surface leading-tight">Elena Rostova</span></div></div><button class="relative p-1.5 text-on-surface-variant hover:text-on-surface hover:bg-surface-container rounded-lg transition-colors" title="Notifications"><span class="material-symbols-outlined text-[20px]">notifications</span><span class="absolute top-1 right-1 w-2 h-2 rounded-full bg-error"></span></button><div class="flex items-center gap-space-sm"><img alt="Elena Rostova avatar" class="w-8 h-8 rounded-full object-cover" src="https://lh3.googleusercontent.com/aida/AEtjO1XM8bAU6u1SGd73cRUZpDg7te6U8Hd9YuPkqi431L4IWNqZL9tf8Hx7usC0Pr2x5uZFks9b6ZVSsN6pF4qp7qBy14iGcMBDgJ1CkgkmUAjIfndkwn_z2y62oK4m5xXJUzEyvjga7vHBHY5I_yrgT2bDOvV6QCvONuw_NwyDFyHdKZJuuGyK5Pgek_6deKYxGCdGgDgn0o72iDzak64pRiWW1BSKisoh_F_jv3CeZdUD3Qs1uum2E_qsQHaI"/><button class="flex items-center justify-center p-1.5 text-on-surface-variant hover:text-error hover:bg-surface-container rounded-lg transition-colors" title="Lock Terminal / Sign Out"><span class="material-symbols-outlined text-[20px]">lock</span></button></div></div></header><main class="w-full pt-14 px-margin"><div class="flex flex-col w-full pb-12">
+<!-- Top Breadcrumb & Meta Bar -->
+<div class="flex flex-wrap items-center justify-between gap-space-sm mb-space-md">
+<nav class="flex items-center gap-space-xs font-caption text-caption text-on-surface-variant">
+<a class="hover:text-primary transition-colors" href="#">Accounting</a>
+<span class="text-outline-variant">/</span>
+<a class="hover:text-primary transition-colors" href="#">Compliance &amp; Filings</a>
+<span class="text-outline-variant">/</span>
+<span class="text-on-surface font-body-sm-semibold text-body-sm-semibold">Tax &amp; VAT/GST Return Audit</span>
+</nav>
+<div class="flex items-center gap-space-sm font-caption text-caption text-on-surface-variant">
+<span class="flex items-center gap-1">
+<span class="material-symbols-outlined text-[15px] text-primary">verified_user</span>
+        Automated Engine: <span class="text-on-surface font-body-sm-semibold text-body-sm-semibold">AvaTax v24.4</span>
+</span>
+<span class="text-outline-variant">|</span>
+<span>GL Sync Timestamp: <strong>Today, 14:32:04 EST</strong></span>
+</div>
+</div>
+<!-- Primary Page Header -->
+<div class="flex flex-col lg:flex-row lg:items-center justify-between gap-space-md mb-space-xl">
+<div class="flex flex-wrap items-center gap-space-md">
+<div class="w-10 h-10 rounded-xl bg-primary-container text-on-primary flex items-center justify-center shadow-sm">
+<span class="material-symbols-outlined text-[24px]">account_balance</span>
+</div>
+<div>
+<div class="flex flex-wrap items-center gap-space-sm">
+<h1 class="font-headline-lg text-headline-lg text-on-surface tracking-tight">Tax &amp; VAT/GST Return Audit &amp; Filing Report</h1>
+<span class="inline-flex items-center gap-1 px-space-sm py-0.5 rounded-full bg-primary-fixed text-on-primary-fixed-variant font-label-sm text-label-sm shadow-sm">
+<span class="material-symbols-outlined text-[14px]">check_circle</span>
+            Audit Verified (99.8% Match)
+          </span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">
+          Consolidated multi-jurisdictional liabilities, statutory deduction credits, and general ledger synchronization checks.
+        </p>
+</div>
+</div>
+<!-- Quick Stat Pill Strip -->
+<div class="flex items-center gap-space-xs self-start lg:self-auto bg-surface-container-low p-1.5 rounded-xl shadow-sm">
+<div class="px-space-md py-1 text-center">
+<span class="block font-caption text-caption text-on-surface-variant uppercase tracking-wider">Total Entities</span>
+<span class="font-body-md-semibold text-body-md-semibold text-on-surface">4 Jurisdictions</span>
+</div>
+<div class="w-px h-6 bg-surface-container-highest"></div>
+<div class="px-space-md py-1 text-center">
+<span class="block font-caption text-caption text-on-surface-variant uppercase tracking-wider">Variance</span>
+<span class="font-body-md-semibold text-body-md-semibold text-primary">$0.00 (Balanced)</span>
+</div>
+</div>
+</div>
+<!-- Filter & Action Controls Ribbon -->
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm mb-space-xl">
+<div class="flex flex-col xl:flex-row items-stretch xl:items-center justify-between gap-space-md">
+<!-- Selectors Group -->
+<div class="grid grid-cols-1 sm:grid-cols-3 gap-space-sm flex-1">
+<!-- Jurisdiction Filter -->
+<div class="flex flex-col gap-1">
+<label class="font-label-sm text-label-sm text-on-surface-variant">Tax Jurisdiction</label>
+<div class="relative flex items-center">
+<span class="material-symbols-outlined absolute left-2.5 text-on-surface-variant text-[18px]">public</span>
+<select class="w-full h-8 pl-8 pr-7 bg-surface-container-low text-on-surface rounded-lg font-body-sm text-body-sm focus:outline-none appearance-none cursor-pointer">
+<option selected="">All Jurisdictions (US, UK, EU OSS, CA)</option>
+<option>US States (New York, California)</option>
+<option>European Union OSS (Destination Rate)</option>
+<option>United Kingdom HMRC (MTD VAT)</option>
+<option>Canada CRA (GST / HST)</option>
+</select>
+<span class="material-symbols-outlined absolute right-2 text-on-surface-variant text-[18px] pointer-events-none">arrow_drop_down</span>
+</div>
+</div>
+<!-- Period Selector -->
+<div class="flex flex-col gap-1">
+<label class="font-label-sm text-label-sm text-on-surface-variant">Tax Filing Period</label>
+<div class="relative flex items-center">
+<span class="material-symbols-outlined absolute left-2.5 text-on-surface-variant text-[18px]">calendar_today</span>
+<select class="w-full h-8 pl-8 pr-7 bg-surface-container-low text-on-surface rounded-lg font-body-sm text-body-sm focus:outline-none appearance-none cursor-pointer">
+<option selected="">Q4 2024 (Oct 1 - Dec 31, 2024)</option>
+<option>Q3 2024 (Jul 1 - Sep 30, 2024)</option>
+<option>Q2 2024 (Apr 1 - Jun 30, 2024)</option>
+<option>FY 2024 Annual Consolidation</option>
+</select>
+<span class="material-symbols-outlined absolute right-2 text-on-surface-variant text-[18px] pointer-events-none">arrow_drop_down</span>
+</div>
+</div>
+<!-- Accounting Basis -->
+<div class="flex flex-col gap-1">
+<label class="font-label-sm text-label-sm text-on-surface-variant">Accounting Basis</label>
+<div class="relative flex items-center">
+<span class="material-symbols-outlined absolute left-2.5 text-on-surface-variant text-[18px]">receipt_long</span>
+<select class="w-full h-8 pl-8 pr-7 bg-surface-container-low text-on-surface rounded-lg font-body-sm text-body-sm focus:outline-none appearance-none cursor-pointer">
+<option selected="">Accrual Basis (Recognized at Invoice)</option>
+<option>Cash Basis (Recognized upon Payment)</option>
+</select>
+<span class="material-symbols-outlined absolute right-2 text-on-surface-variant text-[18px] pointer-events-none">arrow_drop_down</span>
+</div>
+</div>
+</div>
+<!-- Action Buttons -->
+<div class="flex flex-wrap items-end gap-space-sm pt-space-xs xl:pt-0">
+<button class="h-8 px-space-md bg-surface-container text-on-surface hover:bg-surface-container-high font-body-sm-semibold text-body-sm-semibold rounded-lg flex items-center gap-1.5 transition-colors shadow-sm" title="Download Audit Pack">
+<span class="material-symbols-outlined text-[16px]">file_download</span>
+          Export Audit File (SAF-T / IRS)
+        </button>
+<button class="h-8 px-space-md bg-surface-container text-on-surface hover:bg-surface-container-high font-body-sm-semibold text-body-sm-semibold rounded-lg flex items-center gap-1.5 transition-colors shadow-sm" title="Statutory PDFs">
+<span class="material-symbols-outlined text-[16px]">picture_as_pdf</span>
+          Download Form ST-100 / VAT-100
+        </button>
+<button class="h-8 px-space-md bg-primary-container hover:bg-primary text-on-primary font-body-sm-semibold text-body-sm-semibold rounded-lg flex items-center gap-1.5 transition-all shadow-sm">
+<span class="material-symbols-outlined text-[16px]">lock</span>
+          Finalize &amp; Lock Period
+        </button>
+</div>
+</div>
+</div>
+<!-- Operational Metric Cards -->
+<div class="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-space-md mb-space-xl">
+<!-- Metric 1: Gross Taxable Revenue -->
+<div class="bg-surface-container-lowest p-space-lg rounded-xl shadow-sm relative overflow-hidden flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between mb-space-xs">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant">Gross Taxable Revenue</span>
+<span class="material-symbols-outlined text-secondary text-[20px]">storefront</span>
+</div>
+<div class="font-headline-lg text-headline-lg text-on-surface tracking-tight mb-1">$286,400.00</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Across 1,284 retail &amp; online orders</p>
+</div>
+<div class="mt-space-md pt-space-xs flex items-center justify-between">
+<span class="inline-flex items-center gap-1 text-primary font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[14px]">trending_up</span> +14.2% YoY
+        </span>
+<!-- Mini Inline SVG Sparkline -->
+<svg class="w-20 h-5 text-secondary overflow-visible" fill="none" viewbox="0 0 80 20">
+<path d="M0,15 Q20,18 40,8 T80,3" fill="none" stroke="currentColor" stroke-linecap="round" stroke-width="2"></path>
+</svg>
+</div>
+</div>
+<!-- Metric 2: Total Output Tax Collected -->
+<div class="bg-surface-container-lowest p-space-lg rounded-xl shadow-sm relative overflow-hidden flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between mb-space-xs">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant">Total Output Tax Collected</span>
+<span class="material-symbols-outlined text-primary text-[20px]">payments</span>
+</div>
+<div class="font-headline-lg text-headline-lg text-on-surface tracking-tight mb-1">$24,480.00</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Gross sales tax collected at checkout</p>
+</div>
+<div class="mt-space-md pt-space-xs flex items-center justify-between">
+<span class="font-caption text-caption text-on-surface-variant">Avg effective rate: <strong>8.54%</strong></span>
+<svg class="w-20 h-5 text-primary overflow-visible" fill="none" viewbox="0 0 80 20">
+<path d="M0,12 Q20,5 40,9 T80,2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-width="2"></path>
+</svg>
+</div>
+</div>
+<!-- Metric 3: Input Tax Credit (ITC) Deductible -->
+<div class="bg-surface-container-lowest p-space-lg rounded-xl shadow-sm relative overflow-hidden flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between mb-space-xs">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant">Input Tax Credit (ITC)</span>
+<span class="material-symbols-outlined text-secondary-container text-[20px]">receipt</span>
+</div>
+<div class="font-headline-lg text-headline-lg text-on-surface tracking-tight mb-1">$5,560.00</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">VAT/GST on AP vendor invoices &amp; raw goods</p>
+</div>
+<div class="mt-space-md pt-space-xs flex items-center justify-between">
+<span class="inline-flex items-center gap-1 text-primary font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[14px]">check_circle</span> 100% Tax Invoices Valid
+        </span>
+<span class="font-caption text-caption text-on-surface-variant">42 AP Bills</span>
+</div>
+</div>
+<!-- Metric 4: Net Tax Liability Due -->
+<div class="bg-primary-container text-on-primary p-space-lg rounded-xl shadow-sm relative overflow-hidden flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between mb-space-xs">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-on-primary-container">Net Tax Liability Due</span>
+<span class="material-symbols-outlined text-on-primary text-[20px]">account_balance_wallet</span>
+</div>
+<div class="font-headline-lg text-headline-lg text-on-primary tracking-tight mb-1">$18,920.00</div>
+<p class="font-body-sm text-body-sm text-on-primary-container">Scheduled for statutory electronic wire</p>
+</div>
+<div class="mt-space-md pt-space-xs flex items-center justify-between">
+<span class="inline-flex items-center gap-1 bg-surface-container-lowest/20 px-2 py-0.5 rounded-full text-caption font-caption text-on-primary">
+<span class="material-symbols-outlined text-[13px]">event</span> Due: Dec 20, 2024
+        </span>
+<span class="font-body-sm-semibold text-body-sm-semibold text-primary-fixed">Remittance Ready</span>
+</div>
+</div>
+</div>
+<!-- Section 1: Statutory Jurisdiction Filing Breakdown -->
+<div class="bg-surface-container-lowest rounded-xl shadow-sm mb-space-xl overflow-hidden">
+<!-- Header with Segment Filter Tabs -->
+<div class="p-space-lg bg-surface-container-low flex flex-col sm:flex-row sm:items-center justify-between gap-space-md">
+<div>
+<h2 class="font-headline-sm text-headline-sm text-on-surface">Statutory Jurisdiction Filing Breakdown</h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Detailed assessment across state, regional, and national taxing authorities</p>
+</div>
+<div class="flex items-center gap-space-xs bg-surface-container p-1 rounded-xl">
+<button class="px-space-md py-1 bg-surface-container-lowest text-on-surface font-body-sm-semibold text-body-sm-semibold rounded-lg shadow-sm">All Authorities (4)</button>
+<button class="px-space-md py-1 text-on-surface-variant hover:text-on-surface font-body-sm text-body-sm rounded-lg transition-colors">US States (2)</button>
+<button class="px-space-md py-1 text-on-surface-variant hover:text-on-surface font-body-sm text-body-sm rounded-lg transition-colors">EU OSS</button>
+<button class="px-space-md py-1 text-on-surface-variant hover:text-on-surface font-body-sm text-body-sm rounded-lg transition-colors">UK HMRC</button>
+<button class="px-space-md py-1 text-on-surface-variant hover:text-on-surface font-body-sm text-body-sm rounded-lg transition-colors">Canada</button>
+</div>
+</div>
+<!-- Data Table Container -->
+<div class="overflow-x-auto">
+<table class="w-full text-left font-body-sm text-body-sm">
+<thead>
+<tr class="bg-surface-container text-on-surface-variant uppercase font-label-sm text-label-sm tracking-wider">
+<th class="py-space-sm px-space-md">Tax Authority &amp; Code</th>
+<th class="py-space-sm px-space-md">Cadence</th>
+<th class="py-space-sm px-space-md text-right">Gross Sales</th>
+<th class="py-space-sm px-space-md text-right">Exempt Sales</th>
+<th class="py-space-sm px-space-md text-right">Taxable Base</th>
+<th class="py-space-sm px-space-md text-right">Output Tax</th>
+<th class="py-space-sm px-space-md text-right">Input Credit (ITC)</th>
+<th class="py-space-sm px-space-md text-right font-body-sm-semibold text-body-sm-semibold text-on-surface">Net Tax Payable</th>
+<th class="py-space-sm px-space-md text-center">Filing Status</th>
+<th class="py-space-sm px-space-md text-center">Action</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-surface-container-high">
+<!-- Row 1: New York State -->
+<tr class="hover:bg-surface-container-low transition-colors">
+<td class="py-space-md px-space-md">
+<div class="flex items-center gap-space-sm">
+<div class="w-8 h-8 rounded-lg bg-surface-container-high flex items-center justify-center font-body-sm-semibold text-body-sm-semibold text-on-surface">NY</div>
+<div>
+<div class="font-body-md-semibold text-body-md-semibold text-on-surface">New York Dept of Taxation</div>
+<div class="font-caption text-caption text-on-surface-variant">Code: NY-ST-01 • Nexus: Physical Store &amp; Warehouse</div>
+</div>
+</div>
+</td>
+<td class="py-space-md px-space-md">
+<span class="inline-flex items-center px-2 py-0.5 rounded-full bg-surface-container text-on-surface-variant font-caption text-caption">Quarterly</span>
+</td>
+<td class="py-space-md px-space-md text-right font-body-md-semibold text-body-md-semibold text-on-surface">$142,500.00</td>
+<td class="py-space-md px-space-md text-right text-on-surface-variant">
+<span>$18,200.00</span>
+<span class="block font-caption text-caption text-primary">Apparel &lt;$110 Exempt</span>
+</td>
+<td class="py-space-md px-space-md text-right font-body-md-semibold text-body-md-semibold text-on-surface">$124,300.00</td>
+<td class="py-space-md px-space-md text-right font-body-md text-body-md text-on-surface">$11,031.63</td>
+<td class="py-space-md px-space-md text-right text-on-surface-variant">$0.00</td>
+<td class="py-space-md px-space-md text-right font-headline-sm text-headline-sm text-primary">$11,031.63</td>
+<td class="py-space-md px-space-md text-center">
+<span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-primary-fixed text-on-primary-fixed font-label-sm text-label-sm">
+<span class="w-1.5 h-1.5 rounded-full bg-primary"></span> Ready to File
+              </span>
+</td>
+<td class="py-space-md px-space-md text-center">
+<button class="p-1 text-on-surface-variant hover:text-primary transition-colors" title="Review Return Schedule">
+<span class="material-symbols-outlined text-[20px]">visibility</span>
+</button>
+</td>
+</tr>
+<!-- Row 2: California CDTFA -->
+<tr class="hover:bg-surface-container-low transition-colors">
+<td class="py-space-md px-space-md">
+<div class="flex items-center gap-space-sm">
+<div class="w-8 h-8 rounded-lg bg-surface-container-high flex items-center justify-center font-body-sm-semibold text-body-sm-semibold text-on-surface">CA</div>
+<div>
+<div class="font-body-md-semibold text-body-md-semibold text-on-surface">California CDTFA</div>
+<div class="font-caption text-caption text-on-surface-variant">Code: CA-ST-02 • Economic Nexus (&gt;$500k Threshold)</div>
+</div>
+</div>
+</td>
+<td class="py-space-md px-space-md">
+<span class="inline-flex items-center px-2 py-0.5 rounded-full bg-surface-container text-on-surface-variant font-caption text-caption">Quarterly</span>
+</td>
+<td class="py-space-md px-space-md text-right font-body-md-semibold text-body-md-semibold text-on-surface">$68,200.00</td>
+<td class="py-space-md px-space-md text-right text-on-surface-variant">
+<span>$4,100.00</span>
+<span class="block font-caption text-caption text-on-surface-variant">Wholesale Resale</span>
+</td>
+<td class="py-space-md px-space-md text-right font-body-md-semibold text-body-md-semibold text-on-surface">$64,100.00</td>
+<td class="py-space-md px-space-md text-right font-body-md text-body-md text-on-surface">$4,647.25</td>
+<td class="py-space-md px-space-md text-right text-on-surface-variant">$0.00</td>
+<td class="py-space-md px-space-md text-right font-headline-sm text-headline-sm text-primary">$4,647.25</td>
+<td class="py-space-md px-space-md text-center">
+<span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-primary-fixed text-on-primary-fixed font-label-sm text-label-sm">
+<span class="w-1.5 h-1.5 rounded-full bg-primary"></span> Ready to File
+              </span>
+</td>
+<td class="py-space-md px-space-md text-center">
+<button class="p-1 text-on-surface-variant hover:text-primary transition-colors" title="Review Return Schedule">
+<span class="material-symbols-outlined text-[20px]">visibility</span>
+</button>
+</td>
+</tr>
+<!-- Row 3: United Kingdom HMRC -->
+<tr class="hover:bg-surface-container-low transition-colors">
+<td class="py-space-md px-space-md">
+<div class="flex items-center gap-space-sm">
+<div class="w-8 h-8 rounded-lg bg-surface-container-high flex items-center justify-center font-body-sm-semibold text-body-sm-semibold text-on-surface">UK</div>
+<div>
+<div class="font-body-md-semibold text-body-md-semibold text-on-surface">UK HM Revenue &amp; Customs (HMRC)</div>
+<div class="font-caption text-caption text-on-surface-variant">Code: VAT-20 • GB 892 411 392 (Standard 20%)</div>
+</div>
+</div>
+</td>
+<td class="py-space-md px-space-md">
+<span class="inline-flex items-center px-2 py-0.5 rounded-full bg-surface-container text-on-surface-variant font-caption text-caption">Quarterly (MTD)</span>
+</td>
+<td class="py-space-md px-space-md text-right font-body-md-semibold text-body-md-semibold text-on-surface">
+              £32,400.00
+              <span class="block font-caption text-caption text-on-surface-variant">USD ~$41,200.00</span>
+</td>
+<td class="py-space-md px-space-md text-right text-on-surface-variant">
+<span>£0.00</span>
+<span class="block font-caption text-caption text-on-surface-variant">Standard Rate 100%</span>
+</td>
+<td class="py-space-md px-space-md text-right font-body-md-semibold text-body-md-semibold text-on-surface">£32,400.00</td>
+<td class="py-space-md px-space-md text-right font-body-md text-body-md text-on-surface">
+              £6,480.00
+              <span class="block font-caption text-caption text-on-surface-variant">~$8,230 USD</span>
+</td>
+<td class="py-space-md px-space-md text-right text-secondary">
+              £2,850.00
+              <span class="block font-caption text-caption text-on-surface-variant">~$3,620 USD</span>
+</td>
+<td class="py-space-md px-space-md text-right font-headline-sm text-headline-sm text-primary">
+              £3,630.00
+              <span class="block font-caption text-caption text-on-surface-variant font-normal">~$4,610.00 USD</span>
+</td>
+<td class="py-space-md px-space-md text-center">
+<span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-secondary-fixed text-on-secondary-fixed font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[13px]">cloud_sync</span> MTD Linked
+              </span>
+</td>
+<td class="py-space-md px-space-md text-center">
+<button class="p-1 text-on-surface-variant hover:text-primary transition-colors" title="Transmit to HMRC API">
+<span class="material-symbols-outlined text-[20px]">send</span>
+</button>
+</td>
+</tr>
+<!-- Row 4: European Union OSS -->
+<tr class="hover:bg-surface-container-low transition-colors">
+<td class="py-space-md px-space-md">
+<div class="flex items-center gap-space-sm">
+<div class="w-8 h-8 rounded-lg bg-surface-container-high flex items-center justify-center font-body-sm-semibold text-body-sm-semibold text-on-surface">EU</div>
+<div>
+<div class="font-body-md-semibold text-body-md-semibold text-on-surface">EU One-Stop-Shop (OSS)</div>
+<div class="font-caption text-caption text-on-surface-variant">Code: OSS-EU • B2C Destination Rates (FR, DE, IT, ES)</div>
+</div>
+</div>
+</td>
+<td class="py-space-md px-space-md">
+<span class="inline-flex items-center px-2 py-0.5 rounded-full bg-surface-container text-on-surface-variant font-caption text-caption">Quarterly</span>
+</td>
+<td class="py-space-md px-space-md text-right font-body-md-semibold text-body-md-semibold text-on-surface">
+              €28,100.00
+              <span class="block font-caption text-caption text-on-surface-variant">USD ~$30,500.00</span>
+</td>
+<td class="py-space-md px-space-md text-right text-on-surface-variant">
+<span>€0.00</span>
+<span class="block font-caption text-caption text-on-surface-variant">Cross-border Distance</span>
+</td>
+<td class="py-space-md px-space-md text-right font-body-md-semibold text-body-md-semibold text-on-surface">€28,100.00</td>
+<td class="py-space-md px-space-md text-right font-body-md text-body-md text-on-surface">
+              €5,620.00
+              <span class="block font-caption text-caption text-on-surface-variant">~$6,070 USD</span>
+</td>
+<td class="py-space-md px-space-md text-right text-secondary">
+              €1,800.00
+              <span class="block font-caption text-caption text-on-surface-variant">~$1,940 USD</span>
+</td>
+<td class="py-space-md px-space-md text-right font-headline-sm text-headline-sm text-primary">
+              €3,820.00
+              <span class="block font-caption text-caption text-on-surface-variant font-normal">~$4,130.00 USD</span>
+</td>
+<td class="py-space-md px-space-md text-center">
+<span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-primary-fixed text-on-primary-fixed font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[13px]">verified</span> Audit Verified
+              </span>
+</td>
+<td class="py-space-md px-space-md text-center">
+<button class="p-1 text-on-surface-variant hover:text-primary transition-colors" title="Download OSS XML Payload">
+<span class="material-symbols-outlined text-[20px]">download</span>
+</button>
+</td>
+</tr>
+</tbody>
+<tfoot class="bg-surface-container font-body-md-semibold text-body-md-semibold text-on-surface">
+<tr>
+<td class="py-space-sm px-space-md" colspan="2">Consolidated Totals (USD Equivalent)</td>
+<td class="py-space-sm px-space-md text-right">$286,400.00</td>
+<td class="py-space-sm px-space-md text-right text-on-surface-variant">$22,300.00</td>
+<td class="py-space-sm px-space-md text-right">$264,100.00</td>
+<td class="py-space-sm px-space-md text-right">$24,480.00</td>
+<td class="py-space-sm px-space-md text-right text-secondary">$5,560.00</td>
+<td class="py-space-sm px-space-md text-right text-primary text-headline-sm font-headline-sm">$18,920.00</td>
+<td class="py-space-sm px-space-md text-center" colspan="2">
+<span class="font-caption text-caption text-on-surface-variant">All 4 Returns Reconciled</span>
+</td>
+</tr>
+</tfoot>
+</table>
+</div>
+</div>
+<!-- Section 2: Audit Trail & Exemption Certificate Verification (Split Bento) -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-lg mb-space-xl">
+<!-- Left Column: Exemption Breakdown & Certificate Vault -->
+<div class="lg:col-span-6 bg-surface-container-lowest p-space-lg rounded-xl shadow-sm flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between mb-space-sm">
+<div class="flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-secondary text-[22px]">policy</span>
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Exemption Certificate Verification</h3>
+</div>
+<span class="px-2 py-0.5 rounded-full bg-primary-fixed text-on-primary-fixed-variant font-label-sm text-label-sm">
+            28 of 28 Valid (100%)
+          </span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mb-space-md">
+          Statutory non-taxable sales substantiated by automated digital certificate checks. Zero expired or invalid records detected.
+        </p>
+<!-- Exemption Categories List -->
+<div class="space-y-space-sm mb-space-md">
+<!-- Item 1 -->
+<div class="p-space-sm rounded-lg bg-surface-container-low flex items-center justify-between">
+<div class="flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-primary text-[18px]">domain_verification</span>
+<div>
+<span class="font-body-sm-semibold text-body-sm-semibold text-on-surface">Resale Certificates (Form ST-120 / Reseller)</span>
+<span class="block font-caption text-caption text-on-surface-variant">19 B2B Wholesale Accounts • Verified TIN/EIN</span>
+</div>
+</div>
+<div class="text-right">
+<span class="font-body-md-semibold text-body-md-semibold text-on-surface">$12,400.00</span>
+<span class="block font-caption text-caption text-primary">0 Audit Risk</span>
+</div>
+</div>
+<!-- Item 2 -->
+<div class="p-space-sm rounded-lg bg-surface-container-low flex items-center justify-between">
+<div class="flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-secondary text-[18px]">flight_takeoff</span>
+<div>
+<span class="font-body-sm-semibold text-body-sm-semibold text-on-surface">B2B Cross-Border / Reverse Charge</span>
+<span class="block font-caption text-caption text-on-surface-variant">6 Corporate Buyers (EU/UK VIES validated)</span>
+</div>
+</div>
+<div class="text-right">
+<span class="font-body-md-semibold text-body-md-semibold text-on-surface">$4,100.00</span>
+<span class="block font-caption text-caption text-on-surface-variant">Tax Shifted to Buyer</span>
+</div>
+</div>
+<!-- Item 3 -->
+<div class="p-space-sm rounded-lg bg-surface-container-low flex items-center justify-between">
+<div class="flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-tertiary text-[18px]">health_and_safety</span>
+<div>
+<span class="font-body-sm-semibold text-body-sm-semibold text-on-surface">Zero-Rated Product Tax Codes (Essentials)</span>
+<span class="block font-caption text-caption text-on-surface-variant">Medical grade / protective items exempt by law</span>
+</div>
+</div>
+<div class="text-right">
+<span class="font-body-md-semibold text-body-md-semibold text-on-surface">$1,700.00</span>
+<span class="block font-caption text-caption text-on-surface-variant">Statutory Non-taxable</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Action Footer -->
+<div class="pt-space-sm flex items-center justify-between">
+<span class="font-caption text-caption text-on-surface-variant">Total Exemption Base: <strong>$18,200.00</strong></span>
+<button class="font-label-sm text-label-sm text-secondary hover:underline flex items-center gap-1">
+          Open CertVault Manager <span class="material-symbols-outlined text-[16px]">open_in_new</span>
+</button>
+</div>
+</div>
+<!-- Right Column: Reconciliation with General Ledger (GL) Accounts -->
+<div class="lg:col-span-6 bg-surface-container-lowest p-space-lg rounded-xl shadow-sm flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between mb-space-sm">
+<div class="flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-primary text-[22px]">balance</span>
+<h3 class="font-headline-sm text-headline-sm text-on-surface">General Ledger Reconciliation</h3>
+</div>
+<span class="px-2 py-0.5 rounded-full bg-primary-fixed text-on-primary-fixed-variant font-label-sm text-label-sm flex items-center gap-1">
+<span class="w-1.5 h-1.5 rounded-full bg-primary"></span>
+            GL Variance: $0.00
+          </span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mb-space-md">
+          Comparison between calculated statutory return schedule and real-time trial balance in account <code class="text-on-surface font-body-sm-semibold bg-surface-container px-1 py-0.5 rounded">#2050 - Sales Tax / VAT Payable</code>.
+        </p>
+<!-- Ledger Table Comparison -->
+<div class="space-y-space-sm mb-space-md">
+<div class="p-space-sm rounded-lg bg-surface-container-low flex items-center justify-between">
+<div>
+<span class="font-body-sm-semibold text-body-sm-semibold text-on-surface">Trial Balance Balance (Acct #2050)</span>
+<span class="block font-caption text-caption text-on-surface-variant">Net credit balance as of Dec 31, 2024</span>
+</div>
+<span class="font-headline-sm text-headline-sm text-on-surface">$18,920.00</span>
+</div>
+<div class="p-space-sm rounded-lg bg-surface-container-low flex items-center justify-between">
+<div>
+<span class="font-body-sm-semibold text-body-sm-semibold text-on-surface">Consolidated Filing Liability Schedule</span>
+<span class="block font-caption text-caption text-on-surface-variant">Sum of NY, CA, UK HMRC, &amp; EU OSS returns</span>
+</div>
+<span class="font-headline-sm text-headline-sm text-on-surface">$18,920.00</span>
+</div>
+<!-- Delta Result Banner -->
+<div class="p-space-md rounded-xl bg-primary-container text-on-primary flex items-center justify-between">
+<div class="flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-[24px]">verified</span>
+<div>
+<span class="font-body-md-semibold text-body-md-semibold">Audit Integrity Match: 100% Consistent</span>
+<span class="block font-caption text-caption text-on-primary-container">Ready for CFO sign-off and direct electronic statutory transmission</span>
+</div>
+</div>
+<span class="font-headline-md text-headline-md font-bold tracking-tight">Delta: $0.00</span>
+</div>
+</div>
+</div>
+<!-- Action Footer -->
+<div class="pt-space-sm flex items-center justify-between">
+<span class="font-caption text-caption text-on-surface-variant">Audited by System: <strong>Dec 20, 2024 at 14:30:11 UTC</strong></span>
+<button class="font-label-sm text-label-sm text-secondary hover:underline flex items-center gap-1">
+          View GL Journal Entries (#JE-8941) <span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Operational Audit Compliance Sign-off Drawer / Card -->
+<div class="bg-surface-container p-space-lg rounded-xl shadow-sm flex flex-col md:flex-row items-center justify-between gap-space-md">
+<div class="flex items-center gap-space-md">
+<div class="w-12 h-12 rounded-xl bg-surface-container-lowest text-primary flex items-center justify-center shadow-sm shrink-0">
+<span class="material-symbols-outlined text-[28px]">fact_check</span>
+</div>
+<div>
+<h4 class="font-headline-sm text-headline-sm text-on-surface">Statutory Period Close Protocol Active</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+          Locking this period will freeze tax lines on all associated invoices, issue tamper-evident SHA-256 audit hashes, and trigger automated direct filings.
+        </p>
+</div>
+</div>
+<div class="flex items-center gap-space-sm shrink-0 w-full md:w-auto">
+<button class="w-full md:w-auto h-9 px-space-md bg-surface-container-lowest text-on-surface hover:bg-surface-container-high font-body-sm-semibold text-body-sm-semibold rounded-lg transition-colors shadow-sm">
+        Request External CPA Review
+      </button>
+<button class="w-full md:w-auto h-9 px-space-lg bg-primary-container hover:bg-primary text-on-primary font-body-sm-semibold text-body-sm-semibold rounded-lg flex items-center justify-center gap-1.5 transition-all shadow-sm">
+<span class="material-symbols-outlined text-[18px]">verified</span>
+        Approve &amp; Transmit All (4) Returns
+      </button>
+</div>
+</div>
+</div></main></div></body></html>

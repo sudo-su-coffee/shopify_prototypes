@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet"/><style>@layer base { html, body { margin: 0; padding: 0; } body { overscroll-behavior: none; } main > :first-child { margin-top: 0 !important; } main > :last-child { margin-bottom: 0 !important; } } ::-webkit-scrollbar { display: none; }</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "on-surface": "#1b1c1c", "error-container": "#ffdad6", "on-tertiary-fixed": "#1c1b1b", "on-surface-variant": "#3e4944", "surface": "#fbf9f8", "on-primary-fixed-variant": "#00513c", "surface-container": "#efeded", "primary-fixed": "#92f6cf", "surface-container-low": "#f5f3f3", "secondary": "#0055c7", "tertiary-fixed": "#e5e2e1", "secondary-container": "#2c6fe7", "surface-container-high": "#e9e8e7", "background": "#fbf9f8", "primary": "#00654b", "primary-fixed-dim": "#75d9b3", "on-tertiary-container": "#f8f5f4", "on-secondary": "#ffffff", "outline": "#6e7a73", "inverse-on-surface": "#f2f0f0", "on-primary": "#ffffff", "on-primary-fixed": "#002116", "surface-container-lowest": "#ffffff", "secondary-fixed": "#d9e2ff", "on-primary-container": "#d6ffeb", "surface-container-highest": "#e4e2e2", "on-secondary-fixed-variant": "#00419c", "error": "#ba1a1a", "tertiary-fixed-dim": "#c8c6c5", "on-background": "#1b1c1c", "tertiary-container": "#717070", "inverse-surface": "#303031", "surface-bright": "#fbf9f8", "on-error-container": "#93000a", "on-tertiary": "#ffffff", "surface-tint": "#006c50", "on-secondary-fixed": "#001945", "surface-dim": "#dbdad9", "on-secondary-container": "#fefcff", "inverse-primary": "#75d9b3", "surface-variant": "#e4e2e2", "on-tertiary-fixed-variant": "#474746", "primary-container": "#008060", "on-error": "#ffffff", "outline-variant": "#bdc9c2", "secondary-fixed-dim": "#b0c6ff", "tertiary": "#585857" }, "borderRadius": { "DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem" }, "spacing": { "margin": "1.5rem", "space-xs": "0.25rem", "space-md": "1rem", "space-sm": "0.5rem", "gutter": "1rem", "space-lg": "1.25rem", "space-xl": "1.5rem" }, "fontFamily": { "body-lg": ["Inter"], "caption": ["Inter"], "headline-sm": ["Inter"], "label-sm": ["Inter"], "body-sm-semibold": ["Inter"], "headline-md": ["Inter"], "body-sm": ["Inter"], "label-md": ["Inter"], "headline-lg-mobile": ["Inter"], "headline-lg": ["Inter"], "body-md": ["Inter"], "body-md-semibold": ["Inter"] }, "fontSize": { "body-lg": ["15px", { "lineHeight": "22px", "fontWeight": "400" }], "caption": ["11px", { "lineHeight": "14px", "fontWeight": "500" }], "headline-sm": ["16px", { "lineHeight": "24px", "letterSpacing": "-0.005em", "fontWeight": "600" }], "label-sm": ["12px", { "lineHeight": "16px", "letterSpacing": "0.01em", "fontWeight": "600" }], "body-sm-semibold": ["13px", { "lineHeight": "18px", "fontWeight": "600" }], "headline-md": ["20px", { "lineHeight": "28px", "letterSpacing": "-0.01em", "fontWeight": "600" }], "body-sm": ["13px", { "lineHeight": "18px", "fontWeight": "400" }], "label-md": ["13px", { "lineHeight": "16px", "fontWeight": "500" }], "headline-lg-mobile": ["22px", { "lineHeight": "28px", "letterSpacing": "-0.015em", "fontWeight": "700" }], "headline-lg": ["28px", { "lineHeight": "36px", "letterSpacing": "-0.02em", "fontWeight": "700" }], "body-md": ["14px", { "lineHeight": "20px", "fontWeight": "400" }], "body-md-semibold": ["14px", { "lineHeight": "20px", "fontWeight": "600" }] } } } };</script><title>Shopify Admin Home | Shopify Prototype</title>
+</head><body class="bg-surface font-body-sm text-body-sm text-on-surface antialiased"><header class="fixed top-0 left-0 right-0 h-14 z-50 bg-inverse-surface text-inverse-on-surface flex items-center justify-between px-space-md shadow-[0_1px_4px_rgba(0,0,0,0.12)]"><div class="flex items-center gap-space-md min-w-[240px]"><img alt="Shopify Bag Logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1V-gBEwThgr-JtgX9yJl4VfYLNligKQdpdnLcSOj72vBDf09IMRWjwgZsjYFKYjD08YLtP8B-SEGeGQbwEmwDagHqaiIOGihO5RXFpt7lBq5HlF0PbWh6uxwSlc0CBgRhiPPd9vS3exUlOycCN-MkNJmT5T7SXilbOifwtBHvqZNsrW1449A9avt2-TkOOXcSdAFvahgA9guhlj9CatQnNdRmAl_hy1rnaOOSPDdVK1p7XxUiPrvE-t-Rep"/><button class="flex items-center gap-space-xs px-space-sm py-1 rounded bg-inverse-surface hover:bg-surface-variant/20 text-inverse-on-surface transition-colors" type="button"><span class="material-symbols-outlined text-[18px]">storefront</span><span class="font-body-sm-semibold text-body-sm-semibold">Northwind Apparel</span><span class="material-symbols-outlined text-[16px]">unfold_more</span></button></div><div class="flex-1 max-w-2xl px-space-lg"><div class="relative flex items-center w-full"><span class="material-symbols-outlined absolute left-space-sm text-outline-variant text-[18px]">search</span><input class="w-full h-8 pl-8 pr-16 bg-surface-variant/20 hover:bg-surface-variant/30 focus:bg-surface text-inverse-on-surface focus:text-on-surface placeholder:text-outline-variant rounded font-body-sm text-body-sm transition-all focus:outline-none focus:ring-1 focus:ring-secondary" placeholder="Search across products, orders, customers..." type="text"/><div class="absolute right-space-sm flex items-center gap-0.5 px-1.5 py-0.5 rounded bg-surface-variant/30 text-inverse-on-surface/80 font-caption text-caption"><span>⌘</span><span>K</span></div></div></div><div class="flex items-center gap-space-sm justify-end min-w-[240px]"><button aria-label="Shopify Sidekick AI" class="relative p-1.5 rounded hover:bg-surface-variant/20 text-inverse-on-surface transition-colors flex items-center justify-center" type="button"><span class="material-symbols-outlined text-[20px] text-primary-fixed">auto_awesome</span></button><button aria-label="Notifications" class="relative p-1.5 rounded hover:bg-surface-variant/20 text-inverse-on-surface transition-colors flex items-center justify-center" type="button"><span class="material-symbols-outlined text-[20px]">notifications</span><span class="absolute top-1 right-1 w-2 h-2 rounded-full bg-error ring-1 ring-inverse-surface"></span></button><div class="flex items-center gap-space-xs pl-space-xs cursor-pointer"><img alt="Profile" class="w-8 h-8 rounded-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDDN-BO4JB6MuU38q67dITctfWzt4dLTdDBL2t4xB3lLE03T-bdODjv-wv_98TF0qrDAO9jaPkwOX72S6hoiZ3T9eKXyf1dnaMPBlrflTYXV57f2yJbzxjbOQxS5lyEjN9mmXMo6KjRE6DyikqZjdeJBMkDFuRq5vIAMpORcySFqHR6hrK3tlZcjHG6JoM6A_h2PwwGignz8F_G9xJtEfQdNgcDzilJFfw74GdLzuvF3lsnFFs-aVN4sQ"/><span class="hidden lg:inline font-body-sm-semibold text-body-sm-semibold text-inverse-on-surface">Alex Rivera</span><span class="material-symbols-outlined text-[16px] text-inverse-on-surface/70">keyboard_arrow_down</span></div></div></header><aside class="fixed left-0 top-14 bottom-0 w-60 z-40 bg-surface-container-low flex flex-col justify-between overflow-y-auto"><div class="p-space-sm flex flex-col gap-space-md"><nav class="flex flex-col gap-0.5" data-active-classes="bg-surface-container-high text-on-surface font-body-sm-semibold text-body-sm-semibold rounded"><a aria-current="page" class="flex items-center justify-between px-space-sm py-1.5 transition-colors bg-surface-container-high text-on-surface font-body-sm-semibold text-body-sm-semibold rounded" data-path="admin-home" href="#"><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-[18px]">home</span><span class="font-body-sm text-body-sm">Home</span></div></a><a class="flex items-center justify-between px-space-sm py-1.5 rounded text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="orders" href="#"><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-[18px]">receipt_long</span><span class="font-body-sm text-body-sm">Orders</span></div><span class="font-caption text-caption px-1.5 py-0.5 rounded-full bg-surface-container-high text-on-surface-variant font-bold">12</span></a><a class="flex items-center justify-between px-space-sm py-1.5 rounded text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="product-list" href="#"><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-[18px]">sell</span><span class="font-body-sm text-body-sm">Products</span></div></a><a class="flex items-center justify-between px-space-sm py-1.5 rounded text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="customers" href="#"><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-[18px]">group</span><span class="font-body-sm text-body-sm">Customers</span></div></a><a class="flex items-center justify-between px-space-sm py-1.5 rounded text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="content" href="#"><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-[18px]">perm_media</span><span class="font-body-sm text-body-sm">Content</span></div></a><a class="flex items-center justify-between px-space-sm py-1.5 rounded text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="analytics" href="#"><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-[18px]">bar_chart</span><span class="font-body-sm text-body-sm">Analytics</span></div></a><a class="flex items-center justify-between px-space-sm py-1.5 rounded text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="marketing" href="#"><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-[18px]">campaign</span><span class="font-body-sm text-body-sm">Marketing</span></div></a><a class="flex items-center justify-between px-space-sm py-1.5 rounded text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="discounts" href="#"><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-[18px]">percent</span><span class="font-body-sm text-body-sm">Discounts</span></div></a></nav><div class="flex flex-col gap-1"><div class="px-space-sm py-1 font-caption text-caption uppercase text-tertiary tracking-wider font-semibold">Sales Channels</div><nav class="flex flex-col gap-0.5" data-active-classes="bg-surface-container-high text-on-surface font-body-sm-semibold text-body-sm-semibold rounded"><a class="flex items-center justify-between px-space-sm py-1.5 rounded text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="online-store" href="#"><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-[18px]">language</span><span class="font-body-sm text-body-sm">Online Store</span></div><span class="material-symbols-outlined text-[16px] text-tertiary">visibility</span></a><a class="flex items-center justify-between px-space-sm py-1.5 rounded text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="point-of-sale" href="#"><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-[18px]">store</span><span class="font-body-sm text-body-sm">Point of Sale</span></div></a></nav></div><div class="flex flex-col gap-1"><div class="px-space-sm py-1 font-caption text-caption uppercase text-tertiary tracking-wider font-semibold">Apps</div><nav class="flex flex-col gap-0.5" data-active-classes="bg-surface-container-high text-on-surface font-body-sm-semibold text-body-sm-semibold rounded"><a class="flex items-center gap-space-sm px-space-sm py-1.5 rounded text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="shopify-flow" href="#"><span class="material-symbols-outlined text-[18px]">account_tree</span><span class="font-body-sm text-body-sm">Shopify Flow</span></a><a class="flex items-center gap-space-sm px-space-sm py-1.5 rounded text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="shopify-inbox" href="#"><span class="material-symbols-outlined text-[18px]">chat</span><span class="font-body-sm text-body-sm">Shopify Inbox</span></a><a class="flex items-center gap-space-sm px-space-sm py-1.5 rounded text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="product-reviews" href="#"><span class="material-symbols-outlined text-[18px]">reviews</span><span class="font-body-sm text-body-sm">Reviews</span></a></nav></div></div><div class="p-space-sm"><nav class="flex flex-col gap-0.5" data-active-classes="bg-surface-container-high text-on-surface font-body-sm-semibold text-body-sm-semibold rounded"><a class="flex items-center gap-space-sm px-space-sm py-1.5 rounded text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="settings" href="#"><span class="material-symbols-outlined text-[18px]">settings</span><span class="font-body-sm text-body-sm">Settings</span></a><a class="flex items-center gap-space-sm px-space-sm py-1.5 rounded text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="help-center" href="#"><span class="material-symbols-outlined text-[18px]">help</span><span class="font-body-sm text-body-sm">Help Center</span></a></nav></div></aside><div class="pl-60"><main class="relative pt-14 min-h-screen bg-surface w-full px-space-md lg:px-space-xl py-space-md"><div class="max-w-7xl mx-auto"><div class="flex flex-col w-full">
+<div class="flex flex-col gap-space-lg pb-16">
+<!-- Top Greeting & Context Bar -->
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-space-sm pt-2">
+<div>
+<div class="flex items-center gap-space-xs text-on-surface-variant font-label-md text-label-md mb-0.5">
+<span class="material-symbols-outlined text-[16px] text-tertiary">calendar_today</span>
+<span>Tuesday, October 24</span>
+<span class="text-outline-variant">•</span>
+<span class="text-primary-container font-body-sm-semibold text-body-sm-semibold flex items-center gap-1">
+<span class="inline-block w-2 h-2 rounded-full bg-primary-container animate-pulse"></span>
+            Live store online
+          </span>
+</div>
+<h1 class="font-headline-lg text-headline-lg text-on-surface tracking-tight">Good afternoon, Sarah</h1>
+</div>
+<div class="flex items-center gap-space-sm self-start sm:self-auto">
+<button class="h-8 px-space-md bg-surface-container hover:bg-surface-container-high text-on-surface rounded font-body-sm-semibold text-body-sm-semibold flex items-center gap-1.5 shadow-sm transition-colors" type="button">
+<span class="material-symbols-outlined text-[16px] text-tertiary">tune</span>
+          Customize home
+        </button>
+<button class="h-8 px-space-md bg-on-surface hover:bg-black text-on-primary rounded font-body-sm-semibold text-body-sm-semibold flex items-center gap-1.5 shadow-sm transition-all hover:shadow" type="button">
+<span class="material-symbols-outlined text-[16px]">add</span>
+          Add product
+        </button>
+</div>
+</div>
+<!-- Setup Guide Card (Collapsible) -->
+<div class="bg-surface-container-lowest rounded-xl shadow-sm p-space-lg relative overflow-hidden transition-all duration-300" id="setup-banner">
+<div class="flex flex-col md:flex-row md:items-center justify-between gap-space-md">
+<div class="flex items-start gap-space-md">
+<div class="w-10 h-10 rounded-full bg-primary-fixed flex items-center justify-center text-primary shrink-0 mt-0.5">
+<span class="material-symbols-outlined text-[24px]">verified</span>
+</div>
+<div>
+<div class="flex items-center gap-space-xs flex-wrap">
+<h2 class="font-headline-sm text-headline-sm text-on-surface">You're ready to sell! 4 of 5 tasks completed</h2>
+<span class="px-2 py-0.5 rounded-full bg-primary-fixed-dim/40 text-on-primary-fixed-variant font-label-sm text-label-sm">80% Done</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant mt-0.5">
+              Your store is live. Connect your custom domain to establish brand trust before scaling marketing campaigns.
+            </p>
+<div class="w-full max-w-md bg-surface-container-high h-1.5 rounded-full mt-3 overflow-hidden">
+<div class="bg-primary-container h-full rounded-full transition-all duration-700" style="width: 80%;"></div>
+</div>
+</div>
+</div>
+<div class="flex items-center gap-space-sm pl-14 md:pl-0 shrink-0">
+<button class="h-8 px-3.5 bg-primary-container hover:bg-primary text-on-primary rounded font-body-sm-semibold text-body-sm-semibold transition-colors shadow-sm flex items-center gap-1" type="button">
+<span class="material-symbols-outlined text-[16px]">link</span>
+            Add custom domain
+          </button>
+<button aria-label="Dismiss banner" class="p-1 rounded text-outline hover:text-on-surface hover:bg-surface-container transition-colors" id="dismiss-setup-btn" type="button">
+<span class="material-symbols-outlined text-[18px]">close</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Live Metrics Grid -->
+<div class="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-space-md">
+<!-- Metric 1: Total Sales -->
+<div class="bg-surface-container-lowest p-space-md rounded-xl shadow-sm flex flex-col justify-between hover:shadow transition-shadow">
+<div class="flex items-center justify-between">
+<span class="font-body-sm text-body-sm text-on-surface-variant">Total sales</span>
+<span class="px-2 py-0.5 rounded-full bg-primary-fixed/40 text-on-primary-fixed-variant font-label-sm text-label-sm flex items-center gap-0.5">
+<span class="material-symbols-outlined text-[14px]">arrow_upward</span>14.2%
+          </span>
+</div>
+<div class="mt-2 flex items-baseline justify-between">
+<span class="font-headline-lg text-headline-lg text-on-surface">$18,429.50</span>
+<span class="font-caption text-caption text-tertiary">vs yesterday</span>
+</div>
+<!-- Mini Sparkline SVG -->
+<div class="mt-3 pt-2">
+<svg class="w-full h-8 overflow-visible" fill="none" viewbox="0 0 160 32">
+<path d="M0 24 L25 20 L50 26 L75 14 L100 18 L125 8 L160 4" stroke="#008060" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+<path d="M0 24 L25 20 L50 26 L75 14 L100 18 L125 8 L160 4 L160 32 L0 32 Z" fill="#008060" fill-opacity="0.08"></path>
+</svg>
+</div>
+</div>
+<!-- Metric 2: Online store sessions -->
+<div class="bg-surface-container-lowest p-space-md rounded-xl shadow-sm flex flex-col justify-between hover:shadow transition-shadow">
+<div class="flex items-center justify-between">
+<span class="font-body-sm text-body-sm text-on-surface-variant">Online store sessions</span>
+<span class="px-2 py-0.5 rounded-full bg-primary-fixed/40 text-on-primary-fixed-variant font-label-sm text-label-sm flex items-center gap-0.5">
+<span class="material-symbols-outlined text-[14px]">arrow_upward</span>8.5%
+          </span>
+</div>
+<div class="mt-2 flex items-baseline justify-between">
+<span class="font-headline-lg text-headline-lg text-on-surface">3,842</span>
+<span class="font-caption text-caption text-tertiary">Conv. 3.42%</span>
+</div>
+<!-- Mini Sparkline SVG -->
+<div class="mt-3 pt-2">
+<svg class="w-full h-8 overflow-visible" fill="none" viewbox="0 0 160 32">
+<path d="M0 28 L30 22 L60 25 L90 16 L120 19 L140 10 L160 7" stroke="#0055c7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+<path d="M0 28 L30 22 L60 25 L90 16 L120 19 L140 10 L160 7 L160 32 L0 32 Z" fill="#0055c7" fill-opacity="0.08"></path>
+</svg>
+</div>
+</div>
+<!-- Metric 3: Total orders -->
+<div class="bg-surface-container-lowest p-space-md rounded-xl shadow-sm flex flex-col justify-between hover:shadow transition-shadow">
+<div class="flex items-center justify-between">
+<span class="font-body-sm text-body-sm text-on-surface-variant">Total orders</span>
+<span class="px-2 py-0.5 rounded-full bg-surface-container-high text-on-surface-variant font-label-sm text-label-sm">
+            +12 orders
+          </span>
+</div>
+<div class="mt-2 flex items-baseline justify-between">
+<span class="font-headline-lg text-headline-lg text-on-surface">148</span>
+<span class="font-caption text-caption text-primary font-bold">14 unfulfilled</span>
+</div>
+<!-- Mini Bar Sparkline -->
+<div class="mt-3 pt-2 flex items-end gap-1.5 h-8">
+<span class="flex-1 bg-surface-container-high rounded-t h-4"></span>
+<span class="flex-1 bg-surface-container-high rounded-t h-5"></span>
+<span class="flex-1 bg-surface-container-high rounded-t h-3"></span>
+<span class="flex-1 bg-surface-container-high rounded-t h-6"></span>
+<span class="flex-1 bg-surface-container-high rounded-t h-7"></span>
+<span class="flex-1 bg-surface-container-high rounded-t h-5"></span>
+<span class="flex-1 bg-primary-container rounded-t h-8"></span>
+</div>
+</div>
+<!-- Metric 4: Average Order Value -->
+<div class="bg-surface-container-lowest p-space-md rounded-xl shadow-sm flex flex-col justify-between hover:shadow transition-shadow">
+<div class="flex items-center justify-between">
+<span class="font-body-sm text-body-sm text-on-surface-variant">Average order value</span>
+<span class="px-2 py-0.5 rounded-full bg-primary-fixed/40 text-on-primary-fixed-variant font-label-sm text-label-sm flex items-center gap-0.5">
+<span class="material-symbols-outlined text-[14px]">arrow_upward</span>4.1%
+          </span>
+</div>
+<div class="mt-2 flex items-baseline justify-between">
+<span class="font-headline-lg text-headline-lg text-on-surface">$124.52</span>
+<span class="font-caption text-caption text-tertiary">AOV target $120</span>
+</div>
+<!-- Mini Sparkline SVG -->
+<div class="mt-3 pt-2">
+<svg class="w-full h-8 overflow-visible" fill="none" viewbox="0 0 160 32">
+<path d="M0 18 L35 18 L70 22 L105 12 L130 15 L160 8" stroke="#717070" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+<path d="M0 18 L35 18 L70 22 L105 12 L130 15 L160 8 L160 32 L0 32 Z" fill="#717070" fill-opacity="0.06"></path>
+</svg>
+</div>
+</div>
+</div>
+<!-- 2-Column Responsive Layout: Activity feed & Sidekick Column -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-lg items-start">
+<!-- LEFT COLUMN: Main Ops & Tables (8 cols = ~66%) -->
+<div class="lg:col-span-8 flex flex-col gap-space-md">
+<!-- Action Card: Orders to Fulfill -->
+<div class="bg-surface-container-lowest rounded-xl shadow-sm p-space-lg flex flex-col sm:flex-row sm:items-center justify-between gap-space-md">
+<div class="flex items-start gap-space-md">
+<div class="w-10 h-10 rounded-xl bg-surface-container-high flex items-center justify-center text-on-surface shrink-0">
+<span class="material-symbols-outlined text-[22px]">local_shipping</span>
+</div>
+<div>
+<div class="flex items-center gap-2">
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Orders to fulfill</h3>
+<span class="px-2 py-0.5 rounded-full bg-secondary-fixed text-on-secondary-fixed font-label-sm text-label-sm">High Priority</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant mt-0.5">
+<span class="font-body-md-semibold text-body-md-semibold text-on-surface">14 orders</span> need fulfillment today to meet same-day dispatch SLAs.
+              </p>
+</div>
+</div>
+<div class="flex items-center gap-space-sm pl-14 sm:pl-0 shrink-0">
+<button class="h-8 px-space-md bg-surface-container hover:bg-surface-container-high text-on-surface rounded font-body-sm-semibold text-body-sm-semibold transition-colors" type="button">
+              Create shipping labels
+            </button>
+<button class="h-8 px-space-md bg-on-surface hover:bg-black text-on-primary rounded font-body-sm-semibold text-body-sm-semibold transition-colors shadow-sm" type="button">
+              View 14 orders
+            </button>
+</div>
+</div>
+<!-- Action Card: Low Stock Alert -->
+<div class="bg-surface-container-lowest rounded-xl shadow-sm p-space-lg flex flex-col sm:flex-row sm:items-center justify-between gap-space-md">
+<div class="flex items-start gap-space-md">
+<div class="w-10 h-10 rounded-xl bg-error-container flex items-center justify-center text-error shrink-0">
+<span class="material-symbols-outlined text-[22px]">inventory_2</span>
+</div>
+<div>
+<div class="flex items-center gap-2">
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Low stock inventory alert</h3>
+<span class="px-2 py-0.5 rounded-full bg-error-container text-on-error-container font-label-sm text-label-sm">Action required</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant mt-0.5">
+                3 products require immediate restocking: <strong class="text-on-surface font-body-md-semibold text-body-md-semibold">Heavyweight Boxy Tee</strong> (2 left), <strong class="text-on-surface font-body-md-semibold text-body-md-semibold">Canvas Tote</strong> (0 left).
+              </p>
+</div>
+</div>
+<div class="flex items-center gap-space-sm pl-14 sm:pl-0 shrink-0">
+<button class="h-8 px-space-md bg-surface-container hover:bg-surface-container-high text-on-surface rounded font-body-sm-semibold text-body-sm-semibold transition-colors" type="button">
+              Transfer inventory
+            </button>
+</div>
+</div>
+<!-- Recent Orders IndexTable -->
+<div class="bg-surface-container-lowest rounded-xl shadow-sm overflow-hidden flex flex-col">
+<div class="p-space-md bg-surface-container-lowest flex items-center justify-between">
+<div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Recent orders</h3>
+<p class="font-caption text-caption text-tertiary">Real-time incoming customer transactions</p>
+</div>
+<div class="flex items-center gap-2">
+<div class="relative">
+<span class="material-symbols-outlined absolute left-2 top-1.5 text-outline-variant text-[16px]">search</span>
+<input class="h-8 pl-7 pr-3 bg-surface text-on-surface text-body-sm font-body-sm rounded focus:outline-none focus:ring-1 focus:ring-secondary w-36 sm:w-48 placeholder:text-outline-variant" placeholder="Filter orders..." type="text"/>
+</div>
+<button class="h-8 px-2.5 bg-surface hover:bg-surface-container text-on-surface rounded font-body-sm-semibold text-body-sm-semibold flex items-center gap-1 transition-colors" type="button">
+<span class="material-symbols-outlined text-[16px]">filter_list</span>
+                Filter
+              </button>
+</div>
+</div>
+<!-- Table Content -->
+<div class="overflow-x-auto">
+<table class="w-full text-left text-body-sm font-body-sm">
+<thead>
+<tr class="bg-surface-container-low text-on-surface-variant font-label-sm text-label-sm">
+<th class="py-2.5 px-space-md font-semibold">Order</th>
+<th class="py-2.5 px-space-md font-semibold">Customer</th>
+<th class="py-2.5 px-space-md font-semibold hidden sm:table-cell">Items</th>
+<th class="py-2.5 px-space-md font-semibold">Payment</th>
+<th class="py-2.5 px-space-md font-semibold">Fulfillment</th>
+<th class="py-2.5 px-space-md font-semibold text-right">Total</th>
+</tr>
+</thead>
+<tbody class="divide-y-0">
+<!-- Order 1 -->
+<tr class="hover:bg-surface-container-low/60 transition-colors group cursor-pointer">
+<td class="py-3 px-space-md font-body-sm-semibold text-body-sm-semibold text-secondary flex items-center gap-1.5">
+<span>#1042</span>
+<span class="material-symbols-outlined text-[14px] opacity-0 group-hover:opacity-100 transition-opacity">open_in_new</span>
+</td>
+<td class="py-3 px-space-md">
+<div class="flex items-center gap-2">
+<div class="w-7 h-7 rounded-full bg-surface-container flex items-center justify-center font-caption text-caption font-bold text-on-surface-variant">EW</div>
+<div>
+<div class="font-body-sm-semibold text-body-sm-semibold text-on-surface">Emma Watson</div>
+<div class="font-caption text-caption text-tertiary">Austin, TX</div>
+</div>
+</div>
+</td>
+<td class="py-3 px-space-md text-on-surface-variant hidden sm:table-cell">
+                    2 items <span class="font-caption text-caption text-tertiary">(Boxy Tee, Cap)</span>
+</td>
+<td class="py-3 px-space-md">
+<span class="inline-flex items-center px-2 py-0.5 rounded-full bg-primary-fixed/40 text-on-primary-fixed-variant font-label-sm text-label-sm font-semibold">
+                      Paid
+                    </span>
+</td>
+<td class="py-3 px-space-md">
+<span class="inline-flex items-center px-2 py-0.5 rounded-full bg-surface-container-high text-on-surface-variant font-label-sm text-label-sm font-semibold">
+                      Unfulfilled
+                    </span>
+</td>
+<td class="py-3 px-space-md text-right font-body-sm-semibold text-body-sm-semibold text-on-surface">$168.00</td>
+</tr>
+<!-- Order 2 -->
+<tr class="hover:bg-surface-container-low/60 transition-colors group cursor-pointer bg-surface-container-lowest">
+<td class="py-3 px-space-md font-body-sm-semibold text-body-sm-semibold text-secondary flex items-center gap-1.5">
+<span>#1041</span>
+<span class="material-symbols-outlined text-[14px] opacity-0 group-hover:opacity-100 transition-opacity">open_in_new</span>
+</td>
+<td class="py-3 px-space-md">
+<div class="flex items-center gap-2">
+<div class="w-7 h-7 rounded-full bg-surface-container flex items-center justify-center font-caption text-caption font-bold text-on-surface-variant">DL</div>
+<div>
+<div class="font-body-sm-semibold text-body-sm-semibold text-on-surface">David Lee</div>
+<div class="font-caption text-caption text-tertiary">Vancouver, BC</div>
+</div>
+</div>
+</td>
+<td class="py-3 px-space-md text-on-surface-variant hidden sm:table-cell">
+                    1 item <span class="font-caption text-caption text-tertiary">(Heavy Merino Knit)</span>
+</td>
+<td class="py-3 px-space-md">
+<span class="inline-flex items-center px-2 py-0.5 rounded-full bg-primary-fixed/40 text-on-primary-fixed-variant font-label-sm text-label-sm font-semibold">
+                      Paid
+                    </span>
+</td>
+<td class="py-3 px-space-md">
+<span class="inline-flex items-center px-2 py-0.5 rounded-full bg-primary-fixed/40 text-on-primary-fixed-variant font-label-sm text-label-sm font-semibold">
+                      Fulfilled
+                    </span>
+</td>
+<td class="py-3 px-space-md text-right font-body-sm-semibold text-body-sm-semibold text-on-surface">$210.00</td>
+</tr>
+<!-- Order 3 -->
+<tr class="hover:bg-surface-container-low/60 transition-colors group cursor-pointer">
+<td class="py-3 px-space-md font-body-sm-semibold text-body-sm-semibold text-secondary flex items-center gap-1.5">
+<span>#1040</span>
+<span class="material-symbols-outlined text-[14px] opacity-0 group-hover:opacity-100 transition-opacity">open_in_new</span>
+</td>
+<td class="py-3 px-space-md">
+<div class="flex items-center gap-2">
+<div class="w-7 h-7 rounded-full bg-surface-container flex items-center justify-center font-caption text-caption font-bold text-on-surface-variant">SK</div>
+<div>
+<div class="font-body-sm-semibold text-body-sm-semibold text-on-surface">Sophia Kim</div>
+<div class="font-caption text-caption text-tertiary">New York, NY</div>
+</div>
+</div>
+</td>
+<td class="py-3 px-space-md text-on-surface-variant hidden sm:table-cell">
+                    3 items <span class="font-caption text-caption text-tertiary">(Canvas Tote x2, Cap)</span>
+</td>
+<td class="py-3 px-space-md">
+<span class="inline-flex items-center px-2 py-0.5 rounded-full bg-primary-fixed/40 text-on-primary-fixed-variant font-label-sm text-label-sm font-semibold">
+                      Paid
+                    </span>
+</td>
+<td class="py-3 px-space-md">
+<span class="inline-flex items-center px-2 py-0.5 rounded-full bg-surface-container-high text-on-surface-variant font-label-sm text-label-sm font-semibold">
+                      Unfulfilled
+                    </span>
+</td>
+<td class="py-3 px-space-md text-right font-body-sm-semibold text-body-sm-semibold text-on-surface">$142.50</td>
+</tr>
+<!-- Order 4 -->
+<tr class="hover:bg-surface-container-low/60 transition-colors group cursor-pointer">
+<td class="py-3 px-space-md font-body-sm-semibold text-body-sm-semibold text-secondary flex items-center gap-1.5">
+<span>#1039</span>
+<span class="material-symbols-outlined text-[14px] opacity-0 group-hover:opacity-100 transition-opacity">open_in_new</span>
+</td>
+<td class="py-3 px-space-md">
+<div class="flex items-center gap-2">
+<div class="w-7 h-7 rounded-full bg-surface-container flex items-center justify-center font-caption text-caption font-bold text-on-surface-variant">MB</div>
+<div>
+<div class="font-body-sm-semibold text-body-sm-semibold text-on-surface">Marcus Bell</div>
+<div class="font-caption text-caption text-tertiary">Seattle, WA</div>
+</div>
+</div>
+</td>
+<td class="py-3 px-space-md text-on-surface-variant hidden sm:table-cell">
+                    1 item <span class="font-caption text-caption text-tertiary">(Utility Overshirt)</span>
+</td>
+<td class="py-3 px-space-md">
+<span class="inline-flex items-center px-2 py-0.5 rounded-full bg-surface-container-high text-on-surface-variant font-label-sm text-label-sm font-semibold">
+                      Authorized
+                    </span>
+</td>
+<td class="py-3 px-space-md">
+<span class="inline-flex items-center px-2 py-0.5 rounded-full bg-surface-container-high text-on-surface-variant font-label-sm text-label-sm font-semibold">
+                      Unfulfilled
+                    </span>
+</td>
+<td class="py-3 px-space-md text-right font-body-sm-semibold text-body-sm-semibold text-on-surface">$135.00</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="p-space-sm bg-surface-container-low/40 flex items-center justify-between text-on-surface-variant font-body-sm text-body-sm">
+<span class="font-caption text-caption pl-2">Showing 4 of 148 orders</span>
+<button class="h-8 px-space-md font-body-sm-semibold text-body-sm-semibold text-secondary hover:text-on-surface transition-colors flex items-center gap-1" type="button">
+              View all orders
+              <span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</button>
+</div>
+</div>
+</div>
+<!-- RIGHT COLUMN: Sidekick AI & Analytics Widgets (4 cols = ~34%) -->
+<div class="lg:col-span-4 flex flex-col gap-space-md">
+<!-- Shopify Sidekick AI Insight Card -->
+<div class="bg-surface-container-lowest rounded-xl shadow-sm p-space-lg relative overflow-hidden group">
+<div class="absolute -right-6 -top-6 w-24 h-24 rounded-full bg-secondary-fixed opacity-40 blur-xl"></div>
+<div class="flex items-center justify-between mb-3 relative">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-[20px] text-secondary">auto_awesome</span>
+<span class="font-headline-sm text-headline-sm text-on-surface">Shopify Sidekick</span>
+</div>
+<span class="font-caption text-caption px-1.5 py-0.5 rounded bg-secondary-fixed text-on-secondary-fixed font-bold uppercase tracking-wider">AI Insight</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface relative">
+            Sales spiked by <strong class="text-primary font-body-md-semibold text-body-md-semibold">+28%</strong> after your <span class="underline decoration-secondary/30 decoration-2">Autumn Flash Sale</span> newsletter.
+          </p>
+<div class="mt-3 p-space-sm bg-surface-container-low rounded-lg text-on-surface-variant font-body-sm text-body-sm">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[18px] text-secondary">trending_up</span>
+<span><strong>42 new buyers</strong> checked out directly via Instagram Checkout.</span>
+</div>
+</div>
+<div class="mt-4 pt-3 flex items-center justify-between">
+<button class="font-body-sm-semibold text-body-sm-semibold text-secondary hover:underline flex items-center gap-1" type="button">
+              Ask Sidekick to draft next campaign
+              <span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</button>
+</div>
+</div>
+<!-- Store Channel Performance Breakdown -->
+<div class="bg-surface-container-lowest rounded-xl shadow-sm p-space-lg flex flex-col">
+<div class="flex items-center justify-between mb-3">
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Sales channels</h3>
+<span class="font-caption text-caption text-tertiary">Last 30 days</span>
+</div>
+<!-- Progress Multi-bar -->
+<div class="w-full h-3 rounded-full overflow-hidden flex gap-0.5 bg-surface-container">
+<div class="h-full bg-primary-container" style="width: 68%;" title="Online Store: 68%"></div>
+<div class="h-full bg-secondary-container" style="width: 22%;" title="Instagram: 22%"></div>
+<div class="h-full bg-tertiary" style="width: 10%;" title="Point of Sale: 10%"></div>
+</div>
+<!-- Channel Legend -->
+<div class="flex flex-col gap-2.5 mt-4">
+<div class="flex items-center justify-between font-body-sm text-body-sm">
+<div class="flex items-center gap-2">
+<span class="w-2.5 h-2.5 rounded-full bg-primary-container"></span>
+<span class="text-on-surface font-body-sm-semibold text-body-sm-semibold">Online store</span>
+</div>
+<div class="flex items-center gap-space-sm">
+<span class="text-on-surface font-body-sm-semibold text-body-sm-semibold">$12,532.06</span>
+<span class="font-caption text-caption text-tertiary w-8 text-right">68%</span>
+</div>
+</div>
+<div class="flex items-center justify-between font-body-sm text-body-sm">
+<div class="flex items-center gap-2">
+<span class="w-2.5 h-2.5 rounded-full bg-secondary-container"></span>
+<span class="text-on-surface font-body-sm-semibold text-body-sm-semibold">Instagram</span>
+</div>
+<div class="flex items-center gap-space-sm">
+<span class="text-on-surface font-body-sm-semibold text-body-sm-semibold">$4,054.49</span>
+<span class="font-caption text-caption text-tertiary w-8 text-right">22%</span>
+</div>
+</div>
+<div class="flex items-center justify-between font-body-sm text-body-sm">
+<div class="flex items-center gap-2">
+<span class="w-2.5 h-2.5 rounded-full bg-tertiary"></span>
+<span class="text-on-surface font-body-sm-semibold text-body-sm-semibold">Point of Sale</span>
+</div>
+<div class="flex items-center gap-space-sm">
+<span class="text-on-surface font-body-sm-semibold text-body-sm-semibold">$1,842.95</span>
+<span class="font-caption text-caption text-tertiary w-8 text-right">10%</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Polaris Tips & Resources Banner -->
+<div class="bg-surface-container-lowest rounded-xl shadow-sm p-space-lg flex items-start gap-space-md">
+<div class="w-9 h-9 rounded-lg bg-surface-container-high flex items-center justify-center text-on-surface shrink-0">
+<span class="material-symbols-outlined text-[20px] text-tertiary">lightbulb</span>
+</div>
+<div class="flex flex-col gap-1">
+<h4 class="font-body-md-semibold text-body-md-semibold text-on-surface">Boost checkout conversion</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+              Stores offering Shop Pay experience up to 50% faster checkout and 18% higher checkout conversions.
+            </p>
+<div class="mt-2">
+<a class="font-body-sm-semibold text-body-sm-semibold text-secondary hover:underline inline-flex items-center gap-1" href="#">
+                Enable Shop Pay
+                <span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<script>
+  // Simple interaction for dismissing setup guide banner
+  const dismissBtn = document.getElementById('dismiss-setup-btn');
+  const setupBanner = document.getElementById('setup-banner');
+  if (dismissBtn && setupBanner) {
+    dismissBtn.addEventListener('click', () => {
+      setupBanner.style.opacity = '0';
+      setupBanner.style.transform = 'scale(0.98)';
+      setTimeout(() => {
+        setupBanner.remove();
+      }, 300);
+    });
+  }
+</script></div></main></div></body></html>

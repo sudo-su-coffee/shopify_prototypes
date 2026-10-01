@@ -1,0 +1,799 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = {
+    darkMode: "class",
+    theme: {
+      extend: {
+        "colors": {
+          "on-tertiary-fixed-variant": "#474746",
+          "surface-container": "#efeded",
+          "tertiary-container": "#717070",
+          "secondary-container": "#2c6fe7",
+          "secondary-fixed-dim": "#b0c6ff",
+          "on-secondary-container": "#fefcff",
+          "surface-dim": "#dbdad9",
+          "primary-fixed-dim": "#75d9b3",
+          "on-primary-fixed": "#002116",
+          "on-tertiary-container": "#f8f5f4",
+          "tertiary-fixed-dim": "#c8c6c5",
+          "error": "#ba1a1a",
+          "on-secondary-fixed": "#001945",
+          "inverse-surface": "#303031",
+          "surface-container-lowest": "#ffffff",
+          "on-error": "#ffffff",
+          "tertiary-fixed": "#e5e2e1",
+          "surface-container-highest": "#e4e2e2",
+          "primary-fixed": "#92f6cf",
+          "on-tertiary": "#ffffff",
+          "on-primary": "#ffffff",
+          "primary": "#00654b",
+          "on-secondary-fixed-variant": "#00419c",
+          "surface-variant": "#e4e2e2",
+          "surface-container-low": "#f5f3f3",
+          "secondary": "#0055c7",
+          "surface-tint": "#006c50",
+          "outline": "#6e7a73",
+          "on-error-container": "#93000a",
+          "surface-bright": "#fbf9f8",
+          "error-container": "#ffdad6",
+          "primary-container": "#008060",
+          "on-surface": "#1b1c1c",
+          "on-primary-container": "#d6ffeb",
+          "on-surface-variant": "#3e4944",
+          "inverse-on-surface": "#f2f0f0",
+          "tertiary": "#585857",
+          "secondary-fixed": "#d9e2ff",
+          "inverse-primary": "#75d9b3",
+          "surface-container-high": "#e9e8e7",
+          "on-tertiary-fixed": "#1c1b1b",
+          "outline-variant": "#bdc9c2",
+          "on-primary-fixed-variant": "#00513c",
+          "on-background": "#1b1c1c",
+          "background": "#fbf9f8",
+          "surface": "#fbf9f8",
+          "on-secondary": "#ffffff"
+        },
+        "borderRadius": {
+          "DEFAULT": "0.125rem",
+          "lg": "0.25rem",
+          "xl": "0.5rem",
+          "full": "0.75rem"
+        },
+        "spacing": {
+          "space-xl": "1.5rem",
+          "space-md": "1rem",
+          "space-lg": "1.25rem",
+          "gutter": "1rem",
+          "margin": "1.5rem",
+          "space-sm": "0.5rem",
+          "space-xs": "0.25rem"
+        },
+        "fontFamily": {
+          "body-md": [
+            "Inter"
+          ],
+          "headline-lg": [
+            "Inter"
+          ],
+          "headline-md": [
+            "Inter"
+          ],
+          "body-sm-semibold": [
+            "Inter"
+          ],
+          "body-sm": [
+            "Inter"
+          ],
+          "caption": [
+            "Inter"
+          ],
+          "label-sm": [
+            "Inter"
+          ],
+          "body-md-semibold": [
+            "Inter"
+          ],
+          "headline-lg-mobile": [
+            "Inter"
+          ],
+          "body-lg": [
+            "Inter"
+          ],
+          "headline-sm": [
+            "Inter"
+          ],
+          "label-md": [
+            "Inter"
+          ]
+        },
+        "fontSize": {
+          "body-md": [
+            "14px",
+            {
+              "lineHeight": "20px",
+              "fontWeight": "400"
+            }
+          ],
+          "headline-lg": [
+            "28px",
+            {
+              "lineHeight": "36px",
+              "letterSpacing": "-0.02em",
+              "fontWeight": "700"
+            }
+          ],
+          "headline-md": [
+            "20px",
+            {
+              "lineHeight": "28px",
+              "letterSpacing": "-0.01em",
+              "fontWeight": "600"
+            }
+          ],
+          "body-sm-semibold": [
+            "13px",
+            {
+              "lineHeight": "18px",
+              "fontWeight": "600"
+            }
+          ],
+          "body-sm": [
+            "13px",
+            {
+              "lineHeight": "18px",
+              "fontWeight": "400"
+            }
+          ],
+          "caption": [
+            "11px",
+            {
+              "lineHeight": "14px",
+              "fontWeight": "500"
+            }
+          ],
+          "label-sm": [
+            "12px",
+            {
+              "lineHeight": "16px",
+              "letterSpacing": "0.01em",
+              "fontWeight": "600"
+            }
+          ],
+          "body-md-semibold": [
+            "14px",
+            {
+              "lineHeight": "20px",
+              "fontWeight": "600"
+            }
+          ],
+          "headline-lg-mobile": [
+            "22px",
+            {
+              "lineHeight": "28px",
+              "letterSpacing": "-0.015em",
+              "fontWeight": "700"
+            }
+          ],
+          "body-lg": [
+            "15px",
+            {
+              "lineHeight": "22px",
+              "fontWeight": "400"
+            }
+          ],
+          "headline-sm": [
+            "16px",
+            {
+              "lineHeight": "24px",
+              "letterSpacing": "-0.005em",
+              "fontWeight": "600"
+            }
+          ],
+          "label-md": [
+            "13px",
+            {
+              "lineHeight": "16px",
+              "fontWeight": "500"
+            }
+          ]
+        }
+      },
+    },
+  }</script><title>Shopify Admin Multi Location Inventory Stock Hub | Shopify Prototype</title>
+</head><body class="bg-surface font-body-md text-body-md text-on-surface"><aside class="fixed left-0 top-0 h-full w-60 bg-surface-container-low z-40 flex flex-col justify-between shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="flex flex-col"><div class="h-14 flex items-center px-margin gap-space-sm bg-surface-container-lowest"><img alt="Brand logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1WPubMgscUINGuisBDvGZbhiRvwxKjFWpAHPA0GXYWeRFqxcZY4G-byYU4PUykJPYVnuurpj_2yFkafDFmBWhplcA2dlqdqMDkr5ufN1GCA1-9Cy6Y74Bk73_KmB_pOSwvk_HQjInJtWpmQfLSQUcNeG5m75CCs-SDUFif7I_eleu-OGwNMldz9nzh1957zHt7Hfbkc1ds6tpanpikt3_aR6SAXkw6znZBFRPYg-rTUbi8f0VwyeBPJuaQ"/><div class="flex flex-col"><span class="font-body-md-semibold text-body-md-semibold text-on-surface leading-tight">Shopify Operations</span><span class="font-caption text-caption text-on-surface-variant leading-tight">Commerce &amp; Retail POS</span></div></div><div class="px-space-md pt-space-md"><div class="px-space-sm py-space-xs font-caption text-caption uppercase text-on-surface-variant tracking-wider">Merchant Admin</div></div><nav class="flex flex-col gap-space-xs px-space-md py-space-xs" data-active-classes="bg-primary-container text-on-primary font-body-sm-semibold text-body-sm-semibold rounded-xl"><a class="flex items-center px-space-md py-space-sm text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface rounded-xl transition-colors font-body-sm text-body-sm" data-path="shopify-admin-orders-fulfillment" href="#">Orders &amp; Fulfillment</a><a class="flex items-center px-space-md py-space-sm text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface rounded-xl transition-colors font-body-sm text-body-sm" data-path="shopify-admin-multi-location-inventory-stock-hub" href="#">Multi-Location Inventory</a><a class="flex items-center px-space-md py-space-sm text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface rounded-xl transition-colors font-body-sm text-body-sm" data-path="shopify-admin-bulk-shipping-batch-fulfillment-hub" href="#">Bulk Shipping &amp; Manifests</a></nav><div class="px-space-md pt-space-sm"><div class="px-space-sm py-space-xs font-caption text-caption uppercase text-on-surface-variant tracking-wider">Retail POS Counter</div></div><nav class="flex flex-col gap-space-xs px-space-md py-space-xs" data-active-classes="bg-primary-container text-on-primary font-body-sm-semibold text-body-sm-semibold rounded-xl"><a class="flex items-center px-space-md py-space-sm text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface rounded-xl transition-colors font-body-sm text-body-sm" data-path="shopify-pos-orders-returns" href="#">Orders &amp; Returns</a><a class="flex items-center px-space-md py-space-sm text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface rounded-xl transition-colors font-body-sm text-body-sm" data-path="shopify-pos-in-store-pickup-bopis-fulfillment-hub" href="#">In-Store Pickup &amp; BOPIS</a></nav></div><div class="p-space-md flex flex-col gap-space-xs bg-surface-container"><div class="flex items-center justify-between px-space-md py-space-sm bg-surface-container-lowest rounded-xl"><div class="flex items-center gap-space-sm"><span class="w-2 h-2 rounded-full bg-primary-container"></span><span class="font-caption text-caption text-on-surface-variant">Terminal #0421 Online</span></div><span class="material-symbols-outlined text-[16px] text-primary">wifi</span></div></div></aside><div class="pl-60"><header class="fixed top-0 left-60 right-0 h-14 bg-surface-container-lowest shadow-[0_1px_8px_rgba(0,0,0,0.04)] z-30 flex items-center justify-between px-margin"><div class="flex items-center gap-space-lg"><div class="flex items-center gap-space-sm px-space-md py-1 bg-surface-container rounded-full"><span class="material-symbols-outlined text-primary text-[18px]">store</span><span class="font-label-sm text-label-sm text-on-surface">SoHo Flagship Store #0421</span></div><div class="hidden md:flex items-center gap-space-sm px-space-md py-1 bg-surface-container-low rounded-full"><span class="material-symbols-outlined text-on-surface-variant text-[18px]">barcode_scanner</span><span class="font-label-sm text-label-sm text-on-surface-variant">Scanner Active</span></div></div><div class="flex items-center gap-space-lg"><div class="flex items-center gap-space-sm px-space-md py-1 bg-surface-container-low rounded-xl"><span class="material-symbols-outlined text-on-surface-variant text-[18px]">badge</span><div class="flex flex-col text-left"><span class="font-caption text-caption text-on-surface-variant leading-none">Staff Operator</span><span class="font-label-sm text-label-sm text-on-surface leading-tight">Elena Rostova</span></div></div><div class="flex items-center gap-space-sm"><img alt="Profile" class="w-8 h-8 rounded-full object-cover" src="https://lh3.googleusercontent.com/aida/AEtjO1XM8bAU6u1SGd73cRUZpDg7te6U8Hd9YuPkqi431L4IWNqZL9tf8Hx7usC0Pr2x5uZFks9b6ZVSsN6pF4qp7qBy14iGcMBDgJ1CkgkmUAjIfndkwn_z2y62oK4m5xXJUzEyvjga7vHBHY5I_yrgT2bDOvV6QCvONuw_NwyDFyHdKZJuuGyK5Pgek_6deKYxGCdGgDgn0o72iDzak64pRiWW1BSKisoh_F_jv3CeZdUD3Qs1uum2E_qsQHaI"/><button class="flex items-center justify-center p-1.5 text-on-surface-variant hover:text-error hover:bg-surface-container rounded-lg transition-colors" title="Lock Terminal / Sign Out"><span class="material-symbols-outlined text-[20px]">lock</span></button></div></div></header><main class="w-full pt-14 px-margin"><div class="flex flex-col w-full pb-16">
+<!-- Top Command & Breadcrumb Bar -->
+<div class="flex flex-col md:flex-row md:items-center justify-between gap-space-md py-space-md">
+<div class="flex flex-col">
+<div class="flex items-center gap-space-xs text-on-surface-variant font-caption text-caption">
+<a class="hover:text-primary transition-colors" href="#">Products</a>
+<span class="material-symbols-outlined text-[14px]">chevron_right</span>
+<span class="text-on-surface font-body-sm-semibold text-body-sm-semibold">Inventory Hub</span>
+<span class="material-symbols-outlined text-[14px]">chevron_right</span>
+<span class="text-on-surface-variant">Multi-Location Matrix</span>
+</div>
+<div class="flex items-center gap-space-md mt-1">
+<h1 class="font-headline-lg text-headline-lg text-on-surface tracking-tight">Inventory &amp; Multi-Location Stock</h1>
+<span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full bg-primary-fixed text-on-primary-fixed font-label-sm text-label-sm">
+<span class="w-1.5 h-1.5 rounded-full bg-primary animate-pulse"></span> Live Sync (5 Nodes)
+        </span>
+</div>
+</div>
+<div class="flex flex-wrap items-center gap-space-sm">
+<button class="h-8 px-3.5 rounded-lg bg-surface-container hover:bg-surface-container-high text-on-surface font-label-sm text-label-sm flex items-center gap-1.5 transition-colors shadow-sm">
+<span class="material-symbols-outlined text-[16px] text-tertiary">file_download</span>
+        Export
+      </button>
+<button class="h-8 px-3.5 rounded-lg bg-surface-container hover:bg-surface-container-high text-on-surface font-label-sm text-label-sm flex items-center gap-1.5 transition-colors shadow-sm">
+<span class="material-symbols-outlined text-[16px] text-tertiary">file_upload</span>
+        Import
+      </button>
+<button class="h-8 px-3.5 rounded-lg bg-surface-container hover:bg-surface-container-high text-on-surface font-label-sm text-label-sm flex items-center gap-1.5 transition-colors shadow-sm">
+<span class="material-symbols-outlined text-[16px] text-tertiary">sync_alt</span>
+        Create Transfer
+      </button>
+<button class="h-8 px-4 rounded-lg bg-primary hover:bg-primary-container text-on-primary font-body-sm-semibold text-body-sm-semibold flex items-center gap-1.5 transition-colors shadow-sm">
+<span class="material-symbols-outlined text-[18px]">add</span>
+        Adjust Inventory
+      </button>
+</div>
+</div>
+<!-- Global Multi-Node Performance Metric Bar -->
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-space-md my-space-md">
+<!-- Metric 1: Total Stock Value -->
+<div class="bg-surface-container-lowest p-space-md rounded-xl shadow-sm flex flex-col justify-between hover:shadow-md transition-shadow relative overflow-hidden group">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant">Global On-Hand Valuation</span>
+<span class="material-symbols-outlined text-primary text-[20px] bg-primary-fixed/40 p-1 rounded-md">account_balance_wallet</span>
+</div>
+<div class="mt-3">
+<div class="font-headline-md text-headline-md text-on-surface font-bold">$342,850.00</div>
+<div class="flex items-center gap-2 mt-1">
+<span class="font-body-sm-semibold text-body-sm-semibold text-on-surface">14,240 units</span>
+<span class="font-caption text-caption text-primary flex items-center">
+<span class="material-symbols-outlined text-[14px]">trending_up</span> +3.8% MoM
+          </span>
+</div>
+</div>
+<div class="w-full bg-surface-container-high h-1.5 rounded-full mt-3 overflow-hidden">
+<div class="bg-primary h-full rounded-full" style="width: 74%"></div>
+</div>
+</div>
+<!-- Metric 2: Active Locations -->
+<div class="bg-surface-container-lowest p-space-md rounded-xl shadow-sm flex flex-col justify-between hover:shadow-md transition-shadow">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant">Fulfillment Nodes</span>
+<span class="material-symbols-outlined text-secondary text-[20px] bg-secondary-fixed/50 p-1 rounded-md">storefront</span>
+</div>
+<div class="mt-3">
+<div class="flex items-baseline gap-2">
+<span class="font-headline-md text-headline-md text-on-surface font-bold">5 Nodes</span>
+<span class="font-caption text-caption text-primary font-semibold">100% Online</span>
+</div>
+<p class="font-caption text-caption text-on-surface-variant truncate mt-1">
+          NJ DC, SoHo, Brooklyn, Venice LA, Chicago
+        </p>
+</div>
+<div class="flex items-center gap-1 mt-3">
+<span class="w-2 h-2 rounded-full bg-primary" title="NJ DC active"></span>
+<span class="w-2 h-2 rounded-full bg-primary" title="SoHo active"></span>
+<span class="w-2 h-2 rounded-full bg-primary" title="Brooklyn active"></span>
+<span class="w-2 h-2 rounded-full bg-primary" title="LA active"></span>
+<span class="w-2 h-2 rounded-full bg-primary" title="Chicago active"></span>
+<span class="font-caption text-caption text-on-surface-variant ml-2">POS &amp; Web routing active</span>
+</div>
+</div>
+<!-- Metric 3: Critical SKUs -->
+<div class="bg-surface-container-lowest p-space-md rounded-xl shadow-sm flex flex-col justify-between hover:shadow-md transition-shadow">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant">Reorder Needed</span>
+<span class="material-symbols-outlined text-error text-[20px] bg-error-container/60 p-1 rounded-md">warning</span>
+</div>
+<div class="mt-3">
+<div class="flex items-baseline gap-2">
+<span class="font-headline-md text-headline-md text-error font-bold">12 SKUs</span>
+<span class="font-label-sm text-label-sm text-error font-medium">Critical</span>
+</div>
+<p class="font-caption text-caption text-on-surface-variant mt-1">
+          Runout risk &lt; 4 days across retail counters
+        </p>
+</div>
+<div class="flex items-center justify-between mt-3 text-caption font-caption text-on-surface-variant">
+<span>Suggested POs: 4 Drafts</span>
+<a class="text-secondary font-label-sm hover:underline" href="#">Review →</a>
+</div>
+</div>
+<!-- Metric 4: Inter-Store Transfers -->
+<div class="bg-surface-container-lowest p-space-md rounded-xl shadow-sm flex flex-col justify-between hover:shadow-md transition-shadow">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant">Inter-Store Transit</span>
+<span class="material-symbols-outlined text-secondary text-[20px] bg-secondary-fixed/50 p-1 rounded-md">local_shipping</span>
+</div>
+<div class="mt-3">
+<div class="flex items-baseline gap-2">
+<span class="font-headline-md text-headline-md text-on-surface font-bold">3 Active</span>
+<span class="font-body-sm-semibold text-body-sm-semibold text-on-surface-variant">(450 units)</span>
+</div>
+<p class="font-caption text-caption text-on-surface-variant mt-1">
+          Next Delivery: Today 4:00 PM (SoHo Flagship)
+        </p>
+</div>
+<div class="flex items-center gap-2 mt-3">
+<div class="w-full bg-surface-container-high h-1.5 rounded-full overflow-hidden">
+<div class="bg-secondary h-full rounded-full" style="width: 68%"></div>
+</div>
+<span class="font-caption text-caption text-on-surface-variant">68%</span>
+</div>
+</div>
+</div>
+<!-- Location Quick Filter Pill Bar -->
+<div class="flex items-center gap-space-sm overflow-x-auto py-space-sm no-scrollbar">
+<button class="h-8 px-3 rounded-full bg-on-surface text-surface-container-lowest font-body-sm-semibold text-body-sm-semibold flex items-center gap-1.5 whitespace-nowrap shadow-sm">
+<span class="material-symbols-outlined text-[16px]">domain</span>
+      All Locations
+      <span class="ml-1 px-1.5 py-0.5 rounded-full bg-surface-container-highest/30 text-surface font-caption text-caption">14,240</span>
+</button>
+<button class="h-8 px-3 rounded-full bg-surface-container hover:bg-surface-container-high text-on-surface font-body-sm text-body-sm flex items-center gap-1.5 whitespace-nowrap transition-colors">
+<span class="w-2 h-2 rounded-full bg-primary-container"></span>
+      NJ Central DC
+      <span class="ml-1 px-1.5 py-0.5 rounded-full bg-surface-container-highest text-on-surface-variant font-caption text-caption">9,820</span>
+</button>
+<button class="h-8 px-3 rounded-full bg-surface-container hover:bg-surface-container-high text-on-surface font-body-sm text-body-sm flex items-center gap-1.5 whitespace-nowrap transition-colors">
+<span class="w-2 h-2 rounded-full bg-secondary"></span>
+      SoHo Flagship
+      <span class="ml-1 px-1.5 py-0.5 rounded-full bg-surface-container-highest text-on-surface-variant font-caption text-caption">1,450</span>
+</button>
+<button class="h-8 px-3 rounded-full bg-surface-container hover:bg-surface-container-high text-on-surface font-body-sm text-body-sm flex items-center gap-1.5 whitespace-nowrap transition-colors">
+<span class="w-2 h-2 rounded-full bg-tertiary"></span>
+      Brooklyn DUMBO
+      <span class="ml-1 px-1.5 py-0.5 rounded-full bg-surface-container-highest text-on-surface-variant font-caption text-caption">890</span>
+</button>
+<button class="h-8 px-3 rounded-full bg-surface-container hover:bg-surface-container-high text-on-surface font-body-sm text-body-sm flex items-center gap-1.5 whitespace-nowrap transition-colors">
+<span class="w-2 h-2 rounded-full bg-primary"></span>
+      LA Venice
+      <span class="ml-1 px-1.5 py-0.5 rounded-full bg-surface-container-highest text-on-surface-variant font-caption text-caption">1,180</span>
+</button>
+<button class="h-8 px-3 rounded-full bg-surface-container hover:bg-surface-container-high text-on-surface font-body-sm text-body-sm flex items-center gap-1.5 whitespace-nowrap transition-colors">
+<span class="w-2 h-2 rounded-full bg-outline"></span>
+      Chicago Central
+      <span class="ml-1 px-1.5 py-0.5 rounded-full bg-surface-container-highest text-on-surface-variant font-caption text-caption">900</span>
+</button>
+<button class="h-8 px-2 rounded-full bg-surface-container-low hover:bg-surface-container text-on-surface-variant font-label-sm text-label-sm flex items-center gap-1 transition-colors" title="Manage Warehouse Nodes">
+<span class="material-symbols-outlined text-[16px]">tune</span>
+      Configure
+    </button>
+</div>
+<!-- Multi-Store Inventory Matrix (IndexTable Surface) -->
+<div class="mt-space-md bg-surface-container-lowest rounded-xl shadow-sm overflow-hidden flex flex-col">
+<!-- Filter, Search, and Segment Tab Toolbar -->
+<div class="p-space-md bg-surface-container-lowest flex flex-col gap-space-sm">
+<div class="flex flex-col lg:flex-row items-stretch lg:items-center justify-between gap-space-sm">
+<!-- Search Input -->
+<div class="relative flex-1">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-[18px] text-tertiary">search</span>
+<input class="w-full h-9 pl-9 pr-4 rounded-lg bg-surface-container-low text-on-surface font-body-sm text-body-sm placeholder:text-outline focus:outline-none focus:bg-surface-container-lowest focus:shadow-[0_0_0_2px_rgba(0,101,75,0.25)] transition-all" placeholder="Filter inventory by SKU, product name, or barcode (e.g. 884920)..." type="text"/>
+</div>
+<!-- Filter Controls -->
+<div class="flex items-center gap-space-xs overflow-x-auto">
+<div class="h-9 px-3 rounded-lg bg-surface-container-low hover:bg-surface-container text-on-surface font-label-sm text-label-sm flex items-center gap-1.5 cursor-pointer">
+<span class="material-symbols-outlined text-[16px] text-outline">filter_list</span>
+            Availability: In Stock
+            <span class="material-symbols-outlined text-[14px]">arrow_drop_down</span>
+</div>
+<div class="h-9 px-3 rounded-lg bg-surface-container-low hover:bg-surface-container text-on-surface font-label-sm text-label-sm flex items-center gap-1.5 cursor-pointer">
+<span class="material-symbols-outlined text-[16px] text-outline">category</span>
+            Type: Apparel &amp; Accessories
+            <span class="material-symbols-outlined text-[14px]">arrow_drop_down</span>
+</div>
+<div class="h-9 px-3 rounded-lg bg-surface-container-low hover:bg-surface-container text-on-surface font-label-sm text-label-sm flex items-center gap-1.5 cursor-pointer">
+<span class="material-symbols-outlined text-[16px] text-outline">bookmark</span>
+            Saved Views
+            <span class="material-symbols-outlined text-[14px]">arrow_drop_down</span>
+</div>
+<button class="h-9 w-9 rounded-lg bg-surface-container-low hover:bg-surface-container flex items-center justify-center text-on-surface-variant" title="Table Density &amp; Column Preferences">
+<span class="material-symbols-outlined text-[18px]">view_column</span>
+</button>
+</div>
+</div>
+<!-- Segment Badges & Quick Sort Indicator -->
+<div class="flex items-center justify-between pt-1">
+<div class="flex items-center gap-space-md text-body-sm font-body-sm text-on-surface-variant">
+<button class="font-body-sm-semibold text-body-sm-semibold text-on-surface pb-1 border-b-2 border-primary-container">
+            All Products (58)
+          </button>
+<button class="hover:text-on-surface transition-colors pb-1">
+            Low Stock Alerts (12)
+          </button>
+<button class="hover:text-on-surface transition-colors pb-1">
+            In-Transit POs (8)
+          </button>
+<button class="hover:text-on-surface transition-colors pb-1">
+            BOPIS Committed (19)
+          </button>
+</div>
+<div class="font-caption text-caption text-on-surface-variant flex items-center gap-1">
+<span>Sort: Velocity High to Low</span>
+<span class="material-symbols-outlined text-[14px]">sort</span>
+</div>
+</div>
+</div>
+<!-- Inventory Data Grid Table -->
+<div class="w-full overflow-x-auto">
+<table class="w-full text-left font-body-sm text-body-sm">
+<thead class="bg-surface-container-low text-on-surface-variant font-label-sm text-label-sm uppercase tracking-wider">
+<tr>
+<th class="py-2.5 px-space-md w-10 text-center">
+<input class="rounded accent-primary-container cursor-pointer" type="checkbox"/>
+</th>
+<th class="py-2.5 px-space-md min-w-[280px]">Product / Identifiers</th>
+<th class="py-2.5 px-space-sm text-center bg-surface-container/60">NJ DC</th>
+<th class="py-2.5 px-space-sm text-center">SoHo #0421</th>
+<th class="py-2.5 px-space-sm text-center">Brooklyn</th>
+<th class="py-2.5 px-space-sm text-center">Venice LA</th>
+<th class="py-2.5 px-space-sm text-center">Chicago</th>
+<th class="py-2.5 px-space-md text-right">Committed</th>
+<th class="py-2.5 px-space-md text-right text-primary font-semibold">Available</th>
+<th class="py-2.5 px-space-md text-right">On Hand</th>
+<th class="py-2.5 px-space-md text-center">Status / Incoming</th>
+<th class="py-2.5 px-space-md text-center">Actions</th>
+</tr>
+</thead>
+<tbody class="text-on-surface">
+<!-- Row 1: Heavyweight Oversized Hoodie -->
+<tr class="hover:bg-surface-container-low/60 transition-colors group">
+<td class="py-3 px-space-md text-center">
+<input class="rounded accent-primary-container cursor-pointer" type="checkbox"/>
+</td>
+<td class="py-3 px-space-md">
+<div class="flex items-center gap-3">
+<img class="w-11 h-11 rounded-lg object-cover bg-surface-container shrink-0 shadow-sm" data-alt="Editorial e-commerce studio flat lay of an oversized black heavyweight fleece hoodie on clean neutral concrete background with soft studio shadows" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBL9StZBLOFwYG5XhJiOjNX7uQB-_HQ2nBaAAEhU9PidExPMWCLo_xlIjrlBxtCRC40E8m7y3CjJlOOuqnc2BFafncpR6Vsz4yvq4C7oqbU00PUTEE7tVWiCHk9rq-voR5m9OX2RN82K_wydZi83njlF14QyLq-VmPlioFooXAdtJ6kCNzPMO5fb5TAkF5U5e4jFUajfOaXaS4QIhbMK7T4sUFxVd42dGltO4UMX3auA6itpimyw1mnhA"/>
+<div class="flex flex-col min-w-0">
+<span class="font-body-md-semibold text-body-md-semibold text-on-surface truncate group-hover:text-primary transition-colors cursor-pointer">
+                    Heavyweight Oversized Hoodie
+                  </span>
+<div class="flex items-center gap-2 font-caption text-caption text-on-surface-variant mt-0.5">
+<span class="font-mono bg-surface-container px-1 py-0.5 rounded text-[10px]">HOOD-HVY-BLK</span>
+<span>UPC: 884920194821</span>
+</div>
+</div>
+</div>
+</td>
+<!-- Location Matrix Counts -->
+<td class="py-3 px-space-sm text-center font-mono font-medium bg-surface-container-low/40">340</td>
+<td class="py-3 px-space-sm text-center">
+<div class="flex flex-col items-center">
+<span class="font-mono font-semibold text-on-surface">16</span>
+<span class="font-caption text-[10px] text-tertiary">4 shlf / 12 bck</span>
+</div>
+</td>
+<td class="py-3 px-space-sm text-center font-mono">8</td>
+<td class="py-3 px-space-sm text-center font-mono">12</td>
+<td class="py-3 px-space-sm text-center font-mono">10</td>
+<!-- Aggregations -->
+<td class="py-3 px-space-md text-right font-mono text-tertiary">14</td>
+<td class="py-3 px-space-md text-right font-mono font-bold text-primary">372</td>
+<td class="py-3 px-space-md text-right font-mono font-semibold">386</td>
+<td class="py-3 px-space-md text-center">
+<span class="inline-flex items-center px-2 py-0.5 rounded-full text-[11px] font-label-sm bg-primary-fixed text-on-primary-fixed">
+                Healthy Stock
+              </span>
+</td>
+<td class="py-3 px-space-md text-center">
+<button class="h-7 px-2.5 rounded bg-surface-container hover:bg-surface-container-high text-on-surface font-label-sm text-label-sm flex items-center justify-center gap-1 mx-auto transition-colors">
+<span class="material-symbols-outlined text-[14px]">swap_horiz</span> Transfer
+              </button>
+</td>
+</tr>
+<!-- Row 2: Minimalist Cotton Crewneck -->
+<tr class="hover:bg-surface-container-low/60 transition-colors group bg-surface-container-lowest">
+<td class="py-3 px-space-md text-center">
+<input class="rounded accent-primary-container cursor-pointer" type="checkbox"/>
+</td>
+<td class="py-3 px-space-md">
+<div class="flex items-center gap-3">
+<img class="w-11 h-11 rounded-lg object-cover bg-surface-container shrink-0 shadow-sm" data-alt="Modern organic cream-colored minimalist heavyweight cotton crewneck sweatshirt folded neatly on minimalist natural stone podium under crisp directional light" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDPMCqAyQvitNYFU6OHk6tjqSl9DYYnsxCiTrqeHtMASSOIZ7wnqou0Iikw35ERL_pJmWLgFuiUNOGvJZptU3dQ6oI0Kh_Yy8A5wEyRTG36PObLpX0Q0CzMlth4waGU1Am7DFowVX96nf6BpiEZMUt4xee0XT3wlQNG0bPOQPnf0A3cnuBPAX994aZDP6YsRFCa_1s4MtX2qYC3zPFjIbXMegkHQ4N6AzrZof_vv0zi46zFDIySvV2hTA"/>
+<div class="flex flex-col min-w-0">
+<span class="font-body-md-semibold text-body-md-semibold text-on-surface truncate group-hover:text-primary transition-colors cursor-pointer">
+                    Minimalist Cotton Crewneck
+                  </span>
+<div class="flex items-center gap-2 font-caption text-caption text-on-surface-variant mt-0.5">
+<span class="font-mono bg-surface-container px-1 py-0.5 rounded text-[10px]">APX-CR-014</span>
+<span>UPC: 884920205119</span>
+</div>
+</div>
+</div>
+</td>
+<td class="py-3 px-space-sm text-center font-mono font-medium bg-surface-container-low/40">180</td>
+<td class="py-3 px-space-sm text-center font-mono font-semibold">12</td>
+<td class="py-3 px-space-sm text-center font-mono">6</td>
+<td class="py-3 px-space-sm text-center font-mono">15</td>
+<td class="py-3 px-space-sm text-center font-mono">8</td>
+<td class="py-3 px-space-md text-right font-mono text-tertiary">5</td>
+<td class="py-3 px-space-md text-right font-mono font-bold text-primary">216</td>
+<td class="py-3 px-space-md text-right font-mono font-semibold">221</td>
+<td class="py-3 px-space-md text-center">
+<span class="inline-flex items-center px-2 py-0.5 rounded-full text-[11px] font-label-sm bg-surface-container text-on-surface-variant">
+                Optimal
+              </span>
+</td>
+<td class="py-3 px-space-md text-center">
+<button class="h-7 px-2.5 rounded bg-surface-container hover:bg-surface-container-high text-on-surface font-label-sm text-label-sm flex items-center justify-center gap-1 mx-auto transition-colors">
+<span class="material-symbols-outlined text-[14px]">swap_horiz</span> Transfer
+              </button>
+</td>
+</tr>
+<!-- Row 3: Canvas Daily Market Tote (Low Stock Alert) -->
+<tr class="hover:bg-surface-container-low/60 transition-colors group bg-error-container/10">
+<td class="py-3 px-space-md text-center">
+<input class="rounded accent-primary-container cursor-pointer" type="checkbox"/>
+</td>
+<td class="py-3 px-space-md">
+<div class="flex items-center gap-3">
+<img class="w-11 h-11 rounded-lg object-cover bg-surface-container shrink-0 shadow-sm" data-alt="Durable utilitarian ecru canvas tote bag with reinforced olive green webbing handles and structured base resting against architectural concrete wall" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDmN2zdxPR_FQ4tXHRMyDnKtmT8-bAlGV5EtikupS4bOba-PxA0rGjDKkKkkAXpgWLXzZs4I9tDIWCHpSAysOJjfnpdBtLN9wCrzcaI2dzmtr-Fsv5hTvx2S6CGxv8oMt7xcQJjSQwY_Rh72F_QwiP-YXpV0HOCGRAbEylmVg-7Lgd-HaWqglT_B-BmHqLXJgp_kbxHFJB-gGQ8bjb_Shc34KQIFK_n31mpiV5TR-edLC0_b-M8PsEp5w"/>
+<div class="flex flex-col min-w-0">
+<span class="font-body-md-semibold text-body-md-semibold text-on-surface truncate group-hover:text-primary transition-colors cursor-pointer">
+                    Canvas Daily Market Tote
+                  </span>
+<div class="flex items-center gap-2 font-caption text-caption text-on-surface-variant mt-0.5">
+<span class="font-mono bg-surface-container px-1 py-0.5 rounded text-[10px]">APX-TT-002</span>
+<span>UPC: 884920319401</span>
+</div>
+</div>
+</div>
+</td>
+<td class="py-3 px-space-sm text-center font-mono font-medium bg-surface-container-low/40">95</td>
+<td class="py-3 px-space-sm text-center font-mono">14</td>
+<td class="py-3 px-space-sm text-center font-mono text-error font-bold bg-error-container/30 rounded">4</td>
+<td class="py-3 px-space-sm text-center font-mono">8</td>
+<td class="py-3 px-space-sm text-center font-mono text-error font-medium">3</td>
+<td class="py-3 px-space-md text-right font-mono text-tertiary">8</td>
+<td class="py-3 px-space-md text-right font-mono font-bold text-primary">116</td>
+<td class="py-3 px-space-md text-right font-mono font-semibold">124</td>
+<td class="py-3 px-space-md text-center">
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full text-[11px] font-label-sm bg-error-container text-on-error-container">
+<span class="material-symbols-outlined text-[12px]">warning</span> Low in Brooklyn
+              </span>
+</td>
+<td class="py-3 px-space-md text-center">
+<button class="h-7 px-2.5 rounded bg-primary text-on-primary font-label-sm text-label-sm flex items-center justify-center gap-1 mx-auto shadow-sm hover:bg-primary-container transition-colors">
+<span class="material-symbols-outlined text-[14px]">local_shipping</span> Rebalance
+              </button>
+</td>
+</tr>
+<!-- Row 4: Ceramic Travel Tumbler -->
+<tr class="hover:bg-surface-container-low/60 transition-colors group bg-surface-container-lowest">
+<td class="py-3 px-space-md text-center">
+<input class="rounded accent-primary-container cursor-pointer" type="checkbox"/>
+</td>
+<td class="py-3 px-space-md">
+<div class="flex items-center gap-3">
+<img class="w-11 h-11 rounded-lg object-cover bg-surface-container shrink-0 shadow-sm" data-alt="Matte charcoal grey ceramic travel mug with silicone spill-proof lid placed on light Scandinavian oak table in modern sunlit cafe" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAbovZtVakkrG0TEfonk4BMcv0Y9EjaMMF7Xz2OzfcmO5-Fl8mpnh74Rb2uAw4SrX0nyZ7ssKhgyCOPCJpfNsWjGyaxBv0ha4PtMkhGrNeNMTbF-7thLyt9fUzJAFCRiyH1M1sn8fwEsj7k11zBpRU4czh1FTgpEZw6xNNsZ4_A1vrWGEzpt7Niu66ZeNdSVbL8YoSGqnEPtDWgTwt7_JW1QoAOPHmEM1mbiVF42aTCWscjZRH6musb0Q"/>
+<div class="flex flex-col min-w-0">
+<span class="font-body-md-semibold text-body-md-semibold text-on-surface truncate group-hover:text-primary transition-colors cursor-pointer">
+                    Ceramic Travel Tumbler (16oz)
+                  </span>
+<div class="flex items-center gap-2 font-caption text-caption text-on-surface-variant mt-0.5">
+<span class="font-mono bg-surface-container px-1 py-0.5 rounded text-[10px]">APX-TB-330</span>
+<span>UPC: 884920788320</span>
+</div>
+</div>
+</div>
+</td>
+<td class="py-3 px-space-sm text-center font-mono font-medium bg-surface-container-low/40">420</td>
+<td class="py-3 px-space-sm text-center font-mono font-semibold">62</td>
+<td class="py-3 px-space-sm text-center font-mono">18</td>
+<td class="py-3 px-space-sm text-center font-mono">24</td>
+<td class="py-3 px-space-sm text-center font-mono">15</td>
+<td class="py-3 px-space-md text-right font-mono text-tertiary">22</td>
+<td class="py-3 px-space-md text-right font-mono font-bold text-primary">517</td>
+<td class="py-3 px-space-md text-right font-mono font-semibold">539</td>
+<td class="py-3 px-space-md text-center">
+<span class="inline-flex items-center px-2 py-0.5 rounded-full text-[11px] font-label-sm bg-primary-fixed text-on-primary-fixed">
+                High Velocity
+              </span>
+</td>
+<td class="py-3 px-space-md text-center">
+<button class="h-7 px-2.5 rounded bg-surface-container hover:bg-surface-container-high text-on-surface font-label-sm text-label-sm flex items-center justify-center gap-1 mx-auto transition-colors">
+<span class="material-symbols-outlined text-[14px]">swap_horiz</span> Transfer
+              </button>
+</td>
+</tr>
+<!-- Row 5: Tailored Pleated Trouser (Incoming PO) -->
+<tr class="hover:bg-surface-container-low/60 transition-colors group bg-surface-container-lowest">
+<td class="py-3 px-space-md text-center">
+<input class="rounded accent-primary-container cursor-pointer" type="checkbox"/>
+</td>
+<td class="py-3 px-space-md">
+<div class="flex items-center gap-3">
+<img class="w-11 h-11 rounded-lg object-cover bg-surface-container shrink-0 shadow-sm" data-alt="Close-up tailored Japanese wool pleated trousers in deep navy hung on minimal brushed chrome hanger with visible luxury texture and seam detailing" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAnY4G_UpL1R5i4u2yA9ilMizMx1tekVisCtHweDdRE4NNee4YT085wqnIJhe_gYbrOlamH9cmjFYHQhM3VrpIWdfp6NlnZhWSYw2oQBL8RWPds8GhH13P6kHS870ZWitrk-2gsAHO5g9LxTKKtle6Jcm12pytHARGO1p23pp9O0OCZNSTr85P-3vwy6pbIeMQ6FWcGEe9cniDlpwnG4w2y8f7QqW3jaXFKu47uwb04_rDclmq5NNv61Q"/>
+<div class="flex flex-col min-w-0">
+<span class="font-body-md-semibold text-body-md-semibold text-on-surface truncate group-hover:text-primary transition-colors cursor-pointer">
+                    Tailored Pleated Trouser (Navy / 32)
+                  </span>
+<div class="flex items-center gap-2 font-caption text-caption text-on-surface-variant mt-0.5">
+<span class="font-mono bg-surface-container px-1 py-0.5 rounded text-[10px]">TR-PLT-091</span>
+<span>UPC: 884920993012</span>
+</div>
+</div>
+</div>
+</td>
+<td class="py-3 px-space-sm text-center font-mono font-medium bg-surface-container-low/40">110</td>
+<td class="py-3 px-space-sm text-center font-mono font-semibold">8</td>
+<td class="py-3 px-space-sm text-center font-mono text-tertiary">2</td>
+<td class="py-3 px-space-sm text-center font-mono">5</td>
+<td class="py-3 px-space-sm text-center font-mono">4</td>
+<td class="py-3 px-space-md text-right font-mono text-tertiary">6</td>
+<td class="py-3 px-space-md text-right font-mono font-bold text-primary">123</td>
+<td class="py-3 px-space-md text-right font-mono font-semibold">129</td>
+<td class="py-3 px-space-md text-center">
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full text-[11px] font-label-sm bg-secondary-fixed text-on-secondary-fixed">
+<span class="material-symbols-outlined text-[12px]">schedule</span> +40 Inbound SoHo
+              </span>
+</td>
+<td class="py-3 px-space-md text-center">
+<button class="h-7 px-2.5 rounded bg-surface-container hover:bg-surface-container-high text-on-surface font-label-sm text-label-sm flex items-center justify-center gap-1 mx-auto transition-colors">
+<span class="material-symbols-outlined text-[14px]">visibility</span> View PO
+              </button>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<!-- Table Pagination & Selection Summary Bar -->
+<div class="flex flex-col sm:flex-row items-center justify-between p-space-md bg-surface-container-low gap-space-sm text-body-sm font-body-sm text-on-surface-variant">
+<div class="flex items-center gap-space-md">
+<span>Showing <strong class="text-on-surface font-semibold">1-5</strong> of 58 SKUs across 5 locations</span>
+<span class="hidden md:inline text-tertiary">|</span>
+<span class="hidden md:inline font-caption text-caption text-tertiary">Total Synced Node Count: 14,240 physical units</span>
+</div>
+<div class="flex items-center gap-space-xs">
+<button class="h-8 px-3 rounded-lg bg-surface-container-lowest text-on-surface-variant disabled:opacity-50 flex items-center gap-1 shadow-sm font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[16px]">chevron_left</span> Previous
+        </button>
+<button class="h-8 w-8 rounded-lg bg-primary text-on-primary font-body-sm-semibold text-body-sm-semibold flex items-center justify-center">1</button>
+<button class="h-8 w-8 rounded-lg bg-surface-container-lowest hover:bg-surface-container text-on-surface flex items-center justify-center font-label-sm text-label-sm">2</button>
+<button class="h-8 w-8 rounded-lg bg-surface-container-lowest hover:bg-surface-container text-on-surface flex items-center justify-center font-label-sm text-label-sm">3</button>
+<button class="h-8 px-3 rounded-lg bg-surface-container-lowest hover:bg-surface-container text-on-surface flex items-center gap-1 shadow-sm font-label-sm text-label-sm">
+          Next <span class="material-symbols-outlined text-[16px]">chevron_right</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Bottom Split Panel: Active Inter-Location Logistics & Automated Rebalancing Engine -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-md mt-space-md">
+<!-- Active Inter-Store Transfers (7 cols) -->
+<div class="lg:col-span-7 bg-surface-container-lowest p-space-md rounded-xl shadow-sm flex flex-col justify-between">
+<div class="flex items-center justify-between mb-space-sm">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary text-[20px]">local_shipping</span>
+<h2 class="font-headline-sm text-headline-sm text-on-surface">Active Inter-Location Transfers</h2>
+</div>
+<a class="font-label-sm text-label-sm text-secondary hover:underline flex items-center gap-1" href="#">
+          Manifests &amp; Waybills <span class="material-symbols-outlined text-[14px]">open_in_new</span>
+</a>
+</div>
+<div class="flex flex-col gap-space-sm">
+<!-- Transfer Item 1 -->
+<div class="p-space-md rounded-lg bg-surface-container-low flex flex-col md:flex-row items-start md:items-center justify-between gap-space-md hover:bg-surface-container transition-colors">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-lg bg-secondary-fixed flex items-center justify-center text-on-secondary-fixed shrink-0">
+<span class="material-symbols-outlined text-[20px]">sync_alt</span>
+</div>
+<div class="flex flex-col">
+<div class="flex items-center gap-2">
+<span class="font-body-md-semibold text-body-md-semibold text-on-surface">TR-1082</span>
+<span class="px-2 py-0.5 rounded-full text-[11px] font-label-sm bg-secondary-container text-on-secondary-container">
+                  In-Transit
+                </span>
+</div>
+<div class="flex items-center gap-1 font-body-sm text-body-sm text-on-surface-variant mt-0.5">
+<span class="font-semibold text-on-surface">NJ Central DC</span>
+<span class="material-symbols-outlined text-[14px] text-tertiary">arrow_forward</span>
+<span class="font-semibold text-on-surface">SoHo Flagship Store</span>
+</div>
+<span class="font-caption text-caption text-on-surface-variant mt-0.5">
+                40x Heavyweight Hoodie, 20x Crewneck (60 units) • Regional Courier #RC-9192
+              </span>
+</div>
+</div>
+<div class="flex flex-col md:items-end w-full md:w-auto">
+<span class="font-body-sm-semibold text-body-sm-semibold text-primary flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px]">schedule</span> ETA Today, 4:00 PM
+            </span>
+<button class="mt-1 text-label-sm font-label-sm text-on-surface-variant hover:text-on-surface flex items-center gap-1">
+              Receive Manifest <span class="material-symbols-outlined text-[14px]">qr_code_scanner</span>
+</button>
+</div>
+</div>
+<!-- Transfer Item 2 -->
+<div class="p-space-md rounded-lg bg-surface-container-low flex flex-col md:flex-row items-start md:items-center justify-between gap-space-md hover:bg-surface-container transition-colors">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-lg bg-surface-container-highest flex items-center justify-center text-on-surface shrink-0">
+<span class="material-symbols-outlined text-[20px]">inventory_2</span>
+</div>
+<div class="flex flex-col">
+<div class="flex items-center gap-2">
+<span class="font-body-md-semibold text-body-md-semibold text-on-surface">TR-1081</span>
+<span class="px-2 py-0.5 rounded-full text-[11px] font-label-sm bg-surface-container-high text-on-surface-variant">
+                  Picked &amp; Packed
+                </span>
+</div>
+<div class="flex items-center gap-1 font-body-sm text-body-sm text-on-surface-variant mt-0.5">
+<span class="font-semibold text-on-surface">Brooklyn DUMBO</span>
+<span class="material-symbols-outlined text-[14px] text-tertiary">arrow_forward</span>
+<span class="font-semibold text-on-surface">LA Venice Flagship</span>
+</div>
+<span class="font-caption text-caption text-on-surface-variant mt-0.5">
+                15x Canvas Daily Market Tote (15 units) • UPS Ground #1Z992A0198
+              </span>
+</div>
+</div>
+<div class="flex flex-col md:items-end w-full md:w-auto">
+<span class="font-body-sm text-body-sm text-on-surface-variant">
+              Awaiting Courier Pickup
+            </span>
+<button class="mt-1 text-label-sm font-label-sm text-primary hover:underline flex items-center gap-1">
+              Print Shipping Label
+            </button>
+</div>
+</div>
+</div>
+</div>
+<!-- Automated Restock Rules & Velocity Insights (5 cols) -->
+<div class="lg:col-span-5 bg-gradient-to-br from-surface-container-lowest to-surface-container-low p-space-md rounded-xl shadow-sm flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between mb-space-sm">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-[20px]">smart_toy</span>
+<h2 class="font-headline-sm text-headline-sm text-on-surface">Automated Restock Rules</h2>
+</div>
+<span class="px-2 py-0.5 rounded text-[10px] font-label-sm bg-primary-fixed text-on-primary-fixed uppercase font-bold tracking-wider">
+            AI Velocity Mode
+          </span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mb-space-md">
+          Continuous inventory rebalancing based on trailing 7-day POS velocity &amp; localized pickup order demand.
+        </p>
+<!-- Velocity Indicator Card -->
+<div class="p-space-sm rounded-lg bg-surface-container-lowest shadow-sm flex flex-col gap-2">
+<div class="flex items-center justify-between font-label-sm text-label-sm">
+<span class="text-on-surface font-semibold">Active Rebalance Suggestion</span>
+<span class="text-error font-semibold">Brooklyn Store Critical</span>
+</div>
+<div class="text-caption font-caption text-on-surface-variant">
+            Transfer <strong>25 units Canvas Tote</strong> from <strong>NJ DC</strong> to prevent stockout ahead of Saturday footfall peak.
+          </div>
+<div class="flex items-center justify-between pt-1">
+<span class="font-caption text-caption text-tertiary">Estimated transit: 18 hours</span>
+<button class="h-6 px-2.5 rounded bg-primary-container text-on-primary text-[11px] font-label-sm hover:opacity-95 transition-opacity">
+              Approve One-Click Transfer
+            </button>
+</div>
+</div>
+<!-- Rule Toggles -->
+<div class="mt-space-md flex flex-col gap-2">
+<div class="flex items-center justify-between text-body-sm font-body-sm text-on-surface py-1">
+<span class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[16px] text-primary">check_circle</span>
+              Safety Stock Buffer: <strong>5 units / retail node</strong>
+</span>
+<span class="text-caption font-caption text-secondary cursor-pointer hover:underline">Edit</span>
+</div>
+<div class="flex items-center justify-between text-body-sm font-body-sm text-on-surface py-1">
+<span class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[16px] text-primary">check_circle</span>
+              Auto-hold for BOPIS Pickups: <strong>100% Guaranteed</strong>
+</span>
+<span class="text-caption font-caption text-secondary cursor-pointer hover:underline">Edit</span>
+</div>
+</div>
+</div>
+<div class="pt-space-md mt-space-sm flex items-center justify-between">
+<span class="font-caption text-caption text-tertiary">Last evaluated: 4 minutes ago</span>
+<button class="text-label-sm font-label-sm text-primary font-semibold hover:underline flex items-center gap-0.5">
+          Automation Settings →
+        </button>
+</div>
+</div>
+</div>
+</div></main></div></body></html>

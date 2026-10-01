@@ -1,0 +1,712 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = {
+    darkMode: "class",
+    theme: {
+      extend: {
+        "colors": {
+          "on-tertiary": "#ffffff",
+          "primary-fixed": "#92f6cf",
+          "tertiary-container": "#717070",
+          "surface": "#fbf9f8",
+          "secondary": "#0055c7",
+          "surface-bright": "#fbf9f8",
+          "on-surface": "#1b1c1c",
+          "surface-container-low": "#f5f3f3",
+          "background": "#fbf9f8",
+          "on-tertiary-container": "#f8f5f4",
+          "surface-container-highest": "#e4e2e2",
+          "error": "#ba1a1a",
+          "on-primary-container": "#d6ffeb",
+          "on-secondary-container": "#fefcff",
+          "on-primary-fixed-variant": "#00513c",
+          "tertiary-fixed-dim": "#c8c6c5",
+          "tertiary": "#585857",
+          "surface-tint": "#006c50",
+          "surface-dim": "#dbdad9",
+          "secondary-fixed-dim": "#b0c6ff",
+          "secondary-container": "#2c6fe7",
+          "surface-container-lowest": "#ffffff",
+          "on-secondary-fixed": "#001945",
+          "on-secondary-fixed-variant": "#00419c",
+          "primary": "#00654b",
+          "on-background": "#1b1c1c",
+          "on-tertiary-fixed-variant": "#474746",
+          "secondary-fixed": "#d9e2ff",
+          "on-surface-variant": "#3e4944",
+          "surface-container-high": "#e9e8e7",
+          "inverse-primary": "#75d9b3",
+          "outline": "#6e7a73",
+          "inverse-surface": "#303031",
+          "on-primary-fixed": "#002116",
+          "on-primary": "#ffffff",
+          "outline-variant": "#bdc9c2",
+          "primary-fixed-dim": "#75d9b3",
+          "on-secondary": "#ffffff",
+          "on-error-container": "#93000a",
+          "inverse-on-surface": "#f2f0f0",
+          "on-error": "#ffffff",
+          "tertiary-fixed": "#e5e2e1",
+          "error-container": "#ffdad6",
+          "surface-container": "#efeded",
+          "surface-variant": "#e4e2e2",
+          "primary-container": "#008060",
+          "on-tertiary-fixed": "#1c1b1b"
+        },
+        "borderRadius": {
+          "DEFAULT": "0.125rem",
+          "lg": "0.25rem",
+          "xl": "0.5rem",
+          "full": "0.75rem"
+        },
+        "spacing": {
+          "space-md": "1rem",
+          "space-sm": "0.5rem",
+          "margin": "1.5rem",
+          "space-xs": "0.25rem",
+          "space-lg": "1.25rem",
+          "space-xl": "1.5rem",
+          "gutter": "1rem"
+        },
+        "fontFamily": {
+          "body-md": [
+            "Inter"
+          ],
+          "headline-lg": [
+            "Inter"
+          ],
+          "headline-sm": [
+            "Inter"
+          ],
+          "body-sm": [
+            "Inter"
+          ],
+          "body-md-semibold": [
+            "Inter"
+          ],
+          "headline-lg-mobile": [
+            "Inter"
+          ],
+          "label-sm": [
+            "Inter"
+          ],
+          "body-sm-semibold": [
+            "Inter"
+          ],
+          "label-md": [
+            "Inter"
+          ],
+          "headline-md": [
+            "Inter"
+          ],
+          "caption": [
+            "Inter"
+          ],
+          "body-lg": [
+            "Inter"
+          ]
+        },
+        "fontSize": {
+          "body-md": [
+            "14px",
+            {
+              "lineHeight": "20px",
+              "fontWeight": "400"
+            }
+          ],
+          "headline-lg": [
+            "28px",
+            {
+              "lineHeight": "36px",
+              "letterSpacing": "-0.02em",
+              "fontWeight": "700"
+            }
+          ],
+          "headline-sm": [
+            "16px",
+            {
+              "lineHeight": "24px",
+              "letterSpacing": "-0.005em",
+              "fontWeight": "600"
+            }
+          ],
+          "body-sm": [
+            "13px",
+            {
+              "lineHeight": "18px",
+              "fontWeight": "400"
+            }
+          ],
+          "body-md-semibold": [
+            "14px",
+            {
+              "lineHeight": "20px",
+              "fontWeight": "600"
+            }
+          ],
+          "headline-lg-mobile": [
+            "22px",
+            {
+              "lineHeight": "28px",
+              "letterSpacing": "-0.015em",
+              "fontWeight": "700"
+            }
+          ],
+          "label-sm": [
+            "12px",
+            {
+              "lineHeight": "16px",
+              "letterSpacing": "0.01em",
+              "fontWeight": "600"
+            }
+          ],
+          "body-sm-semibold": [
+            "13px",
+            {
+              "lineHeight": "18px",
+              "fontWeight": "600"
+            }
+          ],
+          "label-md": [
+            "13px",
+            {
+              "lineHeight": "16px",
+              "fontWeight": "500"
+            }
+          ],
+          "headline-md": [
+            "20px",
+            {
+              "lineHeight": "28px",
+              "letterSpacing": "-0.01em",
+              "fontWeight": "600"
+            }
+          ],
+          "caption": [
+            "11px",
+            {
+              "lineHeight": "14px",
+              "fontWeight": "500"
+            }
+          ],
+          "body-lg": [
+            "15px",
+            {
+              "lineHeight": "22px",
+              "fontWeight": "400"
+            }
+          ]
+        }
+      },
+    },
+  }</script><title>Shopify Admin Goods Receipt Note Landed Costs | Shopify Prototype</title>
+</head><body class="bg-surface font-body-md text-body-md text-on-surface"><aside class="fixed left-0 top-0 h-full w-60 bg-surface-container-low z-40 flex flex-col justify-between shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="flex flex-col overflow-y-auto"><div class="h-14 flex items-center px-margin gap-space-sm bg-surface-container-lowest shrink-0"><img alt="Shopify logo" class="h-7 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1WPubMgscUINGuisBDvGZbhiRvwxKjFWpAHPA0GXYWeRFqxcZY4G-byYU4PUykJPYVnuurpj_2yFkafDFmBWhplcA2dlqdqMDkr5ufN1GCA1-9Cy6Y74Bk73_KmB_pOSwvk_HQjInJtWpmQfLSQUcNeG5m75CCs-SDUFif7I_eleu-OGwNMldz9nzh1957zHt7Hfbkc1ds6tpanpikt3_aR6SAXkw6znZBFRPYg-rTUbi8f0VwyeBPJuaQ"/><div class="flex flex-col"><span class="font-body-md-semibold text-body-md-semibold text-on-surface leading-tight">Shopify Admin</span><span class="font-caption text-caption text-on-surface-variant leading-tight">Operations &amp; Finance</span></div></div><div class="px-space-md pt-space-sm"><div class="px-space-sm py-space-xs font-caption text-caption uppercase text-on-surface-variant tracking-wider">Store Management</div></div><nav class="flex flex-col gap-space-xs px-space-md py-space-xs" data-active-classes="bg-primary-container text-on-primary font-body-sm-semibold text-body-sm-semibold rounded-xl"><a class="flex items-center px-space-md py-space-sm text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface rounded-xl transition-colors font-body-sm text-body-sm" data-path="shopify-admin-home" href="#">Home</a><a class="flex items-center px-space-md py-space-sm text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface rounded-xl transition-colors font-body-sm text-body-sm" data-path="shopify-admin-orders" href="#">Orders</a><a class="flex items-center px-space-md py-space-sm text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface rounded-xl transition-colors font-body-sm text-body-sm" data-path="shopify-admin-products" href="#">Products</a><a class="flex items-center px-space-md py-space-sm text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface rounded-xl transition-colors font-body-sm text-body-sm" data-path="shopify-admin-multi-location-inventory-stock-hub" href="#">Multi-Location Inventory</a><a class="flex items-center px-space-md py-space-sm text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface rounded-xl transition-colors font-body-sm text-body-sm" data-path="shopify-admin-customers" href="#">Customers</a></nav><div class="px-space-md pt-space-sm"><div class="px-space-sm py-space-xs font-caption text-caption uppercase text-on-surface-variant tracking-wider">Procurement &amp; Billing</div></div><nav class="flex flex-col gap-space-xs px-space-md py-space-xs" data-active-classes="bg-primary-container text-on-primary font-body-sm-semibold text-body-sm-semibold rounded-xl"><a class="flex items-center px-space-md py-space-sm text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface rounded-xl transition-colors font-body-sm text-body-sm" data-path="shopify-admin-purchase-orders-vendor-directory" href="#">Purchase Orders &amp; Vendors</a><a class="flex items-center px-space-md py-space-sm text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface rounded-xl transition-colors font-body-sm text-body-sm" data-path="shopify-admin-vendor-bills-accounts-payable" href="#">Vendor Bills &amp; AP</a><a class="flex items-center px-space-md py-space-sm text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface rounded-xl transition-colors font-body-sm text-body-sm" data-path="shopify-admin-customer-b2b-invoices-ar" href="#">Customer Invoices &amp; AR</a><a class="flex items-center px-space-md py-space-sm text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface rounded-xl transition-colors font-body-sm text-body-sm" data-path="shopify-admin-payments-cash-flow-register" href="#">Payments &amp; Cash Flow</a><a aria-current="page" class="flex items-center px-space-md py-space-sm transition-colors bg-primary-container text-on-primary font-body-sm-semibold text-body-sm-semibold rounded-xl" data-path="shopify-admin-goods-receipt-landed-costs" href="#">Goods Receipt &amp; Landed Costs</a></nav><div class="px-space-md pt-space-sm"><div class="px-space-sm py-space-xs font-caption text-caption uppercase text-on-surface-variant tracking-wider">Accounting &amp; Finance</div></div><nav class="flex flex-col gap-space-xs px-space-md py-space-xs" data-active-classes="bg-primary-container text-on-primary font-body-sm-semibold text-body-sm-semibold rounded-xl"><a class="flex items-center px-space-md py-space-sm text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface rounded-xl transition-colors font-body-sm text-body-sm" data-path="shopify-admin-chart-of-accounts" href="#">Chart of Accounts</a><a class="flex items-center px-space-md py-space-sm text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface rounded-xl transition-colors font-body-sm text-body-sm" data-path="shopify-admin-journal-entries" href="#">Journal Entries</a><a class="flex items-center px-space-md py-space-sm text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface rounded-xl transition-colors font-body-sm text-body-sm" data-path="shopify-admin-bank-reconciliation" href="#">Bank Reconciliation</a><a class="flex items-center px-space-md py-space-sm text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface rounded-xl transition-colors font-body-sm text-body-sm" data-path="shopify-admin-tax-vat-gst" href="#">Tax / VAT &amp; GST</a><a class="flex items-center px-space-md py-space-sm text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface rounded-xl transition-colors font-body-sm text-body-sm" data-path="shopify-admin-financial-reports-trial-balance" href="#">Financial Reports &amp; Trial Balance</a></nav><div class="px-space-md pt-space-sm"><div class="px-space-sm py-space-xs font-caption text-caption uppercase text-on-surface-variant tracking-wider">Sales &amp; Marketing</div></div><nav class="flex flex-col gap-space-xs px-space-md py-space-xs" data-active-classes="bg-primary-container text-on-primary font-body-sm-semibold text-body-sm-semibold rounded-xl"><a class="flex items-center px-space-md py-space-sm text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface rounded-xl transition-colors font-body-sm text-body-sm" data-path="shopify-admin-analytics" href="#">Analytics</a><a class="flex items-center px-space-md py-space-sm text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface rounded-xl transition-colors font-body-sm text-body-sm" data-path="shopify-admin-marketing" href="#">Marketing</a><a class="flex items-center px-space-md py-space-sm text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface rounded-xl transition-colors font-body-sm text-body-sm" data-path="shopify-admin-discounts" href="#">Discounts</a><a class="flex items-center px-space-md py-space-sm text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface rounded-xl transition-colors font-body-sm text-body-sm" data-path="shopify-admin-point-of-sale" href="#">Point of Sale</a></nav></div><div class="p-space-md flex flex-col gap-space-xs bg-surface-container shrink-0"><nav class="flex flex-col gap-space-xs" data-active-classes="bg-primary-container text-on-primary font-body-sm-semibold text-body-sm-semibold rounded-xl"><a class="flex items-center px-space-md py-space-sm text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface rounded-xl transition-colors font-body-sm text-body-sm" data-path="shopify-admin-settings" href="#">Settings</a></nav><div class="flex items-center justify-between px-space-md py-space-sm bg-surface-container-lowest rounded-xl"><div class="flex items-center gap-space-sm"><span class="w-2 h-2 rounded-full bg-primary-container"></span><span class="font-caption text-caption text-on-surface-variant">Ledger Engine Synced</span></div><span class="material-symbols-outlined text-[16px] text-primary">sync</span></div></div></aside><div class="pl-60"><header class="fixed top-0 left-60 right-0 h-14 bg-surface-container-lowest shadow-[0_1px_8px_rgba(0,0,0,0.04)] z-30 flex items-center justify-between px-margin"><div class="flex items-center gap-space-md"><div class="flex items-center gap-space-sm px-space-md py-1 bg-surface-container rounded-full"><span class="material-symbols-outlined text-primary text-[18px]">store</span><span class="font-label-sm text-label-sm text-on-surface">Apex Apparel SoHo</span><span class="material-symbols-outlined text-on-surface-variant text-[16px]">expand_more</span></div><div class="hidden lg:flex items-center gap-space-xs text-on-surface-variant font-caption text-caption"><span class="hover:text-on-surface cursor-pointer">Admin</span><span>/</span><span class="text-on-surface font-label-sm text-label-sm">Finance &amp; Operations</span></div><div class="relative flex items-center w-64 md:w-80 ml-space-xs"><span class="material-symbols-outlined absolute left-space-sm text-on-surface-variant text-[18px]">search</span><input class="w-full h-8 pl-8 pr-space-md py-1 bg-surface-container-low text-on-surface placeholder:text-on-surface-variant rounded-lg font-body-sm text-body-sm border-none focus:outline-none focus:ring-1 focus:ring-primary" placeholder="Search orders, products, accounts (⌘K)" type="text"/></div></div><div class="flex items-center gap-space-md"><div class="flex items-center gap-space-sm px-space-md py-1 bg-surface-container-low rounded-xl"><span class="material-symbols-outlined text-on-surface-variant text-[18px]">badge</span><div class="flex flex-col text-left"><span class="font-caption text-caption text-on-surface-variant leading-none">Staff Operator</span><span class="font-label-sm text-label-sm text-on-surface leading-tight">Elena Rostova</span></div></div><button class="relative p-1.5 text-on-surface-variant hover:text-on-surface hover:bg-surface-container rounded-lg transition-colors" title="Notifications"><span class="material-symbols-outlined text-[20px]">notifications</span><span class="absolute top-1 right-1 w-2 h-2 rounded-full bg-error"></span></button><div class="flex items-center gap-space-sm"><img alt="Elena Rostova avatar" class="w-8 h-8 rounded-full object-cover" src="https://lh3.googleusercontent.com/aida/AEtjO1XM8bAU6u1SGd73cRUZpDg7te6U8Hd9YuPkqi431L4IWNqZL9tf8Hx7usC0Pr2x5uZFks9b6ZVSsN6pF4qp7qBy14iGcMBDgJ1CkgkmUAjIfndkwn_z2y62oK4m5xXJUzEyvjga7vHBHY5I_yrgT2bDOvV6QCvONuw_NwyDFyHdKZJuuGyK5Pgek_6deKYxGCdGgDgn0o72iDzak64pRiWW1BSKisoh_F_jv3CeZdUD3Qs1uum2E_qsQHaI"/><button class="flex items-center justify-center p-1.5 text-on-surface-variant hover:text-error hover:bg-surface-container rounded-lg transition-colors" title="Lock Terminal / Sign Out"><span class="material-symbols-outlined text-[20px]">lock</span></button></div></div></header><main class="w-full pt-14 px-margin"><div class="flex flex-col w-full pb-16 space-y-space-lg">
+<!-- Top Navigation & Breadcrumb -->
+<div class="flex flex-col gap-space-xs pt-space-md">
+<nav class="flex items-center gap-space-xs text-on-surface-variant font-caption text-caption">
+<span class="hover:text-on-surface cursor-pointer">Procurement &amp; Warehouse</span>
+<span>/</span>
+<span class="text-on-surface font-label-sm text-label-sm">Goods Receipt &amp; Landed Costs</span>
+</nav>
+<!-- Header Block -->
+<div class="flex flex-col md:flex-row md:items-center justify-between gap-space-md mt-space-xs">
+<div class="flex items-center gap-space-md flex-wrap">
+<h1 class="font-headline-lg text-headline-lg text-on-surface tracking-tight">Goods Receipt Note (GRN) &amp; Landed Costs</h1>
+<div class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-primary-fixed text-on-primary-fixed-variant font-label-sm text-label-sm shadow-sm">
+<span class="w-2 h-2 rounded-full bg-primary animate-pulse"></span>
+          Warehouse Dock: Active Scanning
+        </div>
+</div>
+<div class="flex items-center gap-space-sm flex-wrap">
+<button class="px-space-md py-1.5 bg-surface-container-lowest text-on-surface font-label-md text-label-md rounded-lg shadow-sm hover:bg-surface-container-high transition-colors flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-[18px]">barcode_scanner</span>
+          Print Receiving Barcodes
+        </button>
+<button class="px-space-md py-1.5 bg-surface-container-lowest text-on-surface font-label-md text-label-md rounded-lg shadow-sm hover:bg-surface-container-high transition-colors flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-[18px]">tune</span>
+          Configure Allocation Rules
+        </button>
+<button class="px-space-md py-1.5 bg-primary-container text-on-primary font-label-md text-label-md rounded-lg shadow hover:bg-primary transition-colors flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-[18px]">add</span>
+          Receive New Shipment
+        </button>
+</div>
+</div>
+</div>
+<!-- Operational Metrics Banner (4 Cards) -->
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-space-md">
+<!-- Metric 1 -->
+<div class="p-space-lg bg-surface-container-lowest rounded-xl shadow-sm flex flex-col justify-between relative overflow-hidden group">
+<div class="flex items-start justify-between">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Shipments Received This Month</span>
+<div class="p-1.5 rounded-lg bg-surface-container text-primary">
+<span class="material-symbols-outlined text-[20px]">inventory_2</span>
+</div>
+</div>
+<div class="mt-space-md">
+<div class="font-headline-lg text-headline-lg text-on-surface font-bold tracking-tight">18 <span class="text-headline-sm font-label-md text-on-surface-variant font-normal">Dock Receipts</span></div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1 flex items-center gap-1">
+<span class="font-body-sm-semibold text-primary">9,450</span> physical units checked in
+        </p>
+</div>
+<div class="mt-space-md h-1.5 w-full bg-surface-container rounded-full overflow-hidden">
+<div class="bg-primary h-full rounded-full" style="width: 82%"></div>
+</div>
+</div>
+<!-- Metric 2 -->
+<div class="p-space-lg bg-surface-container-lowest rounded-xl shadow-sm flex flex-col justify-between relative overflow-hidden">
+<div class="flex items-start justify-between">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Pending QA &amp; Inspection</span>
+<div class="p-1.5 rounded-lg bg-surface-container text-secondary">
+<span class="material-symbols-outlined text-[20px]">fact_check</span>
+</div>
+</div>
+<div class="mt-space-md">
+<div class="font-headline-lg text-headline-lg text-on-surface font-bold tracking-tight">2 <span class="text-headline-sm font-label-md text-on-surface-variant font-normal">Receipts</span></div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1 flex items-center gap-1">
+<span class="font-body-sm-semibold text-secondary">1,200</span> Heavyweight Hoodies under sample count
+        </p>
+</div>
+<div class="mt-space-md h-1.5 w-full bg-surface-container rounded-full overflow-hidden">
+<div class="bg-secondary h-full rounded-full" style="width: 25%"></div>
+</div>
+</div>
+<!-- Metric 3 -->
+<div class="p-space-lg bg-surface-container-lowest rounded-xl shadow-sm flex flex-col justify-between relative overflow-hidden">
+<div class="flex items-start justify-between">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Landed Cost to COGS</span>
+<div class="p-1.5 rounded-lg bg-surface-container text-primary-container">
+<span class="material-symbols-outlined text-[20px]">price_check</span>
+</div>
+</div>
+<div class="mt-space-md">
+<div class="font-headline-lg text-headline-lg text-on-surface font-bold tracking-tight">$8,420.00</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1 truncate">
+          Ocean freight, customs tariffs, drayage
+        </p>
+</div>
+<div class="mt-space-md h-1.5 w-full bg-surface-container rounded-full overflow-hidden">
+<div class="bg-primary-container h-full rounded-full" style="width: 68%"></div>
+</div>
+</div>
+<!-- Metric 4 -->
+<div class="p-space-lg bg-surface-container-lowest rounded-xl shadow-sm flex flex-col justify-between relative overflow-hidden">
+<div class="flex items-start justify-between">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Receiving Accuracy Rate</span>
+<div class="p-1.5 rounded-lg bg-surface-container text-primary">
+<span class="material-symbols-outlined text-[20px]">verified</span>
+</div>
+</div>
+<div class="mt-space-md">
+<div class="font-headline-lg text-headline-lg text-primary font-bold tracking-tight">99.6%</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1 flex items-center gap-1">
+          Barcode match vs Vendor Packing Slips
+        </p>
+</div>
+<div class="mt-space-md h-1.5 w-full bg-surface-container rounded-full overflow-hidden">
+<div class="bg-primary h-full rounded-full" style="width: 99.6%"></div>
+</div>
+</div>
+</div>
+<!-- Interactive Landed Cost Allocation Workbench -->
+<div class="bg-surface-container-lowest rounded-xl shadow-sm p-space-lg flex flex-col gap-space-lg relative overflow-hidden">
+<!-- Card Header Banner -->
+<div class="flex flex-col lg:flex-row lg:items-center justify-between gap-space-md pb-space-md bg-surface-container-low/60 -m-space-lg p-space-lg mb-0">
+<div class="flex items-center gap-space-md">
+<div class="w-10 h-10 rounded-lg bg-primary-container text-on-primary flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[24px]">account_balance_wallet</span>
+</div>
+<div>
+<div class="flex items-center gap-space-xs flex-wrap">
+<h2 class="font-headline-md text-headline-md text-on-surface">Landed Cost Valuation Adjustment</h2>
+<span class="px-2 py-0.5 rounded font-caption text-caption uppercase bg-surface-container-highest text-on-surface font-semibold">PO-2024-1184</span>
+<span class="px-2 py-0.5 rounded font-caption text-caption uppercase bg-primary-fixed text-on-primary-fixed-variant font-semibold">GRN-2024-0082</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">
+            Apex Textiles Ltd shipment • 1,200 units Heavyweight Hoodies • Port of Newark Delivery
+          </p>
+</div>
+</div>
+<div class="flex items-center gap-space-sm self-end lg:self-auto">
+<span class="inline-flex items-center gap-1.5 text-xs text-on-surface-variant font-label-sm bg-surface-container px-2.5 py-1 rounded-full">
+<span class="material-symbols-outlined text-[16px] text-primary">account_tree</span>
+          Capitalizing to GL #1200 (Inventory Asset)
+        </span>
+</div>
+</div>
+<!-- Allocation Layout Grid -->
+<div class="grid grid-cols-1 xl:grid-cols-12 gap-space-lg items-start">
+<!-- Left breakdown table -->
+<div class="xl:col-span-8 flex flex-col gap-space-md">
+<div class="flex items-center justify-between">
+<span class="font-headline-sm text-headline-sm text-on-surface">Incurred Inbound Landed Expenses</span>
+<span class="font-caption text-caption text-on-surface-variant uppercase tracking-wider">3 Additional Freight &amp; Duty Bills Associated</span>
+</div>
+<div class="overflow-x-auto rounded-lg bg-surface-container-low/40">
+<table class="w-full text-left">
+<thead>
+<tr class="bg-surface-container-high/60 text-on-surface-variant font-label-sm text-label-sm">
+<th class="py-2.5 px-space-md">Vendor &amp; Invoice</th>
+<th class="py-2.5 px-space-md">Expense Classification</th>
+<th class="py-2.5 px-space-md">Allocation Method</th>
+<th class="py-2.5 px-space-md text-right">Invoiced Amount</th>
+</tr>
+</thead>
+<tbody class="font-body-sm text-body-sm divide-y divide-surface-container">
+<tr class="hover:bg-surface-container-lowest/80 transition-colors">
+<td class="py-3 px-space-md">
+<div class="font-body-sm-semibold text-on-surface">DHL Global Forwarding</div>
+<div class="font-caption text-caption text-on-surface-variant">INV-DHL-89211 • Ocean &amp; Air Freight</div>
+</td>
+<td class="py-3 px-space-md text-on-surface">Ocean Freight Inbound</td>
+<td class="py-3 px-space-md">
+<span class="inline-flex items-center px-2 py-0.5 rounded-full text-xs font-medium bg-surface-container-highest text-on-surface">By Volume / Weight</span>
+</td>
+<td class="py-3 px-space-md text-right font-body-sm-semibold text-on-surface">$2,418.50</td>
+</tr>
+<tr class="hover:bg-surface-container-lowest/80 transition-colors">
+<td class="py-3 px-space-md">
+<div class="font-body-sm-semibold text-on-surface">U.S. Customs &amp; Border Protection</div>
+<div class="font-caption text-caption text-on-surface-variant">CBP-ENTRY-99410 • Duty tariff code 6110.12</div>
+</td>
+<td class="py-3 px-space-md text-on-surface">Customs Import Duty (6.5%)</td>
+<td class="py-3 px-space-md">
+<span class="inline-flex items-center px-2 py-0.5 rounded-full text-xs font-medium bg-surface-container-highest text-on-surface">By Value (Ad Valorem)</span>
+</td>
+<td class="py-3 px-space-md text-right font-body-sm-semibold text-on-surface">$1,199.25</td>
+</tr>
+<tr class="hover:bg-surface-container-lowest/80 transition-colors">
+<td class="py-3 px-space-md">
+<div class="font-body-sm-semibold text-on-surface">Harbor Logistics Drayage Corp</div>
+<div class="font-caption text-caption text-on-surface-variant">INV-HL-5092 • Pier terminal handling</div>
+</td>
+<td class="py-3 px-space-md text-on-surface">Drayage &amp; Container Offload</td>
+<td class="py-3 px-space-md">
+<span class="inline-flex items-center px-2 py-0.5 rounded-full text-xs font-medium bg-surface-container-highest text-on-surface">Allocated Equally</span>
+</td>
+<td class="py-3 px-space-md text-right font-body-sm-semibold text-on-surface">$450.00</td>
+</tr>
+</tbody>
+</table>
+</div>
+<!-- Base vs Landed breakdown summary bar -->
+<div class="p-space-md rounded-lg bg-surface-container flex flex-col md:flex-row items-center justify-between gap-space-md">
+<div class="flex items-center gap-space-md">
+<span class="material-symbols-outlined text-primary text-[24px]">calculate</span>
+<div>
+<div class="font-body-sm-semibold text-on-surface">Base Purchase Order Subtotal</div>
+<div class="font-caption text-caption text-on-surface-variant">1,200 units × $15.375 / unit base supplier FOB</div>
+</div>
+</div>
+<div class="text-right">
+<div class="font-headline-sm text-headline-sm text-on-surface font-bold">$18,450.00</div>
+<div class="font-caption text-caption text-on-surface-variant">Vendor Invoice Payable</div>
+</div>
+</div>
+</div>
+<!-- Right Cost Calculation Card (Polaris Summary Widget) -->
+<div class="xl:col-span-4 p-space-md rounded-xl bg-surface-container-low flex flex-col gap-space-md">
+<div class="flex items-center justify-between pb-space-sm border-b border-surface-container-high">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant">Cost Unit Recalculation</span>
+<span class="inline-flex items-center text-xs font-semibold px-2 py-0.5 rounded bg-primary-fixed text-on-primary-fixed-variant">+22.0% to Basis</span>
+</div>
+<div class="space-y-2.5">
+<div class="flex items-center justify-between text-body-sm">
+<span class="text-on-surface-variant">Base PO FOB Cost:</span>
+<span class="font-body-sm-semibold text-on-surface">$18,450.00</span>
+</div>
+<div class="flex items-center justify-between text-body-sm">
+<span class="text-on-surface-variant">Landed Cost Add-on:</span>
+<span class="font-body-sm-semibold text-primary">+$4,067.75</span>
+</div>
+<div class="flex items-center justify-between text-body-sm">
+<span class="text-on-surface-variant">Total Adjusted Inventory Value:</span>
+<span class="font-body-sm-semibold text-on-surface">$22,517.75</span>
+</div>
+<div class="h-px bg-surface-container-highest my-2"></div>
+<div class="flex items-center justify-between pt-1">
+<div>
+<div class="font-caption text-caption text-on-surface-variant uppercase">True Realized Unit Cost</div>
+<div class="font-caption text-caption text-on-surface-variant">Was $15.375 FOB</div>
+</div>
+<div class="text-right">
+<span class="font-headline-md text-headline-md font-bold text-primary tracking-tight">$18.765</span>
+<span class="font-caption text-caption text-on-surface-variant">/ unit</span>
+</div>
+</div>
+</div>
+<!-- GL Posting Badge Info -->
+<div class="p-2.5 rounded-lg bg-surface-container-highest/60 flex items-start gap-2">
+<span class="material-symbols-outlined text-[18px] text-on-surface-variant shrink-0 mt-0.5">info</span>
+<p class="font-caption text-caption text-on-surface-variant leading-relaxed">
+            Debit GL #1200 (Inventory Asset) for $22,517.75. Credit GL #2010 (Inbound Freight Accrual) and GL #2000 (Accounts Payable).
+          </p>
+</div>
+<!-- Primary Action buttons -->
+<div class="flex flex-col gap-space-xs mt-1">
+<button class="w-full py-2 px-space-md bg-primary-container text-on-primary font-body-sm-semibold text-body-sm-semibold rounded-lg shadow hover:bg-primary transition-colors flex items-center justify-center gap-space-xs">
+<span class="material-symbols-outlined text-[18px]">rule</span>
+            Apply Landed Cost to Inventory Valuation
+          </button>
+<button class="w-full py-2 px-space-md bg-surface-container-lowest text-on-surface font-body-sm text-body-sm rounded-lg hover:bg-surface-container transition-colors flex items-center justify-center gap-space-xs">
+<span class="material-symbols-outlined text-[18px]">print</span>
+            Print Costed Receiving Slip
+          </button>
+</div>
+</div>
+</div>
+</div>
+<!-- Dock Receipts Index Table Section -->
+<div class="bg-surface-container-lowest rounded-xl shadow-sm overflow-hidden flex flex-col">
+<!-- Filter Tabs Header -->
+<div class="flex flex-col sm:flex-row sm:items-center justify-between px-space-lg pt-space-md bg-surface-container-lowest">
+<div class="flex items-center gap-space-md overflow-x-auto">
+<button class="font-body-sm-semibold text-body-sm-semibold text-on-surface pb-3 border-b-2 border-primary-container whitespace-nowrap">
+          All Dock Receipts <span class="ml-1 text-xs px-1.5 py-0.5 rounded-full bg-surface-container font-normal">24</span>
+</button>
+<button class="font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface pb-3 border-b-2 border-transparent whitespace-nowrap">
+          In-Inspection <span class="ml-1 text-xs px-1.5 py-0.5 rounded-full bg-surface-container font-normal">2</span>
+</button>
+<button class="font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface pb-3 border-b-2 border-transparent whitespace-nowrap">
+          Ready for Landed Cost <span class="ml-1 text-xs px-1.5 py-0.5 rounded-full bg-surface-container font-normal">3</span>
+</button>
+<button class="font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface pb-3 border-b-2 border-transparent whitespace-nowrap">
+          Fully Capitalized &amp; Closed <span class="ml-1 text-xs px-1.5 py-0.5 rounded-full bg-surface-container font-normal">19</span>
+</button>
+</div>
+<div class="flex items-center gap-space-sm pb-3 mt-2 sm:mt-0">
+<div class="relative">
+<span class="material-symbols-outlined absolute left-2.5 top-1.5 text-on-surface-variant text-[16px]">filter_list</span>
+<input class="pl-8 pr-3 py-1 bg-surface-container-low text-on-surface text-body-sm rounded-lg focus:outline-none focus:ring-1 focus:ring-primary w-44" placeholder="Filter receipts..." type="text"/>
+</div>
+<button class="p-1 rounded-lg hover:bg-surface-container text-on-surface-variant" title="Export CSV">
+<span class="material-symbols-outlined text-[20px]">file_download</span>
+</button>
+</div>
+</div>
+<!-- Data Table -->
+<div class="overflow-x-auto">
+<table class="w-full text-left">
+<thead>
+<tr class="bg-surface-container text-on-surface-variant font-label-sm text-label-sm uppercase tracking-wider">
+<th class="py-3 px-space-lg w-10">
+<input class="rounded accent-primary cursor-pointer" type="checkbox"/>
+</th>
+<th class="py-3 px-space-md">GRN #</th>
+<th class="py-3 px-space-md">Date &amp; Time</th>
+<th class="py-3 px-space-md">PO Number</th>
+<th class="py-3 px-space-md">Supplier</th>
+<th class="py-3 px-space-md">Receiving Location</th>
+<th class="py-3 px-space-md">Units (Exp / Rec)</th>
+<th class="py-3 px-space-md">QA Status</th>
+<th class="py-3 px-space-md">Landed Cost Status</th>
+<th class="py-3 px-space-lg text-right">Actions</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-surface-container font-body-sm text-body-sm">
+<!-- Row 1 -->
+<tr class="hover:bg-surface-container-low/70 transition-colors bg-primary-fixed/10">
+<td class="py-3.5 px-space-lg">
+<input checked="" class="rounded accent-primary cursor-pointer" type="checkbox"/>
+</td>
+<td class="py-3.5 px-space-md">
+<span class="font-body-sm-semibold text-primary">#GRN-2024-0082</span>
+</td>
+<td class="py-3.5 px-space-md text-on-surface">
+              Today 09:30 AM
+            </td>
+<td class="py-3.5 px-space-md">
+<span class="font-medium text-on-surface hover:text-primary cursor-pointer">PO-2024-1184</span>
+</td>
+<td class="py-3.5 px-space-md font-body-sm-semibold text-on-surface">
+              Apex Textiles Ltd
+            </td>
+<td class="py-3.5 px-space-md text-on-surface-variant flex items-center gap-1.5 py-4">
+<span class="material-symbols-outlined text-[16px] text-on-surface-variant">warehouse</span>
+              New Jersey Central DC
+            </td>
+<td class="py-3.5 px-space-md font-medium text-on-surface">
+              1,200 / 1,200 <span class="text-xs text-primary font-bold">(100%)</span>
+</td>
+<td class="py-3.5 px-space-md">
+<span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-xs font-semibold bg-primary-fixed text-on-primary-fixed-variant">
+<span class="material-symbols-outlined text-[14px]">check_circle</span>
+                Inspected &amp; Passed
+              </span>
+</td>
+<td class="py-3.5 px-space-md">
+<span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-xs font-semibold bg-primary-fixed text-on-primary-fixed-variant">
+<span class="material-symbols-outlined text-[14px]">price_check</span>
+                Landed Cost Allocated
+              </span>
+</td>
+<td class="py-3.5 px-space-lg text-right">
+<button class="px-2.5 py-1 text-xs font-semibold rounded bg-surface-container hover:bg-surface-container-high text-on-surface transition-colors">
+                View Allocation
+              </button>
+</td>
+</tr>
+<!-- Row 2 -->
+<tr class="hover:bg-surface-container-low/70 transition-colors">
+<td class="py-3.5 px-space-lg">
+<input class="rounded accent-primary cursor-pointer" type="checkbox"/>
+</td>
+<td class="py-3.5 px-space-md">
+<span class="font-body-sm-semibold text-on-surface">#GRN-2024-0081</span>
+</td>
+<td class="py-3.5 px-space-md text-on-surface-variant">
+              Nov 24, 2024
+            </td>
+<td class="py-3.5 px-space-md">
+<span class="font-medium text-on-surface hover:text-primary cursor-pointer">PO-2024-1182</span>
+</td>
+<td class="py-3.5 px-space-md font-body-sm-semibold text-on-surface">
+              Pacific Cotton Mills
+            </td>
+<td class="py-3.5 px-space-md text-on-surface-variant flex items-center gap-1.5 py-4">
+<span class="material-symbols-outlined text-[16px] text-on-surface-variant">storefront</span>
+              SoHo Flagship Store
+            </td>
+<td class="py-3.5 px-space-md font-medium text-on-surface">
+              450 / 450 <span class="text-xs text-primary font-bold">(100%)</span>
+</td>
+<td class="py-3.5 px-space-md">
+<span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-xs font-semibold bg-surface-container text-on-surface">
+<span class="material-symbols-outlined text-[14px]">shelves</span>
+                Inspected &amp; Shelved
+              </span>
+</td>
+<td class="py-3.5 px-space-md">
+<span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-xs font-medium bg-surface-container-highest text-on-surface-variant">
+                Domestic (No Duty)
+              </span>
+</td>
+<td class="py-3.5 px-space-lg text-right">
+<button class="px-2.5 py-1 text-xs font-medium rounded hover:bg-surface-container text-on-surface-variant hover:text-on-surface transition-colors">
+                View Slip
+              </button>
+</td>
+</tr>
+<!-- Row 3 -->
+<tr class="hover:bg-surface-container-low/70 transition-colors">
+<td class="py-3.5 px-space-lg">
+<input class="rounded accent-primary cursor-pointer" type="checkbox"/>
+</td>
+<td class="py-3.5 px-space-md">
+<span class="font-body-sm-semibold text-on-surface">#GRN-2024-0080</span>
+</td>
+<td class="py-3.5 px-space-md text-on-surface-variant">
+              Nov 23, 2024
+            </td>
+<td class="py-3.5 px-space-md">
+<span class="font-medium text-on-surface hover:text-primary cursor-pointer">PO-2024-1179</span>
+</td>
+<td class="py-3.5 px-space-md font-body-sm-semibold text-on-surface">
+              EcoPack Sustainable Co
+            </td>
+<td class="py-3.5 px-space-md text-on-surface-variant flex items-center gap-1.5 py-4">
+<span class="material-symbols-outlined text-[16px] text-on-surface-variant">warehouse</span>
+              New Jersey Central DC
+            </td>
+<td class="py-3.5 px-space-md font-medium text-on-surface">
+              5,000 / 5,000 <span class="text-xs text-primary font-bold">(100%)</span>
+</td>
+<td class="py-3.5 px-space-md">
+<span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-xs font-semibold bg-primary-fixed text-on-primary-fixed-variant">
+<span class="material-symbols-outlined text-[14px]">check</span>
+                Passed
+              </span>
+</td>
+<td class="py-3.5 px-space-md">
+<span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-xs font-medium bg-surface-container-highest text-on-surface-variant">
+                Freight Direct
+              </span>
+</td>
+<td class="py-3.5 px-space-lg text-right">
+<button class="px-2.5 py-1 text-xs font-medium rounded hover:bg-surface-container text-on-surface-variant hover:text-on-surface transition-colors">
+                View Slip
+              </button>
+</td>
+</tr>
+<!-- Row 4 -->
+<tr class="hover:bg-surface-container-low/70 transition-colors">
+<td class="py-3.5 px-space-lg">
+<input class="rounded accent-primary cursor-pointer" type="checkbox"/>
+</td>
+<td class="py-3.5 px-space-md">
+<span class="font-body-sm-semibold text-on-surface">#GRN-2024-0078</span>
+</td>
+<td class="py-3.5 px-space-md text-on-surface-variant">
+              Nov 21, 2024
+            </td>
+<td class="py-3.5 px-space-md">
+<span class="font-medium text-on-surface hover:text-primary cursor-pointer">PO-2024-1175</span>
+</td>
+<td class="py-3.5 px-space-md font-body-sm-semibold text-on-surface">
+              Milan Leather Works
+            </td>
+<td class="py-3.5 px-space-md text-on-surface-variant flex items-center gap-1.5 py-4">
+<span class="material-symbols-outlined text-[16px] text-on-surface-variant">storefront</span>
+              SoHo Flagship Store
+            </td>
+<td class="py-3.5 px-space-md font-medium text-on-surface">
+              180 / 180 <span class="text-xs text-primary font-bold">(100%)</span>
+</td>
+<td class="py-3.5 px-space-md">
+<span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-xs font-semibold bg-secondary-fixed text-on-secondary-fixed-variant">
+<span class="material-symbols-outlined text-[14px]">lock</span>
+                Luxury Vault Verified
+              </span>
+</td>
+<td class="py-3.5 px-space-md">
+<span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-xs font-semibold bg-primary-fixed text-on-primary-fixed-variant">
+                Customs Landed Settled
+              </span>
+</td>
+<td class="py-3.5 px-space-lg text-right">
+<button class="px-2.5 py-1 text-xs font-medium rounded hover:bg-surface-container text-on-surface-variant hover:text-on-surface transition-colors">
+                View Details
+              </button>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<!-- Table Pagination & Bulk Status Footer -->
+<div class="p-space-md bg-surface-container flex flex-col sm:flex-row items-center justify-between gap-space-sm text-body-sm text-on-surface-variant">
+<div class="flex items-center gap-2">
+<span class="font-caption text-caption uppercase tracking-wider">Showing 1 to 4 of 24 Dock Receipts</span>
+</div>
+<div class="flex items-center gap-space-xs">
+<button class="px-3 py-1 bg-surface-container-lowest text-on-surface font-label-sm text-label-sm rounded shadow-sm hover:bg-surface-container-high transition-colors disabled:opacity-50" disabled="">Previous</button>
+<button class="px-3 py-1 bg-surface-container-lowest text-on-surface font-label-sm text-label-sm rounded shadow-sm hover:bg-surface-container-high transition-colors">Next</button>
+</div>
+</div>
+</div>
+<!-- Barcode Scanning & Receiving Station Quick Banner -->
+<div class="rounded-xl bg-surface-container-lowest shadow-sm p-space-md flex flex-col sm:flex-row items-center justify-between gap-space-md">
+<div class="flex items-center gap-space-md">
+<div class="w-10 h-10 rounded-full bg-primary-fixed text-on-primary-fixed-variant flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[22px]">scanner</span>
+</div>
+<div>
+<div class="flex items-center gap-space-xs">
+<span class="w-2 h-2 rounded-full bg-primary"></span>
+<span class="font-body-sm-semibold text-on-surface">USB / Bluetooth Scanner Ready: Honeywell Voyager 1400g connected</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+          Dock Terminal 02 • Ready to scan GS1-128 pallet shipping labels and item EAN/UPC tags directly.
+        </p>
+</div>
+</div>
+<div class="flex items-center gap-space-sm w-full sm:w-auto justify-end">
+<span class="font-caption text-caption text-on-surface-variant">Baud 115200 • Emulation Mode</span>
+<button class="px-3 py-1.5 bg-surface-container text-on-surface font-label-sm text-label-sm rounded-lg hover:bg-surface-container-high transition-colors flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px]">settings_input_component</span>
+        Configure
+      </button>
+</div>
+</div>
+</div></main></div></body></html>
